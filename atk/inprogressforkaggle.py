@@ -40,7 +40,7 @@ sys.path.append('/kaggle/working/project1')
 # for VBAD
 from attack_related.VBAD.model_wrapper.image_model_wrapper import ResNetFeatureExtractor, DensenetFeatureExtractor, \
     TentativePerturbationGenerator
-from attack_related.VBAD.attack.video_attack import untargeted_video_attack
+from attack_related.VBAD.attack.video_attackforkaggle import untargeted_video_attack
 from torchvision import models as tvmodels
 
 mid_out = []
