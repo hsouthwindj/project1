@@ -228,6 +228,7 @@ def rnnbatk(path):
         # print(adv)
         probs, pre_label = model(adv)
         probs = torch.sigmoid(probs)
+        print('final video score', probs)
         logging.info('final video score %s', probs)
         # check image detector performance
         
