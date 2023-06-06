@@ -75,14 +75,14 @@ def group_img_dec(vs, model, model_type):
 
 def video_loader(url):
     loader = detector.rnn_video_loader(device)
-    with open('/notebooks/Deepfake-detection-master/rnnpass') as file:
-        ok = [line.rstrip()[10:] for line in file]
+    #with open('/notebooks/Deepfake-detection-master/rnnpass') as file:
+    #    ok = [line.rstrip()[10:] for line in file]
     if os.path.isdir(url):
         vids = []
         for vid_name in os.listdir(url):
             vid_path = os.path.join(url, vid_name)
-            if vid_path not in ok:
-                continue
+            #if vid_path not in ok:
+            #    continue
             vids.append((vid_path, loader.load(vid_path)))
             # try:
             #     vids.append((vid_path, loader.load(vid_path)))
