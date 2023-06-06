@@ -1,0 +1,4 @@
+DFDC_DATA_PATH: "input"
+ARTIFACTS_PATH: "/kaggle/solution/artifacts"
+MODELS_PATH: "models"
+SUBMISSION_PATH: "output/submission.csv"

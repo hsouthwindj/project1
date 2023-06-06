@@ -1,0 +1,22 @@
+INFO:root:new video /notebooks/atk/input/test_videos/apzckowxpy.mp4
+INFO:root:origin total frame 100, origin total fake frame 100
+INFO:root:total frame 100, total fake frame 100
+INFO:root:iter 0
+INFO:root:tensor([[0.6092]], device='cuda:0', grad_fn=<SigmoidBackward0>)
+INFO:root:tensor(0.9395, device='cuda:0', grad_fn=<MeanBackward0>), tensor(0.0039, device='cuda:0', grad_fn=<SumBackward0>), 9.954252183437347
+INFO:root:total frame 100, total fake frame 1
+INFO:root:iter 1
+INFO:root:tensor([[0.6198]], device='cuda:0', grad_fn=<SigmoidBackward0>)
+INFO:root:tensor(0.9670, device='cuda:0', grad_fn=<MeanBackward0>), tensor(101.6139, device='cuda:0', grad_fn=<SumBackward0>), 9.814586460590363
+INFO:root:total frame 100, total fake frame 99
+INFO:root:iter 2
+INFO:root:tensor([[0.5416]], device='cuda:0', grad_fn=<SigmoidBackward0>)
+INFO:root:tensor(0.7800, device='cuda:0', grad_fn=<MeanBackward0>), tensor(2.9642, device='cuda:0', grad_fn=<SumBackward0>), 9.478169941902161
+INFO:root:total frame 100, total fake frame 0
+INFO:root:iter 3
+INFO:root:tensor([[0.6168]], device='cuda:0', grad_fn=<SigmoidBackward0>)
+INFO:root:tensor(0.9592, device='cuda:0', grad_fn=<MeanBackward0>), tensor(99.4548, device='cuda:0', grad_fn=<SumBackward0>), 9.87527575492859
+INFO:root:total frame 100, total fake frame 95
+INFO:root:iter 4
+INFO:root:tensor([[0.4077]], device='cuda:0', grad_fn=<SigmoidBackward0>)
+INFO:root:tensor(0.5238, device='cuda:0', grad_fn=<MeanBackward0>), tensor(3.4567, device='cuda:0', grad_fn=<SumBackward0>), 9.077253744006157

@@ -1,0 +1,12 @@
+INFO:root:NUM DETECTION FRAMES: 50, VIDEO SCORE: 0.010671052221313612. aaqaifqrwn.mp4
+INFO:root:tensor(1.5586, device='cuda:0', grad_fn=<AddBackward0>)
+INFO:root:NUM DETECTION FRAMES: 50, VIDEO SCORE: 0.010000000000000002. aayrffkzxn.mp4
+INFO:root:tensor(0.0030, device='cuda:0', grad_fn=<AddBackward0>)
+INFO:root:NUM DETECTION FRAMES: 50, VIDEO SCORE: 0.011672972547725896. abhggqdift.mp4
+INFO:root:tensor(1.5804, device='cuda:0', grad_fn=<AddBackward0>)
+INFO:root:NUM DETECTION FRAMES: 50, VIDEO SCORE: 0.010379379856488265. acagallncj.mp4
+INFO:root:tensor(1.4609, device='cuda:0', grad_fn=<AddBackward0>)
+INFO:root:NUM DETECTION FRAMES: 50, VIDEO SCORE: 0.0133302489536071. acdkfksyev.mp4
+INFO:root:tensor(2.5848, device='cuda:0', grad_fn=<AddBackward0>)
+INFO:root:NUM DETECTION FRAMES: 50, VIDEO SCORE: 0.011388871520883272. achdeirhym.mp4
+INFO:root:tensor(1.4418, device='cuda:0', grad_fn=<AddBackward0>)

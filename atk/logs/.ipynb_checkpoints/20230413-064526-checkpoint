@@ -1,0 +1,512 @@
+INFO:root:Argument atk: 'white'
+INFO:root:Argument full_pert: False
+INFO:root:Argument group_size: 6
+INFO:root:Argument iters: 100
+INFO:root:Argument l3: True
+INFO:root:Argument model: 'rnn'
+INFO:root:Argument sec_phase: False
+INFO:root:new video /notebooks/atk/input/test_videos/apzckowxpy.mp4
+INFO:root:origin total frame 100, origin total fake frame 100
+INFO:root:total frame 100, total fake frame 100
+INFO:root:iter 0
+INFO:root:tensor([[0.6092]], device='cuda:0', grad_fn=<SigmoidBackward0>)
+INFO:root:tensor(0.9395, device='cuda:0', grad_fn=<MeanBackward0>), tensor(0.0039, device='cuda:0', grad_fn=<SumBackward0>), tensor(0.9835, device='cuda:0', grad_fn=<SumBackward0>)
+INFO:root:total frame 100, total fake frame 0
+INFO:root:iter 1
+INFO:root:tensor([[0.5828]], device='cuda:0', grad_fn=<SigmoidBackward0>)
+INFO:root:tensor(0.8742, device='cuda:0', grad_fn=<MeanBackward0>), tensor(1.9991, device='cuda:0', grad_fn=<SumBackward0>), tensor(1.2049, device='cuda:0', grad_fn=<SumBackward0>)
+INFO:root:total frame 100, total fake frame 0
+INFO:root:iter 2
+INFO:root:tensor([[0.5169]], device='cuda:0', grad_fn=<SigmoidBackward0>)
+INFO:root:tensor(0.7275, device='cuda:0', grad_fn=<MeanBackward0>), tensor(1.6686, device='cuda:0', grad_fn=<SumBackward0>), tensor(0.9304, device='cuda:0', grad_fn=<SumBackward0>)
+INFO:root:total frame 100, total fake frame 18
+INFO:root:iter 3
+INFO:root:tensor([[0.4577]], device='cuda:0', grad_fn=<SigmoidBackward0>)
+INFO:root:tensor(0.6119, device='cuda:0', grad_fn=<MeanBackward0>), tensor(1.0563, device='cuda:0', grad_fn=<SumBackward0>), tensor(0.8587, device='cuda:0', grad_fn=<SumBackward0>)
+INFO:root:total frame 100, total fake frame 88
+INFO:root:iter 4
+INFO:root:tensor([[0.4580]], device='cuda:0', grad_fn=<SigmoidBackward0>)
+INFO:root:tensor(0.6125, device='cuda:0', grad_fn=<MeanBackward0>), tensor(0.7150, device='cuda:0', grad_fn=<SumBackward0>), tensor(1.0127, device='cuda:0', grad_fn=<SumBackward0>)
+INFO:root:total frame 100, total fake frame 98
+INFO:root:iter 5
+INFO:root:tensor([[0.4631]], device='cuda:0', grad_fn=<SigmoidBackward0>)
+INFO:root:tensor(0.6219, device='cuda:0', grad_fn=<MeanBackward0>), tensor(0.7709, device='cuda:0', grad_fn=<SumBackward0>), tensor(1.1274, device='cuda:0', grad_fn=<SumBackward0>)
+INFO:root:total frame 100, total fake frame 100
+INFO:root:iter 6
+INFO:root:tensor([[0.4151]], device='cuda:0', grad_fn=<SigmoidBackward0>)
+INFO:root:tensor(0.5362, device='cuda:0', grad_fn=<MeanBackward0>), tensor(0.8879, device='cuda:0', grad_fn=<SumBackward0>), tensor(1.0927, device='cuda:0', grad_fn=<SumBackward0>)
+INFO:root:total frame 100, total fake frame 66
+INFO:root:iter 7
+INFO:root:tensor([[0.4130]], device='cuda:0', grad_fn=<SigmoidBackward0>)
+INFO:root:tensor(0.5327, device='cuda:0', grad_fn=<MeanBackward0>), tensor(0.9261, device='cuda:0', grad_fn=<SumBackward0>), tensor(0.9142, device='cuda:0', grad_fn=<SumBackward0>)
+INFO:root:total frame 100, total fake frame 31
+INFO:root:iter 8
+INFO:root:tensor([[0.4094]], device='cuda:0', grad_fn=<SigmoidBackward0>)
+INFO:root:tensor(0.5266, device='cuda:0', grad_fn=<MeanBackward0>), tensor(0.9800, device='cuda:0', grad_fn=<SumBackward0>), tensor(0.7217, device='cuda:0', grad_fn=<SumBackward0>)
+INFO:root:total frame 100, total fake frame 21
+INFO:root:iter 9
+INFO:root:tensor([[0.4156]], device='cuda:0', grad_fn=<SigmoidBackward0>)
+INFO:root:tensor(0.5372, device='cuda:0', grad_fn=<MeanBackward0>), tensor(1.0893, device='cuda:0', grad_fn=<SumBackward0>), tensor(0.6853, device='cuda:0', grad_fn=<SumBackward0>)
+INFO:root:total frame 100, total fake frame 14
+INFO:root:iter 10
+INFO:root:tensor([[0.4085]], device='cuda:0', grad_fn=<SigmoidBackward0>)
+INFO:root:tensor(0.5252, device='cuda:0', grad_fn=<MeanBackward0>), tensor(1.1475, device='cuda:0', grad_fn=<SumBackward0>), tensor(0.6959, device='cuda:0', grad_fn=<SumBackward0>)
+INFO:root:total frame 100, total fake frame 10
+INFO:root:iter 11
+INFO:root:tensor([[0.4036]], device='cuda:0', grad_fn=<SigmoidBackward0>)
+INFO:root:tensor(0.5168, device='cuda:0', grad_fn=<MeanBackward0>), tensor(1.1158, device='cuda:0', grad_fn=<SumBackward0>), tensor(0.6513, device='cuda:0', grad_fn=<SumBackward0>)
+INFO:root:total frame 100, total fake frame 11
+INFO:root:iter 12
+INFO:root:tensor([[0.4016]], device='cuda:0', grad_fn=<SigmoidBackward0>)
+INFO:root:tensor(0.5134, device='cuda:0', grad_fn=<MeanBackward0>), tensor(1.0267, device='cuda:0', grad_fn=<SumBackward0>), tensor(0.6070, device='cuda:0', grad_fn=<SumBackward0>)
+INFO:root:total frame 100, total fake frame 12
+INFO:root:iter 13
+INFO:root:tensor([[0.4125]], device='cuda:0', grad_fn=<SigmoidBackward0>)
+INFO:root:tensor(0.5320, device='cuda:0', grad_fn=<MeanBackward0>), tensor(0.9375, device='cuda:0', grad_fn=<SumBackward0>), tensor(0.6203, device='cuda:0', grad_fn=<SumBackward0>)
+INFO:root:total frame 100, total fake frame 23
+INFO:root:iter 14
+INFO:root:tensor([[0.4097]], device='cuda:0', grad_fn=<SigmoidBackward0>)
+INFO:root:tensor(0.5271, device='cuda:0', grad_fn=<MeanBackward0>), tensor(0.8723, device='cuda:0', grad_fn=<SumBackward0>), tensor(0.6557, device='cuda:0', grad_fn=<SumBackward0>)
+INFO:root:total frame 100, total fake frame 33
+INFO:root:iter 15
+INFO:root:tensor([[0.4057]], device='cuda:0', grad_fn=<SigmoidBackward0>)
+INFO:root:tensor(0.5204, device='cuda:0', grad_fn=<MeanBackward0>), tensor(0.8275, device='cuda:0', grad_fn=<SumBackward0>), tensor(0.6721, device='cuda:0', grad_fn=<SumBackward0>)
+INFO:root:total frame 100, total fake frame 36
+INFO:root:iter 16
+INFO:root:tensor([[0.4018]], device='cuda:0', grad_fn=<SigmoidBackward0>)
+INFO:root:tensor(0.5139, device='cuda:0', grad_fn=<MeanBackward0>), tensor(0.8110, device='cuda:0', grad_fn=<SumBackward0>), tensor(0.6586, device='cuda:0', grad_fn=<SumBackward0>)
+INFO:root:total frame 100, total fake frame 31
+INFO:root:iter 17
+INFO:root:tensor([[0.4007]], device='cuda:0', grad_fn=<SigmoidBackward0>)
+INFO:root:tensor(0.5120, device='cuda:0', grad_fn=<MeanBackward0>), tensor(0.8279, device='cuda:0', grad_fn=<SumBackward0>), tensor(0.6168, device='cuda:0', grad_fn=<SumBackward0>)
+INFO:root:total frame 100, total fake frame 22
+INFO:root:iter 18
+INFO:root:tensor([[0.4026]], device='cuda:0', grad_fn=<SigmoidBackward0>)
+INFO:root:tensor(0.5151, device='cuda:0', grad_fn=<MeanBackward0>), tensor(0.8714, device='cuda:0', grad_fn=<SumBackward0>), tensor(0.5575, device='cuda:0', grad_fn=<SumBackward0>)
+INFO:root:total frame 100, total fake frame 18
+INFO:root:iter 19
+INFO:root:tensor([[0.4037]], device='cuda:0', grad_fn=<SigmoidBackward0>)
+INFO:root:tensor(0.5171, device='cuda:0', grad_fn=<MeanBackward0>), tensor(0.9240, device='cuda:0', grad_fn=<SumBackward0>), tensor(0.5091, device='cuda:0', grad_fn=<SumBackward0>)
+INFO:root:total frame 100, total fake frame 16
+INFO:root:iter 20
+INFO:root:tensor([[0.4105]], device='cuda:0', grad_fn=<SigmoidBackward0>)
+INFO:root:tensor(0.5284, device='cuda:0', grad_fn=<MeanBackward0>), tensor(0.9457, device='cuda:0', grad_fn=<SumBackward0>), tensor(0.4777, device='cuda:0', grad_fn=<SumBackward0>)
+INFO:root:total frame 100, total fake frame 16
+INFO:root:iter 21
+INFO:root:tensor([[0.4090]], device='cuda:0', grad_fn=<SigmoidBackward0>)
+INFO:root:tensor(0.5260, device='cuda:0', grad_fn=<MeanBackward0>), tensor(0.9337, device='cuda:0', grad_fn=<SumBackward0>), tensor(0.4675, device='cuda:0', grad_fn=<SumBackward0>)
+INFO:root:total frame 100, total fake frame 16
+INFO:root:iter 22
+INFO:root:tensor([[0.4160]], device='cuda:0', grad_fn=<SigmoidBackward0>)
+INFO:root:tensor(0.5379, device='cuda:0', grad_fn=<MeanBackward0>), tensor(0.9057, device='cuda:0', grad_fn=<SumBackward0>), tensor(0.4645, device='cuda:0', grad_fn=<SumBackward0>)
+INFO:root:total frame 100, total fake frame 17
+INFO:root:iter 23
+INFO:root:tensor([[0.4111]], device='cuda:0', grad_fn=<SigmoidBackward0>)
+INFO:root:tensor(0.5295, device='cuda:0', grad_fn=<MeanBackward0>), tensor(0.8890, device='cuda:0', grad_fn=<SumBackward0>), tensor(0.4703, device='cuda:0', grad_fn=<SumBackward0>)
+INFO:root:total frame 100, total fake frame 16
+INFO:root:iter 24
+INFO:root:tensor([[0.4120]], device='cuda:0', grad_fn=<SigmoidBackward0>)
+INFO:root:tensor(0.5310, device='cuda:0', grad_fn=<MeanBackward0>), tensor(0.8810, device='cuda:0', grad_fn=<SumBackward0>), tensor(0.4685, device='cuda:0', grad_fn=<SumBackward0>)
+INFO:root:total frame 100, total fake frame 15
+INFO:root:iter 25
+INFO:root:tensor([[0.4078]], device='cuda:0', grad_fn=<SigmoidBackward0>)
+INFO:root:tensor(0.5239, device='cuda:0', grad_fn=<MeanBackward0>), tensor(0.8812, device='cuda:0', grad_fn=<SumBackward0>), tensor(0.4589, device='cuda:0', grad_fn=<SumBackward0>)
+INFO:root:total frame 100, total fake frame 12
+INFO:root:iter 26
+INFO:root:tensor([[0.4140]], device='cuda:0', grad_fn=<SigmoidBackward0>)
+INFO:root:tensor(0.5345, device='cuda:0', grad_fn=<MeanBackward0>), tensor(0.8845, device='cuda:0', grad_fn=<SumBackward0>), tensor(0.4387, device='cuda:0', grad_fn=<SumBackward0>)
+INFO:root:total frame 100, total fake frame 12
+INFO:root:iter 27
+INFO:root:tensor([[0.4113]], device='cuda:0', grad_fn=<SigmoidBackward0>)
+INFO:root:tensor(0.5299, device='cuda:0', grad_fn=<MeanBackward0>), tensor(0.8969, device='cuda:0', grad_fn=<SumBackward0>), tensor(0.4238, device='cuda:0', grad_fn=<SumBackward0>)
+INFO:root:total frame 100, total fake frame 11
+INFO:root:iter 28
+INFO:root:tensor([[0.4156]], device='cuda:0', grad_fn=<SigmoidBackward0>)
+INFO:root:tensor(0.5372, device='cuda:0', grad_fn=<MeanBackward0>), tensor(0.9055, device='cuda:0', grad_fn=<SumBackward0>), tensor(0.4117, device='cuda:0', grad_fn=<SumBackward0>)
+INFO:root:total frame 100, total fake frame 13
+INFO:root:iter 29
+INFO:root:tensor([[0.4154]], device='cuda:0', grad_fn=<SigmoidBackward0>)
+INFO:root:tensor(0.5368, device='cuda:0', grad_fn=<MeanBackward0>), tensor(0.9036, device='cuda:0', grad_fn=<SumBackward0>), tensor(0.4024, device='cuda:0', grad_fn=<SumBackward0>)
+INFO:root:total frame 100, total fake frame 12
+INFO:root:iter 30
+INFO:root:tensor([[0.4158]], device='cuda:0', grad_fn=<SigmoidBackward0>)
+INFO:root:tensor(0.5376, device='cuda:0', grad_fn=<MeanBackward0>), tensor(0.8994, device='cuda:0', grad_fn=<SumBackward0>), tensor(0.3960, device='cuda:0', grad_fn=<SumBackward0>)
+INFO:root:total frame 100, total fake frame 12
+INFO:root:iter 31
+INFO:root:tensor([[0.4181]], device='cuda:0', grad_fn=<SigmoidBackward0>)
+INFO:root:tensor(0.5414, device='cuda:0', grad_fn=<MeanBackward0>), tensor(0.8974, device='cuda:0', grad_fn=<SumBackward0>), tensor(0.3893, device='cuda:0', grad_fn=<SumBackward0>)
+INFO:root:total frame 100, total fake frame 14
+INFO:root:iter 32
+INFO:root:tensor([[0.4157]], device='cuda:0', grad_fn=<SigmoidBackward0>)
+INFO:root:tensor(0.5373, device='cuda:0', grad_fn=<MeanBackward0>), tensor(0.8997, device='cuda:0', grad_fn=<SumBackward0>), tensor(0.3843, device='cuda:0', grad_fn=<SumBackward0>)
+INFO:root:total frame 100, total fake frame 13
+INFO:root:iter 33
+INFO:root:tensor([[0.4234]], device='cuda:0', grad_fn=<SigmoidBackward0>)
+INFO:root:tensor(0.5507, device='cuda:0', grad_fn=<MeanBackward0>), tensor(0.9011, device='cuda:0', grad_fn=<SumBackward0>), tensor(0.3746, device='cuda:0', grad_fn=<SumBackward0>)
+INFO:root:total frame 100, total fake frame 12
+INFO:root:iter 34
+INFO:root:tensor([[0.4158]], device='cuda:0', grad_fn=<SigmoidBackward0>)
+INFO:root:tensor(0.5375, device='cuda:0', grad_fn=<MeanBackward0>), tensor(0.9069, device='cuda:0', grad_fn=<SumBackward0>), tensor(0.3736, device='cuda:0', grad_fn=<SumBackward0>)
+INFO:root:total frame 100, total fake frame 13
+INFO:root:iter 35
+INFO:root:tensor([[0.4237]], device='cuda:0', grad_fn=<SigmoidBackward0>)
+INFO:root:tensor(0.5511, device='cuda:0', grad_fn=<MeanBackward0>), tensor(0.9044, device='cuda:0', grad_fn=<SumBackward0>), tensor(0.3692, device='cuda:0', grad_fn=<SumBackward0>)
+INFO:root:total frame 100, total fake frame 12
+INFO:root:iter 36
+INFO:root:tensor([[0.4183]], device='cuda:0', grad_fn=<SigmoidBackward0>)
+INFO:root:tensor(0.5417, device='cuda:0', grad_fn=<MeanBackward0>), tensor(0.9053, device='cuda:0', grad_fn=<SumBackward0>), tensor(0.3700, device='cuda:0', grad_fn=<SumBackward0>)
+INFO:root:total frame 100, total fake frame 12
+INFO:root:iter 37
+INFO:root:tensor([[0.4231]], device='cuda:0', grad_fn=<SigmoidBackward0>)
+INFO:root:tensor(0.5500, device='cuda:0', grad_fn=<MeanBackward0>), tensor(0.9037, device='cuda:0', grad_fn=<SumBackward0>), tensor(0.3642, device='cuda:0', grad_fn=<SumBackward0>)
+INFO:root:total frame 100, total fake frame 12
+INFO:root:iter 38
+INFO:root:tensor([[0.4192]], device='cuda:0', grad_fn=<SigmoidBackward0>)
+INFO:root:tensor(0.5434, device='cuda:0', grad_fn=<MeanBackward0>), tensor(0.9063, device='cuda:0', grad_fn=<SumBackward0>), tensor(0.3608, device='cuda:0', grad_fn=<SumBackward0>)
+INFO:root:total frame 100, total fake frame 12
+INFO:root:iter 39
+INFO:root:tensor([[0.4235]], device='cuda:0', grad_fn=<SigmoidBackward0>)
+INFO:root:tensor(0.5508, device='cuda:0', grad_fn=<MeanBackward0>), tensor(0.9076, device='cuda:0', grad_fn=<SumBackward0>), tensor(0.3535, device='cuda:0', grad_fn=<SumBackward0>)
+INFO:root:total frame 100, total fake frame 13
+INFO:root:iter 40
+INFO:root:tensor([[0.4211]], device='cuda:0', grad_fn=<SigmoidBackward0>)
+INFO:root:tensor(0.5466, device='cuda:0', grad_fn=<MeanBackward0>), tensor(0.9098, device='cuda:0', grad_fn=<SumBackward0>), tensor(0.3483, device='cuda:0', grad_fn=<SumBackward0>)
+INFO:root:total frame 100, total fake frame 11
+INFO:root:iter 41
+INFO:root:tensor([[0.4252]], device='cuda:0', grad_fn=<SigmoidBackward0>)
+INFO:root:tensor(0.5537, device='cuda:0', grad_fn=<MeanBackward0>), tensor(0.9081, device='cuda:0', grad_fn=<SumBackward0>), tensor(0.3436, device='cuda:0', grad_fn=<SumBackward0>)
+INFO:root:total frame 100, total fake frame 14
+INFO:root:iter 42
+INFO:root:tensor([[0.4225]], device='cuda:0', grad_fn=<SigmoidBackward0>)
+INFO:root:tensor(0.5491, device='cuda:0', grad_fn=<MeanBackward0>), tensor(0.9079, device='cuda:0', grad_fn=<SumBackward0>), tensor(0.3431, device='cuda:0', grad_fn=<SumBackward0>)
+INFO:root:total frame 100, total fake frame 12
+INFO:root:iter 43
+INFO:root:tensor([[0.4254]], device='cuda:0', grad_fn=<SigmoidBackward0>)
+INFO:root:tensor(0.5540, device='cuda:0', grad_fn=<MeanBackward0>), tensor(0.9074, device='cuda:0', grad_fn=<SumBackward0>), tensor(0.3418, device='cuda:0', grad_fn=<SumBackward0>)
+INFO:root:total frame 100, total fake frame 10
+INFO:root:iter 44
+INFO:root:tensor([[0.4217]], device='cuda:0', grad_fn=<SigmoidBackward0>)
+INFO:root:tensor(0.5477, device='cuda:0', grad_fn=<MeanBackward0>), tensor(0.9106, device='cuda:0', grad_fn=<SumBackward0>), tensor(0.3426, device='cuda:0', grad_fn=<SumBackward0>)
+INFO:root:total frame 100, total fake frame 11
+INFO:root:iter 45
+INFO:root:tensor([[0.4233]], device='cuda:0', grad_fn=<SigmoidBackward0>)
+INFO:root:tensor(0.5504, device='cuda:0', grad_fn=<MeanBackward0>), tensor(0.9125, device='cuda:0', grad_fn=<SumBackward0>), tensor(0.3395, device='cuda:0', grad_fn=<SumBackward0>)
+INFO:root:total frame 100, total fake frame 11
+INFO:root:iter 46
+INFO:root:tensor([[0.4238]], device='cuda:0', grad_fn=<SigmoidBackward0>)
+INFO:root:tensor(0.5513, device='cuda:0', grad_fn=<MeanBackward0>), tensor(0.9131, device='cuda:0', grad_fn=<SumBackward0>), tensor(0.3375, device='cuda:0', grad_fn=<SumBackward0>)
+INFO:root:total frame 100, total fake frame 11
+INFO:root:iter 47
+INFO:root:tensor([[0.4254]], device='cuda:0', grad_fn=<SigmoidBackward0>)
+INFO:root:tensor(0.5541, device='cuda:0', grad_fn=<MeanBackward0>), tensor(0.9119, device='cuda:0', grad_fn=<SumBackward0>), tensor(0.3360, device='cuda:0', grad_fn=<SumBackward0>)
+INFO:root:total frame 100, total fake frame 13
+INFO:root:iter 48
+INFO:root:tensor([[0.4213]], device='cuda:0', grad_fn=<SigmoidBackward0>)
+INFO:root:tensor(0.5471, device='cuda:0', grad_fn=<MeanBackward0>), tensor(0.9123, device='cuda:0', grad_fn=<SumBackward0>), tensor(0.3363, device='cuda:0', grad_fn=<SumBackward0>)
+INFO:root:total frame 100, total fake frame 11
+INFO:root:iter 49
+INFO:root:tensor([[0.4278]], device='cuda:0', grad_fn=<SigmoidBackward0>)
+INFO:root:tensor(0.5583, device='cuda:0', grad_fn=<MeanBackward0>), tensor(0.9096, device='cuda:0', grad_fn=<SumBackward0>), tensor(0.3298, device='cuda:0', grad_fn=<SumBackward0>)
+INFO:root:total frame 100, total fake frame 10
+INFO:root:iter 50
+INFO:root:tensor([[0.4213]], device='cuda:0', grad_fn=<SigmoidBackward0>)
+INFO:root:tensor(0.5469, device='cuda:0', grad_fn=<MeanBackward0>), tensor(0.9120, device='cuda:0', grad_fn=<SumBackward0>), tensor(0.3309, device='cuda:0', grad_fn=<SumBackward0>)
+INFO:root:total frame 100, total fake frame 10
+INFO:root:iter 51
+INFO:root:tensor([[0.4284]], device='cuda:0', grad_fn=<SigmoidBackward0>)
+INFO:root:tensor(0.5594, device='cuda:0', grad_fn=<MeanBackward0>), tensor(0.9079, device='cuda:0', grad_fn=<SumBackward0>), tensor(0.3267, device='cuda:0', grad_fn=<SumBackward0>)
+INFO:root:total frame 100, total fake frame 10
+INFO:root:iter 52
+INFO:root:tensor([[0.4225]], device='cuda:0', grad_fn=<SigmoidBackward0>)
+INFO:root:tensor(0.5491, device='cuda:0', grad_fn=<MeanBackward0>), tensor(0.9091, device='cuda:0', grad_fn=<SumBackward0>), tensor(0.3297, device='cuda:0', grad_fn=<SumBackward0>)
+INFO:root:total frame 100, total fake frame 10
+INFO:root:iter 53
+INFO:root:tensor([[0.4300]], device='cuda:0', grad_fn=<SigmoidBackward0>)
+INFO:root:tensor(0.5621, device='cuda:0', grad_fn=<MeanBackward0>), tensor(0.9084, device='cuda:0', grad_fn=<SumBackward0>), tensor(0.3267, device='cuda:0', grad_fn=<SumBackward0>)
+INFO:root:total frame 100, total fake frame 11
+INFO:root:iter 54
+INFO:root:tensor([[0.4215]], device='cuda:0', grad_fn=<SigmoidBackward0>)
+INFO:root:tensor(0.5472, device='cuda:0', grad_fn=<MeanBackward0>), tensor(0.9129, device='cuda:0', grad_fn=<SumBackward0>), tensor(0.3315, device='cuda:0', grad_fn=<SumBackward0>)
+INFO:root:total frame 100, total fake frame 10
+INFO:root:iter 55
+INFO:root:tensor([[0.4269]], device='cuda:0', grad_fn=<SigmoidBackward0>)
+INFO:root:tensor(0.5566, device='cuda:0', grad_fn=<MeanBackward0>), tensor(0.9120, device='cuda:0', grad_fn=<SumBackward0>), tensor(0.3296, device='cuda:0', grad_fn=<SumBackward0>)
+INFO:root:total frame 100, total fake frame 10
+INFO:root:iter 56
+INFO:root:tensor([[0.4237]], device='cuda:0', grad_fn=<SigmoidBackward0>)
+INFO:root:tensor(0.5512, device='cuda:0', grad_fn=<MeanBackward0>), tensor(0.9111, device='cuda:0', grad_fn=<SumBackward0>), tensor(0.3310, device='cuda:0', grad_fn=<SumBackward0>)
+INFO:root:total frame 100, total fake frame 12
+INFO:root:iter 57
+INFO:root:tensor([[0.4311]], device='cuda:0', grad_fn=<SigmoidBackward0>)
+INFO:root:tensor(0.5641, device='cuda:0', grad_fn=<MeanBackward0>), tensor(0.9088, device='cuda:0', grad_fn=<SumBackward0>), tensor(0.3266, device='cuda:0', grad_fn=<SumBackward0>)
+INFO:root:total frame 100, total fake frame 12
+INFO:root:iter 58
+INFO:root:tensor([[0.4219]], device='cuda:0', grad_fn=<SigmoidBackward0>)
+INFO:root:tensor(0.5480, device='cuda:0', grad_fn=<MeanBackward0>), tensor(0.9151, device='cuda:0', grad_fn=<SumBackward0>), tensor(0.3337, device='cuda:0', grad_fn=<SumBackward0>)
+INFO:root:total frame 100, total fake frame 9
+INFO:root:iter 59
+INFO:root:tensor([[0.4300]], device='cuda:0', grad_fn=<SigmoidBackward0>)
+INFO:root:tensor(0.5620, device='cuda:0', grad_fn=<MeanBackward0>), tensor(0.9116, device='cuda:0', grad_fn=<SumBackward0>), tensor(0.3286, device='cuda:0', grad_fn=<SumBackward0>)
+INFO:root:total frame 100, total fake frame 12
+INFO:root:iter 60
+INFO:root:tensor([[0.4263]], device='cuda:0', grad_fn=<SigmoidBackward0>)
+INFO:root:tensor(0.5556, device='cuda:0', grad_fn=<MeanBackward0>), tensor(0.9109, device='cuda:0', grad_fn=<SumBackward0>), tensor(0.3299, device='cuda:0', grad_fn=<SumBackward0>)
+INFO:root:total frame 100, total fake frame 10
+INFO:root:iter 61
+INFO:root:tensor([[0.4267]], device='cuda:0', grad_fn=<SigmoidBackward0>)
+INFO:root:tensor(0.5563, device='cuda:0', grad_fn=<MeanBackward0>), tensor(0.9094, device='cuda:0', grad_fn=<SumBackward0>), tensor(0.3298, device='cuda:0', grad_fn=<SumBackward0>)
+INFO:root:total frame 100, total fake frame 9
+INFO:root:iter 62
+INFO:root:tensor([[0.4230]], device='cuda:0', grad_fn=<SigmoidBackward0>)
+INFO:root:tensor(0.5500, device='cuda:0', grad_fn=<MeanBackward0>), tensor(0.9104, device='cuda:0', grad_fn=<SumBackward0>), tensor(0.3314, device='cuda:0', grad_fn=<SumBackward0>)
+INFO:root:total frame 100, total fake frame 11
+INFO:root:iter 63
+INFO:root:tensor([[0.4280]], device='cuda:0', grad_fn=<SigmoidBackward0>)
+INFO:root:tensor(0.5586, device='cuda:0', grad_fn=<MeanBackward0>), tensor(0.9106, device='cuda:0', grad_fn=<SumBackward0>), tensor(0.3288, device='cuda:0', grad_fn=<SumBackward0>)
+INFO:root:total frame 100, total fake frame 12
+INFO:root:iter 64
+INFO:root:tensor([[0.4254]], device='cuda:0', grad_fn=<SigmoidBackward0>)
+INFO:root:tensor(0.5541, device='cuda:0', grad_fn=<MeanBackward0>), tensor(0.9150, device='cuda:0', grad_fn=<SumBackward0>), tensor(0.3308, device='cuda:0', grad_fn=<SumBackward0>)
+INFO:root:total frame 100, total fake frame 12
+INFO:root:iter 65
+INFO:root:tensor([[0.4286]], device='cuda:0', grad_fn=<SigmoidBackward0>)
+INFO:root:tensor(0.5597, device='cuda:0', grad_fn=<MeanBackward0>), tensor(0.9151, device='cuda:0', grad_fn=<SumBackward0>), tensor(0.3284, device='cuda:0', grad_fn=<SumBackward0>)
+INFO:root:total frame 100, total fake frame 11
+INFO:root:iter 66
+INFO:root:tensor([[0.4242]], device='cuda:0', grad_fn=<SigmoidBackward0>)
+INFO:root:tensor(0.5519, device='cuda:0', grad_fn=<MeanBackward0>), tensor(0.9165, device='cuda:0', grad_fn=<SumBackward0>), tensor(0.3309, device='cuda:0', grad_fn=<SumBackward0>)
+INFO:root:total frame 100, total fake frame 11
+INFO:root:iter 67
+INFO:root:tensor([[0.4290]], device='cuda:0', grad_fn=<SigmoidBackward0>)
+INFO:root:tensor(0.5604, device='cuda:0', grad_fn=<MeanBackward0>), tensor(0.9127, device='cuda:0', grad_fn=<SumBackward0>), tensor(0.3275, device='cuda:0', grad_fn=<SumBackward0>)
+INFO:root:total frame 100, total fake frame 12
+INFO:root:iter 68
+INFO:root:tensor([[0.4239]], device='cuda:0', grad_fn=<SigmoidBackward0>)
+INFO:root:tensor(0.5515, device='cuda:0', grad_fn=<MeanBackward0>), tensor(0.9125, device='cuda:0', grad_fn=<SumBackward0>), tensor(0.3289, device='cuda:0', grad_fn=<SumBackward0>)
+INFO:root:total frame 100, total fake frame 12
+INFO:root:iter 69
+INFO:root:tensor([[0.4219]], device='cuda:0', grad_fn=<SigmoidBackward0>)
+INFO:root:tensor(0.5480, device='cuda:0', grad_fn=<MeanBackward0>), tensor(0.9123, device='cuda:0', grad_fn=<SumBackward0>), tensor(0.3301, device='cuda:0', grad_fn=<SumBackward0>)
+INFO:root:total frame 100, total fake frame 12
+INFO:root:iter 70
+INFO:root:tensor([[0.4285]], device='cuda:0', grad_fn=<SigmoidBackward0>)
+INFO:root:tensor(0.5595, device='cuda:0', grad_fn=<MeanBackward0>), tensor(0.9073, device='cuda:0', grad_fn=<SumBackward0>), tensor(0.3247, device='cuda:0', grad_fn=<SumBackward0>)
+INFO:root:total frame 100, total fake frame 11
+INFO:root:iter 71
+INFO:root:tensor([[0.4230]], device='cuda:0', grad_fn=<SigmoidBackward0>)
+INFO:root:tensor(0.5499, device='cuda:0', grad_fn=<MeanBackward0>), tensor(0.9094, device='cuda:0', grad_fn=<SumBackward0>), tensor(0.3280, device='cuda:0', grad_fn=<SumBackward0>)
+INFO:root:total frame 100, total fake frame 10
+INFO:root:iter 72
+INFO:root:tensor([[0.4296]], device='cuda:0', grad_fn=<SigmoidBackward0>)
+INFO:root:tensor(0.5613, device='cuda:0', grad_fn=<MeanBackward0>), tensor(0.9082, device='cuda:0', grad_fn=<SumBackward0>), tensor(0.3244, device='cuda:0', grad_fn=<SumBackward0>)
+INFO:root:total frame 100, total fake frame 9
+INFO:root:iter 73
+INFO:root:tensor([[0.4278]], device='cuda:0', grad_fn=<SigmoidBackward0>)
+INFO:root:tensor(0.5583, device='cuda:0', grad_fn=<MeanBackward0>), tensor(0.9102, device='cuda:0', grad_fn=<SumBackward0>), tensor(0.3274, device='cuda:0', grad_fn=<SumBackward0>)
+INFO:root:total frame 100, total fake frame 10
+INFO:root:iter 74
+INFO:root:tensor([[0.4275]], device='cuda:0', grad_fn=<SigmoidBackward0>)
+INFO:root:tensor(0.5577, device='cuda:0', grad_fn=<MeanBackward0>), tensor(0.9100, device='cuda:0', grad_fn=<SumBackward0>), tensor(0.3283, device='cuda:0', grad_fn=<SumBackward0>)
+INFO:root:total frame 100, total fake frame 11
+INFO:root:iter 75
+INFO:root:tensor([[0.4281]], device='cuda:0', grad_fn=<SigmoidBackward0>)
+INFO:root:tensor(0.5588, device='cuda:0', grad_fn=<MeanBackward0>), tensor(0.9105, device='cuda:0', grad_fn=<SumBackward0>), tensor(0.3274, device='cuda:0', grad_fn=<SumBackward0>)
+INFO:root:total frame 100, total fake frame 9
+INFO:root:iter 76
+INFO:root:tensor([[0.4265]], device='cuda:0', grad_fn=<SigmoidBackward0>)
+INFO:root:tensor(0.5561, device='cuda:0', grad_fn=<MeanBackward0>), tensor(0.9113, device='cuda:0', grad_fn=<SumBackward0>), tensor(0.3274, device='cuda:0', grad_fn=<SumBackward0>)
+INFO:root:total frame 100, total fake frame 9
+INFO:root:iter 77
+INFO:root:tensor([[0.4245]], device='cuda:0', grad_fn=<SigmoidBackward0>)
+INFO:root:tensor(0.5525, device='cuda:0', grad_fn=<MeanBackward0>), tensor(0.9121, device='cuda:0', grad_fn=<SumBackward0>), tensor(0.3291, device='cuda:0', grad_fn=<SumBackward0>)
+INFO:root:total frame 100, total fake frame 10
+INFO:root:iter 78
+INFO:root:tensor([[0.4253]], device='cuda:0', grad_fn=<SigmoidBackward0>)
+INFO:root:tensor(0.5538, device='cuda:0', grad_fn=<MeanBackward0>), tensor(0.9103, device='cuda:0', grad_fn=<SumBackward0>), tensor(0.3271, device='cuda:0', grad_fn=<SumBackward0>)
+INFO:root:total frame 100, total fake frame 12
+INFO:root:iter 79
+INFO:root:tensor([[0.4227]], device='cuda:0', grad_fn=<SigmoidBackward0>)
+INFO:root:tensor(0.5493, device='cuda:0', grad_fn=<MeanBackward0>), tensor(0.9103, device='cuda:0', grad_fn=<SumBackward0>), tensor(0.3276, device='cuda:0', grad_fn=<SumBackward0>)
+INFO:root:total frame 100, total fake frame 12
+INFO:root:iter 80
+INFO:root:tensor([[0.4250]], device='cuda:0', grad_fn=<SigmoidBackward0>)
+INFO:root:tensor(0.5534, device='cuda:0', grad_fn=<MeanBackward0>), tensor(0.9079, device='cuda:0', grad_fn=<SumBackward0>), tensor(0.3254, device='cuda:0', grad_fn=<SumBackward0>)
+INFO:root:total frame 100, total fake frame 11
+INFO:root:iter 81
+INFO:root:tensor([[0.4243]], device='cuda:0', grad_fn=<SigmoidBackward0>)
+INFO:root:tensor(0.5522, device='cuda:0', grad_fn=<MeanBackward0>), tensor(0.9076, device='cuda:0', grad_fn=<SumBackward0>), tensor(0.3257, device='cuda:0', grad_fn=<SumBackward0>)
+INFO:root:total frame 100, total fake frame 11
+INFO:root:iter 82
+INFO:root:tensor([[0.4273]], device='cuda:0', grad_fn=<SigmoidBackward0>)
+INFO:root:tensor(0.5573, device='cuda:0', grad_fn=<MeanBackward0>), tensor(0.9070, device='cuda:0', grad_fn=<SumBackward0>), tensor(0.3242, device='cuda:0', grad_fn=<SumBackward0>)
+INFO:root:total frame 100, total fake frame 10
+INFO:root:iter 83
+INFO:root:tensor([[0.4255]], device='cuda:0', grad_fn=<SigmoidBackward0>)
+INFO:root:tensor(0.5543, device='cuda:0', grad_fn=<MeanBackward0>), tensor(0.9081, device='cuda:0', grad_fn=<SumBackward0>), tensor(0.3249, device='cuda:0', grad_fn=<SumBackward0>)
+INFO:root:total frame 100, total fake frame 8
+INFO:root:iter 84
+INFO:root:tensor([[0.4293]], device='cuda:0', grad_fn=<SigmoidBackward0>)
+INFO:root:tensor(0.5608, device='cuda:0', grad_fn=<MeanBackward0>), tensor(0.9070, device='cuda:0', grad_fn=<SumBackward0>), tensor(0.3237, device='cuda:0', grad_fn=<SumBackward0>)
+INFO:root:total frame 100, total fake frame 9
+INFO:root:iter 85
+INFO:root:tensor([[0.4257]], device='cuda:0', grad_fn=<SigmoidBackward0>)
+INFO:root:tensor(0.5546, device='cuda:0', grad_fn=<MeanBackward0>), tensor(0.9089, device='cuda:0', grad_fn=<SumBackward0>), tensor(0.3271, device='cuda:0', grad_fn=<SumBackward0>)
+INFO:root:total frame 100, total fake frame 9
+INFO:root:iter 86
+INFO:root:tensor([[0.4275]], device='cuda:0', grad_fn=<SigmoidBackward0>)
+INFO:root:tensor(0.5578, device='cuda:0', grad_fn=<MeanBackward0>), tensor(0.9100, device='cuda:0', grad_fn=<SumBackward0>), tensor(0.3270, device='cuda:0', grad_fn=<SumBackward0>)
+INFO:root:total frame 100, total fake frame 10
+INFO:root:iter 87
+INFO:root:tensor([[0.4294]], device='cuda:0', grad_fn=<SigmoidBackward0>)
+INFO:root:tensor(0.5610, device='cuda:0', grad_fn=<MeanBackward0>), tensor(0.9088, device='cuda:0', grad_fn=<SumBackward0>), tensor(0.3241, device='cuda:0', grad_fn=<SumBackward0>)
+INFO:root:total frame 100, total fake frame 10
+INFO:root:iter 88
+INFO:root:tensor([[0.4283]], device='cuda:0', grad_fn=<SigmoidBackward0>)
+INFO:root:tensor(0.5591, device='cuda:0', grad_fn=<MeanBackward0>), tensor(0.9088, device='cuda:0', grad_fn=<SumBackward0>), tensor(0.3238, device='cuda:0', grad_fn=<SumBackward0>)
+INFO:root:total frame 100, total fake frame 10
+INFO:root:iter 89
+INFO:root:tensor([[0.4257]], device='cuda:0', grad_fn=<SigmoidBackward0>)
+INFO:root:tensor(0.5546, device='cuda:0', grad_fn=<MeanBackward0>), tensor(0.9112, device='cuda:0', grad_fn=<SumBackward0>), tensor(0.3277, device='cuda:0', grad_fn=<SumBackward0>)
+INFO:root:total frame 100, total fake frame 11
+INFO:root:iter 90
+INFO:root:tensor([[0.4234]], device='cuda:0', grad_fn=<SigmoidBackward0>)
+INFO:root:tensor(0.5506, device='cuda:0', grad_fn=<MeanBackward0>), tensor(0.9125, device='cuda:0', grad_fn=<SumBackward0>), tensor(0.3329, device='cuda:0', grad_fn=<SumBackward0>)
+INFO:root:total frame 100, total fake frame 11
+INFO:root:iter 91
+INFO:root:tensor([[0.4277]], device='cuda:0', grad_fn=<SigmoidBackward0>)
+INFO:root:tensor(0.5580, device='cuda:0', grad_fn=<MeanBackward0>), tensor(0.9100, device='cuda:0', grad_fn=<SumBackward0>), tensor(0.3317, device='cuda:0', grad_fn=<SumBackward0>)
+INFO:root:total frame 100, total fake frame 10
+INFO:root:iter 92
+INFO:root:tensor([[0.4243]], device='cuda:0', grad_fn=<SigmoidBackward0>)
+INFO:root:tensor(0.5522, device='cuda:0', grad_fn=<MeanBackward0>), tensor(0.9119, device='cuda:0', grad_fn=<SumBackward0>), tensor(0.3351, device='cuda:0', grad_fn=<SumBackward0>)
+INFO:root:total frame 100, total fake frame 10
+INFO:root:iter 93
+INFO:root:tensor([[0.4291]], device='cuda:0', grad_fn=<SigmoidBackward0>)
+INFO:root:tensor(0.5605, device='cuda:0', grad_fn=<MeanBackward0>), tensor(0.9091, device='cuda:0', grad_fn=<SumBackward0>), tensor(0.3305, device='cuda:0', grad_fn=<SumBackward0>)
+INFO:root:total frame 100, total fake frame 11
+INFO:root:iter 94
+INFO:root:tensor([[0.4256]], device='cuda:0', grad_fn=<SigmoidBackward0>)
+INFO:root:tensor(0.5545, device='cuda:0', grad_fn=<MeanBackward0>), tensor(0.9104, device='cuda:0', grad_fn=<SumBackward0>), tensor(0.3320, device='cuda:0', grad_fn=<SumBackward0>)
+INFO:root:total frame 100, total fake frame 11
+INFO:root:iter 95
+INFO:root:tensor([[0.4260]], device='cuda:0', grad_fn=<SigmoidBackward0>)
+INFO:root:tensor(0.5551, device='cuda:0', grad_fn=<MeanBackward0>), tensor(0.9097, device='cuda:0', grad_fn=<SumBackward0>), tensor(0.3285, device='cuda:0', grad_fn=<SumBackward0>)
+INFO:root:total frame 100, total fake frame 12
+INFO:root:iter 96
+INFO:root:tensor([[0.4249]], device='cuda:0', grad_fn=<SigmoidBackward0>)
+INFO:root:tensor(0.5532, device='cuda:0', grad_fn=<MeanBackward0>), tensor(0.9086, device='cuda:0', grad_fn=<SumBackward0>), tensor(0.3264, device='cuda:0', grad_fn=<SumBackward0>)
+INFO:root:total frame 100, total fake frame 13
+INFO:root:iter 97
+INFO:root:tensor([[0.4293]], device='cuda:0', grad_fn=<SigmoidBackward0>)
+INFO:root:tensor(0.5609, device='cuda:0', grad_fn=<MeanBackward0>), tensor(0.9062, device='cuda:0', grad_fn=<SumBackward0>), tensor(0.3234, device='cuda:0', grad_fn=<SumBackward0>)
+INFO:root:total frame 100, total fake frame 11
+INFO:root:iter 98
+INFO:root:tensor([[0.4253]], device='cuda:0', grad_fn=<SigmoidBackward0>)
+INFO:root:tensor(0.5539, device='cuda:0', grad_fn=<MeanBackward0>), tensor(0.9084, device='cuda:0', grad_fn=<SumBackward0>), tensor(0.3260, device='cuda:0', grad_fn=<SumBackward0>)
+INFO:root:total frame 100, total fake frame 10
+INFO:root:iter 99
+INFO:root:tensor([[0.4270]], device='cuda:0', grad_fn=<SigmoidBackward0>)
+INFO:root:tensor(0.5568, device='cuda:0', grad_fn=<MeanBackward0>), tensor(0.9100, device='cuda:0', grad_fn=<SumBackward0>), tensor(0.3271, device='cuda:0', grad_fn=<SumBackward0>)
+INFO:root:0 0.008430684
+INFO:root:1 0.008476814
+INFO:root:2 0.008647295
+INFO:root:3 0.008292116
+INFO:root:4 0.008760849
+INFO:root:5 0.008424448
+INFO:root:6 0.008479072
+INFO:root:7 0.008767589
+INFO:root:8 0.0086076185
+INFO:root:9 0.008807423
+INFO:root:10 0.00879363
+INFO:root:11 0.00894396
+INFO:root:12 0.008931065
+INFO:root:13 0.008939369
+INFO:root:14 0.008803209
+INFO:root:15 0.008888472
+INFO:root:16 0.008984543
+INFO:root:17 0.0088791475
+INFO:root:18 0.009022327
+INFO:root:19 0.008596907
+INFO:root:20 0.008950564
+INFO:root:21 0.009025123
+INFO:root:22 0.008937611
+INFO:root:23 0.008804278
+INFO:root:24 0.008643682
+INFO:root:25 0.009737069
+INFO:root:26 0.009123104
+INFO:root:27 0.008501403
+INFO:root:28 0.008409832
+INFO:root:29 0.008369608
+INFO:root:30 0.008722698
+INFO:root:31 0.008393227
+INFO:root:32 0.008287703
+INFO:root:33 0.008388962
+INFO:root:34 0.008392865
+INFO:root:35 0.008210562
+INFO:root:36 0.008414588
+INFO:root:37 0.007837154
+INFO:root:38 0.008537161
+INFO:root:39 0.007839626
+INFO:root:40 0.007339438
+INFO:root:41 0.007449638
+INFO:root:42 0.0075094504
+INFO:root:43 0.0073121074
+INFO:root:44 0.0077534756
+INFO:root:45 0.007309937
+INFO:root:46 0.0074418383
+INFO:root:47 0.0073205824
+INFO:root:48 0.007344558
+INFO:root:49 0.007335353
+INFO:root:50 0.0074648145
+INFO:root:51 0.0072759297
+INFO:root:52 0.0074510905
+INFO:root:53 0.0073797246
+INFO:root:54 0.007862066
+INFO:root:55 0.0074224174
+INFO:root:56 0.007921351
+INFO:root:57 0.0077624545
+INFO:root:58 0.008073773
+INFO:root:59 0.008221121
+INFO:root:60 0.008179974
+INFO:root:61 0.008377314
+INFO:root:62 0.008297058
+INFO:root:63 0.008533926
+INFO:root:64 0.00857836
+INFO:root:65 0.008730078
+INFO:root:66 0.008606722
+INFO:root:67 0.008651547
+INFO:root:68 0.008810433
+INFO:root:69 0.008716077
+INFO:root:70 0.008844687
+INFO:root:71 0.008823469
+INFO:root:72 0.008990977
+INFO:root:73 0.008920792
+INFO:root:74 0.008779595
+INFO:root:75 0.008602716
+INFO:root:76 0.008910142
+INFO:root:77 0.008876835
+INFO:root:78 0.008891205
+INFO:root:79 0.008874056
+INFO:root:80 0.009190483
+INFO:root:81 0.009192162
+INFO:root:82 0.009313815
+INFO:root:83 0.009311842
+INFO:root:84 0.0092792045
+INFO:root:85 0.009088573
+INFO:root:86 0.008901247
+INFO:root:87 0.0074517755
+INFO:root:88 0.009095059
+INFO:root:89 0.009423955
+INFO:root:90 0.00923748
+INFO:root:91 0.008820373
+INFO:root:92 0.007710064
+INFO:root:93 0.00777018
+INFO:root:94 0.007661117
+INFO:root:95 0.0077134944
+INFO:root:96 0.0077879336
+INFO:root:97 0.009126341
+INFO:root:98 0.008928839
+INFO:root:99 0.009319882
+INFO:root:final video score tensor([[0.4248]], device='cuda:0', grad_fn=<SigmoidBackward0>)
+INFO:root:total frame 100, total fake frame 10
+INFO:root:fianl l2,1 nrom tensor(0.9085, device='cuda:0', grad_fn=<SumBackward0>)

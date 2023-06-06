@@ -1,0 +1,2613 @@
+INFO:root:Argument atk: 'white'
+INFO:root:Argument full_pert: False
+INFO:root:Argument group_size: 6
+INFO:root:Argument iters: 100
+INFO:root:Argument l3: True
+INFO:root:Argument model: 'rnn'
+INFO:root:Argument reg: 'none'
+INFO:root:Argument sec_phase: False
+INFO:root:new video /notebooks/atk/input/test_videos/apzckowxpy.mp4
+INFO:root:origin total frame 100, origin total fake frame 100
+INFO:root:iter 0
+INFO:root:tensor([[0.5541]], device='cuda:0', grad_fn=<SigmoidBackward0>)
+INFO:root:iter 0
+INFO:root:tensor([[0.5528]], device='cuda:0', grad_fn=<SigmoidBackward0>)
+INFO:root:iter 0
+INFO:root:tensor([[0.5572]], device='cuda:0', grad_fn=<SigmoidBackward0>)
+INFO:root:iter 0
+INFO:root:tensor([[0.5578]], device='cuda:0', grad_fn=<SigmoidBackward0>)
+INFO:root:iter 0
+INFO:root:tensor([[0.5631]], device='cuda:0', grad_fn=<SigmoidBackward0>)
+INFO:root:iter 0
+INFO:root:tensor([[0.5612]], device='cuda:0', grad_fn=<SigmoidBackward0>)
+INFO:root:iter 0
+INFO:root:tensor([[0.5575]], device='cuda:0', grad_fn=<SigmoidBackward0>)
+INFO:root:iter 0
+INFO:root:tensor([[0.5576]], device='cuda:0', grad_fn=<SigmoidBackward0>)
+INFO:root:iter 0
+INFO:root:tensor([[0.5517]], device='cuda:0', grad_fn=<SigmoidBackward0>)
+INFO:root:iter 0
+INFO:root:tensor([[0.5493]], device='cuda:0', grad_fn=<SigmoidBackward0>)
+INFO:root:iter 0
+INFO:root:tensor([[0.5480]], device='cuda:0', grad_fn=<SigmoidBackward0>)
+INFO:root:iter 0
+INFO:root:tensor([[0.5480]], device='cuda:0', grad_fn=<SigmoidBackward0>)
+INFO:root:tensor([9.7137], device='cuda:0', grad_fn=<AddBackward0>), tensor(0.2715, device='cuda:0', grad_fn=<AddBackward0>), tensor(2.4799, device='cuda:0', grad_fn=<AddBackward0>)
+INFO:root:iter 1
+INFO:root:tensor([[0.5157]], device='cuda:0', grad_fn=<SigmoidBackward0>)
+INFO:root:iter 1
+INFO:root:tensor([[0.5187]], device='cuda:0', grad_fn=<SigmoidBackward0>)
+INFO:root:iter 1
+INFO:root:tensor([[0.5254]], device='cuda:0', grad_fn=<SigmoidBackward0>)
+INFO:root:iter 1
+INFO:root:tensor([[0.5188]], device='cuda:0', grad_fn=<SigmoidBackward0>)
+INFO:root:iter 1
+INFO:root:tensor([[0.5113]], device='cuda:0', grad_fn=<SigmoidBackward0>)
+INFO:root:iter 1
+INFO:root:tensor([[0.5212]], device='cuda:0', grad_fn=<SigmoidBackward0>)
+INFO:root:iter 1
+INFO:root:tensor([[0.5118]], device='cuda:0', grad_fn=<SigmoidBackward0>)
+INFO:root:iter 1
+INFO:root:tensor([[0.5401]], device='cuda:0', grad_fn=<SigmoidBackward0>)
+INFO:root:iter 1
+INFO:root:tensor([[0.5164]], device='cuda:0', grad_fn=<SigmoidBackward0>)
+INFO:root:iter 1
+INFO:root:tensor([[0.5137]], device='cuda:0', grad_fn=<SigmoidBackward0>)
+INFO:root:iter 1
+INFO:root:tensor([[0.5151]], device='cuda:0', grad_fn=<SigmoidBackward0>)
+INFO:root:iter 1
+INFO:root:tensor([[0.5133]], device='cuda:0', grad_fn=<SigmoidBackward0>)
+INFO:root:tensor([8.7705], device='cuda:0', grad_fn=<AddBackward0>), tensor(1.0745, device='cuda:0', grad_fn=<AddBackward0>), tensor(2.2286, device='cuda:0', grad_fn=<AddBackward0>)
+INFO:root:iter 2
+INFO:root:tensor([[0.4551]], device='cuda:0', grad_fn=<SigmoidBackward0>)
+INFO:root:iter 2
+INFO:root:tensor([[0.4934]], device='cuda:0', grad_fn=<SigmoidBackward0>)
+INFO:root:iter 2
+INFO:root:tensor([[0.5001]], device='cuda:0', grad_fn=<SigmoidBackward0>)
+INFO:root:iter 2
+INFO:root:tensor([[0.4836]], device='cuda:0', grad_fn=<SigmoidBackward0>)
+INFO:root:iter 2
+INFO:root:tensor([[0.4514]], device='cuda:0', grad_fn=<SigmoidBackward0>)
+INFO:root:iter 2
+INFO:root:tensor([[0.4657]], device='cuda:0', grad_fn=<SigmoidBackward0>)
+INFO:root:iter 2
+INFO:root:tensor([[0.4809]], device='cuda:0', grad_fn=<SigmoidBackward0>)
+INFO:root:iter 2
+INFO:root:tensor([[0.5212]], device='cuda:0', grad_fn=<SigmoidBackward0>)
+INFO:root:iter 2
+INFO:root:tensor([[0.5066]], device='cuda:0', grad_fn=<SigmoidBackward0>)
+INFO:root:iter 2
+INFO:root:tensor([[0.5054]], device='cuda:0', grad_fn=<SigmoidBackward0>)
+INFO:root:iter 2
+INFO:root:tensor([[0.4976]], device='cuda:0', grad_fn=<SigmoidBackward0>)
+INFO:root:iter 2
+INFO:root:tensor([[0.5045]], device='cuda:0', grad_fn=<SigmoidBackward0>)
+INFO:root:tensor([8.0615], device='cuda:0', grad_fn=<AddBackward0>), tensor(1.3658, device='cuda:0', grad_fn=<AddBackward0>), tensor(1.7679, device='cuda:0', grad_fn=<AddBackward0>)
+INFO:root:iter 3
+INFO:root:tensor([[0.4396]], device='cuda:0', grad_fn=<SigmoidBackward0>)
+INFO:root:iter 3
+INFO:root:tensor([[0.4869]], device='cuda:0', grad_fn=<SigmoidBackward0>)
+INFO:root:iter 3
+INFO:root:tensor([[0.4740]], device='cuda:0', grad_fn=<SigmoidBackward0>)
+INFO:root:iter 3
+INFO:root:tensor([[0.4589]], device='cuda:0', grad_fn=<SigmoidBackward0>)
+INFO:root:iter 3
+INFO:root:tensor([[0.4336]], device='cuda:0', grad_fn=<SigmoidBackward0>)
+INFO:root:iter 3
+INFO:root:tensor([[0.4523]], device='cuda:0', grad_fn=<SigmoidBackward0>)
+INFO:root:iter 3
+INFO:root:tensor([[0.4713]], device='cuda:0', grad_fn=<SigmoidBackward0>)
+INFO:root:iter 3
+INFO:root:tensor([[0.5033]], device='cuda:0', grad_fn=<SigmoidBackward0>)
+INFO:root:iter 3
+INFO:root:tensor([[0.5030]], device='cuda:0', grad_fn=<SigmoidBackward0>)
+INFO:root:iter 3
+INFO:root:tensor([[0.5022]], device='cuda:0', grad_fn=<SigmoidBackward0>)
+INFO:root:iter 3
+INFO:root:tensor([[0.4935]], device='cuda:0', grad_fn=<SigmoidBackward0>)
+INFO:root:iter 3
+INFO:root:tensor([[0.5015]], device='cuda:0', grad_fn=<SigmoidBackward0>)
+INFO:root:tensor([7.7836], device='cuda:0', grad_fn=<AddBackward0>), tensor(1.4579, device='cuda:0', grad_fn=<AddBackward0>), tensor(1.2981, device='cuda:0', grad_fn=<AddBackward0>)
+INFO:root:iter 4
+INFO:root:tensor([[0.4326]], device='cuda:0', grad_fn=<SigmoidBackward0>)
+INFO:root:iter 4
+INFO:root:tensor([[0.4830]], device='cuda:0', grad_fn=<SigmoidBackward0>)
+INFO:root:iter 4
+INFO:root:tensor([[0.4667]], device='cuda:0', grad_fn=<SigmoidBackward0>)
+INFO:root:iter 4
+INFO:root:tensor([[0.4451]], device='cuda:0', grad_fn=<SigmoidBackward0>)
+INFO:root:iter 4
+INFO:root:tensor([[0.4246]], device='cuda:0', grad_fn=<SigmoidBackward0>)
+INFO:root:iter 4
+INFO:root:tensor([[0.4426]], device='cuda:0', grad_fn=<SigmoidBackward0>)
+INFO:root:iter 4
+INFO:root:tensor([[0.4622]], device='cuda:0', grad_fn=<SigmoidBackward0>)
+INFO:root:iter 4
+INFO:root:tensor([[0.4813]], device='cuda:0', grad_fn=<SigmoidBackward0>)
+INFO:root:iter 4
+INFO:root:tensor([[0.5017]], device='cuda:0', grad_fn=<SigmoidBackward0>)
+INFO:root:iter 4
+INFO:root:tensor([[0.5009]], device='cuda:0', grad_fn=<SigmoidBackward0>)
+INFO:root:iter 4
+INFO:root:tensor([[0.4916]], device='cuda:0', grad_fn=<SigmoidBackward0>)
+INFO:root:iter 4
+INFO:root:tensor([[0.5005]], device='cuda:0', grad_fn=<SigmoidBackward0>)
+INFO:root:tensor([7.6201], device='cuda:0', grad_fn=<AddBackward0>), tensor(1.4735, device='cuda:0', grad_fn=<AddBackward0>), tensor(1.1810, device='cuda:0', grad_fn=<AddBackward0>)
+INFO:root:iter 5
+INFO:root:tensor([[0.4254]], device='cuda:0', grad_fn=<SigmoidBackward0>)
+INFO:root:iter 5
+INFO:root:tensor([[0.4797]], device='cuda:0', grad_fn=<SigmoidBackward0>)
+INFO:root:iter 5
+INFO:root:tensor([[0.4621]], device='cuda:0', grad_fn=<SigmoidBackward0>)
+INFO:root:iter 5
+INFO:root:tensor([[0.4397]], device='cuda:0', grad_fn=<SigmoidBackward0>)
+INFO:root:iter 5
+INFO:root:tensor([[0.4172]], device='cuda:0', grad_fn=<SigmoidBackward0>)
+INFO:root:iter 5
+INFO:root:tensor([[0.4368]], device='cuda:0', grad_fn=<SigmoidBackward0>)
+INFO:root:iter 5
+INFO:root:tensor([[0.4550]], device='cuda:0', grad_fn=<SigmoidBackward0>)
+INFO:root:iter 5
+INFO:root:tensor([[0.4771]], device='cuda:0', grad_fn=<SigmoidBackward0>)
+INFO:root:iter 5
+INFO:root:tensor([[0.5020]], device='cuda:0', grad_fn=<SigmoidBackward0>)
+INFO:root:iter 5
+INFO:root:tensor([[0.5010]], device='cuda:0', grad_fn=<SigmoidBackward0>)
+INFO:root:iter 5
+INFO:root:tensor([[0.4909]], device='cuda:0', grad_fn=<SigmoidBackward0>)
+INFO:root:iter 5
+INFO:root:tensor([[0.5007]], device='cuda:0', grad_fn=<SigmoidBackward0>)
+INFO:root:tensor([7.5379], device='cuda:0', grad_fn=<AddBackward0>), tensor(1.4560, device='cuda:0', grad_fn=<AddBackward0>), tensor(1.1810, device='cuda:0', grad_fn=<AddBackward0>)
+INFO:root:iter 6
+INFO:root:tensor([[0.4196]], device='cuda:0', grad_fn=<SigmoidBackward0>)
+INFO:root:iter 6
+INFO:root:tensor([[0.4776]], device='cuda:0', grad_fn=<SigmoidBackward0>)
+INFO:root:iter 6
+INFO:root:tensor([[0.4581]], device='cuda:0', grad_fn=<SigmoidBackward0>)
+INFO:root:iter 6
+INFO:root:tensor([[0.4356]], device='cuda:0', grad_fn=<SigmoidBackward0>)
+INFO:root:iter 6
+INFO:root:tensor([[0.4120]], device='cuda:0', grad_fn=<SigmoidBackward0>)
+INFO:root:iter 6
+INFO:root:tensor([[0.4324]], device='cuda:0', grad_fn=<SigmoidBackward0>)
+INFO:root:iter 6
+INFO:root:tensor([[0.4522]], device='cuda:0', grad_fn=<SigmoidBackward0>)
+INFO:root:iter 6
+INFO:root:tensor([[0.4711]], device='cuda:0', grad_fn=<SigmoidBackward0>)
+INFO:root:iter 6
+INFO:root:tensor([[0.5034]], device='cuda:0', grad_fn=<SigmoidBackward0>)
+INFO:root:iter 6
+INFO:root:tensor([[0.5018]], device='cuda:0', grad_fn=<SigmoidBackward0>)
+INFO:root:iter 6
+INFO:root:tensor([[0.4913]], device='cuda:0', grad_fn=<SigmoidBackward0>)
+INFO:root:iter 6
+INFO:root:tensor([[0.5020]], device='cuda:0', grad_fn=<SigmoidBackward0>)
+INFO:root:tensor([7.4844], device='cuda:0', grad_fn=<AddBackward0>), tensor(1.4183, device='cuda:0', grad_fn=<AddBackward0>), tensor(1.1810, device='cuda:0', grad_fn=<AddBackward0>)
+INFO:root:iter 7
+INFO:root:tensor([[0.4145]], device='cuda:0', grad_fn=<SigmoidBackward0>)
+INFO:root:iter 7
+INFO:root:tensor([[0.4767]], device='cuda:0', grad_fn=<SigmoidBackward0>)
+INFO:root:iter 7
+INFO:root:tensor([[0.4556]], device='cuda:0', grad_fn=<SigmoidBackward0>)
+INFO:root:iter 7
+INFO:root:tensor([[0.4322]], device='cuda:0', grad_fn=<SigmoidBackward0>)
+INFO:root:iter 7
+INFO:root:tensor([[0.4085]], device='cuda:0', grad_fn=<SigmoidBackward0>)
+INFO:root:iter 7
+INFO:root:tensor([[0.4300]], device='cuda:0', grad_fn=<SigmoidBackward0>)
+INFO:root:iter 7
+INFO:root:tensor([[0.4509]], device='cuda:0', grad_fn=<SigmoidBackward0>)
+INFO:root:iter 7
+INFO:root:tensor([[0.4648]], device='cuda:0', grad_fn=<SigmoidBackward0>)
+INFO:root:iter 7
+INFO:root:tensor([[0.5056]], device='cuda:0', grad_fn=<SigmoidBackward0>)
+INFO:root:iter 7
+INFO:root:tensor([[0.5031]], device='cuda:0', grad_fn=<SigmoidBackward0>)
+INFO:root:iter 7
+INFO:root:tensor([[0.4925]], device='cuda:0', grad_fn=<SigmoidBackward0>)
+INFO:root:iter 7
+INFO:root:tensor([[0.5037]], device='cuda:0', grad_fn=<SigmoidBackward0>)
+INFO:root:tensor([7.4512], device='cuda:0', grad_fn=<AddBackward0>), tensor(1.3676, device='cuda:0', grad_fn=<AddBackward0>), tensor(1.1810, device='cuda:0', grad_fn=<AddBackward0>)
+INFO:root:iter 8
+INFO:root:tensor([[0.4112]], device='cuda:0', grad_fn=<SigmoidBackward0>)
+INFO:root:iter 8
+INFO:root:tensor([[0.4758]], device='cuda:0', grad_fn=<SigmoidBackward0>)
+INFO:root:iter 8
+INFO:root:tensor([[0.4538]], device='cuda:0', grad_fn=<SigmoidBackward0>)
+INFO:root:iter 8
+INFO:root:tensor([[0.4305]], device='cuda:0', grad_fn=<SigmoidBackward0>)
+INFO:root:iter 8
+INFO:root:tensor([[0.4066]], device='cuda:0', grad_fn=<SigmoidBackward0>)
+INFO:root:iter 8
+INFO:root:tensor([[0.4283]], device='cuda:0', grad_fn=<SigmoidBackward0>)
+INFO:root:iter 8
+INFO:root:tensor([[0.4497]], device='cuda:0', grad_fn=<SigmoidBackward0>)
+INFO:root:iter 8
+INFO:root:tensor([[0.4581]], device='cuda:0', grad_fn=<SigmoidBackward0>)
+INFO:root:iter 8
+INFO:root:tensor([[0.5071]], device='cuda:0', grad_fn=<SigmoidBackward0>)
+INFO:root:iter 8
+INFO:root:tensor([[0.5045]], device='cuda:0', grad_fn=<SigmoidBackward0>)
+INFO:root:iter 8
+INFO:root:tensor([[0.4938]], device='cuda:0', grad_fn=<SigmoidBackward0>)
+INFO:root:iter 8
+INFO:root:tensor([[0.5054]], device='cuda:0', grad_fn=<SigmoidBackward0>)
+INFO:root:tensor([7.4289], device='cuda:0', grad_fn=<AddBackward0>), tensor(1.3105, device='cuda:0', grad_fn=<AddBackward0>), tensor(1.1811, device='cuda:0', grad_fn=<AddBackward0>)
+INFO:root:iter 9
+INFO:root:tensor([[0.4099]], device='cuda:0', grad_fn=<SigmoidBackward0>)
+INFO:root:iter 9
+INFO:root:tensor([[0.4747]], device='cuda:0', grad_fn=<SigmoidBackward0>)
+INFO:root:iter 9
+INFO:root:tensor([[0.4524]], device='cuda:0', grad_fn=<SigmoidBackward0>)
+INFO:root:iter 9
+INFO:root:tensor([[0.4288]], device='cuda:0', grad_fn=<SigmoidBackward0>)
+INFO:root:iter 9
+INFO:root:tensor([[0.4055]], device='cuda:0', grad_fn=<SigmoidBackward0>)
+INFO:root:iter 9
+INFO:root:tensor([[0.4283]], device='cuda:0', grad_fn=<SigmoidBackward0>)
+INFO:root:iter 9
+INFO:root:tensor([[0.4486]], device='cuda:0', grad_fn=<SigmoidBackward0>)
+INFO:root:iter 9
+INFO:root:tensor([[0.4537]], device='cuda:0', grad_fn=<SigmoidBackward0>)
+INFO:root:iter 9
+INFO:root:tensor([[0.5074]], device='cuda:0', grad_fn=<SigmoidBackward0>)
+INFO:root:iter 9
+INFO:root:tensor([[0.5055]], device='cuda:0', grad_fn=<SigmoidBackward0>)
+INFO:root:iter 9
+INFO:root:tensor([[0.4947]], device='cuda:0', grad_fn=<SigmoidBackward0>)
+INFO:root:iter 9
+INFO:root:tensor([[0.5062]], device='cuda:0', grad_fn=<SigmoidBackward0>)
+INFO:root:tensor([7.4129], device='cuda:0', grad_fn=<AddBackward0>), tensor(1.2504, device='cuda:0', grad_fn=<AddBackward0>), tensor(1.1811, device='cuda:0', grad_fn=<AddBackward0>)
+INFO:root:iter 10
+INFO:root:tensor([[0.4081]], device='cuda:0', grad_fn=<SigmoidBackward0>)
+INFO:root:iter 10
+INFO:root:tensor([[0.4741]], device='cuda:0', grad_fn=<SigmoidBackward0>)
+INFO:root:iter 10
+INFO:root:tensor([[0.4507]], device='cuda:0', grad_fn=<SigmoidBackward0>)
+INFO:root:iter 10
+INFO:root:tensor([[0.4277]], device='cuda:0', grad_fn=<SigmoidBackward0>)
+INFO:root:iter 10
+INFO:root:tensor([[0.4043]], device='cuda:0', grad_fn=<SigmoidBackward0>)
+INFO:root:iter 10
+INFO:root:tensor([[0.4280]], device='cuda:0', grad_fn=<SigmoidBackward0>)
+INFO:root:iter 10
+INFO:root:tensor([[0.4480]], device='cuda:0', grad_fn=<SigmoidBackward0>)
+INFO:root:iter 10
+INFO:root:tensor([[0.4506]], device='cuda:0', grad_fn=<SigmoidBackward0>)
+INFO:root:iter 10
+INFO:root:tensor([[0.5071]], device='cuda:0', grad_fn=<SigmoidBackward0>)
+INFO:root:iter 10
+INFO:root:tensor([[0.5058]], device='cuda:0', grad_fn=<SigmoidBackward0>)
+INFO:root:iter 10
+INFO:root:tensor([[0.4955]], device='cuda:0', grad_fn=<SigmoidBackward0>)
+INFO:root:iter 10
+INFO:root:tensor([[0.5065]], device='cuda:0', grad_fn=<SigmoidBackward0>)
+INFO:root:tensor([7.3964], device='cuda:0', grad_fn=<AddBackward0>), tensor(1.1924, device='cuda:0', grad_fn=<AddBackward0>), tensor(1.1811, device='cuda:0', grad_fn=<AddBackward0>)
+INFO:root:iter 11
+INFO:root:tensor([[0.4072]], device='cuda:0', grad_fn=<SigmoidBackward0>)
+INFO:root:iter 11
+INFO:root:tensor([[0.4730]], device='cuda:0', grad_fn=<SigmoidBackward0>)
+INFO:root:iter 11
+INFO:root:tensor([[0.4493]], device='cuda:0', grad_fn=<SigmoidBackward0>)
+INFO:root:iter 11
+INFO:root:tensor([[0.4261]], device='cuda:0', grad_fn=<SigmoidBackward0>)
+INFO:root:iter 11
+INFO:root:tensor([[0.4035]], device='cuda:0', grad_fn=<SigmoidBackward0>)
+INFO:root:iter 11
+INFO:root:tensor([[0.4278]], device='cuda:0', grad_fn=<SigmoidBackward0>)
+INFO:root:iter 11
+INFO:root:tensor([[0.4471]], device='cuda:0', grad_fn=<SigmoidBackward0>)
+INFO:root:iter 11
+INFO:root:tensor([[0.4478]], device='cuda:0', grad_fn=<SigmoidBackward0>)
+INFO:root:iter 11
+INFO:root:tensor([[0.5067]], device='cuda:0', grad_fn=<SigmoidBackward0>)
+INFO:root:iter 11
+INFO:root:tensor([[0.5060]], device='cuda:0', grad_fn=<SigmoidBackward0>)
+INFO:root:iter 11
+INFO:root:tensor([[0.4958]], device='cuda:0', grad_fn=<SigmoidBackward0>)
+INFO:root:iter 11
+INFO:root:tensor([[0.5064]], device='cuda:0', grad_fn=<SigmoidBackward0>)
+INFO:root:tensor([7.3792], device='cuda:0', grad_fn=<AddBackward0>), tensor(1.1399, device='cuda:0', grad_fn=<AddBackward0>), tensor(1.2411, device='cuda:0', grad_fn=<AddBackward0>)
+INFO:root:iter 12
+INFO:root:tensor([[0.4077]], device='cuda:0', grad_fn=<SigmoidBackward0>)
+INFO:root:iter 12
+INFO:root:tensor([[0.4726]], device='cuda:0', grad_fn=<SigmoidBackward0>)
+INFO:root:iter 12
+INFO:root:tensor([[0.4488]], device='cuda:0', grad_fn=<SigmoidBackward0>)
+INFO:root:iter 12
+INFO:root:tensor([[0.4255]], device='cuda:0', grad_fn=<SigmoidBackward0>)
+INFO:root:iter 12
+INFO:root:tensor([[0.4033]], device='cuda:0', grad_fn=<SigmoidBackward0>)
+INFO:root:iter 12
+INFO:root:tensor([[0.4270]], device='cuda:0', grad_fn=<SigmoidBackward0>)
+INFO:root:iter 12
+INFO:root:tensor([[0.4458]], device='cuda:0', grad_fn=<SigmoidBackward0>)
+INFO:root:iter 12
+INFO:root:tensor([[0.4461]], device='cuda:0', grad_fn=<SigmoidBackward0>)
+INFO:root:iter 12
+INFO:root:tensor([[0.5066]], device='cuda:0', grad_fn=<SigmoidBackward0>)
+INFO:root:iter 12
+INFO:root:tensor([[0.5060]], device='cuda:0', grad_fn=<SigmoidBackward0>)
+INFO:root:iter 12
+INFO:root:tensor([[0.4953]], device='cuda:0', grad_fn=<SigmoidBackward0>)
+INFO:root:iter 12
+INFO:root:tensor([[0.5064]], device='cuda:0', grad_fn=<SigmoidBackward0>)
+INFO:root:tensor([7.3691], device='cuda:0', grad_fn=<AddBackward0>), tensor(1.0938, device='cuda:0', grad_fn=<AddBackward0>), tensor(1.3017, device='cuda:0', grad_fn=<AddBackward0>)
+INFO:root:iter 13
+INFO:root:tensor([[0.4071]], device='cuda:0', grad_fn=<SigmoidBackward0>)
+INFO:root:iter 13
+INFO:root:tensor([[0.4724]], device='cuda:0', grad_fn=<SigmoidBackward0>)
+INFO:root:iter 13
+INFO:root:tensor([[0.4488]], device='cuda:0', grad_fn=<SigmoidBackward0>)
+INFO:root:iter 13
+INFO:root:tensor([[0.4249]], device='cuda:0', grad_fn=<SigmoidBackward0>)
+INFO:root:iter 13
+INFO:root:tensor([[0.4026]], device='cuda:0', grad_fn=<SigmoidBackward0>)
+INFO:root:iter 13
+INFO:root:tensor([[0.4262]], device='cuda:0', grad_fn=<SigmoidBackward0>)
+INFO:root:iter 13
+INFO:root:tensor([[0.4452]], device='cuda:0', grad_fn=<SigmoidBackward0>)
+INFO:root:iter 13
+INFO:root:tensor([[0.4452]], device='cuda:0', grad_fn=<SigmoidBackward0>)
+INFO:root:iter 13
+INFO:root:tensor([[0.5067]], device='cuda:0', grad_fn=<SigmoidBackward0>)
+INFO:root:iter 13
+INFO:root:tensor([[0.5059]], device='cuda:0', grad_fn=<SigmoidBackward0>)
+INFO:root:iter 13
+INFO:root:tensor([[0.4948]], device='cuda:0', grad_fn=<SigmoidBackward0>)
+INFO:root:iter 13
+INFO:root:tensor([[0.5063]], device='cuda:0', grad_fn=<SigmoidBackward0>)
+INFO:root:tensor([7.3602], device='cuda:0', grad_fn=<AddBackward0>), tensor(1.0554, device='cuda:0', grad_fn=<AddBackward0>), tensor(1.4226, device='cuda:0', grad_fn=<AddBackward0>)
+INFO:root:iter 14
+INFO:root:tensor([[0.4060]], device='cuda:0', grad_fn=<SigmoidBackward0>)
+INFO:root:iter 14
+INFO:root:tensor([[0.4724]], device='cuda:0', grad_fn=<SigmoidBackward0>)
+INFO:root:iter 14
+INFO:root:tensor([[0.4485]], device='cuda:0', grad_fn=<SigmoidBackward0>)
+INFO:root:iter 14
+INFO:root:tensor([[0.4246]], device='cuda:0', grad_fn=<SigmoidBackward0>)
+INFO:root:iter 14
+INFO:root:tensor([[0.4028]], device='cuda:0', grad_fn=<SigmoidBackward0>)
+INFO:root:iter 14
+INFO:root:tensor([[0.4264]], device='cuda:0', grad_fn=<SigmoidBackward0>)
+INFO:root:iter 14
+INFO:root:tensor([[0.4451]], device='cuda:0', grad_fn=<SigmoidBackward0>)
+INFO:root:iter 14
+INFO:root:tensor([[0.4452]], device='cuda:0', grad_fn=<SigmoidBackward0>)
+INFO:root:iter 14
+INFO:root:tensor([[0.5070]], device='cuda:0', grad_fn=<SigmoidBackward0>)
+INFO:root:iter 14
+INFO:root:tensor([[0.5058]], device='cuda:0', grad_fn=<SigmoidBackward0>)
+INFO:root:iter 14
+INFO:root:tensor([[0.4943]], device='cuda:0', grad_fn=<SigmoidBackward0>)
+INFO:root:iter 14
+INFO:root:tensor([[0.5063]], device='cuda:0', grad_fn=<SigmoidBackward0>)
+INFO:root:tensor([7.3574], device='cuda:0', grad_fn=<AddBackward0>), tensor(1.0234, device='cuda:0', grad_fn=<AddBackward0>), tensor(1.4796, device='cuda:0', grad_fn=<AddBackward0>)
+INFO:root:iter 15
+INFO:root:tensor([[0.4050]], device='cuda:0', grad_fn=<SigmoidBackward0>)
+INFO:root:iter 15
+INFO:root:tensor([[0.4725]], device='cuda:0', grad_fn=<SigmoidBackward0>)
+INFO:root:iter 15
+INFO:root:tensor([[0.4485]], device='cuda:0', grad_fn=<SigmoidBackward0>)
+INFO:root:iter 15
+INFO:root:tensor([[0.4245]], device='cuda:0', grad_fn=<SigmoidBackward0>)
+INFO:root:iter 15
+INFO:root:tensor([[0.4025]], device='cuda:0', grad_fn=<SigmoidBackward0>)
+INFO:root:iter 15
+INFO:root:tensor([[0.4256]], device='cuda:0', grad_fn=<SigmoidBackward0>)
+INFO:root:iter 15
+INFO:root:tensor([[0.4451]], device='cuda:0', grad_fn=<SigmoidBackward0>)
+INFO:root:iter 15
+INFO:root:tensor([[0.4447]], device='cuda:0', grad_fn=<SigmoidBackward0>)
+INFO:root:iter 15
+INFO:root:tensor([[0.5072]], device='cuda:0', grad_fn=<SigmoidBackward0>)
+INFO:root:iter 15
+INFO:root:tensor([[0.5059]], device='cuda:0', grad_fn=<SigmoidBackward0>)
+INFO:root:iter 15
+INFO:root:tensor([[0.4940]], device='cuda:0', grad_fn=<SigmoidBackward0>)
+INFO:root:iter 15
+INFO:root:tensor([[0.5063]], device='cuda:0', grad_fn=<SigmoidBackward0>)
+INFO:root:tensor([7.3530], device='cuda:0', grad_fn=<AddBackward0>), tensor(0.9968, device='cuda:0', grad_fn=<AddBackward0>), tensor(1.7760, device='cuda:0', grad_fn=<AddBackward0>)
+INFO:root:iter 16
+INFO:root:tensor([[0.4047]], device='cuda:0', grad_fn=<SigmoidBackward0>)
+INFO:root:iter 16
+INFO:root:tensor([[0.4729]], device='cuda:0', grad_fn=<SigmoidBackward0>)
+INFO:root:iter 16
+INFO:root:tensor([[0.4485]], device='cuda:0', grad_fn=<SigmoidBackward0>)
+INFO:root:iter 16
+INFO:root:tensor([[0.4244]], device='cuda:0', grad_fn=<SigmoidBackward0>)
+INFO:root:iter 16
+INFO:root:tensor([[0.4026]], device='cuda:0', grad_fn=<SigmoidBackward0>)
+INFO:root:iter 16
+INFO:root:tensor([[0.4259]], device='cuda:0', grad_fn=<SigmoidBackward0>)
+INFO:root:iter 16
+INFO:root:tensor([[0.4448]], device='cuda:0', grad_fn=<SigmoidBackward0>)
+INFO:root:iter 16
+INFO:root:tensor([[0.4437]], device='cuda:0', grad_fn=<SigmoidBackward0>)
+INFO:root:iter 16
+INFO:root:tensor([[0.5075]], device='cuda:0', grad_fn=<SigmoidBackward0>)
+INFO:root:iter 16
+INFO:root:tensor([[0.5060]], device='cuda:0', grad_fn=<SigmoidBackward0>)
+INFO:root:iter 16
+INFO:root:tensor([[0.4938]], device='cuda:0', grad_fn=<SigmoidBackward0>)
+INFO:root:iter 16
+INFO:root:tensor([[0.5064]], device='cuda:0', grad_fn=<SigmoidBackward0>)
+INFO:root:tensor([7.3521], device='cuda:0', grad_fn=<AddBackward0>), tensor(0.9740, device='cuda:0', grad_fn=<AddBackward0>), tensor(1.8356, device='cuda:0', grad_fn=<AddBackward0>)
+INFO:root:iter 17
+INFO:root:tensor([[0.4044]], device='cuda:0', grad_fn=<SigmoidBackward0>)
+INFO:root:iter 17
+INFO:root:tensor([[0.4727]], device='cuda:0', grad_fn=<SigmoidBackward0>)
+INFO:root:iter 17
+INFO:root:tensor([[0.4494]], device='cuda:0', grad_fn=<SigmoidBackward0>)
+INFO:root:iter 17
+INFO:root:tensor([[0.4251]], device='cuda:0', grad_fn=<SigmoidBackward0>)
+INFO:root:iter 17
+INFO:root:tensor([[0.4023]], device='cuda:0', grad_fn=<SigmoidBackward0>)
+INFO:root:iter 17
+INFO:root:tensor([[0.4255]], device='cuda:0', grad_fn=<SigmoidBackward0>)
+INFO:root:iter 17
+INFO:root:tensor([[0.4468]], device='cuda:0', grad_fn=<SigmoidBackward0>)
+INFO:root:iter 17
+INFO:root:tensor([[0.4439]], device='cuda:0', grad_fn=<SigmoidBackward0>)
+INFO:root:iter 17
+INFO:root:tensor([[0.5076]], device='cuda:0', grad_fn=<SigmoidBackward0>)
+INFO:root:iter 17
+INFO:root:tensor([[0.5061]], device='cuda:0', grad_fn=<SigmoidBackward0>)
+INFO:root:iter 17
+INFO:root:tensor([[0.4938]], device='cuda:0', grad_fn=<SigmoidBackward0>)
+INFO:root:iter 17
+INFO:root:tensor([[0.5067]], device='cuda:0', grad_fn=<SigmoidBackward0>)
+INFO:root:tensor([7.3573], device='cuda:0', grad_fn=<AddBackward0>), tensor(0.9540, device='cuda:0', grad_fn=<AddBackward0>), tensor(1.8343, device='cuda:0', grad_fn=<AddBackward0>)
+INFO:root:iter 18
+INFO:root:tensor([[0.4043]], device='cuda:0', grad_fn=<SigmoidBackward0>)
+INFO:root:iter 18
+INFO:root:tensor([[0.4729]], device='cuda:0', grad_fn=<SigmoidBackward0>)
+INFO:root:iter 18
+INFO:root:tensor([[0.4495]], device='cuda:0', grad_fn=<SigmoidBackward0>)
+INFO:root:iter 18
+INFO:root:tensor([[0.4251]], device='cuda:0', grad_fn=<SigmoidBackward0>)
+INFO:root:iter 18
+INFO:root:tensor([[0.4026]], device='cuda:0', grad_fn=<SigmoidBackward0>)
+INFO:root:iter 18
+INFO:root:tensor([[0.4267]], device='cuda:0', grad_fn=<SigmoidBackward0>)
+INFO:root:iter 18
+INFO:root:tensor([[0.4454]], device='cuda:0', grad_fn=<SigmoidBackward0>)
+INFO:root:iter 18
+INFO:root:tensor([[0.4438]], device='cuda:0', grad_fn=<SigmoidBackward0>)
+INFO:root:iter 18
+INFO:root:tensor([[0.5076]], device='cuda:0', grad_fn=<SigmoidBackward0>)
+INFO:root:iter 18
+INFO:root:tensor([[0.5062]], device='cuda:0', grad_fn=<SigmoidBackward0>)
+INFO:root:iter 18
+INFO:root:tensor([[0.4940]], device='cuda:0', grad_fn=<SigmoidBackward0>)
+INFO:root:iter 18
+INFO:root:tensor([[0.5069]], device='cuda:0', grad_fn=<SigmoidBackward0>)
+INFO:root:tensor([7.3590], device='cuda:0', grad_fn=<AddBackward0>), tensor(0.9366, device='cuda:0', grad_fn=<AddBackward0>), tensor(1.6556, device='cuda:0', grad_fn=<AddBackward0>)
+INFO:root:iter 19
+INFO:root:tensor([[0.4041]], device='cuda:0', grad_fn=<SigmoidBackward0>)
+INFO:root:iter 19
+INFO:root:tensor([[0.4721]], device='cuda:0', grad_fn=<SigmoidBackward0>)
+INFO:root:iter 19
+INFO:root:tensor([[0.4490]], device='cuda:0', grad_fn=<SigmoidBackward0>)
+INFO:root:iter 19
+INFO:root:tensor([[0.4256]], device='cuda:0', grad_fn=<SigmoidBackward0>)
+INFO:root:iter 19
+INFO:root:tensor([[0.4021]], device='cuda:0', grad_fn=<SigmoidBackward0>)
+INFO:root:iter 19
+INFO:root:tensor([[0.4260]], device='cuda:0', grad_fn=<SigmoidBackward0>)
+INFO:root:iter 19
+INFO:root:tensor([[0.4453]], device='cuda:0', grad_fn=<SigmoidBackward0>)
+INFO:root:iter 19
+INFO:root:tensor([[0.4457]], device='cuda:0', grad_fn=<SigmoidBackward0>)
+INFO:root:iter 19
+INFO:root:tensor([[0.5075]], device='cuda:0', grad_fn=<SigmoidBackward0>)
+INFO:root:iter 19
+INFO:root:tensor([[0.5063]], device='cuda:0', grad_fn=<SigmoidBackward0>)
+INFO:root:iter 19
+INFO:root:tensor([[0.4939]], device='cuda:0', grad_fn=<SigmoidBackward0>)
+INFO:root:iter 19
+INFO:root:tensor([[0.5069]], device='cuda:0', grad_fn=<SigmoidBackward0>)
+INFO:root:tensor([7.3579], device='cuda:0', grad_fn=<AddBackward0>), tensor(0.9208, device='cuda:0', grad_fn=<AddBackward0>), tensor(1.4184, device='cuda:0', grad_fn=<AddBackward0>)
+INFO:root:iter 20
+INFO:root:tensor([[0.4045]], device='cuda:0', grad_fn=<SigmoidBackward0>)
+INFO:root:iter 20
+INFO:root:tensor([[0.4722]], device='cuda:0', grad_fn=<SigmoidBackward0>)
+INFO:root:iter 20
+INFO:root:tensor([[0.4500]], device='cuda:0', grad_fn=<SigmoidBackward0>)
+INFO:root:iter 20
+INFO:root:tensor([[0.4260]], device='cuda:0', grad_fn=<SigmoidBackward0>)
+INFO:root:iter 20
+INFO:root:tensor([[0.4020]], device='cuda:0', grad_fn=<SigmoidBackward0>)
+INFO:root:iter 20
+INFO:root:tensor([[0.4274]], device='cuda:0', grad_fn=<SigmoidBackward0>)
+INFO:root:iter 20
+INFO:root:tensor([[0.4451]], device='cuda:0', grad_fn=<SigmoidBackward0>)
+INFO:root:iter 20
+INFO:root:tensor([[0.4465]], device='cuda:0', grad_fn=<SigmoidBackward0>)
+INFO:root:iter 20
+INFO:root:tensor([[0.5076]], device='cuda:0', grad_fn=<SigmoidBackward0>)
+INFO:root:iter 20
+INFO:root:tensor([[0.5064]], device='cuda:0', grad_fn=<SigmoidBackward0>)
+INFO:root:iter 20
+INFO:root:tensor([[0.4937]], device='cuda:0', grad_fn=<SigmoidBackward0>)
+INFO:root:iter 20
+INFO:root:tensor([[0.5069]], device='cuda:0', grad_fn=<SigmoidBackward0>)
+INFO:root:tensor([7.3645], device='cuda:0', grad_fn=<AddBackward0>), tensor(0.9043, device='cuda:0', grad_fn=<AddBackward0>), tensor(1.3595, device='cuda:0', grad_fn=<AddBackward0>)
+INFO:root:iter 21
+INFO:root:tensor([[0.4046]], device='cuda:0', grad_fn=<SigmoidBackward0>)
+INFO:root:iter 21
+INFO:root:tensor([[0.4727]], device='cuda:0', grad_fn=<SigmoidBackward0>)
+INFO:root:iter 21
+INFO:root:tensor([[0.4496]], device='cuda:0', grad_fn=<SigmoidBackward0>)
+INFO:root:iter 21
+INFO:root:tensor([[0.4254]], device='cuda:0', grad_fn=<SigmoidBackward0>)
+INFO:root:iter 21
+INFO:root:tensor([[0.4022]], device='cuda:0', grad_fn=<SigmoidBackward0>)
+INFO:root:iter 21
+INFO:root:tensor([[0.4270]], device='cuda:0', grad_fn=<SigmoidBackward0>)
+INFO:root:iter 21
+INFO:root:tensor([[0.4455]], device='cuda:0', grad_fn=<SigmoidBackward0>)
+INFO:root:iter 21
+INFO:root:tensor([[0.4457]], device='cuda:0', grad_fn=<SigmoidBackward0>)
+INFO:root:iter 21
+INFO:root:tensor([[0.5078]], device='cuda:0', grad_fn=<SigmoidBackward0>)
+INFO:root:iter 21
+INFO:root:tensor([[0.5064]], device='cuda:0', grad_fn=<SigmoidBackward0>)
+INFO:root:iter 21
+INFO:root:tensor([[0.4935]], device='cuda:0', grad_fn=<SigmoidBackward0>)
+INFO:root:iter 21
+INFO:root:tensor([[0.5069]], device='cuda:0', grad_fn=<SigmoidBackward0>)
+INFO:root:tensor([7.3627], device='cuda:0', grad_fn=<AddBackward0>), tensor(0.8881, device='cuda:0', grad_fn=<AddBackward0>), tensor(1.3621, device='cuda:0', grad_fn=<AddBackward0>)
+INFO:root:iter 22
+INFO:root:tensor([[0.4037]], device='cuda:0', grad_fn=<SigmoidBackward0>)
+INFO:root:iter 22
+INFO:root:tensor([[0.4725]], device='cuda:0', grad_fn=<SigmoidBackward0>)
+INFO:root:iter 22
+INFO:root:tensor([[0.4498]], device='cuda:0', grad_fn=<SigmoidBackward0>)
+INFO:root:iter 22
+INFO:root:tensor([[0.4260]], device='cuda:0', grad_fn=<SigmoidBackward0>)
+INFO:root:iter 22
+INFO:root:tensor([[0.4024]], device='cuda:0', grad_fn=<SigmoidBackward0>)
+INFO:root:iter 22
+INFO:root:tensor([[0.4254]], device='cuda:0', grad_fn=<SigmoidBackward0>)
+INFO:root:iter 22
+INFO:root:tensor([[0.4450]], device='cuda:0', grad_fn=<SigmoidBackward0>)
+INFO:root:iter 22
+INFO:root:tensor([[0.4473]], device='cuda:0', grad_fn=<SigmoidBackward0>)
+INFO:root:iter 22
+INFO:root:tensor([[0.5079]], device='cuda:0', grad_fn=<SigmoidBackward0>)
+INFO:root:iter 22
+INFO:root:tensor([[0.5066]], device='cuda:0', grad_fn=<SigmoidBackward0>)
+INFO:root:iter 22
+INFO:root:tensor([[0.4935]], device='cuda:0', grad_fn=<SigmoidBackward0>)
+INFO:root:iter 22
+INFO:root:tensor([[0.5070]], device='cuda:0', grad_fn=<SigmoidBackward0>)
+INFO:root:tensor([7.3627], device='cuda:0', grad_fn=<AddBackward0>), tensor(0.8706, device='cuda:0', grad_fn=<AddBackward0>), tensor(1.3625, device='cuda:0', grad_fn=<AddBackward0>)
+INFO:root:iter 23
+INFO:root:tensor([[0.4055]], device='cuda:0', grad_fn=<SigmoidBackward0>)
+INFO:root:iter 23
+INFO:root:tensor([[0.4727]], device='cuda:0', grad_fn=<SigmoidBackward0>)
+INFO:root:iter 23
+INFO:root:tensor([[0.4500]], device='cuda:0', grad_fn=<SigmoidBackward0>)
+INFO:root:iter 23
+INFO:root:tensor([[0.4255]], device='cuda:0', grad_fn=<SigmoidBackward0>)
+INFO:root:iter 23
+INFO:root:tensor([[0.4029]], device='cuda:0', grad_fn=<SigmoidBackward0>)
+INFO:root:iter 23
+INFO:root:tensor([[0.4263]], device='cuda:0', grad_fn=<SigmoidBackward0>)
+INFO:root:iter 23
+INFO:root:tensor([[0.4443]], device='cuda:0', grad_fn=<SigmoidBackward0>)
+INFO:root:iter 23
+INFO:root:tensor([[0.4453]], device='cuda:0', grad_fn=<SigmoidBackward0>)
+INFO:root:iter 23
+INFO:root:tensor([[0.5080]], device='cuda:0', grad_fn=<SigmoidBackward0>)
+INFO:root:iter 23
+INFO:root:tensor([[0.5067]], device='cuda:0', grad_fn=<SigmoidBackward0>)
+INFO:root:iter 23
+INFO:root:tensor([[0.4936]], device='cuda:0', grad_fn=<SigmoidBackward0>)
+INFO:root:iter 23
+INFO:root:tensor([[0.5072]], device='cuda:0', grad_fn=<SigmoidBackward0>)
+INFO:root:tensor([7.3641], device='cuda:0', grad_fn=<AddBackward0>), tensor(0.8531, device='cuda:0', grad_fn=<AddBackward0>), tensor(1.4230, device='cuda:0', grad_fn=<AddBackward0>)
+INFO:root:iter 24
+INFO:root:tensor([[0.4048]], device='cuda:0', grad_fn=<SigmoidBackward0>)
+INFO:root:iter 24
+INFO:root:tensor([[0.4729]], device='cuda:0', grad_fn=<SigmoidBackward0>)
+INFO:root:iter 24
+INFO:root:tensor([[0.4498]], device='cuda:0', grad_fn=<SigmoidBackward0>)
+INFO:root:iter 24
+INFO:root:tensor([[0.4253]], device='cuda:0', grad_fn=<SigmoidBackward0>)
+INFO:root:iter 24
+INFO:root:tensor([[0.4024]], device='cuda:0', grad_fn=<SigmoidBackward0>)
+INFO:root:iter 24
+INFO:root:tensor([[0.4259]], device='cuda:0', grad_fn=<SigmoidBackward0>)
+INFO:root:iter 24
+INFO:root:tensor([[0.4444]], device='cuda:0', grad_fn=<SigmoidBackward0>)
+INFO:root:iter 24
+INFO:root:tensor([[0.4449]], device='cuda:0', grad_fn=<SigmoidBackward0>)
+INFO:root:iter 24
+INFO:root:tensor([[0.5081]], device='cuda:0', grad_fn=<SigmoidBackward0>)
+INFO:root:iter 24
+INFO:root:tensor([[0.5067]], device='cuda:0', grad_fn=<SigmoidBackward0>)
+INFO:root:iter 24
+INFO:root:tensor([[0.4937]], device='cuda:0', grad_fn=<SigmoidBackward0>)
+INFO:root:iter 24
+INFO:root:tensor([[0.5074]], device='cuda:0', grad_fn=<SigmoidBackward0>)
+INFO:root:tensor([7.3618], device='cuda:0', grad_fn=<AddBackward0>), tensor(0.8361, device='cuda:0', grad_fn=<AddBackward0>), tensor(1.4225, device='cuda:0', grad_fn=<AddBackward0>)
+INFO:root:iter 25
+INFO:root:tensor([[0.4052]], device='cuda:0', grad_fn=<SigmoidBackward0>)
+INFO:root:iter 25
+INFO:root:tensor([[0.4724]], device='cuda:0', grad_fn=<SigmoidBackward0>)
+INFO:root:iter 25
+INFO:root:tensor([[0.4496]], device='cuda:0', grad_fn=<SigmoidBackward0>)
+INFO:root:iter 25
+INFO:root:tensor([[0.4256]], device='cuda:0', grad_fn=<SigmoidBackward0>)
+INFO:root:iter 25
+INFO:root:tensor([[0.4028]], device='cuda:0', grad_fn=<SigmoidBackward0>)
+INFO:root:iter 25
+INFO:root:tensor([[0.4257]], device='cuda:0', grad_fn=<SigmoidBackward0>)
+INFO:root:iter 25
+INFO:root:tensor([[0.4445]], device='cuda:0', grad_fn=<SigmoidBackward0>)
+INFO:root:iter 25
+INFO:root:tensor([[0.4469]], device='cuda:0', grad_fn=<SigmoidBackward0>)
+INFO:root:iter 25
+INFO:root:tensor([[0.5083]], device='cuda:0', grad_fn=<SigmoidBackward0>)
+INFO:root:iter 25
+INFO:root:tensor([[0.5069]], device='cuda:0', grad_fn=<SigmoidBackward0>)
+INFO:root:iter 25
+INFO:root:tensor([[0.4937]], device='cuda:0', grad_fn=<SigmoidBackward0>)
+INFO:root:iter 25
+INFO:root:tensor([[0.5077]], device='cuda:0', grad_fn=<SigmoidBackward0>)
+INFO:root:tensor([7.3664], device='cuda:0', grad_fn=<AddBackward0>), tensor(0.8192, device='cuda:0', grad_fn=<AddBackward0>), tensor(1.7212, device='cuda:0', grad_fn=<AddBackward0>)
+INFO:root:iter 26
+INFO:root:tensor([[0.4047]], device='cuda:0', grad_fn=<SigmoidBackward0>)
+INFO:root:iter 26
+INFO:root:tensor([[0.4726]], device='cuda:0', grad_fn=<SigmoidBackward0>)
+INFO:root:iter 26
+INFO:root:tensor([[0.4498]], device='cuda:0', grad_fn=<SigmoidBackward0>)
+INFO:root:iter 26
+INFO:root:tensor([[0.4253]], device='cuda:0', grad_fn=<SigmoidBackward0>)
+INFO:root:iter 26
+INFO:root:tensor([[0.4025]], device='cuda:0', grad_fn=<SigmoidBackward0>)
+INFO:root:iter 26
+INFO:root:tensor([[0.4257]], device='cuda:0', grad_fn=<SigmoidBackward0>)
+INFO:root:iter 26
+INFO:root:tensor([[0.4448]], device='cuda:0', grad_fn=<SigmoidBackward0>)
+INFO:root:iter 26
+INFO:root:tensor([[0.4451]], device='cuda:0', grad_fn=<SigmoidBackward0>)
+INFO:root:iter 26
+INFO:root:tensor([[0.5084]], device='cuda:0', grad_fn=<SigmoidBackward0>)
+INFO:root:iter 26
+INFO:root:tensor([[0.5071]], device='cuda:0', grad_fn=<SigmoidBackward0>)
+INFO:root:iter 26
+INFO:root:tensor([[0.4939]], device='cuda:0', grad_fn=<SigmoidBackward0>)
+INFO:root:iter 26
+INFO:root:tensor([[0.5079]], device='cuda:0', grad_fn=<SigmoidBackward0>)
+INFO:root:tensor([7.3641], device='cuda:0', grad_fn=<AddBackward0>), tensor(0.8036, device='cuda:0', grad_fn=<AddBackward0>), tensor(1.8372, device='cuda:0', grad_fn=<AddBackward0>)
+INFO:root:iter 27
+INFO:root:tensor([[0.4038]], device='cuda:0', grad_fn=<SigmoidBackward0>)
+INFO:root:iter 27
+INFO:root:tensor([[0.4729]], device='cuda:0', grad_fn=<SigmoidBackward0>)
+INFO:root:iter 27
+INFO:root:tensor([[0.4497]], device='cuda:0', grad_fn=<SigmoidBackward0>)
+INFO:root:iter 27
+INFO:root:tensor([[0.4256]], device='cuda:0', grad_fn=<SigmoidBackward0>)
+INFO:root:iter 27
+INFO:root:tensor([[0.4019]], device='cuda:0', grad_fn=<SigmoidBackward0>)
+INFO:root:iter 27
+INFO:root:tensor([[0.4254]], device='cuda:0', grad_fn=<SigmoidBackward0>)
+INFO:root:iter 27
+INFO:root:tensor([[0.4449]], device='cuda:0', grad_fn=<SigmoidBackward0>)
+INFO:root:iter 27
+INFO:root:tensor([[0.4454]], device='cuda:0', grad_fn=<SigmoidBackward0>)
+INFO:root:iter 27
+INFO:root:tensor([[0.5087]], device='cuda:0', grad_fn=<SigmoidBackward0>)
+INFO:root:iter 27
+INFO:root:tensor([[0.5072]], device='cuda:0', grad_fn=<SigmoidBackward0>)
+INFO:root:iter 27
+INFO:root:tensor([[0.4942]], device='cuda:0', grad_fn=<SigmoidBackward0>)
+INFO:root:iter 27
+INFO:root:tensor([[0.5081]], device='cuda:0', grad_fn=<SigmoidBackward0>)
+INFO:root:tensor([7.3648], device='cuda:0', grad_fn=<AddBackward0>), tensor(0.7889, device='cuda:0', grad_fn=<AddBackward0>), tensor(1.8368, device='cuda:0', grad_fn=<AddBackward0>)
+INFO:root:iter 28
+INFO:root:tensor([[0.4049]], device='cuda:0', grad_fn=<SigmoidBackward0>)
+INFO:root:iter 28
+INFO:root:tensor([[0.4730]], device='cuda:0', grad_fn=<SigmoidBackward0>)
+INFO:root:iter 28
+INFO:root:tensor([[0.4499]], device='cuda:0', grad_fn=<SigmoidBackward0>)
+INFO:root:iter 28
+INFO:root:tensor([[0.4252]], device='cuda:0', grad_fn=<SigmoidBackward0>)
+INFO:root:iter 28
+INFO:root:tensor([[0.4024]], device='cuda:0', grad_fn=<SigmoidBackward0>)
+INFO:root:iter 28
+INFO:root:tensor([[0.4257]], device='cuda:0', grad_fn=<SigmoidBackward0>)
+INFO:root:iter 28
+INFO:root:tensor([[0.4454]], device='cuda:0', grad_fn=<SigmoidBackward0>)
+INFO:root:iter 28
+INFO:root:tensor([[0.4462]], device='cuda:0', grad_fn=<SigmoidBackward0>)
+INFO:root:iter 28
+INFO:root:tensor([[0.5088]], device='cuda:0', grad_fn=<SigmoidBackward0>)
+INFO:root:iter 28
+INFO:root:tensor([[0.5073]], device='cuda:0', grad_fn=<SigmoidBackward0>)
+INFO:root:iter 28
+INFO:root:tensor([[0.4942]], device='cuda:0', grad_fn=<SigmoidBackward0>)
+INFO:root:iter 28
+INFO:root:tensor([[0.5083]], device='cuda:0', grad_fn=<SigmoidBackward0>)
+INFO:root:tensor([7.3712], device='cuda:0', grad_fn=<AddBackward0>), tensor(0.7755, device='cuda:0', grad_fn=<AddBackward0>), tensor(1.8350, device='cuda:0', grad_fn=<AddBackward0>)
+INFO:root:iter 29
+INFO:root:tensor([[0.4036]], device='cuda:0', grad_fn=<SigmoidBackward0>)
+INFO:root:iter 29
+INFO:root:tensor([[0.4732]], device='cuda:0', grad_fn=<SigmoidBackward0>)
+INFO:root:iter 29
+INFO:root:tensor([[0.4502]], device='cuda:0', grad_fn=<SigmoidBackward0>)
+INFO:root:iter 29
+INFO:root:tensor([[0.4259]], device='cuda:0', grad_fn=<SigmoidBackward0>)
+INFO:root:iter 29
+INFO:root:tensor([[0.4027]], device='cuda:0', grad_fn=<SigmoidBackward0>)
+INFO:root:iter 29
+INFO:root:tensor([[0.4257]], device='cuda:0', grad_fn=<SigmoidBackward0>)
+INFO:root:iter 29
+INFO:root:tensor([[0.4457]], device='cuda:0', grad_fn=<SigmoidBackward0>)
+INFO:root:iter 29
+INFO:root:tensor([[0.4455]], device='cuda:0', grad_fn=<SigmoidBackward0>)
+INFO:root:iter 29
+INFO:root:tensor([[0.5090]], device='cuda:0', grad_fn=<SigmoidBackward0>)
+INFO:root:iter 29
+INFO:root:tensor([[0.5074]], device='cuda:0', grad_fn=<SigmoidBackward0>)
+INFO:root:iter 29
+INFO:root:tensor([[0.4945]], device='cuda:0', grad_fn=<SigmoidBackward0>)
+INFO:root:iter 29
+INFO:root:tensor([[0.5085]], device='cuda:0', grad_fn=<SigmoidBackward0>)
+INFO:root:tensor([7.3723], device='cuda:0', grad_fn=<AddBackward0>), tensor(0.7638, device='cuda:0', grad_fn=<AddBackward0>), tensor(1.8359, device='cuda:0', grad_fn=<AddBackward0>)
+INFO:root:iter 30
+INFO:root:tensor([[0.4045]], device='cuda:0', grad_fn=<SigmoidBackward0>)
+INFO:root:iter 30
+INFO:root:tensor([[0.4730]], device='cuda:0', grad_fn=<SigmoidBackward0>)
+INFO:root:iter 30
+INFO:root:tensor([[0.4506]], device='cuda:0', grad_fn=<SigmoidBackward0>)
+INFO:root:iter 30
+INFO:root:tensor([[0.4261]], device='cuda:0', grad_fn=<SigmoidBackward0>)
+INFO:root:iter 30
+INFO:root:tensor([[0.4031]], device='cuda:0', grad_fn=<SigmoidBackward0>)
+INFO:root:iter 30
+INFO:root:tensor([[0.4261]], device='cuda:0', grad_fn=<SigmoidBackward0>)
+INFO:root:iter 30
+INFO:root:tensor([[0.4456]], device='cuda:0', grad_fn=<SigmoidBackward0>)
+INFO:root:iter 30
+INFO:root:tensor([[0.4458]], device='cuda:0', grad_fn=<SigmoidBackward0>)
+INFO:root:iter 30
+INFO:root:tensor([[0.5091]], device='cuda:0', grad_fn=<SigmoidBackward0>)
+INFO:root:iter 30
+INFO:root:tensor([[0.5075]], device='cuda:0', grad_fn=<SigmoidBackward0>)
+INFO:root:iter 30
+INFO:root:tensor([[0.4944]], device='cuda:0', grad_fn=<SigmoidBackward0>)
+INFO:root:iter 30
+INFO:root:tensor([[0.5086]], device='cuda:0', grad_fn=<SigmoidBackward0>)
+INFO:root:tensor([7.3767], device='cuda:0', grad_fn=<AddBackward0>), tensor(0.7531, device='cuda:0', grad_fn=<AddBackward0>), tensor(1.8982, device='cuda:0', grad_fn=<AddBackward0>)
+INFO:root:iter 31
+INFO:root:tensor([[0.4042]], device='cuda:0', grad_fn=<SigmoidBackward0>)
+INFO:root:iter 31
+INFO:root:tensor([[0.4731]], device='cuda:0', grad_fn=<SigmoidBackward0>)
+INFO:root:iter 31
+INFO:root:tensor([[0.4507]], device='cuda:0', grad_fn=<SigmoidBackward0>)
+INFO:root:iter 31
+INFO:root:tensor([[0.4260]], device='cuda:0', grad_fn=<SigmoidBackward0>)
+INFO:root:iter 31
+INFO:root:tensor([[0.4031]], device='cuda:0', grad_fn=<SigmoidBackward0>)
+INFO:root:iter 31
+INFO:root:tensor([[0.4267]], device='cuda:0', grad_fn=<SigmoidBackward0>)
+INFO:root:iter 31
+INFO:root:tensor([[0.4461]], device='cuda:0', grad_fn=<SigmoidBackward0>)
+INFO:root:iter 31
+INFO:root:tensor([[0.4451]], device='cuda:0', grad_fn=<SigmoidBackward0>)
+INFO:root:iter 31
+INFO:root:tensor([[0.5091]], device='cuda:0', grad_fn=<SigmoidBackward0>)
+INFO:root:iter 31
+INFO:root:tensor([[0.5077]], device='cuda:0', grad_fn=<SigmoidBackward0>)
+INFO:root:iter 31
+INFO:root:tensor([[0.4945]], device='cuda:0', grad_fn=<SigmoidBackward0>)
+INFO:root:iter 31
+INFO:root:tensor([[0.5087]], device='cuda:0', grad_fn=<SigmoidBackward0>)
+INFO:root:tensor([7.3781], device='cuda:0', grad_fn=<AddBackward0>), tensor(0.7439, device='cuda:0', grad_fn=<AddBackward0>), tensor(1.8974, device='cuda:0', grad_fn=<AddBackward0>)
+INFO:root:iter 32
+INFO:root:tensor([[0.4040]], device='cuda:0', grad_fn=<SigmoidBackward0>)
+INFO:root:iter 32
+INFO:root:tensor([[0.4732]], device='cuda:0', grad_fn=<SigmoidBackward0>)
+INFO:root:iter 32
+INFO:root:tensor([[0.4515]], device='cuda:0', grad_fn=<SigmoidBackward0>)
+INFO:root:iter 32
+INFO:root:tensor([[0.4267]], device='cuda:0', grad_fn=<SigmoidBackward0>)
+INFO:root:iter 32
+INFO:root:tensor([[0.4031]], device='cuda:0', grad_fn=<SigmoidBackward0>)
+INFO:root:iter 32
+INFO:root:tensor([[0.4259]], device='cuda:0', grad_fn=<SigmoidBackward0>)
+INFO:root:iter 32
+INFO:root:tensor([[0.4462]], device='cuda:0', grad_fn=<SigmoidBackward0>)
+INFO:root:iter 32
+INFO:root:tensor([[0.4459]], device='cuda:0', grad_fn=<SigmoidBackward0>)
+INFO:root:iter 32
+INFO:root:tensor([[0.5093]], device='cuda:0', grad_fn=<SigmoidBackward0>)
+INFO:root:iter 32
+INFO:root:tensor([[0.5079]], device='cuda:0', grad_fn=<SigmoidBackward0>)
+INFO:root:iter 32
+INFO:root:tensor([[0.4946]], device='cuda:0', grad_fn=<SigmoidBackward0>)
+INFO:root:iter 32
+INFO:root:tensor([[0.5089]], device='cuda:0', grad_fn=<SigmoidBackward0>)
+INFO:root:tensor([7.3820], device='cuda:0', grad_fn=<AddBackward0>), tensor(0.7347, device='cuda:0', grad_fn=<AddBackward0>), tensor(1.7182, device='cuda:0', grad_fn=<AddBackward0>)
+INFO:root:iter 33
+INFO:root:tensor([[0.4042]], device='cuda:0', grad_fn=<SigmoidBackward0>)
+INFO:root:iter 33
+INFO:root:tensor([[0.4736]], device='cuda:0', grad_fn=<SigmoidBackward0>)
+INFO:root:iter 33
+INFO:root:tensor([[0.4511]], device='cuda:0', grad_fn=<SigmoidBackward0>)
+INFO:root:iter 33
+INFO:root:tensor([[0.4263]], device='cuda:0', grad_fn=<SigmoidBackward0>)
+INFO:root:iter 33
+INFO:root:tensor([[0.4040]], device='cuda:0', grad_fn=<SigmoidBackward0>)
+INFO:root:iter 33
+INFO:root:tensor([[0.4264]], device='cuda:0', grad_fn=<SigmoidBackward0>)
+INFO:root:iter 33
+INFO:root:tensor([[0.4461]], device='cuda:0', grad_fn=<SigmoidBackward0>)
+INFO:root:iter 33
+INFO:root:tensor([[0.4454]], device='cuda:0', grad_fn=<SigmoidBackward0>)
+INFO:root:iter 33
+INFO:root:tensor([[0.5094]], device='cuda:0', grad_fn=<SigmoidBackward0>)
+INFO:root:iter 33
+INFO:root:tensor([[0.5081]], device='cuda:0', grad_fn=<SigmoidBackward0>)
+INFO:root:iter 33
+INFO:root:tensor([[0.4946]], device='cuda:0', grad_fn=<SigmoidBackward0>)
+INFO:root:iter 33
+INFO:root:tensor([[0.5090]], device='cuda:0', grad_fn=<SigmoidBackward0>)
+INFO:root:tensor([7.3838], device='cuda:0', grad_fn=<AddBackward0>), tensor(0.7254, device='cuda:0', grad_fn=<AddBackward0>), tensor(1.5991, device='cuda:0', grad_fn=<AddBackward0>)
+INFO:root:iter 34
+INFO:root:tensor([[0.4039]], device='cuda:0', grad_fn=<SigmoidBackward0>)
+INFO:root:iter 34
+INFO:root:tensor([[0.4733]], device='cuda:0', grad_fn=<SigmoidBackward0>)
+INFO:root:iter 34
+INFO:root:tensor([[0.4512]], device='cuda:0', grad_fn=<SigmoidBackward0>)
+INFO:root:iter 34
+INFO:root:tensor([[0.4265]], device='cuda:0', grad_fn=<SigmoidBackward0>)
+INFO:root:iter 34
+INFO:root:tensor([[0.4033]], device='cuda:0', grad_fn=<SigmoidBackward0>)
+INFO:root:iter 34
+INFO:root:tensor([[0.4267]], device='cuda:0', grad_fn=<SigmoidBackward0>)
+INFO:root:iter 34
+INFO:root:tensor([[0.4467]], device='cuda:0', grad_fn=<SigmoidBackward0>)
+INFO:root:iter 34
+INFO:root:tensor([[0.4469]], device='cuda:0', grad_fn=<SigmoidBackward0>)
+INFO:root:iter 34
+INFO:root:tensor([[0.5095]], device='cuda:0', grad_fn=<SigmoidBackward0>)
+INFO:root:iter 34
+INFO:root:tensor([[0.5083]], device='cuda:0', grad_fn=<SigmoidBackward0>)
+INFO:root:iter 34
+INFO:root:tensor([[0.4947]], device='cuda:0', grad_fn=<SigmoidBackward0>)
+INFO:root:iter 34
+INFO:root:tensor([[0.5093]], device='cuda:0', grad_fn=<SigmoidBackward0>)
+INFO:root:tensor([7.3879], device='cuda:0', grad_fn=<AddBackward0>), tensor(0.7155, device='cuda:0', grad_fn=<AddBackward0>), tensor(1.6615, device='cuda:0', grad_fn=<AddBackward0>)
+INFO:root:iter 35
+INFO:root:tensor([[0.4033]], device='cuda:0', grad_fn=<SigmoidBackward0>)
+INFO:root:iter 35
+INFO:root:tensor([[0.4733]], device='cuda:0', grad_fn=<SigmoidBackward0>)
+INFO:root:iter 35
+INFO:root:tensor([[0.4519]], device='cuda:0', grad_fn=<SigmoidBackward0>)
+INFO:root:iter 35
+INFO:root:tensor([[0.4271]], device='cuda:0', grad_fn=<SigmoidBackward0>)
+INFO:root:iter 35
+INFO:root:tensor([[0.4034]], device='cuda:0', grad_fn=<SigmoidBackward0>)
+INFO:root:iter 35
+INFO:root:tensor([[0.4264]], device='cuda:0', grad_fn=<SigmoidBackward0>)
+INFO:root:iter 35
+INFO:root:tensor([[0.4465]], device='cuda:0', grad_fn=<SigmoidBackward0>)
+INFO:root:iter 35
+INFO:root:tensor([[0.4473]], device='cuda:0', grad_fn=<SigmoidBackward0>)
+INFO:root:iter 35
+INFO:root:tensor([[0.5096]], device='cuda:0', grad_fn=<SigmoidBackward0>)
+INFO:root:iter 35
+INFO:root:tensor([[0.5084]], device='cuda:0', grad_fn=<SigmoidBackward0>)
+INFO:root:iter 35
+INFO:root:tensor([[0.4950]], device='cuda:0', grad_fn=<SigmoidBackward0>)
+INFO:root:iter 35
+INFO:root:tensor([[0.5094]], device='cuda:0', grad_fn=<SigmoidBackward0>)
+INFO:root:tensor([7.3903], device='cuda:0', grad_fn=<AddBackward0>), tensor(0.7068, device='cuda:0', grad_fn=<AddBackward0>), tensor(1.8429, device='cuda:0', grad_fn=<AddBackward0>)
+INFO:root:iter 36
+INFO:root:tensor([[0.4039]], device='cuda:0', grad_fn=<SigmoidBackward0>)
+INFO:root:iter 36
+INFO:root:tensor([[0.4734]], device='cuda:0', grad_fn=<SigmoidBackward0>)
+INFO:root:iter 36
+INFO:root:tensor([[0.4511]], device='cuda:0', grad_fn=<SigmoidBackward0>)
+INFO:root:iter 36
+INFO:root:tensor([[0.4271]], device='cuda:0', grad_fn=<SigmoidBackward0>)
+INFO:root:iter 36
+INFO:root:tensor([[0.4044]], device='cuda:0', grad_fn=<SigmoidBackward0>)
+INFO:root:iter 36
+INFO:root:tensor([[0.4259]], device='cuda:0', grad_fn=<SigmoidBackward0>)
+INFO:root:iter 36
+INFO:root:tensor([[0.4463]], device='cuda:0', grad_fn=<SigmoidBackward0>)
+INFO:root:iter 36
+INFO:root:tensor([[0.4470]], device='cuda:0', grad_fn=<SigmoidBackward0>)
+INFO:root:iter 36
+INFO:root:tensor([[0.5098]], device='cuda:0', grad_fn=<SigmoidBackward0>)
+INFO:root:iter 36
+INFO:root:tensor([[0.5085]], device='cuda:0', grad_fn=<SigmoidBackward0>)
+INFO:root:iter 36
+INFO:root:tensor([[0.4950]], device='cuda:0', grad_fn=<SigmoidBackward0>)
+INFO:root:iter 36
+INFO:root:tensor([[0.5095]], device='cuda:0', grad_fn=<SigmoidBackward0>)
+INFO:root:tensor([7.3912], device='cuda:0', grad_fn=<AddBackward0>), tensor(0.6980, device='cuda:0', grad_fn=<AddBackward0>), tensor(1.8417, device='cuda:0', grad_fn=<AddBackward0>)
+INFO:root:iter 37
+INFO:root:tensor([[0.4039]], device='cuda:0', grad_fn=<SigmoidBackward0>)
+INFO:root:iter 37
+INFO:root:tensor([[0.4737]], device='cuda:0', grad_fn=<SigmoidBackward0>)
+INFO:root:iter 37
+INFO:root:tensor([[0.4513]], device='cuda:0', grad_fn=<SigmoidBackward0>)
+INFO:root:iter 37
+INFO:root:tensor([[0.4274]], device='cuda:0', grad_fn=<SigmoidBackward0>)
+INFO:root:iter 37
+INFO:root:tensor([[0.4035]], device='cuda:0', grad_fn=<SigmoidBackward0>)
+INFO:root:iter 37
+INFO:root:tensor([[0.4263]], device='cuda:0', grad_fn=<SigmoidBackward0>)
+INFO:root:iter 37
+INFO:root:tensor([[0.4469]], device='cuda:0', grad_fn=<SigmoidBackward0>)
+INFO:root:iter 37
+INFO:root:tensor([[0.4471]], device='cuda:0', grad_fn=<SigmoidBackward0>)
+INFO:root:iter 37
+INFO:root:tensor([[0.5099]], device='cuda:0', grad_fn=<SigmoidBackward0>)
+INFO:root:iter 37
+INFO:root:tensor([[0.5085]], device='cuda:0', grad_fn=<SigmoidBackward0>)
+INFO:root:iter 37
+INFO:root:tensor([[0.4952]], device='cuda:0', grad_fn=<SigmoidBackward0>)
+INFO:root:iter 37
+INFO:root:tensor([[0.5096]], device='cuda:0', grad_fn=<SigmoidBackward0>)
+INFO:root:tensor([7.3935], device='cuda:0', grad_fn=<AddBackward0>), tensor(0.6896, device='cuda:0', grad_fn=<AddBackward0>), tensor(1.8395, device='cuda:0', grad_fn=<AddBackward0>)
+INFO:root:iter 38
+INFO:root:tensor([[0.4043]], device='cuda:0', grad_fn=<SigmoidBackward0>)
+INFO:root:iter 38
+INFO:root:tensor([[0.4742]], device='cuda:0', grad_fn=<SigmoidBackward0>)
+INFO:root:iter 38
+INFO:root:tensor([[0.4516]], device='cuda:0', grad_fn=<SigmoidBackward0>)
+INFO:root:iter 38
+INFO:root:tensor([[0.4276]], device='cuda:0', grad_fn=<SigmoidBackward0>)
+INFO:root:iter 38
+INFO:root:tensor([[0.4042]], device='cuda:0', grad_fn=<SigmoidBackward0>)
+INFO:root:iter 38
+INFO:root:tensor([[0.4263]], device='cuda:0', grad_fn=<SigmoidBackward0>)
+INFO:root:iter 38
+INFO:root:tensor([[0.4469]], device='cuda:0', grad_fn=<SigmoidBackward0>)
+INFO:root:iter 38
+INFO:root:tensor([[0.4461]], device='cuda:0', grad_fn=<SigmoidBackward0>)
+INFO:root:iter 38
+INFO:root:tensor([[0.5101]], device='cuda:0', grad_fn=<SigmoidBackward0>)
+INFO:root:iter 38
+INFO:root:tensor([[0.5086]], device='cuda:0', grad_fn=<SigmoidBackward0>)
+INFO:root:iter 38
+INFO:root:tensor([[0.4954]], device='cuda:0', grad_fn=<SigmoidBackward0>)
+INFO:root:iter 38
+INFO:root:tensor([[0.5097]], device='cuda:0', grad_fn=<SigmoidBackward0>)
+INFO:root:tensor([7.3969], device='cuda:0', grad_fn=<AddBackward0>), tensor(0.6814, device='cuda:0', grad_fn=<AddBackward0>), tensor(1.8372, device='cuda:0', grad_fn=<AddBackward0>)
+INFO:root:iter 39
+INFO:root:tensor([[0.4042]], device='cuda:0', grad_fn=<SigmoidBackward0>)
+INFO:root:iter 39
+INFO:root:tensor([[0.4740]], device='cuda:0', grad_fn=<SigmoidBackward0>)
+INFO:root:iter 39
+INFO:root:tensor([[0.4516]], device='cuda:0', grad_fn=<SigmoidBackward0>)
+INFO:root:iter 39
+INFO:root:tensor([[0.4265]], device='cuda:0', grad_fn=<SigmoidBackward0>)
+INFO:root:iter 39
+INFO:root:tensor([[0.4045]], device='cuda:0', grad_fn=<SigmoidBackward0>)
+INFO:root:iter 39
+INFO:root:tensor([[0.4264]], device='cuda:0', grad_fn=<SigmoidBackward0>)
+INFO:root:iter 39
+INFO:root:tensor([[0.4471]], device='cuda:0', grad_fn=<SigmoidBackward0>)
+INFO:root:iter 39
+INFO:root:tensor([[0.4465]], device='cuda:0', grad_fn=<SigmoidBackward0>)
+INFO:root:iter 39
+INFO:root:tensor([[0.5101]], device='cuda:0', grad_fn=<SigmoidBackward0>)
+INFO:root:iter 39
+INFO:root:tensor([[0.5088]], device='cuda:0', grad_fn=<SigmoidBackward0>)
+INFO:root:iter 39
+INFO:root:tensor([[0.4954]], device='cuda:0', grad_fn=<SigmoidBackward0>)
+INFO:root:iter 39
+INFO:root:tensor([[0.5099]], device='cuda:0', grad_fn=<SigmoidBackward0>)
+INFO:root:tensor([7.3969], device='cuda:0', grad_fn=<AddBackward0>), tensor(0.6747, device='cuda:0', grad_fn=<AddBackward0>), tensor(1.8380, device='cuda:0', grad_fn=<AddBackward0>)
+INFO:root:iter 40
+INFO:root:tensor([[0.4038]], device='cuda:0', grad_fn=<SigmoidBackward0>)
+INFO:root:iter 40
+INFO:root:tensor([[0.4749]], device='cuda:0', grad_fn=<SigmoidBackward0>)
+INFO:root:iter 40
+INFO:root:tensor([[0.4515]], device='cuda:0', grad_fn=<SigmoidBackward0>)
+INFO:root:iter 40
+INFO:root:tensor([[0.4267]], device='cuda:0', grad_fn=<SigmoidBackward0>)
+INFO:root:iter 40
+INFO:root:tensor([[0.4041]], device='cuda:0', grad_fn=<SigmoidBackward0>)
+INFO:root:iter 40
+INFO:root:tensor([[0.4266]], device='cuda:0', grad_fn=<SigmoidBackward0>)
+INFO:root:iter 40
+INFO:root:tensor([[0.4469]], device='cuda:0', grad_fn=<SigmoidBackward0>)
+INFO:root:iter 40
+INFO:root:tensor([[0.4465]], device='cuda:0', grad_fn=<SigmoidBackward0>)
+INFO:root:iter 40
+INFO:root:tensor([[0.5102]], device='cuda:0', grad_fn=<SigmoidBackward0>)
+INFO:root:iter 40
+INFO:root:tensor([[0.5089]], device='cuda:0', grad_fn=<SigmoidBackward0>)
+INFO:root:iter 40
+INFO:root:tensor([[0.4955]], device='cuda:0', grad_fn=<SigmoidBackward0>)
+INFO:root:iter 40
+INFO:root:tensor([[0.5100]], device='cuda:0', grad_fn=<SigmoidBackward0>)
+INFO:root:tensor([7.3980], device='cuda:0', grad_fn=<AddBackward0>), tensor(0.6693, device='cuda:0', grad_fn=<AddBackward0>), tensor(1.8982, device='cuda:0', grad_fn=<AddBackward0>)
+INFO:root:iter 41
+INFO:root:tensor([[0.4041]], device='cuda:0', grad_fn=<SigmoidBackward0>)
+INFO:root:iter 41
+INFO:root:tensor([[0.4745]], device='cuda:0', grad_fn=<SigmoidBackward0>)
+INFO:root:iter 41
+INFO:root:tensor([[0.4514]], device='cuda:0', grad_fn=<SigmoidBackward0>)
+INFO:root:iter 41
+INFO:root:tensor([[0.4265]], device='cuda:0', grad_fn=<SigmoidBackward0>)
+INFO:root:iter 41
+INFO:root:tensor([[0.4049]], device='cuda:0', grad_fn=<SigmoidBackward0>)
+INFO:root:iter 41
+INFO:root:tensor([[0.4268]], device='cuda:0', grad_fn=<SigmoidBackward0>)
+INFO:root:iter 41
+INFO:root:tensor([[0.4472]], device='cuda:0', grad_fn=<SigmoidBackward0>)
+INFO:root:iter 41
+INFO:root:tensor([[0.4462]], device='cuda:0', grad_fn=<SigmoidBackward0>)
+INFO:root:iter 41
+INFO:root:tensor([[0.5104]], device='cuda:0', grad_fn=<SigmoidBackward0>)
+INFO:root:iter 41
+INFO:root:tensor([[0.5091]], device='cuda:0', grad_fn=<SigmoidBackward0>)
+INFO:root:iter 41
+INFO:root:tensor([[0.4956]], device='cuda:0', grad_fn=<SigmoidBackward0>)
+INFO:root:iter 41
+INFO:root:tensor([[0.5101]], device='cuda:0', grad_fn=<SigmoidBackward0>)
+INFO:root:tensor([7.4004], device='cuda:0', grad_fn=<AddBackward0>), tensor(0.6628, device='cuda:0', grad_fn=<AddBackward0>), tensor(1.8983, device='cuda:0', grad_fn=<AddBackward0>)
+INFO:root:iter 42
+INFO:root:tensor([[0.4045]], device='cuda:0', grad_fn=<SigmoidBackward0>)
+INFO:root:iter 42
+INFO:root:tensor([[0.4749]], device='cuda:0', grad_fn=<SigmoidBackward0>)
+INFO:root:iter 42
+INFO:root:tensor([[0.4514]], device='cuda:0', grad_fn=<SigmoidBackward0>)
+INFO:root:iter 42
+INFO:root:tensor([[0.4266]], device='cuda:0', grad_fn=<SigmoidBackward0>)
+INFO:root:iter 42
+INFO:root:tensor([[0.4044]], device='cuda:0', grad_fn=<SigmoidBackward0>)
+INFO:root:iter 42
+INFO:root:tensor([[0.4264]], device='cuda:0', grad_fn=<SigmoidBackward0>)
+INFO:root:iter 42
+INFO:root:tensor([[0.4467]], device='cuda:0', grad_fn=<SigmoidBackward0>)
+INFO:root:iter 42
+INFO:root:tensor([[0.4471]], device='cuda:0', grad_fn=<SigmoidBackward0>)
+INFO:root:iter 42
+INFO:root:tensor([[0.5105]], device='cuda:0', grad_fn=<SigmoidBackward0>)
+INFO:root:iter 42
+INFO:root:tensor([[0.5093]], device='cuda:0', grad_fn=<SigmoidBackward0>)
+INFO:root:iter 42
+INFO:root:tensor([[0.4958]], device='cuda:0', grad_fn=<SigmoidBackward0>)
+INFO:root:iter 42
+INFO:root:tensor([[0.5104]], device='cuda:0', grad_fn=<SigmoidBackward0>)
+INFO:root:tensor([7.4026], device='cuda:0', grad_fn=<AddBackward0>), tensor(0.6574, device='cuda:0', grad_fn=<AddBackward0>), tensor(1.8980, device='cuda:0', grad_fn=<AddBackward0>)
+INFO:root:iter 43
+INFO:root:tensor([[0.4045]], device='cuda:0', grad_fn=<SigmoidBackward0>)
+INFO:root:iter 43
+INFO:root:tensor([[0.4753]], device='cuda:0', grad_fn=<SigmoidBackward0>)
+INFO:root:iter 43
+INFO:root:tensor([[0.4518]], device='cuda:0', grad_fn=<SigmoidBackward0>)
+INFO:root:iter 43
+INFO:root:tensor([[0.4264]], device='cuda:0', grad_fn=<SigmoidBackward0>)
+INFO:root:iter 43
+INFO:root:tensor([[0.4042]], device='cuda:0', grad_fn=<SigmoidBackward0>)
+INFO:root:iter 43
+INFO:root:tensor([[0.4272]], device='cuda:0', grad_fn=<SigmoidBackward0>)
+INFO:root:iter 43
+INFO:root:tensor([[0.4471]], device='cuda:0', grad_fn=<SigmoidBackward0>)
+INFO:root:iter 43
+INFO:root:tensor([[0.4464]], device='cuda:0', grad_fn=<SigmoidBackward0>)
+INFO:root:iter 43
+INFO:root:tensor([[0.5105]], device='cuda:0', grad_fn=<SigmoidBackward0>)
+INFO:root:iter 43
+INFO:root:tensor([[0.5094]], device='cuda:0', grad_fn=<SigmoidBackward0>)
+INFO:root:iter 43
+INFO:root:tensor([[0.4960]], device='cuda:0', grad_fn=<SigmoidBackward0>)
+INFO:root:iter 43
+INFO:root:tensor([[0.5105]], device='cuda:0', grad_fn=<SigmoidBackward0>)
+INFO:root:tensor([7.4053], device='cuda:0', grad_fn=<AddBackward0>), tensor(0.6520, device='cuda:0', grad_fn=<AddBackward0>), tensor(1.8969, device='cuda:0', grad_fn=<AddBackward0>)
+INFO:root:iter 44
+INFO:root:tensor([[0.4043]], device='cuda:0', grad_fn=<SigmoidBackward0>)
+INFO:root:iter 44
+INFO:root:tensor([[0.4748]], device='cuda:0', grad_fn=<SigmoidBackward0>)
+INFO:root:iter 44
+INFO:root:tensor([[0.4522]], device='cuda:0', grad_fn=<SigmoidBackward0>)
+INFO:root:iter 44
+INFO:root:tensor([[0.4272]], device='cuda:0', grad_fn=<SigmoidBackward0>)
+INFO:root:iter 44
+INFO:root:tensor([[0.4048]], device='cuda:0', grad_fn=<SigmoidBackward0>)
+INFO:root:iter 44
+INFO:root:tensor([[0.4268]], device='cuda:0', grad_fn=<SigmoidBackward0>)
+INFO:root:iter 44
+INFO:root:tensor([[0.4473]], device='cuda:0', grad_fn=<SigmoidBackward0>)
+INFO:root:iter 44
+INFO:root:tensor([[0.4471]], device='cuda:0', grad_fn=<SigmoidBackward0>)
+INFO:root:iter 44
+INFO:root:tensor([[0.5107]], device='cuda:0', grad_fn=<SigmoidBackward0>)
+INFO:root:iter 44
+INFO:root:tensor([[0.5095]], device='cuda:0', grad_fn=<SigmoidBackward0>)
+INFO:root:iter 44
+INFO:root:tensor([[0.4960]], device='cuda:0', grad_fn=<SigmoidBackward0>)
+INFO:root:iter 44
+INFO:root:tensor([[0.5106]], device='cuda:0', grad_fn=<SigmoidBackward0>)
+INFO:root:tensor([7.4087], device='cuda:0', grad_fn=<AddBackward0>), tensor(0.6467, device='cuda:0', grad_fn=<AddBackward0>), tensor(1.8960, device='cuda:0', grad_fn=<AddBackward0>)
+INFO:root:iter 45
+INFO:root:tensor([[0.4048]], device='cuda:0', grad_fn=<SigmoidBackward0>)
+INFO:root:iter 45
+INFO:root:tensor([[0.4746]], device='cuda:0', grad_fn=<SigmoidBackward0>)
+INFO:root:iter 45
+INFO:root:tensor([[0.4522]], device='cuda:0', grad_fn=<SigmoidBackward0>)
+INFO:root:iter 45
+INFO:root:tensor([[0.4271]], device='cuda:0', grad_fn=<SigmoidBackward0>)
+INFO:root:iter 45
+INFO:root:tensor([[0.4043]], device='cuda:0', grad_fn=<SigmoidBackward0>)
+INFO:root:iter 45
+INFO:root:tensor([[0.4266]], device='cuda:0', grad_fn=<SigmoidBackward0>)
+INFO:root:iter 45
+INFO:root:tensor([[0.4472]], device='cuda:0', grad_fn=<SigmoidBackward0>)
+INFO:root:iter 45
+INFO:root:tensor([[0.4470]], device='cuda:0', grad_fn=<SigmoidBackward0>)
+INFO:root:iter 45
+INFO:root:tensor([[0.5108]], device='cuda:0', grad_fn=<SigmoidBackward0>)
+INFO:root:iter 45
+INFO:root:tensor([[0.5095]], device='cuda:0', grad_fn=<SigmoidBackward0>)
+INFO:root:iter 45
+INFO:root:tensor([[0.4960]], device='cuda:0', grad_fn=<SigmoidBackward0>)
+INFO:root:iter 45
+INFO:root:tensor([[0.5107]], device='cuda:0', grad_fn=<SigmoidBackward0>)
+INFO:root:tensor([7.4079], device='cuda:0', grad_fn=<AddBackward0>), tensor(0.6425, device='cuda:0', grad_fn=<AddBackward0>), tensor(1.8967, device='cuda:0', grad_fn=<AddBackward0>)
+INFO:root:iter 46
+INFO:root:tensor([[0.4042]], device='cuda:0', grad_fn=<SigmoidBackward0>)
+INFO:root:iter 46
+INFO:root:tensor([[0.4744]], device='cuda:0', grad_fn=<SigmoidBackward0>)
+INFO:root:iter 46
+INFO:root:tensor([[0.4525]], device='cuda:0', grad_fn=<SigmoidBackward0>)
+INFO:root:iter 46
+INFO:root:tensor([[0.4281]], device='cuda:0', grad_fn=<SigmoidBackward0>)
+INFO:root:iter 46
+INFO:root:tensor([[0.4045]], device='cuda:0', grad_fn=<SigmoidBackward0>)
+INFO:root:iter 46
+INFO:root:tensor([[0.4283]], device='cuda:0', grad_fn=<SigmoidBackward0>)
+INFO:root:iter 46
+INFO:root:tensor([[0.4478]], device='cuda:0', grad_fn=<SigmoidBackward0>)
+INFO:root:iter 46
+INFO:root:tensor([[0.4468]], device='cuda:0', grad_fn=<SigmoidBackward0>)
+INFO:root:iter 46
+INFO:root:tensor([[0.5109]], device='cuda:0', grad_fn=<SigmoidBackward0>)
+INFO:root:iter 46
+INFO:root:tensor([[0.5095]], device='cuda:0', grad_fn=<SigmoidBackward0>)
+INFO:root:iter 46
+INFO:root:tensor([[0.4961]], device='cuda:0', grad_fn=<SigmoidBackward0>)
+INFO:root:iter 46
+INFO:root:tensor([[0.5108]], device='cuda:0', grad_fn=<SigmoidBackward0>)
+INFO:root:tensor([7.4133], device='cuda:0', grad_fn=<AddBackward0>), tensor(0.6378, device='cuda:0', grad_fn=<AddBackward0>), tensor(1.8954, device='cuda:0', grad_fn=<AddBackward0>)
+INFO:root:iter 47
+INFO:root:tensor([[0.4045]], device='cuda:0', grad_fn=<SigmoidBackward0>)
+INFO:root:iter 47
+INFO:root:tensor([[0.4748]], device='cuda:0', grad_fn=<SigmoidBackward0>)
+INFO:root:iter 47
+INFO:root:tensor([[0.4522]], device='cuda:0', grad_fn=<SigmoidBackward0>)
+INFO:root:iter 47
+INFO:root:tensor([[0.4274]], device='cuda:0', grad_fn=<SigmoidBackward0>)
+INFO:root:iter 47
+INFO:root:tensor([[0.4068]], device='cuda:0', grad_fn=<SigmoidBackward0>)
+INFO:root:iter 47
+INFO:root:tensor([[0.4275]], device='cuda:0', grad_fn=<SigmoidBackward0>)
+INFO:root:iter 47
+INFO:root:tensor([[0.4477]], device='cuda:0', grad_fn=<SigmoidBackward0>)
+INFO:root:iter 47
+INFO:root:tensor([[0.4494]], device='cuda:0', grad_fn=<SigmoidBackward0>)
+INFO:root:iter 47
+INFO:root:tensor([[0.5109]], device='cuda:0', grad_fn=<SigmoidBackward0>)
+INFO:root:iter 47
+INFO:root:tensor([[0.5097]], device='cuda:0', grad_fn=<SigmoidBackward0>)
+INFO:root:iter 47
+INFO:root:tensor([[0.4963]], device='cuda:0', grad_fn=<SigmoidBackward0>)
+INFO:root:iter 47
+INFO:root:tensor([[0.5109]], device='cuda:0', grad_fn=<SigmoidBackward0>)
+INFO:root:tensor([7.4209], device='cuda:0', grad_fn=<AddBackward0>), tensor(0.6341, device='cuda:0', grad_fn=<AddBackward0>), tensor(1.8949, device='cuda:0', grad_fn=<AddBackward0>)
+INFO:root:iter 48
+INFO:root:tensor([[0.4044]], device='cuda:0', grad_fn=<SigmoidBackward0>)
+INFO:root:iter 48
+INFO:root:tensor([[0.4747]], device='cuda:0', grad_fn=<SigmoidBackward0>)
+INFO:root:iter 48
+INFO:root:tensor([[0.4521]], device='cuda:0', grad_fn=<SigmoidBackward0>)
+INFO:root:iter 48
+INFO:root:tensor([[0.4273]], device='cuda:0', grad_fn=<SigmoidBackward0>)
+INFO:root:iter 48
+INFO:root:tensor([[0.4059]], device='cuda:0', grad_fn=<SigmoidBackward0>)
+INFO:root:iter 48
+INFO:root:tensor([[0.4276]], device='cuda:0', grad_fn=<SigmoidBackward0>)
+INFO:root:iter 48
+INFO:root:tensor([[0.4482]], device='cuda:0', grad_fn=<SigmoidBackward0>)
+INFO:root:iter 48
+INFO:root:tensor([[0.4477]], device='cuda:0', grad_fn=<SigmoidBackward0>)
+INFO:root:iter 48
+INFO:root:tensor([[0.5110]], device='cuda:0', grad_fn=<SigmoidBackward0>)
+INFO:root:iter 48
+INFO:root:tensor([[0.5097]], device='cuda:0', grad_fn=<SigmoidBackward0>)
+INFO:root:iter 48
+INFO:root:tensor([[0.4963]], device='cuda:0', grad_fn=<SigmoidBackward0>)
+INFO:root:iter 48
+INFO:root:tensor([[0.5111]], device='cuda:0', grad_fn=<SigmoidBackward0>)
+INFO:root:tensor([7.4175], device='cuda:0', grad_fn=<AddBackward0>), tensor(0.6316, device='cuda:0', grad_fn=<AddBackward0>), tensor(1.8953, device='cuda:0', grad_fn=<AddBackward0>)
+INFO:root:iter 49
+INFO:root:tensor([[0.4047]], device='cuda:0', grad_fn=<SigmoidBackward0>)
+INFO:root:iter 49
+INFO:root:tensor([[0.4748]], device='cuda:0', grad_fn=<SigmoidBackward0>)
+INFO:root:iter 49
+INFO:root:tensor([[0.4520]], device='cuda:0', grad_fn=<SigmoidBackward0>)
+INFO:root:iter 49
+INFO:root:tensor([[0.4282]], device='cuda:0', grad_fn=<SigmoidBackward0>)
+INFO:root:iter 49
+INFO:root:tensor([[0.4052]], device='cuda:0', grad_fn=<SigmoidBackward0>)
+INFO:root:iter 49
+INFO:root:tensor([[0.4278]], device='cuda:0', grad_fn=<SigmoidBackward0>)
+INFO:root:iter 49
+INFO:root:tensor([[0.4479]], device='cuda:0', grad_fn=<SigmoidBackward0>)
+INFO:root:iter 49
+INFO:root:tensor([[0.4481]], device='cuda:0', grad_fn=<SigmoidBackward0>)
+INFO:root:iter 49
+INFO:root:tensor([[0.5111]], device='cuda:0', grad_fn=<SigmoidBackward0>)
+INFO:root:iter 49
+INFO:root:tensor([[0.5100]], device='cuda:0', grad_fn=<SigmoidBackward0>)
+INFO:root:iter 49
+INFO:root:tensor([[0.4962]], device='cuda:0', grad_fn=<SigmoidBackward0>)
+INFO:root:iter 49
+INFO:root:tensor([[0.5111]], device='cuda:0', grad_fn=<SigmoidBackward0>)
+INFO:root:tensor([7.4194], device='cuda:0', grad_fn=<AddBackward0>), tensor(0.6290, device='cuda:0', grad_fn=<AddBackward0>), tensor(1.8965, device='cuda:0', grad_fn=<AddBackward0>)
+INFO:root:iter 50
+INFO:root:tensor([[0.4040]], device='cuda:0', grad_fn=<SigmoidBackward0>)
+INFO:root:iter 50
+INFO:root:tensor([[0.4748]], device='cuda:0', grad_fn=<SigmoidBackward0>)
+INFO:root:iter 50
+INFO:root:tensor([[0.4527]], device='cuda:0', grad_fn=<SigmoidBackward0>)
+INFO:root:iter 50
+INFO:root:tensor([[0.4280]], device='cuda:0', grad_fn=<SigmoidBackward0>)
+INFO:root:iter 50
+INFO:root:tensor([[0.4064]], device='cuda:0', grad_fn=<SigmoidBackward0>)
+INFO:root:iter 50
+INFO:root:tensor([[0.4271]], device='cuda:0', grad_fn=<SigmoidBackward0>)
+INFO:root:iter 50
+INFO:root:tensor([[0.4473]], device='cuda:0', grad_fn=<SigmoidBackward0>)
+INFO:root:iter 50
+INFO:root:tensor([[0.4478]], device='cuda:0', grad_fn=<SigmoidBackward0>)
+INFO:root:iter 50
+INFO:root:tensor([[0.5113]], device='cuda:0', grad_fn=<SigmoidBackward0>)
+INFO:root:iter 50
+INFO:root:tensor([[0.5100]], device='cuda:0', grad_fn=<SigmoidBackward0>)
+INFO:root:iter 50
+INFO:root:tensor([[0.4961]], device='cuda:0', grad_fn=<SigmoidBackward0>)
+INFO:root:iter 50
+INFO:root:tensor([[0.5112]], device='cuda:0', grad_fn=<SigmoidBackward0>)
+INFO:root:tensor([7.4189], device='cuda:0', grad_fn=<AddBackward0>), tensor(0.6259, device='cuda:0', grad_fn=<AddBackward0>), tensor(1.8946, device='cuda:0', grad_fn=<AddBackward0>)
+INFO:root:iter 51
+INFO:root:tensor([[0.4048]], device='cuda:0', grad_fn=<SigmoidBackward0>)
+INFO:root:iter 51
+INFO:root:tensor([[0.4756]], device='cuda:0', grad_fn=<SigmoidBackward0>)
+INFO:root:iter 51
+INFO:root:tensor([[0.4531]], device='cuda:0', grad_fn=<SigmoidBackward0>)
+INFO:root:iter 51
+INFO:root:tensor([[0.4282]], device='cuda:0', grad_fn=<SigmoidBackward0>)
+INFO:root:iter 51
+INFO:root:tensor([[0.4049]], device='cuda:0', grad_fn=<SigmoidBackward0>)
+INFO:root:iter 51
+INFO:root:tensor([[0.4276]], device='cuda:0', grad_fn=<SigmoidBackward0>)
+INFO:root:iter 51
+INFO:root:tensor([[0.4477]], device='cuda:0', grad_fn=<SigmoidBackward0>)
+INFO:root:iter 51
+INFO:root:tensor([[0.4479]], device='cuda:0', grad_fn=<SigmoidBackward0>)
+INFO:root:iter 51
+INFO:root:tensor([[0.5116]], device='cuda:0', grad_fn=<SigmoidBackward0>)
+INFO:root:iter 51
+INFO:root:tensor([[0.5100]], device='cuda:0', grad_fn=<SigmoidBackward0>)
+INFO:root:iter 51
+INFO:root:tensor([[0.4963]], device='cuda:0', grad_fn=<SigmoidBackward0>)
+INFO:root:iter 51
+INFO:root:tensor([[0.5115]], device='cuda:0', grad_fn=<SigmoidBackward0>)
+INFO:root:tensor([7.4236], device='cuda:0', grad_fn=<AddBackward0>), tensor(0.6232, device='cuda:0', grad_fn=<AddBackward0>), tensor(1.8941, device='cuda:0', grad_fn=<AddBackward0>)
+INFO:root:iter 52
+INFO:root:tensor([[0.4044]], device='cuda:0', grad_fn=<SigmoidBackward0>)
+INFO:root:iter 52
+INFO:root:tensor([[0.4754]], device='cuda:0', grad_fn=<SigmoidBackward0>)
+INFO:root:iter 52
+INFO:root:tensor([[0.4529]], device='cuda:0', grad_fn=<SigmoidBackward0>)
+INFO:root:iter 52
+INFO:root:tensor([[0.4281]], device='cuda:0', grad_fn=<SigmoidBackward0>)
+INFO:root:iter 52
+INFO:root:tensor([[0.4046]], device='cuda:0', grad_fn=<SigmoidBackward0>)
+INFO:root:iter 52
+INFO:root:tensor([[0.4271]], device='cuda:0', grad_fn=<SigmoidBackward0>)
+INFO:root:iter 52
+INFO:root:tensor([[0.4477]], device='cuda:0', grad_fn=<SigmoidBackward0>)
+INFO:root:iter 52
+INFO:root:tensor([[0.4471]], device='cuda:0', grad_fn=<SigmoidBackward0>)
+INFO:root:iter 52
+INFO:root:tensor([[0.5115]], device='cuda:0', grad_fn=<SigmoidBackward0>)
+INFO:root:iter 52
+INFO:root:tensor([[0.5102]], device='cuda:0', grad_fn=<SigmoidBackward0>)
+INFO:root:iter 52
+INFO:root:tensor([[0.4963]], device='cuda:0', grad_fn=<SigmoidBackward0>)
+INFO:root:iter 52
+INFO:root:tensor([[0.5115]], device='cuda:0', grad_fn=<SigmoidBackward0>)
+INFO:root:tensor([7.4191], device='cuda:0', grad_fn=<AddBackward0>), tensor(0.6205, device='cuda:0', grad_fn=<AddBackward0>), tensor(1.8926, device='cuda:0', grad_fn=<AddBackward0>)
+INFO:root:iter 53
+INFO:root:tensor([[0.4053]], device='cuda:0', grad_fn=<SigmoidBackward0>)
+INFO:root:iter 53
+INFO:root:tensor([[0.4753]], device='cuda:0', grad_fn=<SigmoidBackward0>)
+INFO:root:iter 53
+INFO:root:tensor([[0.4532]], device='cuda:0', grad_fn=<SigmoidBackward0>)
+INFO:root:iter 53
+INFO:root:tensor([[0.4277]], device='cuda:0', grad_fn=<SigmoidBackward0>)
+INFO:root:iter 53
+INFO:root:tensor([[0.4054]], device='cuda:0', grad_fn=<SigmoidBackward0>)
+INFO:root:iter 53
+INFO:root:tensor([[0.4278]], device='cuda:0', grad_fn=<SigmoidBackward0>)
+INFO:root:iter 53
+INFO:root:tensor([[0.4484]], device='cuda:0', grad_fn=<SigmoidBackward0>)
+INFO:root:iter 53
+INFO:root:tensor([[0.4466]], device='cuda:0', grad_fn=<SigmoidBackward0>)
+INFO:root:iter 53
+INFO:root:tensor([[0.5116]], device='cuda:0', grad_fn=<SigmoidBackward0>)
+INFO:root:iter 53
+INFO:root:tensor([[0.5104]], device='cuda:0', grad_fn=<SigmoidBackward0>)
+INFO:root:iter 53
+INFO:root:tensor([[0.4968]], device='cuda:0', grad_fn=<SigmoidBackward0>)
+INFO:root:iter 53
+INFO:root:tensor([[0.5115]], device='cuda:0', grad_fn=<SigmoidBackward0>)
+INFO:root:tensor([7.4253], device='cuda:0', grad_fn=<AddBackward0>), tensor(0.6166, device='cuda:0', grad_fn=<AddBackward0>), tensor(1.8910, device='cuda:0', grad_fn=<AddBackward0>)
+INFO:root:iter 54
+INFO:root:tensor([[0.4048]], device='cuda:0', grad_fn=<SigmoidBackward0>)
+INFO:root:iter 54
+INFO:root:tensor([[0.4761]], device='cuda:0', grad_fn=<SigmoidBackward0>)
+INFO:root:iter 54
+INFO:root:tensor([[0.4528]], device='cuda:0', grad_fn=<SigmoidBackward0>)
+INFO:root:iter 54
+INFO:root:tensor([[0.4275]], device='cuda:0', grad_fn=<SigmoidBackward0>)
+INFO:root:iter 54
+INFO:root:tensor([[0.4056]], device='cuda:0', grad_fn=<SigmoidBackward0>)
+INFO:root:iter 54
+INFO:root:tensor([[0.4275]], device='cuda:0', grad_fn=<SigmoidBackward0>)
+INFO:root:iter 54
+INFO:root:tensor([[0.4483]], device='cuda:0', grad_fn=<SigmoidBackward0>)
+INFO:root:iter 54
+INFO:root:tensor([[0.4472]], device='cuda:0', grad_fn=<SigmoidBackward0>)
+INFO:root:iter 54
+INFO:root:tensor([[0.5116]], device='cuda:0', grad_fn=<SigmoidBackward0>)
+INFO:root:iter 54
+INFO:root:tensor([[0.5104]], device='cuda:0', grad_fn=<SigmoidBackward0>)
+INFO:root:iter 54
+INFO:root:tensor([[0.4966]], device='cuda:0', grad_fn=<SigmoidBackward0>)
+INFO:root:iter 54
+INFO:root:tensor([[0.5115]], device='cuda:0', grad_fn=<SigmoidBackward0>)
+INFO:root:tensor([7.4248], device='cuda:0', grad_fn=<AddBackward0>), tensor(0.6140, device='cuda:0', grad_fn=<AddBackward0>), tensor(1.8910, device='cuda:0', grad_fn=<AddBackward0>)
+INFO:root:iter 55
+INFO:root:tensor([[0.4045]], device='cuda:0', grad_fn=<SigmoidBackward0>)
+INFO:root:iter 55
+INFO:root:tensor([[0.4756]], device='cuda:0', grad_fn=<SigmoidBackward0>)
+INFO:root:iter 55
+INFO:root:tensor([[0.4528]], device='cuda:0', grad_fn=<SigmoidBackward0>)
+INFO:root:iter 55
+INFO:root:tensor([[0.4276]], device='cuda:0', grad_fn=<SigmoidBackward0>)
+INFO:root:iter 55
+INFO:root:tensor([[0.4051]], device='cuda:0', grad_fn=<SigmoidBackward0>)
+INFO:root:iter 55
+INFO:root:tensor([[0.4278]], device='cuda:0', grad_fn=<SigmoidBackward0>)
+INFO:root:iter 55
+INFO:root:tensor([[0.4481]], device='cuda:0', grad_fn=<SigmoidBackward0>)
+INFO:root:iter 55
+INFO:root:tensor([[0.4464]], device='cuda:0', grad_fn=<SigmoidBackward0>)
+INFO:root:iter 55
+INFO:root:tensor([[0.5116]], device='cuda:0', grad_fn=<SigmoidBackward0>)
+INFO:root:iter 55
+INFO:root:tensor([[0.5105]], device='cuda:0', grad_fn=<SigmoidBackward0>)
+INFO:root:iter 55
+INFO:root:tensor([[0.4969]], device='cuda:0', grad_fn=<SigmoidBackward0>)
+INFO:root:iter 55
+INFO:root:tensor([[0.5115]], device='cuda:0', grad_fn=<SigmoidBackward0>)
+INFO:root:tensor([7.4222], device='cuda:0', grad_fn=<AddBackward0>), tensor(0.6120, device='cuda:0', grad_fn=<AddBackward0>), tensor(1.8909, device='cuda:0', grad_fn=<AddBackward0>)
+INFO:root:iter 56
+INFO:root:tensor([[0.4039]], device='cuda:0', grad_fn=<SigmoidBackward0>)
+INFO:root:iter 56
+INFO:root:tensor([[0.4751]], device='cuda:0', grad_fn=<SigmoidBackward0>)
+INFO:root:iter 56
+INFO:root:tensor([[0.4526]], device='cuda:0', grad_fn=<SigmoidBackward0>)
+INFO:root:iter 56
+INFO:root:tensor([[0.4278]], device='cuda:0', grad_fn=<SigmoidBackward0>)
+INFO:root:iter 56
+INFO:root:tensor([[0.4051]], device='cuda:0', grad_fn=<SigmoidBackward0>)
+INFO:root:iter 56
+INFO:root:tensor([[0.4273]], device='cuda:0', grad_fn=<SigmoidBackward0>)
+INFO:root:iter 56
+INFO:root:tensor([[0.4485]], device='cuda:0', grad_fn=<SigmoidBackward0>)
+INFO:root:iter 56
+INFO:root:tensor([[0.4464]], device='cuda:0', grad_fn=<SigmoidBackward0>)
+INFO:root:iter 56
+INFO:root:tensor([[0.5117]], device='cuda:0', grad_fn=<SigmoidBackward0>)
+INFO:root:iter 56
+INFO:root:tensor([[0.5106]], device='cuda:0', grad_fn=<SigmoidBackward0>)
+INFO:root:iter 56
+INFO:root:tensor([[0.4968]], device='cuda:0', grad_fn=<SigmoidBackward0>)
+INFO:root:iter 56
+INFO:root:tensor([[0.5118]], device='cuda:0', grad_fn=<SigmoidBackward0>)
+INFO:root:tensor([7.4212], device='cuda:0', grad_fn=<AddBackward0>), tensor(0.6096, device='cuda:0', grad_fn=<AddBackward0>), tensor(1.8916, device='cuda:0', grad_fn=<AddBackward0>)
+INFO:root:iter 57
+INFO:root:tensor([[0.4053]], device='cuda:0', grad_fn=<SigmoidBackward0>)
+INFO:root:iter 57
+INFO:root:tensor([[0.4759]], device='cuda:0', grad_fn=<SigmoidBackward0>)
+INFO:root:iter 57
+INFO:root:tensor([[0.4531]], device='cuda:0', grad_fn=<SigmoidBackward0>)
+INFO:root:iter 57
+INFO:root:tensor([[0.4277]], device='cuda:0', grad_fn=<SigmoidBackward0>)
+INFO:root:iter 57
+INFO:root:tensor([[0.4064]], device='cuda:0', grad_fn=<SigmoidBackward0>)
+INFO:root:iter 57
+INFO:root:tensor([[0.4278]], device='cuda:0', grad_fn=<SigmoidBackward0>)
+INFO:root:iter 57
+INFO:root:tensor([[0.4480]], device='cuda:0', grad_fn=<SigmoidBackward0>)
+INFO:root:iter 57
+INFO:root:tensor([[0.4468]], device='cuda:0', grad_fn=<SigmoidBackward0>)
+INFO:root:iter 57
+INFO:root:tensor([[0.5118]], device='cuda:0', grad_fn=<SigmoidBackward0>)
+INFO:root:iter 57
+INFO:root:tensor([[0.5106]], device='cuda:0', grad_fn=<SigmoidBackward0>)
+INFO:root:iter 57
+INFO:root:tensor([[0.4971]], device='cuda:0', grad_fn=<SigmoidBackward0>)
+INFO:root:iter 57
+INFO:root:tensor([[0.5119]], device='cuda:0', grad_fn=<SigmoidBackward0>)
+INFO:root:tensor([7.4297], device='cuda:0', grad_fn=<AddBackward0>), tensor(0.6057, device='cuda:0', grad_fn=<AddBackward0>), tensor(1.8911, device='cuda:0', grad_fn=<AddBackward0>)
+INFO:root:iter 58
+INFO:root:tensor([[0.4045]], device='cuda:0', grad_fn=<SigmoidBackward0>)
+INFO:root:iter 58
+INFO:root:tensor([[0.4754]], device='cuda:0', grad_fn=<SigmoidBackward0>)
+INFO:root:iter 58
+INFO:root:tensor([[0.4526]], device='cuda:0', grad_fn=<SigmoidBackward0>)
+INFO:root:iter 58
+INFO:root:tensor([[0.4272]], device='cuda:0', grad_fn=<SigmoidBackward0>)
+INFO:root:iter 58
+INFO:root:tensor([[0.4064]], device='cuda:0', grad_fn=<SigmoidBackward0>)
+INFO:root:iter 58
+INFO:root:tensor([[0.4272]], device='cuda:0', grad_fn=<SigmoidBackward0>)
+INFO:root:iter 58
+INFO:root:tensor([[0.4480]], device='cuda:0', grad_fn=<SigmoidBackward0>)
+INFO:root:iter 58
+INFO:root:tensor([[0.4465]], device='cuda:0', grad_fn=<SigmoidBackward0>)
+INFO:root:iter 58
+INFO:root:tensor([[0.5118]], device='cuda:0', grad_fn=<SigmoidBackward0>)
+INFO:root:iter 58
+INFO:root:tensor([[0.5109]], device='cuda:0', grad_fn=<SigmoidBackward0>)
+INFO:root:iter 58
+INFO:root:tensor([[0.4967]], device='cuda:0', grad_fn=<SigmoidBackward0>)
+INFO:root:iter 58
+INFO:root:tensor([[0.5120]], device='cuda:0', grad_fn=<SigmoidBackward0>)
+INFO:root:tensor([7.4240], device='cuda:0', grad_fn=<AddBackward0>), tensor(0.6050, device='cuda:0', grad_fn=<AddBackward0>), tensor(1.8901, device='cuda:0', grad_fn=<AddBackward0>)
+INFO:root:iter 59
+INFO:root:tensor([[0.4041]], device='cuda:0', grad_fn=<SigmoidBackward0>)
+INFO:root:iter 59
+INFO:root:tensor([[0.4754]], device='cuda:0', grad_fn=<SigmoidBackward0>)
+INFO:root:iter 59
+INFO:root:tensor([[0.4529]], device='cuda:0', grad_fn=<SigmoidBackward0>)
+INFO:root:iter 59
+INFO:root:tensor([[0.4275]], device='cuda:0', grad_fn=<SigmoidBackward0>)
+INFO:root:iter 59
+INFO:root:tensor([[0.4059]], device='cuda:0', grad_fn=<SigmoidBackward0>)
+INFO:root:iter 59
+INFO:root:tensor([[0.4276]], device='cuda:0', grad_fn=<SigmoidBackward0>)
+INFO:root:iter 59
+INFO:root:tensor([[0.4483]], device='cuda:0', grad_fn=<SigmoidBackward0>)
+INFO:root:iter 59
+INFO:root:tensor([[0.4474]], device='cuda:0', grad_fn=<SigmoidBackward0>)
+INFO:root:iter 59
+INFO:root:tensor([[0.5119]], device='cuda:0', grad_fn=<SigmoidBackward0>)
+INFO:root:iter 59
+INFO:root:tensor([[0.5108]], device='cuda:0', grad_fn=<SigmoidBackward0>)
+INFO:root:iter 59
+INFO:root:tensor([[0.4968]], device='cuda:0', grad_fn=<SigmoidBackward0>)
+INFO:root:iter 59
+INFO:root:tensor([[0.5119]], device='cuda:0', grad_fn=<SigmoidBackward0>)
+INFO:root:tensor([7.4265], device='cuda:0', grad_fn=<AddBackward0>), tensor(0.6023, device='cuda:0', grad_fn=<AddBackward0>), tensor(1.9375, device='cuda:0', grad_fn=<AddBackward0>)
+INFO:root:iter 60
+INFO:root:tensor([[0.4045]], device='cuda:0', grad_fn=<SigmoidBackward0>)
+INFO:root:iter 60
+INFO:root:tensor([[0.4759]], device='cuda:0', grad_fn=<SigmoidBackward0>)
+INFO:root:iter 60
+INFO:root:tensor([[0.4528]], device='cuda:0', grad_fn=<SigmoidBackward0>)
+INFO:root:iter 60
+INFO:root:tensor([[0.4279]], device='cuda:0', grad_fn=<SigmoidBackward0>)
+INFO:root:iter 60
+INFO:root:tensor([[0.4075]], device='cuda:0', grad_fn=<SigmoidBackward0>)
+INFO:root:iter 60
+INFO:root:tensor([[0.4276]], device='cuda:0', grad_fn=<SigmoidBackward0>)
+INFO:root:iter 60
+INFO:root:tensor([[0.4477]], device='cuda:0', grad_fn=<SigmoidBackward0>)
+INFO:root:iter 60
+INFO:root:tensor([[0.4468]], device='cuda:0', grad_fn=<SigmoidBackward0>)
+INFO:root:iter 60
+INFO:root:tensor([[0.5119]], device='cuda:0', grad_fn=<SigmoidBackward0>)
+INFO:root:iter 60
+INFO:root:tensor([[0.5108]], device='cuda:0', grad_fn=<SigmoidBackward0>)
+INFO:root:iter 60
+INFO:root:tensor([[0.4970]], device='cuda:0', grad_fn=<SigmoidBackward0>)
+INFO:root:iter 60
+INFO:root:tensor([[0.5118]], device='cuda:0', grad_fn=<SigmoidBackward0>)
+INFO:root:tensor([7.4294], device='cuda:0', grad_fn=<AddBackward0>), tensor(0.6000, device='cuda:0', grad_fn=<AddBackward0>), tensor(1.9362, device='cuda:0', grad_fn=<AddBackward0>)
+INFO:root:iter 61
+INFO:root:tensor([[0.4049]], device='cuda:0', grad_fn=<SigmoidBackward0>)
+INFO:root:iter 61
+INFO:root:tensor([[0.4754]], device='cuda:0', grad_fn=<SigmoidBackward0>)
+INFO:root:iter 61
+INFO:root:tensor([[0.4525]], device='cuda:0', grad_fn=<SigmoidBackward0>)
+INFO:root:iter 61
+INFO:root:tensor([[0.4274]], device='cuda:0', grad_fn=<SigmoidBackward0>)
+INFO:root:iter 61
+INFO:root:tensor([[0.4051]], device='cuda:0', grad_fn=<SigmoidBackward0>)
+INFO:root:iter 61
+INFO:root:tensor([[0.4278]], device='cuda:0', grad_fn=<SigmoidBackward0>)
+INFO:root:iter 61
+INFO:root:tensor([[0.4481]], device='cuda:0', grad_fn=<SigmoidBackward0>)
+INFO:root:iter 61
+INFO:root:tensor([[0.4471]], device='cuda:0', grad_fn=<SigmoidBackward0>)
+INFO:root:iter 61
+INFO:root:tensor([[0.5120]], device='cuda:0', grad_fn=<SigmoidBackward0>)
+INFO:root:iter 61
+INFO:root:tensor([[0.5110]], device='cuda:0', grad_fn=<SigmoidBackward0>)
+INFO:root:iter 61
+INFO:root:tensor([[0.4970]], device='cuda:0', grad_fn=<SigmoidBackward0>)
+INFO:root:iter 61
+INFO:root:tensor([[0.5119]], device='cuda:0', grad_fn=<SigmoidBackward0>)
+INFO:root:tensor([7.4259], device='cuda:0', grad_fn=<AddBackward0>), tensor(0.5986, device='cuda:0', grad_fn=<AddBackward0>), tensor(1.9373, device='cuda:0', grad_fn=<AddBackward0>)
+INFO:root:iter 62
+INFO:root:tensor([[0.4045]], device='cuda:0', grad_fn=<SigmoidBackward0>)
+INFO:root:iter 62
+INFO:root:tensor([[0.4753]], device='cuda:0', grad_fn=<SigmoidBackward0>)
+INFO:root:iter 62
+INFO:root:tensor([[0.4533]], device='cuda:0', grad_fn=<SigmoidBackward0>)
+INFO:root:iter 62
+INFO:root:tensor([[0.4278]], device='cuda:0', grad_fn=<SigmoidBackward0>)
+INFO:root:iter 62
+INFO:root:tensor([[0.4057]], device='cuda:0', grad_fn=<SigmoidBackward0>)
+INFO:root:iter 62
+INFO:root:tensor([[0.4274]], device='cuda:0', grad_fn=<SigmoidBackward0>)
+INFO:root:iter 62
+INFO:root:tensor([[0.4485]], device='cuda:0', grad_fn=<SigmoidBackward0>)
+INFO:root:iter 62
+INFO:root:tensor([[0.4468]], device='cuda:0', grad_fn=<SigmoidBackward0>)
+INFO:root:iter 62
+INFO:root:tensor([[0.5121]], device='cuda:0', grad_fn=<SigmoidBackward0>)
+INFO:root:iter 62
+INFO:root:tensor([[0.5111]], device='cuda:0', grad_fn=<SigmoidBackward0>)
+INFO:root:iter 62
+INFO:root:tensor([[0.4970]], device='cuda:0', grad_fn=<SigmoidBackward0>)
+INFO:root:iter 62
+INFO:root:tensor([[0.5122]], device='cuda:0', grad_fn=<SigmoidBackward0>)
+INFO:root:tensor([7.4286], device='cuda:0', grad_fn=<AddBackward0>), tensor(0.5965, device='cuda:0', grad_fn=<AddBackward0>), tensor(1.9358, device='cuda:0', grad_fn=<AddBackward0>)
+INFO:root:iter 63
+INFO:root:tensor([[0.4043]], device='cuda:0', grad_fn=<SigmoidBackward0>)
+INFO:root:iter 63
+INFO:root:tensor([[0.4756]], device='cuda:0', grad_fn=<SigmoidBackward0>)
+INFO:root:iter 63
+INFO:root:tensor([[0.4531]], device='cuda:0', grad_fn=<SigmoidBackward0>)
+INFO:root:iter 63
+INFO:root:tensor([[0.4280]], device='cuda:0', grad_fn=<SigmoidBackward0>)
+INFO:root:iter 63
+INFO:root:tensor([[0.4064]], device='cuda:0', grad_fn=<SigmoidBackward0>)
+INFO:root:iter 63
+INFO:root:tensor([[0.4279]], device='cuda:0', grad_fn=<SigmoidBackward0>)
+INFO:root:iter 63
+INFO:root:tensor([[0.4482]], device='cuda:0', grad_fn=<SigmoidBackward0>)
+INFO:root:iter 63
+INFO:root:tensor([[0.4471]], device='cuda:0', grad_fn=<SigmoidBackward0>)
+INFO:root:iter 63
+INFO:root:tensor([[0.5120]], device='cuda:0', grad_fn=<SigmoidBackward0>)
+INFO:root:iter 63
+INFO:root:tensor([[0.5111]], device='cuda:0', grad_fn=<SigmoidBackward0>)
+INFO:root:iter 63
+INFO:root:tensor([[0.4973]], device='cuda:0', grad_fn=<SigmoidBackward0>)
+INFO:root:iter 63
+INFO:root:tensor([[0.5120]], device='cuda:0', grad_fn=<SigmoidBackward0>)
+INFO:root:tensor([7.4310], device='cuda:0', grad_fn=<AddBackward0>), tensor(0.5944, device='cuda:0', grad_fn=<AddBackward0>), tensor(1.8891, device='cuda:0', grad_fn=<AddBackward0>)
+INFO:root:iter 64
+INFO:root:tensor([[0.4048]], device='cuda:0', grad_fn=<SigmoidBackward0>)
+INFO:root:iter 64
+INFO:root:tensor([[0.4755]], device='cuda:0', grad_fn=<SigmoidBackward0>)
+INFO:root:iter 64
+INFO:root:tensor([[0.4535]], device='cuda:0', grad_fn=<SigmoidBackward0>)
+INFO:root:iter 64
+INFO:root:tensor([[0.4276]], device='cuda:0', grad_fn=<SigmoidBackward0>)
+INFO:root:iter 64
+INFO:root:tensor([[0.4063]], device='cuda:0', grad_fn=<SigmoidBackward0>)
+INFO:root:iter 64
+INFO:root:tensor([[0.4279]], device='cuda:0', grad_fn=<SigmoidBackward0>)
+INFO:root:iter 64
+INFO:root:tensor([[0.4484]], device='cuda:0', grad_fn=<SigmoidBackward0>)
+INFO:root:iter 64
+INFO:root:tensor([[0.4473]], device='cuda:0', grad_fn=<SigmoidBackward0>)
+INFO:root:iter 64
+INFO:root:tensor([[0.5121]], device='cuda:0', grad_fn=<SigmoidBackward0>)
+INFO:root:iter 64
+INFO:root:tensor([[0.5113]], device='cuda:0', grad_fn=<SigmoidBackward0>)
+INFO:root:iter 64
+INFO:root:tensor([[0.4973]], device='cuda:0', grad_fn=<SigmoidBackward0>)
+INFO:root:iter 64
+INFO:root:tensor([[0.5122]], device='cuda:0', grad_fn=<SigmoidBackward0>)
+INFO:root:tensor([7.4334], device='cuda:0', grad_fn=<AddBackward0>), tensor(0.5923, device='cuda:0', grad_fn=<AddBackward0>), tensor(1.8891, device='cuda:0', grad_fn=<AddBackward0>)
+INFO:root:iter 65
+INFO:root:tensor([[0.4049]], device='cuda:0', grad_fn=<SigmoidBackward0>)
+INFO:root:iter 65
+INFO:root:tensor([[0.4758]], device='cuda:0', grad_fn=<SigmoidBackward0>)
+INFO:root:iter 65
+INFO:root:tensor([[0.4536]], device='cuda:0', grad_fn=<SigmoidBackward0>)
+INFO:root:iter 65
+INFO:root:tensor([[0.4279]], device='cuda:0', grad_fn=<SigmoidBackward0>)
+INFO:root:iter 65
+INFO:root:tensor([[0.4063]], device='cuda:0', grad_fn=<SigmoidBackward0>)
+INFO:root:iter 65
+INFO:root:tensor([[0.4283]], device='cuda:0', grad_fn=<SigmoidBackward0>)
+INFO:root:iter 65
+INFO:root:tensor([[0.4479]], device='cuda:0', grad_fn=<SigmoidBackward0>)
+INFO:root:iter 65
+INFO:root:tensor([[0.4475]], device='cuda:0', grad_fn=<SigmoidBackward0>)
+INFO:root:iter 65
+INFO:root:tensor([[0.5121]], device='cuda:0', grad_fn=<SigmoidBackward0>)
+INFO:root:iter 65
+INFO:root:tensor([[0.5113]], device='cuda:0', grad_fn=<SigmoidBackward0>)
+INFO:root:iter 65
+INFO:root:tensor([[0.4971]], device='cuda:0', grad_fn=<SigmoidBackward0>)
+INFO:root:iter 65
+INFO:root:tensor([[0.5121]], device='cuda:0', grad_fn=<SigmoidBackward0>)
+INFO:root:tensor([7.4338], device='cuda:0', grad_fn=<AddBackward0>), tensor(0.5913, device='cuda:0', grad_fn=<AddBackward0>), tensor(1.8882, device='cuda:0', grad_fn=<AddBackward0>)
+INFO:root:iter 66
+INFO:root:tensor([[0.4046]], device='cuda:0', grad_fn=<SigmoidBackward0>)
+INFO:root:iter 66
+INFO:root:tensor([[0.4763]], device='cuda:0', grad_fn=<SigmoidBackward0>)
+INFO:root:iter 66
+INFO:root:tensor([[0.4537]], device='cuda:0', grad_fn=<SigmoidBackward0>)
+INFO:root:iter 66
+INFO:root:tensor([[0.4280]], device='cuda:0', grad_fn=<SigmoidBackward0>)
+INFO:root:iter 66
+INFO:root:tensor([[0.4057]], device='cuda:0', grad_fn=<SigmoidBackward0>)
+INFO:root:iter 66
+INFO:root:tensor([[0.4285]], device='cuda:0', grad_fn=<SigmoidBackward0>)
+INFO:root:iter 66
+INFO:root:tensor([[0.4481]], device='cuda:0', grad_fn=<SigmoidBackward0>)
+INFO:root:iter 66
+INFO:root:tensor([[0.4467]], device='cuda:0', grad_fn=<SigmoidBackward0>)
+INFO:root:iter 66
+INFO:root:tensor([[0.5121]], device='cuda:0', grad_fn=<SigmoidBackward0>)
+INFO:root:iter 66
+INFO:root:tensor([[0.5114]], device='cuda:0', grad_fn=<SigmoidBackward0>)
+INFO:root:iter 66
+INFO:root:tensor([[0.4970]], device='cuda:0', grad_fn=<SigmoidBackward0>)
+INFO:root:iter 66
+INFO:root:tensor([[0.5120]], device='cuda:0', grad_fn=<SigmoidBackward0>)
+INFO:root:tensor([7.4335], device='cuda:0', grad_fn=<AddBackward0>), tensor(0.5900, device='cuda:0', grad_fn=<AddBackward0>), tensor(1.8876, device='cuda:0', grad_fn=<AddBackward0>)
+INFO:root:iter 67
+INFO:root:tensor([[0.4047]], device='cuda:0', grad_fn=<SigmoidBackward0>)
+INFO:root:iter 67
+INFO:root:tensor([[0.4763]], device='cuda:0', grad_fn=<SigmoidBackward0>)
+INFO:root:iter 67
+INFO:root:tensor([[0.4531]], device='cuda:0', grad_fn=<SigmoidBackward0>)
+INFO:root:iter 67
+INFO:root:tensor([[0.4280]], device='cuda:0', grad_fn=<SigmoidBackward0>)
+INFO:root:iter 67
+INFO:root:tensor([[0.4073]], device='cuda:0', grad_fn=<SigmoidBackward0>)
+INFO:root:iter 67
+INFO:root:tensor([[0.4279]], device='cuda:0', grad_fn=<SigmoidBackward0>)
+INFO:root:iter 67
+INFO:root:tensor([[0.4488]], device='cuda:0', grad_fn=<SigmoidBackward0>)
+INFO:root:iter 67
+INFO:root:tensor([[0.4475]], device='cuda:0', grad_fn=<SigmoidBackward0>)
+INFO:root:iter 67
+INFO:root:tensor([[0.5122]], device='cuda:0', grad_fn=<SigmoidBackward0>)
+INFO:root:iter 67
+INFO:root:tensor([[0.5115]], device='cuda:0', grad_fn=<SigmoidBackward0>)
+INFO:root:iter 67
+INFO:root:tensor([[0.4972]], device='cuda:0', grad_fn=<SigmoidBackward0>)
+INFO:root:iter 67
+INFO:root:tensor([[0.5122]], device='cuda:0', grad_fn=<SigmoidBackward0>)
+INFO:root:tensor([7.4376], device='cuda:0', grad_fn=<AddBackward0>), tensor(0.5878, device='cuda:0', grad_fn=<AddBackward0>), tensor(1.9354, device='cuda:0', grad_fn=<AddBackward0>)
+INFO:root:iter 68
+INFO:root:tensor([[0.4048]], device='cuda:0', grad_fn=<SigmoidBackward0>)
+INFO:root:iter 68
+INFO:root:tensor([[0.4769]], device='cuda:0', grad_fn=<SigmoidBackward0>)
+INFO:root:iter 68
+INFO:root:tensor([[0.4530]], device='cuda:0', grad_fn=<SigmoidBackward0>)
+INFO:root:iter 68
+INFO:root:tensor([[0.4277]], device='cuda:0', grad_fn=<SigmoidBackward0>)
+INFO:root:iter 68
+INFO:root:tensor([[0.4060]], device='cuda:0', grad_fn=<SigmoidBackward0>)
+INFO:root:iter 68
+INFO:root:tensor([[0.4281]], device='cuda:0', grad_fn=<SigmoidBackward0>)
+INFO:root:iter 68
+INFO:root:tensor([[0.4484]], device='cuda:0', grad_fn=<SigmoidBackward0>)
+INFO:root:iter 68
+INFO:root:tensor([[0.4470]], device='cuda:0', grad_fn=<SigmoidBackward0>)
+INFO:root:iter 68
+INFO:root:tensor([[0.5122]], device='cuda:0', grad_fn=<SigmoidBackward0>)
+INFO:root:iter 68
+INFO:root:tensor([[0.5113]], device='cuda:0', grad_fn=<SigmoidBackward0>)
+INFO:root:iter 68
+INFO:root:tensor([[0.4973]], device='cuda:0', grad_fn=<SigmoidBackward0>)
+INFO:root:iter 68
+INFO:root:tensor([[0.5121]], device='cuda:0', grad_fn=<SigmoidBackward0>)
+INFO:root:tensor([7.4346], device='cuda:0', grad_fn=<AddBackward0>), tensor(0.5881, device='cuda:0', grad_fn=<AddBackward0>), tensor(1.9376, device='cuda:0', grad_fn=<AddBackward0>)
+INFO:root:iter 69
+INFO:root:tensor([[0.4045]], device='cuda:0', grad_fn=<SigmoidBackward0>)
+INFO:root:iter 69
+INFO:root:tensor([[0.4761]], device='cuda:0', grad_fn=<SigmoidBackward0>)
+INFO:root:iter 69
+INFO:root:tensor([[0.4535]], device='cuda:0', grad_fn=<SigmoidBackward0>)
+INFO:root:iter 69
+INFO:root:tensor([[0.4282]], device='cuda:0', grad_fn=<SigmoidBackward0>)
+INFO:root:iter 69
+INFO:root:tensor([[0.4056]], device='cuda:0', grad_fn=<SigmoidBackward0>)
+INFO:root:iter 69
+INFO:root:tensor([[0.4283]], device='cuda:0', grad_fn=<SigmoidBackward0>)
+INFO:root:iter 69
+INFO:root:tensor([[0.4484]], device='cuda:0', grad_fn=<SigmoidBackward0>)
+INFO:root:iter 69
+INFO:root:tensor([[0.4477]], device='cuda:0', grad_fn=<SigmoidBackward0>)
+INFO:root:iter 69
+INFO:root:tensor([[0.5123]], device='cuda:0', grad_fn=<SigmoidBackward0>)
+INFO:root:iter 69
+INFO:root:tensor([[0.5114]], device='cuda:0', grad_fn=<SigmoidBackward0>)
+INFO:root:iter 69
+INFO:root:tensor([[0.4971]], device='cuda:0', grad_fn=<SigmoidBackward0>)
+INFO:root:iter 69
+INFO:root:tensor([[0.5121]], device='cuda:0', grad_fn=<SigmoidBackward0>)
+INFO:root:tensor([7.4349], device='cuda:0', grad_fn=<AddBackward0>), tensor(0.5871, device='cuda:0', grad_fn=<AddBackward0>), tensor(1.9361, device='cuda:0', grad_fn=<AddBackward0>)
+INFO:root:iter 70
+INFO:root:tensor([[0.4058]], device='cuda:0', grad_fn=<SigmoidBackward0>)
+INFO:root:iter 70
+INFO:root:tensor([[0.4759]], device='cuda:0', grad_fn=<SigmoidBackward0>)
+INFO:root:iter 70
+INFO:root:tensor([[0.4534]], device='cuda:0', grad_fn=<SigmoidBackward0>)
+INFO:root:iter 70
+INFO:root:tensor([[0.4285]], device='cuda:0', grad_fn=<SigmoidBackward0>)
+INFO:root:iter 70
+INFO:root:tensor([[0.4068]], device='cuda:0', grad_fn=<SigmoidBackward0>)
+INFO:root:iter 70
+INFO:root:tensor([[0.4278]], device='cuda:0', grad_fn=<SigmoidBackward0>)
+INFO:root:iter 70
+INFO:root:tensor([[0.4484]], device='cuda:0', grad_fn=<SigmoidBackward0>)
+INFO:root:iter 70
+INFO:root:tensor([[0.4469]], device='cuda:0', grad_fn=<SigmoidBackward0>)
+INFO:root:iter 70
+INFO:root:tensor([[0.5124]], device='cuda:0', grad_fn=<SigmoidBackward0>)
+INFO:root:iter 70
+INFO:root:tensor([[0.5116]], device='cuda:0', grad_fn=<SigmoidBackward0>)
+INFO:root:iter 70
+INFO:root:tensor([[0.4974]], device='cuda:0', grad_fn=<SigmoidBackward0>)
+INFO:root:iter 70
+INFO:root:tensor([[0.5122]], device='cuda:0', grad_fn=<SigmoidBackward0>)
+INFO:root:tensor([7.4385], device='cuda:0', grad_fn=<AddBackward0>), tensor(0.5854, device='cuda:0', grad_fn=<AddBackward0>), tensor(1.9342, device='cuda:0', grad_fn=<AddBackward0>)
+INFO:root:iter 71
+INFO:root:tensor([[0.4045]], device='cuda:0', grad_fn=<SigmoidBackward0>)
+INFO:root:iter 71
+INFO:root:tensor([[0.4768]], device='cuda:0', grad_fn=<SigmoidBackward0>)
+INFO:root:iter 71
+INFO:root:tensor([[0.4542]], device='cuda:0', grad_fn=<SigmoidBackward0>)
+INFO:root:iter 71
+INFO:root:tensor([[0.4279]], device='cuda:0', grad_fn=<SigmoidBackward0>)
+INFO:root:iter 71
+INFO:root:tensor([[0.4068]], device='cuda:0', grad_fn=<SigmoidBackward0>)
+INFO:root:iter 71
+INFO:root:tensor([[0.4277]], device='cuda:0', grad_fn=<SigmoidBackward0>)
+INFO:root:iter 71
+INFO:root:tensor([[0.4489]], device='cuda:0', grad_fn=<SigmoidBackward0>)
+INFO:root:iter 71
+INFO:root:tensor([[0.4474]], device='cuda:0', grad_fn=<SigmoidBackward0>)
+INFO:root:iter 71
+INFO:root:tensor([[0.5123]], device='cuda:0', grad_fn=<SigmoidBackward0>)
+INFO:root:iter 71
+INFO:root:tensor([[0.5115]], device='cuda:0', grad_fn=<SigmoidBackward0>)
+INFO:root:iter 71
+INFO:root:tensor([[0.4973]], device='cuda:0', grad_fn=<SigmoidBackward0>)
+INFO:root:iter 71
+INFO:root:tensor([[0.5123]], device='cuda:0', grad_fn=<SigmoidBackward0>)
+INFO:root:tensor([7.4397], device='cuda:0', grad_fn=<AddBackward0>), tensor(0.5848, device='cuda:0', grad_fn=<AddBackward0>), tensor(1.8880, device='cuda:0', grad_fn=<AddBackward0>)
+INFO:root:iter 72
+INFO:root:tensor([[0.4047]], device='cuda:0', grad_fn=<SigmoidBackward0>)
+INFO:root:iter 72
+INFO:root:tensor([[0.4759]], device='cuda:0', grad_fn=<SigmoidBackward0>)
+INFO:root:iter 72
+INFO:root:tensor([[0.4538]], device='cuda:0', grad_fn=<SigmoidBackward0>)
+INFO:root:iter 72
+INFO:root:tensor([[0.4279]], device='cuda:0', grad_fn=<SigmoidBackward0>)
+INFO:root:iter 72
+INFO:root:tensor([[0.4053]], device='cuda:0', grad_fn=<SigmoidBackward0>)
+INFO:root:iter 72
+INFO:root:tensor([[0.4284]], device='cuda:0', grad_fn=<SigmoidBackward0>)
+INFO:root:iter 72
+INFO:root:tensor([[0.4490]], device='cuda:0', grad_fn=<SigmoidBackward0>)
+INFO:root:iter 72
+INFO:root:tensor([[0.4473]], device='cuda:0', grad_fn=<SigmoidBackward0>)
+INFO:root:iter 72
+INFO:root:tensor([[0.5125]], device='cuda:0', grad_fn=<SigmoidBackward0>)
+INFO:root:iter 72
+INFO:root:tensor([[0.5115]], device='cuda:0', grad_fn=<SigmoidBackward0>)
+INFO:root:iter 72
+INFO:root:tensor([[0.4970]], device='cuda:0', grad_fn=<SigmoidBackward0>)
+INFO:root:iter 72
+INFO:root:tensor([[0.5122]], device='cuda:0', grad_fn=<SigmoidBackward0>)
+INFO:root:tensor([7.4359], device='cuda:0', grad_fn=<AddBackward0>), tensor(0.5852, device='cuda:0', grad_fn=<AddBackward0>), tensor(1.8870, device='cuda:0', grad_fn=<AddBackward0>)
+INFO:root:iter 73
+INFO:root:tensor([[0.4042]], device='cuda:0', grad_fn=<SigmoidBackward0>)
+INFO:root:iter 73
+INFO:root:tensor([[0.4761]], device='cuda:0', grad_fn=<SigmoidBackward0>)
+INFO:root:iter 73
+INFO:root:tensor([[0.4540]], device='cuda:0', grad_fn=<SigmoidBackward0>)
+INFO:root:iter 73
+INFO:root:tensor([[0.4283]], device='cuda:0', grad_fn=<SigmoidBackward0>)
+INFO:root:iter 73
+INFO:root:tensor([[0.4056]], device='cuda:0', grad_fn=<SigmoidBackward0>)
+INFO:root:iter 73
+INFO:root:tensor([[0.4277]], device='cuda:0', grad_fn=<SigmoidBackward0>)
+INFO:root:iter 73
+INFO:root:tensor([[0.4487]], device='cuda:0', grad_fn=<SigmoidBackward0>)
+INFO:root:iter 73
+INFO:root:tensor([[0.4472]], device='cuda:0', grad_fn=<SigmoidBackward0>)
+INFO:root:iter 73
+INFO:root:tensor([[0.5125]], device='cuda:0', grad_fn=<SigmoidBackward0>)
+INFO:root:iter 73
+INFO:root:tensor([[0.5116]], device='cuda:0', grad_fn=<SigmoidBackward0>)
+INFO:root:iter 73
+INFO:root:tensor([[0.4973]], device='cuda:0', grad_fn=<SigmoidBackward0>)
+INFO:root:iter 73
+INFO:root:tensor([[0.5123]], device='cuda:0', grad_fn=<SigmoidBackward0>)
+INFO:root:tensor([7.4358], device='cuda:0', grad_fn=<AddBackward0>), tensor(0.5842, device='cuda:0', grad_fn=<AddBackward0>), tensor(1.8881, device='cuda:0', grad_fn=<AddBackward0>)
+INFO:root:iter 74
+INFO:root:tensor([[0.4046]], device='cuda:0', grad_fn=<SigmoidBackward0>)
+INFO:root:iter 74
+INFO:root:tensor([[0.4761]], device='cuda:0', grad_fn=<SigmoidBackward0>)
+INFO:root:iter 74
+INFO:root:tensor([[0.4536]], device='cuda:0', grad_fn=<SigmoidBackward0>)
+INFO:root:iter 74
+INFO:root:tensor([[0.4276]], device='cuda:0', grad_fn=<SigmoidBackward0>)
+INFO:root:iter 74
+INFO:root:tensor([[0.4061]], device='cuda:0', grad_fn=<SigmoidBackward0>)
+INFO:root:iter 74
+INFO:root:tensor([[0.4274]], device='cuda:0', grad_fn=<SigmoidBackward0>)
+INFO:root:iter 74
+INFO:root:tensor([[0.4487]], device='cuda:0', grad_fn=<SigmoidBackward0>)
+INFO:root:iter 74
+INFO:root:tensor([[0.4471]], device='cuda:0', grad_fn=<SigmoidBackward0>)
+INFO:root:iter 74
+INFO:root:tensor([[0.5125]], device='cuda:0', grad_fn=<SigmoidBackward0>)
+INFO:root:iter 74
+INFO:root:tensor([[0.5118]], device='cuda:0', grad_fn=<SigmoidBackward0>)
+INFO:root:iter 74
+INFO:root:tensor([[0.4973]], device='cuda:0', grad_fn=<SigmoidBackward0>)
+INFO:root:iter 74
+INFO:root:tensor([[0.5123]], device='cuda:0', grad_fn=<SigmoidBackward0>)
+INFO:root:tensor([7.4352], device='cuda:0', grad_fn=<AddBackward0>), tensor(0.5837, device='cuda:0', grad_fn=<AddBackward0>), tensor(1.8880, device='cuda:0', grad_fn=<AddBackward0>)
+INFO:root:iter 75
+INFO:root:tensor([[0.4050]], device='cuda:0', grad_fn=<SigmoidBackward0>)
+INFO:root:iter 75
+INFO:root:tensor([[0.4762]], device='cuda:0', grad_fn=<SigmoidBackward0>)
+INFO:root:iter 75
+INFO:root:tensor([[0.4537]], device='cuda:0', grad_fn=<SigmoidBackward0>)
+INFO:root:iter 75
+INFO:root:tensor([[0.4286]], device='cuda:0', grad_fn=<SigmoidBackward0>)
+INFO:root:iter 75
+INFO:root:tensor([[0.4060]], device='cuda:0', grad_fn=<SigmoidBackward0>)
+INFO:root:iter 75
+INFO:root:tensor([[0.4283]], device='cuda:0', grad_fn=<SigmoidBackward0>)
+INFO:root:iter 75
+INFO:root:tensor([[0.4486]], device='cuda:0', grad_fn=<SigmoidBackward0>)
+INFO:root:iter 75
+INFO:root:tensor([[0.4477]], device='cuda:0', grad_fn=<SigmoidBackward0>)
+INFO:root:iter 75
+INFO:root:tensor([[0.5126]], device='cuda:0', grad_fn=<SigmoidBackward0>)
+INFO:root:iter 75
+INFO:root:tensor([[0.5117]], device='cuda:0', grad_fn=<SigmoidBackward0>)
+INFO:root:iter 75
+INFO:root:tensor([[0.4974]], device='cuda:0', grad_fn=<SigmoidBackward0>)
+INFO:root:iter 75
+INFO:root:tensor([[0.5124]], device='cuda:0', grad_fn=<SigmoidBackward0>)
+INFO:root:tensor([7.4407], device='cuda:0', grad_fn=<AddBackward0>), tensor(0.5821, device='cuda:0', grad_fn=<AddBackward0>), tensor(1.8870, device='cuda:0', grad_fn=<AddBackward0>)
+INFO:root:iter 76
+INFO:root:tensor([[0.4045]], device='cuda:0', grad_fn=<SigmoidBackward0>)
+INFO:root:iter 76
+INFO:root:tensor([[0.4756]], device='cuda:0', grad_fn=<SigmoidBackward0>)
+INFO:root:iter 76
+INFO:root:tensor([[0.4541]], device='cuda:0', grad_fn=<SigmoidBackward0>)
+INFO:root:iter 76
+INFO:root:tensor([[0.4288]], device='cuda:0', grad_fn=<SigmoidBackward0>)
+INFO:root:iter 76
+INFO:root:tensor([[0.4072]], device='cuda:0', grad_fn=<SigmoidBackward0>)
+INFO:root:iter 76
+INFO:root:tensor([[0.4282]], device='cuda:0', grad_fn=<SigmoidBackward0>)
+INFO:root:iter 76
+INFO:root:tensor([[0.4488]], device='cuda:0', grad_fn=<SigmoidBackward0>)
+INFO:root:iter 76
+INFO:root:tensor([[0.4472]], device='cuda:0', grad_fn=<SigmoidBackward0>)
+INFO:root:iter 76
+INFO:root:tensor([[0.5125]], device='cuda:0', grad_fn=<SigmoidBackward0>)
+INFO:root:iter 76
+INFO:root:tensor([[0.5115]], device='cuda:0', grad_fn=<SigmoidBackward0>)
+INFO:root:iter 76
+INFO:root:tensor([[0.4972]], device='cuda:0', grad_fn=<SigmoidBackward0>)
+INFO:root:iter 76
+INFO:root:tensor([[0.5124]], device='cuda:0', grad_fn=<SigmoidBackward0>)
+INFO:root:tensor([7.4403], device='cuda:0', grad_fn=<AddBackward0>), tensor(0.5816, device='cuda:0', grad_fn=<AddBackward0>), tensor(1.9367, device='cuda:0', grad_fn=<AddBackward0>)
+INFO:root:iter 77
+INFO:root:tensor([[0.4059]], device='cuda:0', grad_fn=<SigmoidBackward0>)
+INFO:root:iter 77
+INFO:root:tensor([[0.4761]], device='cuda:0', grad_fn=<SigmoidBackward0>)
+INFO:root:iter 77
+INFO:root:tensor([[0.4542]], device='cuda:0', grad_fn=<SigmoidBackward0>)
+INFO:root:iter 77
+INFO:root:tensor([[0.4281]], device='cuda:0', grad_fn=<SigmoidBackward0>)
+INFO:root:iter 77
+INFO:root:tensor([[0.4058]], device='cuda:0', grad_fn=<SigmoidBackward0>)
+INFO:root:iter 77
+INFO:root:tensor([[0.4278]], device='cuda:0', grad_fn=<SigmoidBackward0>)
+INFO:root:iter 77
+INFO:root:tensor([[0.4483]], device='cuda:0', grad_fn=<SigmoidBackward0>)
+INFO:root:iter 77
+INFO:root:tensor([[0.4470]], device='cuda:0', grad_fn=<SigmoidBackward0>)
+INFO:root:iter 77
+INFO:root:tensor([[0.5125]], device='cuda:0', grad_fn=<SigmoidBackward0>)
+INFO:root:iter 77
+INFO:root:tensor([[0.5116]], device='cuda:0', grad_fn=<SigmoidBackward0>)
+INFO:root:iter 77
+INFO:root:tensor([[0.4969]], device='cuda:0', grad_fn=<SigmoidBackward0>)
+INFO:root:iter 77
+INFO:root:tensor([[0.5126]], device='cuda:0', grad_fn=<SigmoidBackward0>)
+INFO:root:tensor([7.4381], device='cuda:0', grad_fn=<AddBackward0>), tensor(0.5813, device='cuda:0', grad_fn=<AddBackward0>), tensor(1.9367, device='cuda:0', grad_fn=<AddBackward0>)
+INFO:root:iter 78
+INFO:root:tensor([[0.4045]], device='cuda:0', grad_fn=<SigmoidBackward0>)
+INFO:root:iter 78
+INFO:root:tensor([[0.4759]], device='cuda:0', grad_fn=<SigmoidBackward0>)
+INFO:root:iter 78
+INFO:root:tensor([[0.4547]], device='cuda:0', grad_fn=<SigmoidBackward0>)
+INFO:root:iter 78
+INFO:root:tensor([[0.4287]], device='cuda:0', grad_fn=<SigmoidBackward0>)
+INFO:root:iter 78
+INFO:root:tensor([[0.4062]], device='cuda:0', grad_fn=<SigmoidBackward0>)
+INFO:root:iter 78
+INFO:root:tensor([[0.4292]], device='cuda:0', grad_fn=<SigmoidBackward0>)
+INFO:root:iter 78
+INFO:root:tensor([[0.4488]], device='cuda:0', grad_fn=<SigmoidBackward0>)
+INFO:root:iter 78
+INFO:root:tensor([[0.4474]], device='cuda:0', grad_fn=<SigmoidBackward0>)
+INFO:root:iter 78
+INFO:root:tensor([[0.5125]], device='cuda:0', grad_fn=<SigmoidBackward0>)
+INFO:root:iter 78
+INFO:root:tensor([[0.5116]], device='cuda:0', grad_fn=<SigmoidBackward0>)
+INFO:root:iter 78
+INFO:root:tensor([[0.4975]], device='cuda:0', grad_fn=<SigmoidBackward0>)
+INFO:root:iter 78
+INFO:root:tensor([[0.5125]], device='cuda:0', grad_fn=<SigmoidBackward0>)
+INFO:root:tensor([7.4432], device='cuda:0', grad_fn=<AddBackward0>), tensor(0.5804, device='cuda:0', grad_fn=<AddBackward0>), tensor(1.9345, device='cuda:0', grad_fn=<AddBackward0>)
+INFO:root:iter 79
+INFO:root:tensor([[0.4055]], device='cuda:0', grad_fn=<SigmoidBackward0>)
+INFO:root:iter 79
+INFO:root:tensor([[0.4761]], device='cuda:0', grad_fn=<SigmoidBackward0>)
+INFO:root:iter 79
+INFO:root:tensor([[0.4539]], device='cuda:0', grad_fn=<SigmoidBackward0>)
+INFO:root:iter 79
+INFO:root:tensor([[0.4277]], device='cuda:0', grad_fn=<SigmoidBackward0>)
+INFO:root:iter 79
+INFO:root:tensor([[0.4061]], device='cuda:0', grad_fn=<SigmoidBackward0>)
+INFO:root:iter 79
+INFO:root:tensor([[0.4280]], device='cuda:0', grad_fn=<SigmoidBackward0>)
+INFO:root:iter 79
+INFO:root:tensor([[0.4488]], device='cuda:0', grad_fn=<SigmoidBackward0>)
+INFO:root:iter 79
+INFO:root:tensor([[0.4480]], device='cuda:0', grad_fn=<SigmoidBackward0>)
+INFO:root:iter 79
+INFO:root:tensor([[0.5126]], device='cuda:0', grad_fn=<SigmoidBackward0>)
+INFO:root:iter 79
+INFO:root:tensor([[0.5117]], device='cuda:0', grad_fn=<SigmoidBackward0>)
+INFO:root:iter 79
+INFO:root:tensor([[0.4973]], device='cuda:0', grad_fn=<SigmoidBackward0>)
+INFO:root:iter 79
+INFO:root:tensor([[0.5122]], device='cuda:0', grad_fn=<SigmoidBackward0>)
+INFO:root:tensor([7.4403], device='cuda:0', grad_fn=<AddBackward0>), tensor(0.5809, device='cuda:0', grad_fn=<AddBackward0>), tensor(1.8871, device='cuda:0', grad_fn=<AddBackward0>)
+INFO:root:iter 80
+INFO:root:tensor([[0.4041]], device='cuda:0', grad_fn=<SigmoidBackward0>)
+INFO:root:iter 80
+INFO:root:tensor([[0.4760]], device='cuda:0', grad_fn=<SigmoidBackward0>)
+INFO:root:iter 80
+INFO:root:tensor([[0.4544]], device='cuda:0', grad_fn=<SigmoidBackward0>)
+INFO:root:iter 80
+INFO:root:tensor([[0.4276]], device='cuda:0', grad_fn=<SigmoidBackward0>)
+INFO:root:iter 80
+INFO:root:tensor([[0.4062]], device='cuda:0', grad_fn=<SigmoidBackward0>)
+INFO:root:iter 80
+INFO:root:tensor([[0.4287]], device='cuda:0', grad_fn=<SigmoidBackward0>)
+INFO:root:iter 80
+INFO:root:tensor([[0.4487]], device='cuda:0', grad_fn=<SigmoidBackward0>)
+INFO:root:iter 80
+INFO:root:tensor([[0.4473]], device='cuda:0', grad_fn=<SigmoidBackward0>)
+INFO:root:iter 80
+INFO:root:tensor([[0.5126]], device='cuda:0', grad_fn=<SigmoidBackward0>)
+INFO:root:iter 80
+INFO:root:tensor([[0.5116]], device='cuda:0', grad_fn=<SigmoidBackward0>)
+INFO:root:iter 80
+INFO:root:tensor([[0.4972]], device='cuda:0', grad_fn=<SigmoidBackward0>)
+INFO:root:iter 80
+INFO:root:tensor([[0.5126]], device='cuda:0', grad_fn=<SigmoidBackward0>)
+INFO:root:tensor([7.4388], device='cuda:0', grad_fn=<AddBackward0>), tensor(0.5819, device='cuda:0', grad_fn=<AddBackward0>), tensor(1.8865, device='cuda:0', grad_fn=<AddBackward0>)
+INFO:root:iter 81
+INFO:root:tensor([[0.4060]], device='cuda:0', grad_fn=<SigmoidBackward0>)
+INFO:root:iter 81
+INFO:root:tensor([[0.4769]], device='cuda:0', grad_fn=<SigmoidBackward0>)
+INFO:root:iter 81
+INFO:root:tensor([[0.4537]], device='cuda:0', grad_fn=<SigmoidBackward0>)
+INFO:root:iter 81
+INFO:root:tensor([[0.4282]], device='cuda:0', grad_fn=<SigmoidBackward0>)
+INFO:root:iter 81
+INFO:root:tensor([[0.4058]], device='cuda:0', grad_fn=<SigmoidBackward0>)
+INFO:root:iter 81
+INFO:root:tensor([[0.4282]], device='cuda:0', grad_fn=<SigmoidBackward0>)
+INFO:root:iter 81
+INFO:root:tensor([[0.4488]], device='cuda:0', grad_fn=<SigmoidBackward0>)
+INFO:root:iter 81
+INFO:root:tensor([[0.4470]], device='cuda:0', grad_fn=<SigmoidBackward0>)
+INFO:root:iter 81
+INFO:root:tensor([[0.5127]], device='cuda:0', grad_fn=<SigmoidBackward0>)
+INFO:root:iter 81
+INFO:root:tensor([[0.5116]], device='cuda:0', grad_fn=<SigmoidBackward0>)
+INFO:root:iter 81
+INFO:root:tensor([[0.4975]], device='cuda:0', grad_fn=<SigmoidBackward0>)
+INFO:root:iter 81
+INFO:root:tensor([[0.5129]], device='cuda:0', grad_fn=<SigmoidBackward0>)
+INFO:root:tensor([7.4431], device='cuda:0', grad_fn=<AddBackward0>), tensor(0.5808, device='cuda:0', grad_fn=<AddBackward0>), tensor(1.8887, device='cuda:0', grad_fn=<AddBackward0>)
+INFO:root:iter 82
+INFO:root:tensor([[0.4045]], device='cuda:0', grad_fn=<SigmoidBackward0>)
+INFO:root:iter 82
+INFO:root:tensor([[0.4760]], device='cuda:0', grad_fn=<SigmoidBackward0>)
+INFO:root:iter 82
+INFO:root:tensor([[0.4536]], device='cuda:0', grad_fn=<SigmoidBackward0>)
+INFO:root:iter 82
+INFO:root:tensor([[0.4277]], device='cuda:0', grad_fn=<SigmoidBackward0>)
+INFO:root:iter 82
+INFO:root:tensor([[0.4071]], device='cuda:0', grad_fn=<SigmoidBackward0>)
+INFO:root:iter 82
+INFO:root:tensor([[0.4279]], device='cuda:0', grad_fn=<SigmoidBackward0>)
+INFO:root:iter 82
+INFO:root:tensor([[0.4488]], device='cuda:0', grad_fn=<SigmoidBackward0>)
+INFO:root:iter 82
+INFO:root:tensor([[0.4475]], device='cuda:0', grad_fn=<SigmoidBackward0>)
+INFO:root:iter 82
+INFO:root:tensor([[0.5126]], device='cuda:0', grad_fn=<SigmoidBackward0>)
+INFO:root:iter 82
+INFO:root:tensor([[0.5118]], device='cuda:0', grad_fn=<SigmoidBackward0>)
+INFO:root:iter 82
+INFO:root:tensor([[0.4971]], device='cuda:0', grad_fn=<SigmoidBackward0>)
+INFO:root:iter 82
+INFO:root:tensor([[0.5126]], device='cuda:0', grad_fn=<SigmoidBackward0>)
+INFO:root:tensor([7.4391], device='cuda:0', grad_fn=<AddBackward0>), tensor(0.5810, device='cuda:0', grad_fn=<AddBackward0>), tensor(1.8871, device='cuda:0', grad_fn=<AddBackward0>)
+INFO:root:iter 83
+INFO:root:tensor([[0.4053]], device='cuda:0', grad_fn=<SigmoidBackward0>)
+INFO:root:iter 83
+INFO:root:tensor([[0.4767]], device='cuda:0', grad_fn=<SigmoidBackward0>)
+INFO:root:iter 83
+INFO:root:tensor([[0.4540]], device='cuda:0', grad_fn=<SigmoidBackward0>)
+INFO:root:iter 83
+INFO:root:tensor([[0.4282]], device='cuda:0', grad_fn=<SigmoidBackward0>)
+INFO:root:iter 83
+INFO:root:tensor([[0.4064]], device='cuda:0', grad_fn=<SigmoidBackward0>)
+INFO:root:iter 83
+INFO:root:tensor([[0.4286]], device='cuda:0', grad_fn=<SigmoidBackward0>)
+INFO:root:iter 83
+INFO:root:tensor([[0.4489]], device='cuda:0', grad_fn=<SigmoidBackward0>)
+INFO:root:iter 83
+INFO:root:tensor([[0.4475]], device='cuda:0', grad_fn=<SigmoidBackward0>)
+INFO:root:iter 83
+INFO:root:tensor([[0.5127]], device='cuda:0', grad_fn=<SigmoidBackward0>)
+INFO:root:iter 83
+INFO:root:tensor([[0.5117]], device='cuda:0', grad_fn=<SigmoidBackward0>)
+INFO:root:iter 83
+INFO:root:tensor([[0.4974]], device='cuda:0', grad_fn=<SigmoidBackward0>)
+INFO:root:iter 83
+INFO:root:tensor([[0.5125]], device='cuda:0', grad_fn=<SigmoidBackward0>)
+INFO:root:tensor([7.4440], device='cuda:0', grad_fn=<AddBackward0>), tensor(0.5794, device='cuda:0', grad_fn=<AddBackward0>), tensor(1.8873, device='cuda:0', grad_fn=<AddBackward0>)
+INFO:root:iter 84
+INFO:root:tensor([[0.4041]], device='cuda:0', grad_fn=<SigmoidBackward0>)
+INFO:root:iter 84
+INFO:root:tensor([[0.4764]], device='cuda:0', grad_fn=<SigmoidBackward0>)
+INFO:root:iter 84
+INFO:root:tensor([[0.4538]], device='cuda:0', grad_fn=<SigmoidBackward0>)
+INFO:root:iter 84
+INFO:root:tensor([[0.4280]], device='cuda:0', grad_fn=<SigmoidBackward0>)
+INFO:root:iter 84
+INFO:root:tensor([[0.4060]], device='cuda:0', grad_fn=<SigmoidBackward0>)
+INFO:root:iter 84
+INFO:root:tensor([[0.4285]], device='cuda:0', grad_fn=<SigmoidBackward0>)
+INFO:root:iter 84
+INFO:root:tensor([[0.4485]], device='cuda:0', grad_fn=<SigmoidBackward0>)
+INFO:root:iter 84
+INFO:root:tensor([[0.4473]], device='cuda:0', grad_fn=<SigmoidBackward0>)
+INFO:root:iter 84
+INFO:root:tensor([[0.5127]], device='cuda:0', grad_fn=<SigmoidBackward0>)
+INFO:root:iter 84
+INFO:root:tensor([[0.5118]], device='cuda:0', grad_fn=<SigmoidBackward0>)
+INFO:root:iter 84
+INFO:root:tensor([[0.4975]], device='cuda:0', grad_fn=<SigmoidBackward0>)
+INFO:root:iter 84
+INFO:root:tensor([[0.5125]], device='cuda:0', grad_fn=<SigmoidBackward0>)
+INFO:root:tensor([7.4390], device='cuda:0', grad_fn=<AddBackward0>), tensor(0.5800, device='cuda:0', grad_fn=<AddBackward0>), tensor(1.9349, device='cuda:0', grad_fn=<AddBackward0>)
+INFO:root:iter 85
+INFO:root:tensor([[0.4048]], device='cuda:0', grad_fn=<SigmoidBackward0>)
+INFO:root:iter 85
+INFO:root:tensor([[0.4765]], device='cuda:0', grad_fn=<SigmoidBackward0>)
+INFO:root:iter 85
+INFO:root:tensor([[0.4543]], device='cuda:0', grad_fn=<SigmoidBackward0>)
+INFO:root:iter 85
+INFO:root:tensor([[0.4281]], device='cuda:0', grad_fn=<SigmoidBackward0>)
+INFO:root:iter 85
+INFO:root:tensor([[0.4062]], device='cuda:0', grad_fn=<SigmoidBackward0>)
+INFO:root:iter 85
+INFO:root:tensor([[0.4280]], device='cuda:0', grad_fn=<SigmoidBackward0>)
+INFO:root:iter 85
+INFO:root:tensor([[0.4492]], device='cuda:0', grad_fn=<SigmoidBackward0>)
+INFO:root:iter 85
+INFO:root:tensor([[0.4468]], device='cuda:0', grad_fn=<SigmoidBackward0>)
+INFO:root:iter 85
+INFO:root:tensor([[0.5127]], device='cuda:0', grad_fn=<SigmoidBackward0>)
+INFO:root:iter 85
+INFO:root:tensor([[0.5118]], device='cuda:0', grad_fn=<SigmoidBackward0>)
+INFO:root:iter 85
+INFO:root:tensor([[0.4974]], device='cuda:0', grad_fn=<SigmoidBackward0>)
+INFO:root:iter 85
+INFO:root:tensor([[0.5127]], device='cuda:0', grad_fn=<SigmoidBackward0>)
+INFO:root:tensor([7.4411], device='cuda:0', grad_fn=<AddBackward0>), tensor(0.5788, device='cuda:0', grad_fn=<AddBackward0>), tensor(1.9355, device='cuda:0', grad_fn=<AddBackward0>)
+INFO:root:iter 86
+INFO:root:tensor([[0.4045]], device='cuda:0', grad_fn=<SigmoidBackward0>)
+INFO:root:iter 86
+INFO:root:tensor([[0.4766]], device='cuda:0', grad_fn=<SigmoidBackward0>)
+INFO:root:iter 86
+INFO:root:tensor([[0.4541]], device='cuda:0', grad_fn=<SigmoidBackward0>)
+INFO:root:iter 86
+INFO:root:tensor([[0.4288]], device='cuda:0', grad_fn=<SigmoidBackward0>)
+INFO:root:iter 86
+INFO:root:tensor([[0.4061]], device='cuda:0', grad_fn=<SigmoidBackward0>)
+INFO:root:iter 86
+INFO:root:tensor([[0.4284]], device='cuda:0', grad_fn=<SigmoidBackward0>)
+INFO:root:iter 86
+INFO:root:tensor([[0.4487]], device='cuda:0', grad_fn=<SigmoidBackward0>)
+INFO:root:iter 86
+INFO:root:tensor([[0.4476]], device='cuda:0', grad_fn=<SigmoidBackward0>)
+INFO:root:iter 86
+INFO:root:tensor([[0.5128]], device='cuda:0', grad_fn=<SigmoidBackward0>)
+INFO:root:iter 86
+INFO:root:tensor([[0.5117]], device='cuda:0', grad_fn=<SigmoidBackward0>)
+INFO:root:iter 86
+INFO:root:tensor([[0.4974]], device='cuda:0', grad_fn=<SigmoidBackward0>)
+INFO:root:iter 86
+INFO:root:tensor([[0.5125]], device='cuda:0', grad_fn=<SigmoidBackward0>)
+INFO:root:tensor([7.4429], device='cuda:0', grad_fn=<AddBackward0>), tensor(0.5784, device='cuda:0', grad_fn=<AddBackward0>), tensor(1.9349, device='cuda:0', grad_fn=<AddBackward0>)
+INFO:root:iter 87
+INFO:root:tensor([[0.4043]], device='cuda:0', grad_fn=<SigmoidBackward0>)
+INFO:root:iter 87
+INFO:root:tensor([[0.4764]], device='cuda:0', grad_fn=<SigmoidBackward0>)
+INFO:root:iter 87
+INFO:root:tensor([[0.4543]], device='cuda:0', grad_fn=<SigmoidBackward0>)
+INFO:root:iter 87
+INFO:root:tensor([[0.4283]], device='cuda:0', grad_fn=<SigmoidBackward0>)
+INFO:root:iter 87
+INFO:root:tensor([[0.4054]], device='cuda:0', grad_fn=<SigmoidBackward0>)
+INFO:root:iter 87
+INFO:root:tensor([[0.4281]], device='cuda:0', grad_fn=<SigmoidBackward0>)
+INFO:root:iter 87
+INFO:root:tensor([[0.4491]], device='cuda:0', grad_fn=<SigmoidBackward0>)
+INFO:root:iter 87
+INFO:root:tensor([[0.4476]], device='cuda:0', grad_fn=<SigmoidBackward0>)
+INFO:root:iter 87
+INFO:root:tensor([[0.5127]], device='cuda:0', grad_fn=<SigmoidBackward0>)
+INFO:root:iter 87
+INFO:root:tensor([[0.5118]], device='cuda:0', grad_fn=<SigmoidBackward0>)
+INFO:root:iter 87
+INFO:root:tensor([[0.4974]], device='cuda:0', grad_fn=<SigmoidBackward0>)
+INFO:root:iter 87
+INFO:root:tensor([[0.5125]], device='cuda:0', grad_fn=<SigmoidBackward0>)
+INFO:root:tensor([7.4406], device='cuda:0', grad_fn=<AddBackward0>), tensor(0.5779, device='cuda:0', grad_fn=<AddBackward0>), tensor(1.9354, device='cuda:0', grad_fn=<AddBackward0>)
+INFO:root:iter 88
+INFO:root:tensor([[0.4046]], device='cuda:0', grad_fn=<SigmoidBackward0>)
+INFO:root:iter 88
+INFO:root:tensor([[0.4762]], device='cuda:0', grad_fn=<SigmoidBackward0>)
+INFO:root:iter 88
+INFO:root:tensor([[0.4549]], device='cuda:0', grad_fn=<SigmoidBackward0>)
+INFO:root:iter 88
+INFO:root:tensor([[0.4284]], device='cuda:0', grad_fn=<SigmoidBackward0>)
+INFO:root:iter 88
+INFO:root:tensor([[0.4058]], device='cuda:0', grad_fn=<SigmoidBackward0>)
+INFO:root:iter 88
+INFO:root:tensor([[0.4284]], device='cuda:0', grad_fn=<SigmoidBackward0>)
+INFO:root:iter 88
+INFO:root:tensor([[0.4489]], device='cuda:0', grad_fn=<SigmoidBackward0>)
+INFO:root:iter 88
+INFO:root:tensor([[0.4468]], device='cuda:0', grad_fn=<SigmoidBackward0>)
+INFO:root:iter 88
+INFO:root:tensor([[0.5127]], device='cuda:0', grad_fn=<SigmoidBackward0>)
+INFO:root:iter 88
+INFO:root:tensor([[0.5118]], device='cuda:0', grad_fn=<SigmoidBackward0>)
+INFO:root:iter 88
+INFO:root:tensor([[0.4972]], device='cuda:0', grad_fn=<SigmoidBackward0>)
+INFO:root:iter 88
+INFO:root:tensor([[0.5126]], device='cuda:0', grad_fn=<SigmoidBackward0>)
+INFO:root:tensor([7.4414], device='cuda:0', grad_fn=<AddBackward0>), tensor(0.5771, device='cuda:0', grad_fn=<AddBackward0>), tensor(1.8858, device='cuda:0', grad_fn=<AddBackward0>)
+INFO:root:iter 89
+INFO:root:tensor([[0.4046]], device='cuda:0', grad_fn=<SigmoidBackward0>)
+INFO:root:iter 89
+INFO:root:tensor([[0.4765]], device='cuda:0', grad_fn=<SigmoidBackward0>)
+INFO:root:iter 89
+INFO:root:tensor([[0.4547]], device='cuda:0', grad_fn=<SigmoidBackward0>)
+INFO:root:iter 89
+INFO:root:tensor([[0.4282]], device='cuda:0', grad_fn=<SigmoidBackward0>)
+INFO:root:iter 89
+INFO:root:tensor([[0.4060]], device='cuda:0', grad_fn=<SigmoidBackward0>)
+INFO:root:iter 89
+INFO:root:tensor([[0.4285]], device='cuda:0', grad_fn=<SigmoidBackward0>)
+INFO:root:iter 89
+INFO:root:tensor([[0.4492]], device='cuda:0', grad_fn=<SigmoidBackward0>)
+INFO:root:iter 89
+INFO:root:tensor([[0.4483]], device='cuda:0', grad_fn=<SigmoidBackward0>)
+INFO:root:iter 89
+INFO:root:tensor([[0.5128]], device='cuda:0', grad_fn=<SigmoidBackward0>)
+INFO:root:iter 89
+INFO:root:tensor([[0.5119]], device='cuda:0', grad_fn=<SigmoidBackward0>)
+INFO:root:iter 89
+INFO:root:tensor([[0.4973]], device='cuda:0', grad_fn=<SigmoidBackward0>)
+INFO:root:iter 89
+INFO:root:tensor([[0.5124]], device='cuda:0', grad_fn=<SigmoidBackward0>)
+INFO:root:tensor([7.4449], device='cuda:0', grad_fn=<AddBackward0>), tensor(0.5764, device='cuda:0', grad_fn=<AddBackward0>), tensor(1.8866, device='cuda:0', grad_fn=<AddBackward0>)
+INFO:root:iter 90
+INFO:root:tensor([[0.4040]], device='cuda:0', grad_fn=<SigmoidBackward0>)
+INFO:root:iter 90
+INFO:root:tensor([[0.4761]], device='cuda:0', grad_fn=<SigmoidBackward0>)
+INFO:root:iter 90
+INFO:root:tensor([[0.4544]], device='cuda:0', grad_fn=<SigmoidBackward0>)
+INFO:root:iter 90
+INFO:root:tensor([[0.4280]], device='cuda:0', grad_fn=<SigmoidBackward0>)
+INFO:root:iter 90
+INFO:root:tensor([[0.4059]], device='cuda:0', grad_fn=<SigmoidBackward0>)
+INFO:root:iter 90
+INFO:root:tensor([[0.4283]], device='cuda:0', grad_fn=<SigmoidBackward0>)
+INFO:root:iter 90
+INFO:root:tensor([[0.4495]], device='cuda:0', grad_fn=<SigmoidBackward0>)
+INFO:root:iter 90
+INFO:root:tensor([[0.4474]], device='cuda:0', grad_fn=<SigmoidBackward0>)
+INFO:root:iter 90
+INFO:root:tensor([[0.5129]], device='cuda:0', grad_fn=<SigmoidBackward0>)
+INFO:root:iter 90
+INFO:root:tensor([[0.5118]], device='cuda:0', grad_fn=<SigmoidBackward0>)
+INFO:root:iter 90
+INFO:root:tensor([[0.4975]], device='cuda:0', grad_fn=<SigmoidBackward0>)
+INFO:root:iter 90
+INFO:root:tensor([[0.5126]], device='cuda:0', grad_fn=<SigmoidBackward0>)
+INFO:root:tensor([7.4415], device='cuda:0', grad_fn=<AddBackward0>), tensor(0.5766, device='cuda:0', grad_fn=<AddBackward0>), tensor(1.8867, device='cuda:0', grad_fn=<AddBackward0>)
+INFO:root:iter 91
+INFO:root:tensor([[0.4056]], device='cuda:0', grad_fn=<SigmoidBackward0>)
+INFO:root:iter 91
+INFO:root:tensor([[0.4762]], device='cuda:0', grad_fn=<SigmoidBackward0>)
+INFO:root:iter 91
+INFO:root:tensor([[0.4552]], device='cuda:0', grad_fn=<SigmoidBackward0>)
+INFO:root:iter 91
+INFO:root:tensor([[0.4278]], device='cuda:0', grad_fn=<SigmoidBackward0>)
+INFO:root:iter 91
+INFO:root:tensor([[0.4066]], device='cuda:0', grad_fn=<SigmoidBackward0>)
+INFO:root:iter 91
+INFO:root:tensor([[0.4277]], device='cuda:0', grad_fn=<SigmoidBackward0>)
+INFO:root:iter 91
+INFO:root:tensor([[0.4490]], device='cuda:0', grad_fn=<SigmoidBackward0>)
+INFO:root:iter 91
+INFO:root:tensor([[0.4474]], device='cuda:0', grad_fn=<SigmoidBackward0>)
+INFO:root:iter 91
+INFO:root:tensor([[0.5129]], device='cuda:0', grad_fn=<SigmoidBackward0>)
+INFO:root:iter 91
+INFO:root:tensor([[0.5117]], device='cuda:0', grad_fn=<SigmoidBackward0>)
+INFO:root:iter 91
+INFO:root:tensor([[0.4972]], device='cuda:0', grad_fn=<SigmoidBackward0>)
+INFO:root:iter 91
+INFO:root:tensor([[0.5125]], device='cuda:0', grad_fn=<SigmoidBackward0>)
+INFO:root:tensor([7.4441], device='cuda:0', grad_fn=<AddBackward0>), tensor(0.5761, device='cuda:0', grad_fn=<AddBackward0>), tensor(1.9338, device='cuda:0', grad_fn=<AddBackward0>)
+INFO:root:iter 92
+INFO:root:tensor([[0.4053]], device='cuda:0', grad_fn=<SigmoidBackward0>)
+INFO:root:iter 92
+INFO:root:tensor([[0.4764]], device='cuda:0', grad_fn=<SigmoidBackward0>)
+INFO:root:iter 92
+INFO:root:tensor([[0.4542]], device='cuda:0', grad_fn=<SigmoidBackward0>)
+INFO:root:iter 92
+INFO:root:tensor([[0.4278]], device='cuda:0', grad_fn=<SigmoidBackward0>)
+INFO:root:iter 92
+INFO:root:tensor([[0.4064]], device='cuda:0', grad_fn=<SigmoidBackward0>)
+INFO:root:iter 92
+INFO:root:tensor([[0.4277]], device='cuda:0', grad_fn=<SigmoidBackward0>)
+INFO:root:iter 92
+INFO:root:tensor([[0.4507]], device='cuda:0', grad_fn=<SigmoidBackward0>)
+INFO:root:iter 92
+INFO:root:tensor([[0.4472]], device='cuda:0', grad_fn=<SigmoidBackward0>)
+INFO:root:iter 92
+INFO:root:tensor([[0.5128]], device='cuda:0', grad_fn=<SigmoidBackward0>)
+INFO:root:iter 92
+INFO:root:tensor([[0.5119]], device='cuda:0', grad_fn=<SigmoidBackward0>)
+INFO:root:iter 92
+INFO:root:tensor([[0.4976]], device='cuda:0', grad_fn=<SigmoidBackward0>)
+INFO:root:iter 92
+INFO:root:tensor([[0.5124]], device='cuda:0', grad_fn=<SigmoidBackward0>)
+INFO:root:tensor([7.4451], device='cuda:0', grad_fn=<AddBackward0>), tensor(0.5770, device='cuda:0', grad_fn=<AddBackward0>), tensor(1.9336, device='cuda:0', grad_fn=<AddBackward0>)
+INFO:root:iter 93
+INFO:root:tensor([[0.4047]], device='cuda:0', grad_fn=<SigmoidBackward0>)
+INFO:root:iter 93
+INFO:root:tensor([[0.4764]], device='cuda:0', grad_fn=<SigmoidBackward0>)
+INFO:root:iter 93
+INFO:root:tensor([[0.4545]], device='cuda:0', grad_fn=<SigmoidBackward0>)
+INFO:root:iter 93
+INFO:root:tensor([[0.4287]], device='cuda:0', grad_fn=<SigmoidBackward0>)
+INFO:root:iter 93
+INFO:root:tensor([[0.4064]], device='cuda:0', grad_fn=<SigmoidBackward0>)
+INFO:root:iter 93
+INFO:root:tensor([[0.4288]], device='cuda:0', grad_fn=<SigmoidBackward0>)
+INFO:root:iter 93
+INFO:root:tensor([[0.4492]], device='cuda:0', grad_fn=<SigmoidBackward0>)
+INFO:root:iter 93
+INFO:root:tensor([[0.4469]], device='cuda:0', grad_fn=<SigmoidBackward0>)
+INFO:root:iter 93
+INFO:root:tensor([[0.5128]], device='cuda:0', grad_fn=<SigmoidBackward0>)
+INFO:root:iter 93
+INFO:root:tensor([[0.5117]], device='cuda:0', grad_fn=<SigmoidBackward0>)
+INFO:root:iter 93
+INFO:root:tensor([[0.4972]], device='cuda:0', grad_fn=<SigmoidBackward0>)
+INFO:root:iter 93
+INFO:root:tensor([[0.5126]], device='cuda:0', grad_fn=<SigmoidBackward0>)
+INFO:root:tensor([7.4439], device='cuda:0', grad_fn=<AddBackward0>), tensor(0.5760, device='cuda:0', grad_fn=<AddBackward0>), tensor(1.9335, device='cuda:0', grad_fn=<AddBackward0>)
+INFO:root:iter 94
+INFO:root:tensor([[0.4066]], device='cuda:0', grad_fn=<SigmoidBackward0>)
+INFO:root:iter 94
+INFO:root:tensor([[0.4765]], device='cuda:0', grad_fn=<SigmoidBackward0>)
+INFO:root:iter 94
+INFO:root:tensor([[0.4544]], device='cuda:0', grad_fn=<SigmoidBackward0>)
+INFO:root:iter 94
+INFO:root:tensor([[0.4281]], device='cuda:0', grad_fn=<SigmoidBackward0>)
+INFO:root:iter 94
+INFO:root:tensor([[0.4067]], device='cuda:0', grad_fn=<SigmoidBackward0>)
+INFO:root:iter 94
+INFO:root:tensor([[0.4279]], device='cuda:0', grad_fn=<SigmoidBackward0>)
+INFO:root:iter 94
+INFO:root:tensor([[0.4491]], device='cuda:0', grad_fn=<SigmoidBackward0>)
+INFO:root:iter 94
+INFO:root:tensor([[0.4465]], device='cuda:0', grad_fn=<SigmoidBackward0>)
+INFO:root:iter 94
+INFO:root:tensor([[0.5128]], device='cuda:0', grad_fn=<SigmoidBackward0>)
+INFO:root:iter 94
+INFO:root:tensor([[0.5118]], device='cuda:0', grad_fn=<SigmoidBackward0>)
+INFO:root:iter 94
+INFO:root:tensor([[0.4975]], device='cuda:0', grad_fn=<SigmoidBackward0>)
+INFO:root:iter 94
+INFO:root:tensor([[0.5124]], device='cuda:0', grad_fn=<SigmoidBackward0>)
+INFO:root:tensor([7.4441], device='cuda:0', grad_fn=<AddBackward0>), tensor(0.5776, device='cuda:0', grad_fn=<AddBackward0>), tensor(1.9343, device='cuda:0', grad_fn=<AddBackward0>)
+INFO:root:iter 95
+INFO:root:tensor([[0.4046]], device='cuda:0', grad_fn=<SigmoidBackward0>)
+INFO:root:iter 95
+INFO:root:tensor([[0.4762]], device='cuda:0', grad_fn=<SigmoidBackward0>)
+INFO:root:iter 95
+INFO:root:tensor([[0.4543]], device='cuda:0', grad_fn=<SigmoidBackward0>)
+INFO:root:iter 95
+INFO:root:tensor([[0.4287]], device='cuda:0', grad_fn=<SigmoidBackward0>)
+INFO:root:iter 95
+INFO:root:tensor([[0.4058]], device='cuda:0', grad_fn=<SigmoidBackward0>)
+INFO:root:iter 95
+INFO:root:tensor([[0.4283]], device='cuda:0', grad_fn=<SigmoidBackward0>)
+INFO:root:iter 95
+INFO:root:tensor([[0.4491]], device='cuda:0', grad_fn=<SigmoidBackward0>)
+INFO:root:iter 95
+INFO:root:tensor([[0.4472]], device='cuda:0', grad_fn=<SigmoidBackward0>)
+INFO:root:iter 95
+INFO:root:tensor([[0.5129]], device='cuda:0', grad_fn=<SigmoidBackward0>)
+INFO:root:iter 95
+INFO:root:tensor([[0.5119]], device='cuda:0', grad_fn=<SigmoidBackward0>)
+INFO:root:iter 95
+INFO:root:tensor([[0.4976]], device='cuda:0', grad_fn=<SigmoidBackward0>)
+INFO:root:iter 95
+INFO:root:tensor([[0.5124]], device='cuda:0', grad_fn=<SigmoidBackward0>)
+INFO:root:tensor([7.4424], device='cuda:0', grad_fn=<AddBackward0>), tensor(0.5772, device='cuda:0', grad_fn=<AddBackward0>), tensor(1.9345, device='cuda:0', grad_fn=<AddBackward0>)
+INFO:root:iter 96
+INFO:root:tensor([[0.4052]], device='cuda:0', grad_fn=<SigmoidBackward0>)
+INFO:root:iter 96
+INFO:root:tensor([[0.4763]], device='cuda:0', grad_fn=<SigmoidBackward0>)
+INFO:root:iter 96
+INFO:root:tensor([[0.4540]], device='cuda:0', grad_fn=<SigmoidBackward0>)
+INFO:root:iter 96
+INFO:root:tensor([[0.4283]], device='cuda:0', grad_fn=<SigmoidBackward0>)
+INFO:root:iter 96
+INFO:root:tensor([[0.4063]], device='cuda:0', grad_fn=<SigmoidBackward0>)
+INFO:root:iter 96
+INFO:root:tensor([[0.4279]], device='cuda:0', grad_fn=<SigmoidBackward0>)
+INFO:root:iter 96
+INFO:root:tensor([[0.4487]], device='cuda:0', grad_fn=<SigmoidBackward0>)
+INFO:root:iter 96
+INFO:root:tensor([[0.4474]], device='cuda:0', grad_fn=<SigmoidBackward0>)
+INFO:root:iter 96
+INFO:root:tensor([[0.5131]], device='cuda:0', grad_fn=<SigmoidBackward0>)
+INFO:root:iter 96
+INFO:root:tensor([[0.5118]], device='cuda:0', grad_fn=<SigmoidBackward0>)
+INFO:root:iter 96
+INFO:root:tensor([[0.4973]], device='cuda:0', grad_fn=<SigmoidBackward0>)
+INFO:root:iter 96
+INFO:root:tensor([[0.5128]], device='cuda:0', grad_fn=<SigmoidBackward0>)
+INFO:root:tensor([7.4423], device='cuda:0', grad_fn=<AddBackward0>), tensor(0.5773, device='cuda:0', grad_fn=<AddBackward0>), tensor(1.8863, device='cuda:0', grad_fn=<AddBackward0>)
+INFO:root:iter 97
+INFO:root:tensor([[0.4055]], device='cuda:0', grad_fn=<SigmoidBackward0>)
+INFO:root:iter 97
+INFO:root:tensor([[0.4762]], device='cuda:0', grad_fn=<SigmoidBackward0>)
+INFO:root:iter 97
+INFO:root:tensor([[0.4541]], device='cuda:0', grad_fn=<SigmoidBackward0>)
+INFO:root:iter 97
+INFO:root:tensor([[0.4282]], device='cuda:0', grad_fn=<SigmoidBackward0>)
+INFO:root:iter 97
+INFO:root:tensor([[0.4060]], device='cuda:0', grad_fn=<SigmoidBackward0>)
+INFO:root:iter 97
+INFO:root:tensor([[0.4291]], device='cuda:0', grad_fn=<SigmoidBackward0>)
+INFO:root:iter 97
+INFO:root:tensor([[0.4487]], device='cuda:0', grad_fn=<SigmoidBackward0>)
+INFO:root:iter 97
+INFO:root:tensor([[0.4476]], device='cuda:0', grad_fn=<SigmoidBackward0>)
+INFO:root:iter 97
+INFO:root:tensor([[0.5128]], device='cuda:0', grad_fn=<SigmoidBackward0>)
+INFO:root:iter 97
+INFO:root:tensor([[0.5119]], device='cuda:0', grad_fn=<SigmoidBackward0>)
+INFO:root:iter 97
+INFO:root:tensor([[0.4973]], device='cuda:0', grad_fn=<SigmoidBackward0>)
+INFO:root:iter 97
+INFO:root:tensor([[0.5126]], device='cuda:0', grad_fn=<SigmoidBackward0>)
+INFO:root:tensor([7.4441], device='cuda:0', grad_fn=<AddBackward0>), tensor(0.5766, device='cuda:0', grad_fn=<AddBackward0>), tensor(1.8860, device='cuda:0', grad_fn=<AddBackward0>)
+INFO:root:iter 98
+INFO:root:tensor([[0.4040]], device='cuda:0', grad_fn=<SigmoidBackward0>)
+INFO:root:iter 98
+INFO:root:tensor([[0.4767]], device='cuda:0', grad_fn=<SigmoidBackward0>)
+INFO:root:iter 98
+INFO:root:tensor([[0.4544]], device='cuda:0', grad_fn=<SigmoidBackward0>)
+INFO:root:iter 98
+INFO:root:tensor([[0.4286]], device='cuda:0', grad_fn=<SigmoidBackward0>)
+INFO:root:iter 98
+INFO:root:tensor([[0.4061]], device='cuda:0', grad_fn=<SigmoidBackward0>)
+INFO:root:iter 98
+INFO:root:tensor([[0.4285]], device='cuda:0', grad_fn=<SigmoidBackward0>)
+INFO:root:iter 98
+INFO:root:tensor([[0.4490]], device='cuda:0', grad_fn=<SigmoidBackward0>)
+INFO:root:iter 98
+INFO:root:tensor([[0.4465]], device='cuda:0', grad_fn=<SigmoidBackward0>)
+INFO:root:iter 98
+INFO:root:tensor([[0.5129]], device='cuda:0', grad_fn=<SigmoidBackward0>)
+INFO:root:iter 98
+INFO:root:tensor([[0.5119]], device='cuda:0', grad_fn=<SigmoidBackward0>)
+INFO:root:iter 98
+INFO:root:tensor([[0.4975]], device='cuda:0', grad_fn=<SigmoidBackward0>)
+INFO:root:iter 98
+INFO:root:tensor([[0.5124]], device='cuda:0', grad_fn=<SigmoidBackward0>)
+INFO:root:tensor([7.4413], device='cuda:0', grad_fn=<AddBackward0>), tensor(0.5764, device='cuda:0', grad_fn=<AddBackward0>), tensor(1.8863, device='cuda:0', grad_fn=<AddBackward0>)
+INFO:root:iter 99
+INFO:root:tensor([[0.4046]], device='cuda:0', grad_fn=<SigmoidBackward0>)
+INFO:root:iter 99
+INFO:root:tensor([[0.4760]], device='cuda:0', grad_fn=<SigmoidBackward0>)
+INFO:root:iter 99
+INFO:root:tensor([[0.4545]], device='cuda:0', grad_fn=<SigmoidBackward0>)
+INFO:root:iter 99
+INFO:root:tensor([[0.4281]], device='cuda:0', grad_fn=<SigmoidBackward0>)
+INFO:root:iter 99
+INFO:root:tensor([[0.4063]], device='cuda:0', grad_fn=<SigmoidBackward0>)
+INFO:root:iter 99
+INFO:root:tensor([[0.4281]], device='cuda:0', grad_fn=<SigmoidBackward0>)
+INFO:root:iter 99
+INFO:root:tensor([[0.4485]], device='cuda:0', grad_fn=<SigmoidBackward0>)
+INFO:root:iter 99
+INFO:root:tensor([[0.4472]], device='cuda:0', grad_fn=<SigmoidBackward0>)
+INFO:root:iter 99
+INFO:root:tensor([[0.5130]], device='cuda:0', grad_fn=<SigmoidBackward0>)
+INFO:root:iter 99
+INFO:root:tensor([[0.5120]], device='cuda:0', grad_fn=<SigmoidBackward0>)
+INFO:root:iter 99
+INFO:root:tensor([[0.4976]], device='cuda:0', grad_fn=<SigmoidBackward0>)
+INFO:root:iter 99
+INFO:root:tensor([[0.5126]], device='cuda:0', grad_fn=<SigmoidBackward0>)
+INFO:root:tensor([7.4417], device='cuda:0', grad_fn=<AddBackward0>), tensor(0.5760, device='cuda:0', grad_fn=<AddBackward0>), tensor(1.9339, device='cuda:0', grad_fn=<AddBackward0>)
+INFO:root:0 0.0039571687
+INFO:root:1 0.0031719625
+INFO:root:2 0.0031002979
+INFO:root:3 0.009682058
+INFO:root:4 0.008388784
+INFO:root:5 0.006917128
+INFO:root:6 0.0041348925
+INFO:root:7 0.0037587266
+INFO:root:8 0.0028323994
+INFO:root:9 0.0024365417
+INFO:root:10 0.0035564108
+INFO:root:11 0.0029431803
+INFO:root:12 0.002870196
+INFO:root:13 0.00843212
+INFO:root:14 0.0025188618
+INFO:root:15 0.0061314227
+INFO:root:16 0.003399284
+INFO:root:17 0.0029021576
+INFO:root:18 0.0033740494
+INFO:root:19 0.0030069973
+INFO:root:20 0.0030888566
+INFO:root:21 0.008173233
+INFO:root:22 0.0068802303
+INFO:root:23 0.0033068634
+INFO:root:24 0.0031104262
+INFO:root:25 0.0023844987
+INFO:root:26 0.0034449487
+INFO:root:27 0.003259583
+INFO:root:28 0.008497743
+INFO:root:29 0.0071899826
+INFO:root:30 0.0060405396
+INFO:root:31 0.0032588262
+INFO:root:32 0.0037485375
+INFO:root:33 0.0027283723
+INFO:root:34 0.0037174865
+INFO:root:35 0.008544898
+INFO:root:36 0.0076658903
+INFO:root:37 0.006473241
+INFO:root:38 0.0041070147
+INFO:root:39 0.0030568559
+INFO:root:40 0.0032236427
+INFO:root:41 0.0026955171
+INFO:root:42 0.0037814695
+INFO:root:43 0.0032858092
+INFO:root:44 0.007744978
+INFO:root:45 0.00763935
+INFO:root:46 0.0063248575
+INFO:root:47 0.0041661286
+INFO:root:48 0.0036027282
+INFO:root:49 0.0026846793
+INFO:root:50 0.0030979323
+INFO:root:51 0.0030879457
+INFO:root:52 0.00285885
+INFO:root:53 0.008359229
+INFO:root:54 0.0067730406
+INFO:root:55 0.00462932
+INFO:root:56 0.0032357941
+INFO:root:57 0.006943501
+INFO:root:58 0.0042565367
+INFO:root:59 0.0033853995
+INFO:root:60 0.003022825
+INFO:root:61 0.007325596
+INFO:root:62 0.0022496826
+INFO:root:63 0.0054035485
+INFO:root:64 0.003229683
+INFO:root:65 0.002322781
+INFO:root:66 0.003052187
+INFO:root:67 0.0027090274
+INFO:root:68 0.002358671
+INFO:root:69 0.0016020902
+INFO:root:70 0.0015977323
+INFO:root:71 0.0018027461
+INFO:root:72 0.0029014996
+INFO:root:73 0.0023909984
+INFO:root:74 0.0029496718
+INFO:root:75 0.002761167
+INFO:root:76 0.0024273125
+INFO:root:77 0.0017344865
+INFO:root:78 0.0020732242
+INFO:root:79 0.0015554907
+INFO:root:80 0.0028589289
+INFO:root:81 0.0022940293
+INFO:root:82 0.0029106047
+INFO:root:83 0.0023233863
+INFO:root:84 0.00226238
+INFO:root:85 0.0024056719
+INFO:root:86 0.002385225
+INFO:root:87 0.0070938226
+INFO:root:88 0.0030513313
+INFO:root:89 0.0023178575
+INFO:root:90 0.0026172798
+INFO:root:91 0.0022052631
+INFO:root:92 0.002326734
+INFO:root:93 0.0020487776
+INFO:root:94 0.0020679971
+INFO:root:95 0.0019682234
+INFO:root:96 0.001233737
+INFO:root:97 0.0007453874
+INFO:root:98 0.0019672206
+INFO:root:99 0.001976995
+INFO:root:final video score tensor([[0.3390]], device='cuda:0', grad_fn=<SigmoidBackward0>)
+INFO:root:total frame 100, total fake frame 56
+INFO:root:fianl l2,1 nrom tensor(0.4936, device='cuda:0', grad_fn=<SumBackward0>)

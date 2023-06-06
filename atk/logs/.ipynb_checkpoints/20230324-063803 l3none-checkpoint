@@ -1,0 +1,482 @@
+INFO:root:new video /notebooks/atk/input/test_videos/apzckowxpy.mp4
+INFO:root:iter 0
+INFO:root:tensor([[0.6316]], device='cuda:0', grad_fn=<SigmoidBackward0>)
+INFO:root:tensor(0.6492, device='cuda:0', grad_fn=<AddBackward0>), tensor(0.0118, device='cuda:0', grad_fn=<SumBackward0>), -298.41962546110153
+INFO:root:iter 1
+INFO:root:tensor([[0.5950]], device='cuda:0', grad_fn=<SigmoidBackward0>)
+INFO:root:tensor(0.6045, device='cuda:0', grad_fn=<AddBackward0>), tensor(5.9864, device='cuda:0', grad_fn=<SumBackward0>), -295.6978251338005
+INFO:root:iter 2
+INFO:root:tensor([[0.3520]], device='cuda:0', grad_fn=<SigmoidBackward0>)
+INFO:root:tensor(0.4936, device='cuda:0', grad_fn=<AddBackward0>), tensor(5.9379, device='cuda:0', grad_fn=<SumBackward0>), -294.0044593811035
+INFO:root:iter 3
+INFO:root:tensor([[0.2881]], device='cuda:0', grad_fn=<SigmoidBackward0>)
+INFO:root:tensor(0.4663, device='cuda:0', grad_fn=<AddBackward0>), tensor(4.0926, device='cuda:0', grad_fn=<SumBackward0>), -295.76197814941406
+INFO:root:iter 4
+INFO:root:tensor([[0.2916]], device='cuda:0', grad_fn=<SigmoidBackward0>)
+INFO:root:tensor(0.4610, device='cuda:0', grad_fn=<AddBackward0>), tensor(2.0852, device='cuda:0', grad_fn=<SumBackward0>), -296.39446091651917
+INFO:root:iter 5
+INFO:root:tensor([[0.4072]], device='cuda:0', grad_fn=<SigmoidBackward0>)
+INFO:root:tensor(0.4757, device='cuda:0', grad_fn=<AddBackward0>), tensor(2.6914, device='cuda:0', grad_fn=<SumBackward0>), -294.14250898361206
+INFO:root:iter 6
+INFO:root:tensor([[0.5175]], device='cuda:0', grad_fn=<SigmoidBackward0>)
+INFO:root:tensor(0.5508, device='cuda:0', grad_fn=<AddBackward0>), tensor(3.1748, device='cuda:0', grad_fn=<SumBackward0>), -293.15654426813126
+INFO:root:iter 7
+INFO:root:tensor([[0.4824]], device='cuda:0', grad_fn=<SigmoidBackward0>)
+INFO:root:tensor(0.5306, device='cuda:0', grad_fn=<AddBackward0>), tensor(2.9398, device='cuda:0', grad_fn=<SumBackward0>), -291.8634114265442
+INFO:root:iter 8
+INFO:root:tensor([[0.4366]], device='cuda:0', grad_fn=<SigmoidBackward0>)
+INFO:root:tensor(0.5121, device='cuda:0', grad_fn=<AddBackward0>), tensor(2.3263, device='cuda:0', grad_fn=<SumBackward0>), -292.09822657704353
+INFO:root:iter 9
+INFO:root:tensor([[0.4186]], device='cuda:0', grad_fn=<SigmoidBackward0>)
+INFO:root:tensor(0.4981, device='cuda:0', grad_fn=<AddBackward0>), tensor(2.0440, device='cuda:0', grad_fn=<SumBackward0>), -291.4683900475502
+INFO:root:iter 10
+INFO:root:tensor([[0.4241]], device='cuda:0', grad_fn=<SigmoidBackward0>)
+INFO:root:tensor(0.5016, device='cuda:0', grad_fn=<AddBackward0>), tensor(2.1175, device='cuda:0', grad_fn=<SumBackward0>), -291.23864310979843
+INFO:root:iter 11
+INFO:root:tensor([[0.3924]], device='cuda:0', grad_fn=<SigmoidBackward0>)
+INFO:root:tensor(0.4910, device='cuda:0', grad_fn=<AddBackward0>), tensor(2.0530, device='cuda:0', grad_fn=<SumBackward0>), -289.95866897702217
+INFO:root:iter 12
+INFO:root:tensor([[0.3471]], device='cuda:0', grad_fn=<SigmoidBackward0>)
+INFO:root:tensor(0.4724, device='cuda:0', grad_fn=<AddBackward0>), tensor(1.8732, device='cuda:0', grad_fn=<SumBackward0>), -290.423063069582
+INFO:root:iter 13
+INFO:root:tensor([[0.3381]], device='cuda:0', grad_fn=<SigmoidBackward0>)
+INFO:root:tensor(0.4679, device='cuda:0', grad_fn=<AddBackward0>), tensor(1.7565, device='cuda:0', grad_fn=<SumBackward0>), -291.1485116481781
+INFO:root:iter 14
+INFO:root:tensor([[0.3763]], device='cuda:0', grad_fn=<SigmoidBackward0>)
+INFO:root:tensor(0.4693, device='cuda:0', grad_fn=<AddBackward0>), tensor(1.6781, device='cuda:0', grad_fn=<SumBackward0>), -291.45763024687767
+INFO:root:iter 15
+INFO:root:tensor([[0.4402]], device='cuda:0', grad_fn=<SigmoidBackward0>)
+INFO:root:tensor(0.4847, device='cuda:0', grad_fn=<AddBackward0>), tensor(1.5568, device='cuda:0', grad_fn=<SumBackward0>), -291.65287470817566
+INFO:root:iter 16
+INFO:root:tensor([[0.4698]], device='cuda:0', grad_fn=<SigmoidBackward0>)
+INFO:root:tensor(0.5022, device='cuda:0', grad_fn=<AddBackward0>), tensor(1.4183, device='cuda:0', grad_fn=<SumBackward0>), -291.53007277846336
+INFO:root:iter 17
+INFO:root:tensor([[0.4581]], device='cuda:0', grad_fn=<SigmoidBackward0>)
+INFO:root:tensor(0.4974, device='cuda:0', grad_fn=<AddBackward0>), tensor(1.3359, device='cuda:0', grad_fn=<SumBackward0>), -290.94501453638077
+INFO:root:iter 18
+INFO:root:tensor([[0.4256]], device='cuda:0', grad_fn=<SigmoidBackward0>)
+INFO:root:tensor(0.4820, device='cuda:0', grad_fn=<AddBackward0>), tensor(1.3130, device='cuda:0', grad_fn=<SumBackward0>), -290.87202629446983
+INFO:root:iter 19
+INFO:root:tensor([[0.4061]], device='cuda:0', grad_fn=<SigmoidBackward0>)
+INFO:root:tensor(0.4751, device='cuda:0', grad_fn=<AddBackward0>), tensor(1.2753, device='cuda:0', grad_fn=<SumBackward0>), -291.5261270701885
+INFO:root:iter 20
+INFO:root:tensor([[0.4139]], device='cuda:0', grad_fn=<SigmoidBackward0>)
+INFO:root:tensor(0.4758, device='cuda:0', grad_fn=<AddBackward0>), tensor(1.2019, device='cuda:0', grad_fn=<SumBackward0>), -292.0539639890194
+INFO:root:iter 21
+INFO:root:tensor([[0.4374]], device='cuda:0', grad_fn=<SigmoidBackward0>)
+INFO:root:tensor(0.4853, device='cuda:0', grad_fn=<AddBackward0>), tensor(1.1166, device='cuda:0', grad_fn=<SumBackward0>), -292.12314596772194
+INFO:root:iter 22
+INFO:root:tensor([[0.4493]], device='cuda:0', grad_fn=<SigmoidBackward0>)
+INFO:root:tensor(0.4932, device='cuda:0', grad_fn=<AddBackward0>), tensor(1.0423, device='cuda:0', grad_fn=<SumBackward0>), -291.46879252791405
+INFO:root:iter 23
+INFO:root:tensor([[0.4480]], device='cuda:0', grad_fn=<SigmoidBackward0>)
+INFO:root:tensor(0.4937, device='cuda:0', grad_fn=<AddBackward0>), tensor(0.9927, device='cuda:0', grad_fn=<SumBackward0>), -290.7274183034897
+INFO:root:iter 24
+INFO:root:tensor([[0.4395]], device='cuda:0', grad_fn=<SigmoidBackward0>)
+INFO:root:tensor(0.4876, device='cuda:0', grad_fn=<AddBackward0>), tensor(0.9681, device='cuda:0', grad_fn=<SumBackward0>), -290.2722960114479
+INFO:root:iter 25
+INFO:root:tensor([[0.4456]], device='cuda:0', grad_fn=<SigmoidBackward0>)
+INFO:root:tensor(0.4884, device='cuda:0', grad_fn=<AddBackward0>), tensor(0.9287, device='cuda:0', grad_fn=<SumBackward0>), -290.9190815091133
+INFO:root:iter 26
+INFO:root:tensor([[0.4487]], device='cuda:0', grad_fn=<SigmoidBackward0>)
+INFO:root:tensor(0.4883, device='cuda:0', grad_fn=<AddBackward0>), tensor(0.8864, device='cuda:0', grad_fn=<SumBackward0>), -290.6311540901661
+INFO:root:iter 27
+INFO:root:tensor([[0.4568]], device='cuda:0', grad_fn=<SigmoidBackward0>)
+INFO:root:tensor(0.4939, device='cuda:0', grad_fn=<AddBackward0>), tensor(0.8385, device='cuda:0', grad_fn=<SumBackward0>), -290.61045575141907
+INFO:root:iter 28
+INFO:root:tensor([[0.4518]], device='cuda:0', grad_fn=<SigmoidBackward0>)
+INFO:root:tensor(0.4910, device='cuda:0', grad_fn=<AddBackward0>), tensor(0.8117, device='cuda:0', grad_fn=<SumBackward0>), -290.42708802223206
+INFO:root:iter 29
+INFO:root:tensor([[0.4624]], device='cuda:0', grad_fn=<SigmoidBackward0>)
+INFO:root:tensor(0.4975, device='cuda:0', grad_fn=<AddBackward0>), tensor(0.7766, device='cuda:0', grad_fn=<SumBackward0>), -290.66349509358406
+INFO:root:iter 30
+INFO:root:tensor([[0.4532]], device='cuda:0', grad_fn=<SigmoidBackward0>)
+INFO:root:tensor(0.4908, device='cuda:0', grad_fn=<AddBackward0>), tensor(0.7616, device='cuda:0', grad_fn=<SumBackward0>), -290.0516132116318
+INFO:root:iter 31
+INFO:root:tensor([[0.4647]], device='cuda:0', grad_fn=<SigmoidBackward0>)
+INFO:root:tensor(0.4989, device='cuda:0', grad_fn=<AddBackward0>), tensor(0.7278, device='cuda:0', grad_fn=<SumBackward0>), -290.35743686556816
+INFO:root:iter 32
+INFO:root:tensor([[0.4554]], device='cuda:0', grad_fn=<SigmoidBackward0>)
+INFO:root:tensor(0.4932, device='cuda:0', grad_fn=<AddBackward0>), tensor(0.7112, device='cuda:0', grad_fn=<SumBackward0>), -290.2293694317341
+INFO:root:iter 33
+INFO:root:tensor([[0.4632]], device='cuda:0', grad_fn=<SigmoidBackward0>)
+INFO:root:tensor(0.4981, device='cuda:0', grad_fn=<AddBackward0>), tensor(0.6832, device='cuda:0', grad_fn=<SumBackward0>), -290.4826114475727
+INFO:root:iter 34
+INFO:root:tensor([[0.4588]], device='cuda:0', grad_fn=<SigmoidBackward0>)
+INFO:root:tensor(0.4945, device='cuda:0', grad_fn=<AddBackward0>), tensor(0.6664, device='cuda:0', grad_fn=<SumBackward0>), -290.094927996397
+INFO:root:iter 35
+INFO:root:tensor([[0.4669]], device='cuda:0', grad_fn=<SigmoidBackward0>)
+INFO:root:tensor(0.5000, device='cuda:0', grad_fn=<AddBackward0>), tensor(0.6399, device='cuda:0', grad_fn=<SumBackward0>), -290.28780823946
+INFO:root:iter 36
+INFO:root:tensor([[0.4595]], device='cuda:0', grad_fn=<SigmoidBackward0>)
+INFO:root:tensor(0.4951, device='cuda:0', grad_fn=<AddBackward0>), tensor(0.6286, device='cuda:0', grad_fn=<SumBackward0>), -290.0938019454479
+INFO:root:iter 37
+INFO:root:tensor([[0.4712]], device='cuda:0', grad_fn=<SigmoidBackward0>)
+INFO:root:tensor(0.5029, device='cuda:0', grad_fn=<AddBackward0>), tensor(0.6042, device='cuda:0', grad_fn=<SumBackward0>), -290.4668544828892
+INFO:root:iter 38
+INFO:root:tensor([[0.4608]], device='cuda:0', grad_fn=<SigmoidBackward0>)
+INFO:root:tensor(0.4961, device='cuda:0', grad_fn=<AddBackward0>), tensor(0.6004, device='cuda:0', grad_fn=<SumBackward0>), -289.89717614650726
+INFO:root:iter 39
+INFO:root:tensor([[0.4724]], device='cuda:0', grad_fn=<SigmoidBackward0>)
+INFO:root:tensor(0.5041, device='cuda:0', grad_fn=<AddBackward0>), tensor(0.5791, device='cuda:0', grad_fn=<SumBackward0>), -290.38034558296204
+INFO:root:iter 40
+INFO:root:tensor([[0.4639]], device='cuda:0', grad_fn=<SigmoidBackward0>)
+INFO:root:tensor(0.4978, device='cuda:0', grad_fn=<AddBackward0>), tensor(0.5750, device='cuda:0', grad_fn=<SumBackward0>), -290.0584567785263
+INFO:root:iter 41
+INFO:root:tensor([[0.4743]], device='cuda:0', grad_fn=<SigmoidBackward0>)
+INFO:root:tensor(0.5047, device='cuda:0', grad_fn=<AddBackward0>), tensor(0.5568, device='cuda:0', grad_fn=<SumBackward0>), -290.236059486866
+INFO:root:iter 42
+INFO:root:tensor([[0.4648]], device='cuda:0', grad_fn=<SigmoidBackward0>)
+INFO:root:tensor(0.4988, device='cuda:0', grad_fn=<AddBackward0>), tensor(0.5557, device='cuda:0', grad_fn=<SumBackward0>), -290.0135354101658
+INFO:root:iter 43
+INFO:root:tensor([[0.4743]], device='cuda:0', grad_fn=<SigmoidBackward0>)
+INFO:root:tensor(0.5054, device='cuda:0', grad_fn=<AddBackward0>), tensor(0.5396, device='cuda:0', grad_fn=<SumBackward0>), -290.18071392178535
+INFO:root:iter 44
+INFO:root:tensor([[0.4674]], device='cuda:0', grad_fn=<SigmoidBackward0>)
+INFO:root:tensor(0.5003, device='cuda:0', grad_fn=<AddBackward0>), tensor(0.5396, device='cuda:0', grad_fn=<SumBackward0>), -289.60989475250244
+INFO:root:iter 45
+INFO:root:tensor([[0.4749]], device='cuda:0', grad_fn=<SigmoidBackward0>)
+INFO:root:tensor(0.5060, device='cuda:0', grad_fn=<AddBackward0>), tensor(0.5260, device='cuda:0', grad_fn=<SumBackward0>), -289.95379826426506
+INFO:root:iter 46
+INFO:root:tensor([[0.4684]], device='cuda:0', grad_fn=<SigmoidBackward0>)
+INFO:root:tensor(0.5012, device='cuda:0', grad_fn=<AddBackward0>), tensor(0.5251, device='cuda:0', grad_fn=<SumBackward0>), -289.7151500582695
+INFO:root:iter 47
+INFO:root:tensor([[0.4753]], device='cuda:0', grad_fn=<SigmoidBackward0>)
+INFO:root:tensor(0.5063, device='cuda:0', grad_fn=<AddBackward0>), tensor(0.5118, device='cuda:0', grad_fn=<SumBackward0>), -289.8004598915577
+INFO:root:iter 48
+INFO:root:tensor([[0.4685]], device='cuda:0', grad_fn=<SigmoidBackward0>)
+INFO:root:tensor(0.5023, device='cuda:0', grad_fn=<AddBackward0>), tensor(0.5110, device='cuda:0', grad_fn=<SumBackward0>), -289.7035704255104
+INFO:root:iter 49
+INFO:root:tensor([[0.4745]], device='cuda:0', grad_fn=<SigmoidBackward0>)
+INFO:root:tensor(0.5061, device='cuda:0', grad_fn=<AddBackward0>), tensor(0.5003, device='cuda:0', grad_fn=<SumBackward0>), -289.6997453570366
+INFO:root:iter 50
+INFO:root:tensor([[0.4709]], device='cuda:0', grad_fn=<SigmoidBackward0>)
+INFO:root:tensor(0.5033, device='cuda:0', grad_fn=<AddBackward0>), tensor(0.4990, device='cuda:0', grad_fn=<SumBackward0>), -289.57673040032387
+INFO:root:iter 51
+INFO:root:tensor([[0.4767]], device='cuda:0', grad_fn=<SigmoidBackward0>)
+INFO:root:tensor(0.5079, device='cuda:0', grad_fn=<AddBackward0>), tensor(0.4895, device='cuda:0', grad_fn=<SumBackward0>), -289.7695717215538
+INFO:root:iter 52
+INFO:root:tensor([[0.4700]], device='cuda:0', grad_fn=<SigmoidBackward0>)
+INFO:root:tensor(0.5028, device='cuda:0', grad_fn=<AddBackward0>), tensor(0.4934, device='cuda:0', grad_fn=<SumBackward0>), -289.50493347644806
+INFO:root:iter 53
+INFO:root:tensor([[0.4773]], device='cuda:0', grad_fn=<SigmoidBackward0>)
+INFO:root:tensor(0.5081, device='cuda:0', grad_fn=<AddBackward0>), tensor(0.4845, device='cuda:0', grad_fn=<SumBackward0>), -289.8705021739006
+INFO:root:iter 54
+INFO:root:tensor([[0.4703]], device='cuda:0', grad_fn=<SigmoidBackward0>)
+INFO:root:tensor(0.5030, device='cuda:0', grad_fn=<AddBackward0>), tensor(0.4876, device='cuda:0', grad_fn=<SumBackward0>), -289.2567454278469
+INFO:root:iter 55
+INFO:root:tensor([[0.4788]], device='cuda:0', grad_fn=<SigmoidBackward0>)
+INFO:root:tensor(0.5090, device='cuda:0', grad_fn=<AddBackward0>), tensor(0.4799, device='cuda:0', grad_fn=<SumBackward0>), -289.6996406316757
+INFO:root:iter 56
+INFO:root:tensor([[0.4708]], device='cuda:0', grad_fn=<SigmoidBackward0>)
+INFO:root:tensor(0.5038, device='cuda:0', grad_fn=<AddBackward0>), tensor(0.4808, device='cuda:0', grad_fn=<SumBackward0>), -289.450237095356
+INFO:root:iter 57
+INFO:root:tensor([[0.4782]], device='cuda:0', grad_fn=<SigmoidBackward0>)
+INFO:root:tensor(0.5091, device='cuda:0', grad_fn=<AddBackward0>), tensor(0.4774, device='cuda:0', grad_fn=<SumBackward0>), -289.3807262480259
+INFO:root:iter 58
+INFO:root:tensor([[0.4701]], device='cuda:0', grad_fn=<SigmoidBackward0>)
+INFO:root:tensor(0.5033, device='cuda:0', grad_fn=<AddBackward0>), tensor(0.4796, device='cuda:0', grad_fn=<SumBackward0>), -289.0746699869633
+INFO:root:iter 59
+INFO:root:tensor([[0.4790]], device='cuda:0', grad_fn=<SigmoidBackward0>)
+INFO:root:tensor(0.5092, device='cuda:0', grad_fn=<AddBackward0>), tensor(0.4711, device='cuda:0', grad_fn=<SumBackward0>), -289.25378826260567
+INFO:root:0 0.0065037003
+INFO:root:1 0.0071511585
+INFO:root:2 0.0057045463
+INFO:root:3 0.0037495892
+INFO:root:4 0.0049566827
+INFO:root:5 0.0018846685
+INFO:root:6 0.001460098
+INFO:root:7 0.0064882874
+INFO:root:8 0.0038073463
+INFO:root:9 0.003781551
+INFO:root:10 0.0047397614
+INFO:root:11 0.0043716836
+INFO:root:12 0.00076501234
+INFO:root:13 0.00064670324
+INFO:root:14 0.004072889
+INFO:root:15 0.0026362017
+INFO:root:16 0.0049774293
+INFO:root:17 0.003642732
+INFO:root:18 0.0038988125
+INFO:root:19 0.0034968283
+INFO:root:20 0.0040652333
+INFO:root:21 0.0037934775
+INFO:root:22 0.0043600737
+INFO:root:23 0.0037572316
+INFO:root:24 0.004133666
+INFO:root:25 0.0034555416
+INFO:root:26 0.0037360124
+INFO:root:27 0.0036397502
+INFO:root:28 0.0036375225
+INFO:root:29 0.0037461254
+INFO:root:30 0.0037690396
+INFO:root:31 0.0037161426
+INFO:root:32 0.0035238527
+INFO:root:33 0.004072125
+INFO:root:34 0.0039741388
+INFO:root:35 0.0036445535
+INFO:root:36 0.0039190603
+INFO:root:37 0.0007422191
+INFO:root:38 0.0010142126
+INFO:root:39 0.0006264702
+INFO:root:40 0.0009998801
+INFO:root:41 0.00063254306
+INFO:root:42 0.0032696058
+INFO:root:43 0.00071004033
+INFO:root:44 0.0034568578
+INFO:root:45 0.00061166147
+INFO:root:46 0.0006232937
+INFO:root:47 0.0005778737
+INFO:root:48 0.0032598393
+INFO:root:49 0.003338388
+INFO:root:50 0.00070975017
+INFO:root:51 0.0040173777
+INFO:root:52 0.0036528453
+INFO:root:53 0.0012358627
+INFO:root:54 0.0013213479
+INFO:root:55 0.0031572036
+INFO:root:56 0.00086647354
+INFO:root:57 0.0041694613
+INFO:root:58 0.004184367
+INFO:root:59 0.0061571216
+INFO:root:60 0.000644555
+INFO:root:61 0.0005738987
+INFO:root:62 0.00066898804
+INFO:root:63 0.0017922965
+INFO:root:64 0.00056095736
+INFO:root:65 0.000640232
+INFO:root:66 0.000660919
+INFO:root:67 0.0006007921
+INFO:root:68 0.00078785536
+INFO:root:69 0.00065524894
+INFO:root:70 0.00064871623
+INFO:root:71 0.00071728596
+INFO:root:72 0.0006765362
+INFO:root:73 0.00064114516
+INFO:root:74 0.0008319001
+INFO:root:75 0.0008186414
+INFO:root:76 0.0007787246
+INFO:root:77 0.00064813904
+INFO:root:78 0.0006935699
+INFO:root:79 0.00074390636
+INFO:root:80 0.0007056417
+INFO:root:81 0.00066588254
+INFO:root:82 0.000726213
+INFO:root:83 0.0006466025
+INFO:root:84 0.0006479613
+INFO:root:85 0.00082148117
+INFO:root:86 0.0006467801
+INFO:root:87 0.0006496454
+INFO:root:88 0.00073515624
+INFO:root:89 0.00070183014
+INFO:root:90 0.00069621595
+INFO:root:91 0.0007025384
+INFO:root:92 0.00071896974
+INFO:root:93 0.0007095807
+INFO:root:94 0.00074357586
+INFO:root:95 0.00081595255
+INFO:root:96 0.00093551073
+INFO:root:97 0.00093035377
+INFO:root:98 0.0008248313
+INFO:root:99 0.0007466477
+INFO:root:100 0.0009508071
+INFO:root:101 0.00079598016
+INFO:root:102 0.000782642
+INFO:root:103 0.0007233135
+INFO:root:104 0.0007821519
+INFO:root:105 0.0008405241
+INFO:root:106 0.0007350844
+INFO:root:107 0.0008520854
+INFO:root:108 0.000766359
+INFO:root:109 0.0008175337
+INFO:root:110 0.00068756193
+INFO:root:111 0.0006993829
+INFO:root:112 0.000574554
+INFO:root:113 0.00066114764
+INFO:root:114 0.0006837479
+INFO:root:115 0.00064794155
+INFO:root:116 0.00069802895
+INFO:root:117 0.0006689515
+INFO:root:118 0.00070498465
+INFO:root:119 0.0006479877
+INFO:root:120 0.0006637343
+INFO:root:121 0.0006720348
+INFO:root:122 0.00069582014
+INFO:root:123 0.00075855746
+INFO:root:124 0.000769997
+INFO:root:125 0.00061729585
+INFO:root:126 0.00070964755
+INFO:root:127 0.000677436
+INFO:root:128 0.00067292573
+INFO:root:129 0.0006496971
+INFO:root:130 0.00057886797
+INFO:root:131 0.0006518836
+INFO:root:132 0.0006116805
+INFO:root:133 0.00054442626
+INFO:root:134 0.0006721906
+INFO:root:135 0.0006997789
+INFO:root:136 0.0005549434
+INFO:root:137 0.0006836293
+INFO:root:138 0.00054404524
+INFO:root:139 0.0006313592
+INFO:root:140 0.0005690155
+INFO:root:141 0.0006142537
+INFO:root:142 0.00056381815
+INFO:root:143 0.0005654989
+INFO:root:144 0.0005924743
+INFO:root:145 0.000587337
+INFO:root:146 0.00058137963
+INFO:root:147 0.000572841
+INFO:root:148 0.0006348498
+INFO:root:149 0.0006047731
+INFO:root:150 0.0005892046
+INFO:root:151 0.0005356453
+INFO:root:152 0.0006146011
+INFO:root:153 0.0006733121
+INFO:root:154 0.0005908467
+INFO:root:155 0.0005773485
+INFO:root:156 0.00066041434
+INFO:root:157 0.0005581922
+INFO:root:158 0.00067305483
+INFO:root:159 0.0006520675
+INFO:root:160 0.000662103
+INFO:root:161 0.00058459
+INFO:root:162 0.00069870445
+INFO:root:163 0.00068097
+INFO:root:164 0.000597919
+INFO:root:165 0.00067832245
+INFO:root:166 0.0005769351
+INFO:root:167 0.0006626045
+INFO:root:168 0.0006279123
+INFO:root:169 0.00065599324
+INFO:root:170 0.0006405907
+INFO:root:171 0.00067100476
+INFO:root:172 0.000563462
+INFO:root:173 0.00064624834
+INFO:root:174 0.00061541836
+INFO:root:175 0.00064745685
+INFO:root:176 0.0006171188
+INFO:root:177 0.00062737236
+INFO:root:178 0.00065362814
+INFO:root:179 0.0005984694
+INFO:root:180 0.0005583222
+INFO:root:181 0.00059907185
+INFO:root:182 0.0006026577
+INFO:root:183 0.0006526452
+INFO:root:184 0.00058745313
+INFO:root:185 0.0006177033
+INFO:root:186 0.0006035808
+INFO:root:187 0.0006817642
+INFO:root:188 0.0006331417
+INFO:root:189 0.00066965533
+INFO:root:190 0.0006461131
+INFO:root:191 0.00059444516
+INFO:root:192 0.00066294323
+INFO:root:193 0.00069836737
+INFO:root:194 0.0005817818
+INFO:root:195 0.0005731861
+INFO:root:196 0.00064697675
+INFO:root:197 0.00058309396
+INFO:root:198 0.00070636877
+INFO:root:199 0.0007961183
+INFO:root:200 0.0007296464
+INFO:root:201 0.0006558813
+INFO:root:202 0.0006295922
+INFO:root:203 0.0006161869
+INFO:root:204 0.000669374
+INFO:root:205 0.00064689387
+INFO:root:206 0.0007774324
+INFO:root:207 0.0006959091
+INFO:root:208 0.00074978796
+INFO:root:209 0.0005563337
+INFO:root:210 0.0005949241
+INFO:root:211 0.0006033405
+INFO:root:212 0.0005486048
+INFO:root:213 0.0014345078
+INFO:root:214 0.0006359548
+INFO:root:215 0.0005746321
+INFO:root:216 0.0006216359
+INFO:root:217 0.00061561714
+INFO:root:218 0.000678324
+INFO:root:219 0.00057781703
+INFO:root:220 0.0005604477
+INFO:root:221 0.0005788749
+INFO:root:222 0.000494275
+INFO:root:223 0.00049330166
+INFO:root:224 0.00060160994
+INFO:root:225 0.0005328081
+INFO:root:226 0.0004544814
+INFO:root:227 0.00064012874
+INFO:root:228 0.00059835915
+INFO:root:229 0.0005542037
+INFO:root:230 0.0006666884
+INFO:root:231 0.00047710165
+INFO:root:232 0.00075662497
+INFO:root:233 0.0005810596
+INFO:root:234 0.0005651148
+INFO:root:235 0.0005651376
+INFO:root:236 0.00064390176
+INFO:root:237 0.0005936939
+INFO:root:238 0.0007535384
+INFO:root:239 0.00084530486
+INFO:root:240 0.0006413555
+INFO:root:241 0.0005074694
+INFO:root:242 0.0006931332
+INFO:root:243 0.00056468684
+INFO:root:244 0.00053806853
+INFO:root:245 0.00061100617
+INFO:root:246 0.00056005793
+INFO:root:247 0.00065600115
+INFO:root:248 0.00066708255
+INFO:root:249 0.00056153606
+INFO:root:250 0.0006039745
+INFO:root:251 0.0006817342
+INFO:root:252 0.00057338475
+INFO:root:253 0.0005443094
+INFO:root:254 0.00054858986
+INFO:root:255 0.0005223319
+INFO:root:256 0.0005924105
+INFO:root:257 0.00049558486
+INFO:root:258 0.00049456325
+INFO:root:259 0.00063537806
+INFO:root:260 0.0006247831
+INFO:root:261 0.0005380558
+INFO:root:262 0.0005358035
+INFO:root:263 0.00048769364
+INFO:root:264 0.0006593076
+INFO:root:265 0.0005009359
+INFO:root:266 0.00068196835
+INFO:root:267 0.00049070915
+INFO:root:268 0.00058936654
+INFO:root:269 0.00067449873
+INFO:root:270 0.00045166648
+INFO:root:271 0.00056033133
+INFO:root:272 0.0006993138
+INFO:root:273 0.0006200707
+INFO:root:274 0.00062206615
+INFO:root:275 0.00047898298
+INFO:root:276 0.00057641335
+INFO:root:277 0.00046539906
+INFO:root:278 0.0005329503
+INFO:root:279 0.0008726499
+INFO:root:280 0.0006787018
+INFO:root:281 0.000621131
+INFO:root:282 0.00076942146
+INFO:root:283 0.00066952955
+INFO:root:284 0.00069732004
+INFO:root:285 0.00065974233
+INFO:root:286 0.00076513865
+INFO:root:287 0.00059985986
+INFO:root:288 0.0005563109
+INFO:root:289 0.0006323639
+INFO:root:290 0.0005296781
+INFO:root:291 0.00054719625
+INFO:root:292 0.0006422334
+INFO:root:293 0.00045977684
+INFO:root:294 0.0006130948
+INFO:root:295 0.00047798894
+INFO:root:296 0.0006397894
+INFO:root:297 0.00044001473
+INFO:root:298 0.00080292963
+INFO:root:299 0.00062288466
+INFO:root:total frame 300, total fake frame 30

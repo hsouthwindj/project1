@@ -1,0 +1,3183 @@
+INFO:root:Argument atk: 'black'
+INFO:root:Argument full_pert: False
+INFO:root:Argument group_size: 7
+INFO:root:Argument iters: 100
+INFO:root:Argument l3: False
+INFO:root:Argument model: 'rnn'
+INFO:root:Argument sec_phase: False
+INFO:root:cur target prediction: 0.6126262545585632
+INFO:root:sampling....
+INFO:root:count in: 48
+INFO:root:step 49 : loss -0.009549275040626526 | lr 0.01
+INFO:root:cur target prediction: 0.6137831211090088
+INFO:root:sampling....
+INFO:root:count in: 48
+INFO:root:step 98 : loss -0.009650889784097672 | lr 0.01
+INFO:root:cur target prediction: 0.6135374307632446
+INFO:root:sampling....
+INFO:root:count in: 48
+INFO:root:step 147 : loss -0.009629302968581518 | lr 0.01
+INFO:root:cur target prediction: 0.6133437752723694
+INFO:root:sampling....
+INFO:root:count in: 48
+INFO:root:step 196 : loss -0.009612282117207846 | lr 0.01
+INFO:root:cur target prediction: 0.6126817464828491
+INFO:root:sampling....
+INFO:root:count in: 48
+INFO:root:step 245 : loss -0.00955414647857348 | lr 0.01
+INFO:root:cur target prediction: 0.6115650534629822
+INFO:root:sampling....
+INFO:root:count in: 48
+INFO:root:step 294 : loss -0.009456158926089605 | lr 0.01
+INFO:root:cur target prediction: 0.6105160713195801
+INFO:root:sampling....
+INFO:root:count in: 48
+INFO:root:step 343 : loss -0.00936420758565267 | lr 0.01
+INFO:root:cur target prediction: 0.6102495193481445
+INFO:root:sampling....
+INFO:root:count in: 48
+INFO:root:step 392 : loss -0.009340858707825342 | lr 0.01
+INFO:root:cur target prediction: 0.6107844710350037
+INFO:root:sampling....
+INFO:root:count in: 48
+INFO:root:step 441 : loss -0.00938773031036059 | lr 0.01
+INFO:root:cur target prediction: 0.6102498769760132
+INFO:root:sampling....
+INFO:root:count in: 48
+INFO:root:step 490 : loss -0.009340887268384298 | lr 0.01
+INFO:root:cur target prediction: 0.6101918816566467
+INFO:root:sampling....
+INFO:root:count in: 48
+INFO:root:step 539 : loss -0.00933581218123436 | lr 0.01
+INFO:root:cur target prediction: 0.6101564168930054
+INFO:root:sampling....
+INFO:root:count in: 48
+INFO:root:step 588 : loss -0.009332704047362009 | lr 0.01
+INFO:root:cur target prediction: 0.6094382405281067
+INFO:root:sampling....
+INFO:root:count in: 48
+INFO:root:step 637 : loss -0.00926982487241427 | lr 0.01
+INFO:root:cur target prediction: 0.6094127297401428
+INFO:root:sampling....
+INFO:root:count in: 48
+INFO:root:step 686 : loss -0.009267588456471762 | lr 0.01
+INFO:root:cur target prediction: 0.6088655591011047
+INFO:root:sampling....
+INFO:root:count in: 48
+INFO:root:step 735 : loss -0.009219712888201078 | lr 0.01
+INFO:root:cur target prediction: 0.6087663769721985
+INFO:root:sampling....
+INFO:root:count in: 48
+INFO:root:step 784 : loss -0.009211028615633646 | lr 0.01
+INFO:root:cur target prediction: 0.6083588004112244
+INFO:root:sampling....
+INFO:root:count in: 48
+INFO:root:step 833 : loss -0.009175390005111694 | lr 0.01
+INFO:root:cur target prediction: 0.6094850301742554
+INFO:root:sampling....
+INFO:root:count in: 48
+INFO:root:step 882 : loss -0.00927391896645228 | lr 0.01
+INFO:root:cur target prediction: 0.608959972858429
+INFO:root:sampling....
+INFO:root:count in: 48
+INFO:root:step 931 : loss -0.009227970615029335 | lr 0.01
+INFO:root:cur target prediction: 0.6099684238433838
+INFO:root:sampling....
+INFO:root:count in: 48
+INFO:root:step 980 : loss -0.009316245714823404 | lr 0.005
+INFO:root:cur target prediction: 0.6085528135299683
+INFO:root:sampling....
+INFO:root:count in: 48
+INFO:root:step 1029 : loss -0.009192359323302904 | lr 0.005
+INFO:root:cur target prediction: 0.608249843120575
+INFO:root:sampling....
+INFO:root:count in: 48
+INFO:root:step 1078 : loss -0.009165861954291662 | lr 0.005
+INFO:root:cur target prediction: 0.6066063642501831
+INFO:root:sampling....
+INFO:root:count in: 48
+INFO:root:step 1127 : loss -0.009022278090318045 | lr 0.005
+INFO:root:cur target prediction: 0.6055837869644165
+INFO:root:sampling....
+INFO:root:count in: 48
+INFO:root:step 1176 : loss -0.008933040002981821 | lr 0.005
+INFO:root:cur target prediction: 0.6049509644508362
+INFO:root:sampling....
+INFO:root:count in: 48
+INFO:root:step 1225 : loss -0.008877867211898169 | lr 0.005
+INFO:root:cur target prediction: 0.6046942472457886
+INFO:root:sampling....
+INFO:root:count in: 48
+INFO:root:step 1274 : loss -0.008855494360129038 | lr 0.005
+INFO:root:cur target prediction: 0.6037511825561523
+INFO:root:sampling....
+INFO:root:count in: 48
+INFO:root:step 1323 : loss -0.008773330599069595 | lr 0.005
+INFO:root:cur target prediction: 0.6036170721054077
+INFO:root:sampling....
+INFO:root:count in: 48
+INFO:root:step 1372 : loss -0.008761654297510782 | lr 0.005
+INFO:root:cur target prediction: 0.6032611727714539
+INFO:root:sampling....
+INFO:root:count in: 48
+INFO:root:step 1421 : loss -0.00873066857457161 | lr 0.005
+INFO:root:cur target prediction: 0.6028245091438293
+INFO:root:sampling....
+INFO:root:count in: 48
+INFO:root:step 1470 : loss -0.008692661921183268 | lr 0.005
+INFO:root:cur target prediction: 0.6022646427154541
+INFO:root:sampling....
+INFO:root:count in: 48
+INFO:root:step 1519 : loss -0.008643964926401774 | lr 0.005
+INFO:root:cur target prediction: 0.6013526320457458
+INFO:root:sampling....
+INFO:root:count in: 48
+INFO:root:step 1568 : loss -0.00856467274328073 | lr 0.005
+INFO:root:cur target prediction: 0.6011547446250916
+INFO:root:sampling....
+INFO:root:count in: 48
+INFO:root:step 1617 : loss -0.008547471836209297 | lr 0.005
+INFO:root:cur target prediction: 0.6007416248321533
+INFO:root:sampling....
+INFO:root:count in: 48
+INFO:root:step 1666 : loss -0.00851158673564593 | lr 0.005
+INFO:root:cur target prediction: 0.6001760363578796
+INFO:root:sampling....
+INFO:root:count in: 48
+INFO:root:step 1715 : loss -0.008462470645705858 | lr 0.005
+INFO:root:cur target prediction: 0.6002258062362671
+INFO:root:sampling....
+INFO:root:count in: 48
+INFO:root:step 1764 : loss -0.008466795086860657 | lr 0.005
+INFO:root:cur target prediction: 0.5999472737312317
+INFO:root:sampling....
+INFO:root:count in: 48
+INFO:root:step 1813 : loss -0.00844261422753334 | lr 0.005
+INFO:root:cur target prediction: 0.6002445816993713
+INFO:root:sampling....
+INFO:root:count in: 48
+INFO:root:step 1862 : loss -0.008468426143129667 | lr 0.005
+INFO:root:cur target prediction: 0.5995340943336487
+INFO:root:sampling....
+INFO:root:count in: 48
+INFO:root:step 1911 : loss -0.008406758308410645 | lr 0.005
+INFO:root:cur target prediction: 0.5991047024726868
+INFO:root:sampling....
+INFO:root:count in: 48
+INFO:root:step 1960 : loss -0.008369505405426025 | lr 0.0025
+INFO:root:cur target prediction: 0.5984278321266174
+INFO:root:sampling....
+INFO:root:count in: 48
+INFO:root:step 2009 : loss -0.008310804764429728 | lr 0.0025
+INFO:root:cur target prediction: 0.5980807542800903
+INFO:root:sampling....
+INFO:root:count in: 48
+INFO:root:step 2058 : loss -0.00828071931997935 | lr 0.0025
+INFO:root:cur target prediction: 0.5975540280342102
+INFO:root:sampling....
+INFO:root:count in: 48
+INFO:root:step 2107 : loss -0.008235080788532892 | lr 0.0025
+INFO:root:cur target prediction: 0.5969250202178955
+INFO:root:sampling....
+INFO:root:count in: 48
+INFO:root:step 2156 : loss -0.008180609593788782 | lr 0.0025
+INFO:root:cur target prediction: 0.5966209173202515
+INFO:root:sampling....
+INFO:root:count in: 48
+INFO:root:step 2205 : loss -0.008154274895787239 | lr 0.0025
+INFO:root:cur target prediction: 0.5965070724487305
+INFO:root:sampling....
+INFO:root:count in: 48
+INFO:root:step 2254 : loss -0.008144420261184374 | lr 0.0025
+INFO:root:cur target prediction: 0.5957391262054443
+INFO:root:sampling....
+INFO:root:count in: 48
+INFO:root:step 2303 : loss -0.008077969153722128 | lr 0.0025
+INFO:root:cur target prediction: 0.595726490020752
+INFO:root:sampling....
+INFO:root:count in: 48
+INFO:root:step 2352 : loss -0.008076876401901245 | lr 0.0025
+INFO:root:cur target prediction: 0.5954650044441223
+INFO:root:sampling....
+INFO:root:count in: 48
+INFO:root:step 2401 : loss -0.008054258301854134 | lr 0.0025
+INFO:root:cur target prediction: 0.5952655076980591
+INFO:root:sampling....
+INFO:root:count in: 48
+INFO:root:step 2450 : loss -0.008037010207772255 | lr 0.0025
+INFO:root:cur target prediction: 0.5945843458175659
+INFO:root:sampling....
+INFO:root:count in: 48
+INFO:root:step 2499 : loss -0.007978122681379318 | lr 0.0025
+INFO:root:cur target prediction: 0.5943560600280762
+INFO:root:sampling....
+INFO:root:count in: 48
+INFO:root:step 2548 : loss -0.00795839416484038 | lr 0.0025
+INFO:root:cur target prediction: 0.5942150950431824
+INFO:root:sampling....
+INFO:root:count in: 48
+INFO:root:step 2597 : loss -0.007946209982037544 | lr 0.0025
+INFO:root:cur target prediction: 0.594019889831543
+INFO:root:sampling....
+INFO:root:count in: 48
+INFO:root:step 2646 : loss -0.00792934869726499 | lr 0.0025
+INFO:root:cur target prediction: 0.593561589717865
+INFO:root:sampling....
+INFO:root:count in: 48
+INFO:root:step 2695 : loss -0.0078897625207901 | lr 0.0025
+INFO:root:cur target prediction: 0.5934488773345947
+INFO:root:sampling....
+INFO:root:count in: 48
+INFO:root:step 2744 : loss -0.007880028958121935 | lr 0.0025
+INFO:root:cur target prediction: 0.5928717851638794
+INFO:root:sampling....
+INFO:root:count in: 48
+INFO:root:step 2793 : loss -0.007830209409197172 | lr 0.0025
+INFO:root:cur target prediction: 0.5927023887634277
+INFO:root:sampling....
+INFO:root:count in: 48
+INFO:root:step 2842 : loss -0.007815591370066008 | lr 0.0025
+INFO:root:cur target prediction: 0.5923089981079102
+INFO:root:sampling....
+INFO:root:count in: 48
+INFO:root:step 2891 : loss -0.007781647145748138 | lr 0.0025
+INFO:root:cur target prediction: 0.5920860767364502
+INFO:root:sampling....
+INFO:root:count in: 48
+INFO:root:step 2940 : loss -0.00776241160929203 | lr 0.002
+INFO:root:cur target prediction: 0.5915419459342957
+INFO:root:sampling....
+INFO:root:count in: 48
+INFO:root:step 2989 : loss -0.007715492198864619 | lr 0.002
+INFO:root:cur target prediction: 0.5911357402801514
+INFO:root:sampling....
+INFO:root:count in: 48
+INFO:root:step 3038 : loss -0.007680470123887062 | lr 0.002
+INFO:root:cur target prediction: 0.5909036993980408
+INFO:root:sampling....
+INFO:root:count in: 48
+INFO:root:step 3087 : loss -0.00766046221057574 | lr 0.002
+INFO:root:cur target prediction: 0.5907392501831055
+INFO:root:sampling....
+INFO:root:count in: 48
+INFO:root:step 3136 : loss -0.007646293689807256 | lr 0.002
+INFO:root:cur target prediction: 0.5904698967933655
+INFO:root:sampling....
+INFO:root:count in: 48
+INFO:root:step 3185 : loss -0.0076230913400650024 | lr 0.002
+INFO:root:cur target prediction: 0.5904337167739868
+INFO:root:sampling....
+INFO:root:count in: 48
+INFO:root:step 3234 : loss -0.007619967063268025 | lr 0.002
+INFO:root:cur target prediction: 0.5902486443519592
+INFO:root:sampling....
+INFO:root:count in: 48
+INFO:root:step 3283 : loss -0.007604024683435758 | lr 0.002
+INFO:root:cur target prediction: 0.5901715159416199
+INFO:root:sampling....
+INFO:root:count in: 48
+INFO:root:step 3332 : loss -0.007597385595242183 | lr 0.002
+INFO:root:cur target prediction: 0.5899633765220642
+INFO:root:sampling....
+INFO:root:count in: 48
+INFO:root:step 3381 : loss -0.0075794607400894165 | lr 0.002
+INFO:root:cur target prediction: 0.5895179510116577
+INFO:root:sampling....
+INFO:root:count in: 48
+INFO:root:step 3430 : loss -0.007541107634703319 | lr 0.002
+INFO:root:cur target prediction: 0.5893623232841492
+INFO:root:sampling....
+INFO:root:count in: 48
+INFO:root:step 3479 : loss -0.007527702798446019 | lr 0.002
+INFO:root:cur target prediction: 0.5888667106628418
+INFO:root:sampling....
+INFO:root:count in: 48
+INFO:root:step 3528 : loss -0.007485049466292064 | lr 0.002
+INFO:root:cur target prediction: 0.5885074138641357
+INFO:root:sampling....
+INFO:root:count in: 48
+INFO:root:step 3577 : loss -0.007454138870040576 | lr 0.002
+INFO:root:cur target prediction: 0.5883634090423584
+INFO:root:sampling....
+INFO:root:count in: 48
+INFO:root:step 3626 : loss -0.007441747933626175 | lr 0.002
+INFO:root:cur target prediction: 0.5884127616882324
+INFO:root:sampling....
+INFO:root:count in: 48
+INFO:root:step 3675 : loss -0.007445992281039556 | lr 0.002
+INFO:root:cur target prediction: 0.5881423950195312
+INFO:root:sampling....
+INFO:root:count in: 48
+INFO:root:step 3724 : loss -0.007422737156351407 | lr 0.002
+INFO:root:cur target prediction: 0.587607204914093
+INFO:root:sampling....
+INFO:root:count in: 48
+INFO:root:step 3773 : loss -0.007376724233229955 | lr 0.002
+INFO:root:cur target prediction: 0.5873357653617859
+INFO:root:sampling....
+INFO:root:count in: 48
+INFO:root:step 3822 : loss -0.007353384668628375 | lr 0.002
+INFO:root:cur target prediction: 0.5870491862297058
+INFO:root:sampling....
+INFO:root:count in: 48
+INFO:root:step 3871 : loss -0.007328752428293228 | lr 0.002
+INFO:root:cur target prediction: 0.5869613289833069
+INFO:root:sampling....
+INFO:root:count in: 48
+INFO:root:step 3920 : loss -0.007321202506621678 | lr 0.002
+INFO:root:cur target prediction: 0.5868162512779236
+INFO:root:sampling....
+INFO:root:count in: 48
+INFO:root:step 3969 : loss -0.007308736443519592 | lr 0.002
+INFO:root:cur target prediction: 0.5867049098014832
+INFO:root:sampling....
+INFO:root:count in: 48
+INFO:root:step 4018 : loss -0.00729916679362456 | lr 0.002
+INFO:root:cur target prediction: 0.5865105986595154
+INFO:root:sampling....
+INFO:root:count in: 48
+INFO:root:step 4067 : loss -0.007282475630442302 | lr 0.002
+INFO:root:cur target prediction: 0.5863422155380249
+INFO:root:sampling....
+INFO:root:count in: 48
+INFO:root:step 4116 : loss -0.007268015295267105 | lr 0.002
+INFO:root:cur target prediction: 0.5859706997871399
+INFO:root:sampling....
+INFO:root:count in: 48
+INFO:root:step 4165 : loss -0.007236108183860779 | lr 0.002
+INFO:root:cur target prediction: 0.5859145522117615
+INFO:root:sampling....
+INFO:root:count in: 48
+INFO:root:step 4214 : loss -0.007231287037332852 | lr 0.002
+INFO:root:cur target prediction: 0.5857632160186768
+INFO:root:sampling....
+INFO:root:count in: 48
+INFO:root:step 4263 : loss -0.007218293845653534 | lr 0.002
+INFO:root:cur target prediction: 0.5853342413902283
+INFO:root:sampling....
+INFO:root:count in: 48
+INFO:root:step 4312 : loss -0.007181469351053238 | lr 0.002
+INFO:root:cur target prediction: 0.5852962136268616
+INFO:root:sampling....
+INFO:root:count in: 48
+INFO:root:step 4361 : loss -0.007178197304407756 | lr 0.002
+INFO:root:cur target prediction: 0.585146963596344
+INFO:root:sampling....
+INFO:root:count in: 48
+INFO:root:step 4410 : loss -0.007165392239888509 | lr 0.002
+INFO:root:cur target prediction: 0.5854134559631348
+INFO:root:sampling....
+INFO:root:count in: 48
+INFO:root:step 4459 : loss -0.007188264901439349 | lr 0.002
+INFO:root:cur target prediction: 0.5851144790649414
+INFO:root:sampling....
+INFO:root:count in: 48
+INFO:root:step 4508 : loss -0.007162600134809812 | lr 0.002
+INFO:root:cur target prediction: 0.5849801898002625
+INFO:root:sampling....
+INFO:root:count in: 48
+INFO:root:step 4557 : loss -0.007151079053680102 | lr 0.002
+INFO:root:cur target prediction: 0.5847914218902588
+INFO:root:sampling....
+INFO:root:count in: 48
+INFO:root:step 4606 : loss -0.007134884595870972 | lr 0.002
+INFO:root:cur target prediction: 0.5845517516136169
+INFO:root:sampling....
+INFO:root:count in: 48
+INFO:root:step 4655 : loss -0.00711431788901488 | lr 0.002
+INFO:root:cur target prediction: 0.5843638181686401
+INFO:root:sampling....
+INFO:root:count in: 48
+INFO:root:step 4704 : loss -0.007098197937011719 | lr 0.002
+INFO:root:cur target prediction: 0.5843198299407959
+INFO:root:sampling....
+INFO:root:count in: 48
+INFO:root:step 4753 : loss -0.007094426701466243 | lr 0.002
+INFO:root:cur target prediction: 0.5841886401176453
+INFO:root:sampling....
+INFO:root:count in: 48
+INFO:root:step 4802 : loss -0.00708317756652832 | lr 0.002
+INFO:root:cur target prediction: 0.5838932991027832
+INFO:root:sampling....
+INFO:root:count in: 48
+INFO:root:step 4851 : loss -0.0070578474551439285 | lr 0.002
+INFO:root:cur target prediction: 0.5836852192878723
+INFO:root:sampling....
+INFO:root:count in: 48
+INFO:root:step 4900 : loss -0.007040003314614296 | lr 0.002
+INFO:root:cur target prediction: 0.5837003588676453
+INFO:root:sampling....
+INFO:root:count in: 48
+INFO:root:step 4949 : loss -0.007041305303573608 | lr 0.002
+INFO:root:cur target prediction: 0.5834827423095703
+INFO:root:sampling....
+INFO:root:count in: 48
+INFO:root:step 4998 : loss -0.007022645945350329 | lr 0.002
+INFO:root:cur target prediction: 0.5834174156188965
+INFO:root:sampling....
+INFO:root:count in: 48
+INFO:root:step 5047 : loss -0.00701705055932204 | lr 0.002
+INFO:root:cur target prediction: 0.5830573439598083
+INFO:root:sampling....
+INFO:root:count in: 48
+INFO:root:step 5096 : loss -0.006986184666554133 | lr 0.002
+INFO:root:cur target prediction: 0.5826660394668579
+INFO:root:sampling....
+INFO:root:count in: 48
+INFO:root:step 5145 : loss -0.006952655191222827 | lr 0.002
+INFO:root:cur target prediction: 0.5824689865112305
+INFO:root:sampling....
+INFO:root:count in: 48
+INFO:root:step 5194 : loss -0.00693577341735363 | lr 0.002
+INFO:root:cur target prediction: 0.5824602246284485
+INFO:root:sampling....
+INFO:root:count in: 48
+INFO:root:step 5243 : loss -0.0069350240131219225 | lr 0.002
+INFO:root:cur target prediction: 0.5820730328559875
+INFO:root:sampling....
+INFO:root:count in: 48
+INFO:root:step 5292 : loss -0.006901856511831284 | lr 0.002
+INFO:root:cur target prediction: 0.5817058682441711
+INFO:root:sampling....
+INFO:root:count in: 48
+INFO:root:step 5341 : loss -0.006870422512292862 | lr 0.002
+INFO:root:cur target prediction: 0.5818537473678589
+INFO:root:sampling....
+INFO:root:count in: 48
+INFO:root:step 5390 : loss -0.0068830835322539015 | lr 0.002
+INFO:root:cur target prediction: 0.5817318558692932
+INFO:root:sampling....
+INFO:root:count in: 48
+INFO:root:step 5439 : loss -0.006872644027074178 | lr 0.002
+INFO:root:cur target prediction: 0.5816200971603394
+INFO:root:sampling....
+INFO:root:count in: 48
+INFO:root:step 5488 : loss -0.006863077481587728 | lr 0.002
+INFO:root:cur target prediction: 0.5815793871879578
+INFO:root:sampling....
+INFO:root:count in: 48
+INFO:root:step 5537 : loss -0.006859595576922099 | lr 0.002
+INFO:root:cur target prediction: 0.5815659761428833
+INFO:root:sampling....
+INFO:root:count in: 48
+INFO:root:step 5586 : loss -0.006858444462219874 | lr 0.002
+INFO:root:cur target prediction: 0.5812883973121643
+INFO:root:sampling....
+INFO:root:count in: 48
+INFO:root:step 5635 : loss -0.006834684560696284 | lr 0.002
+INFO:root:cur target prediction: 0.5810198187828064
+INFO:root:sampling....
+INFO:root:count in: 48
+INFO:root:step 5684 : loss -0.006811695173382759 | lr 0.002
+INFO:root:cur target prediction: 0.5810766816139221
+INFO:root:sampling....
+INFO:root:count in: 48
+INFO:root:step 5733 : loss -0.006816559781630834 | lr 0.002
+INFO:root:cur target prediction: 0.5808661580085754
+INFO:root:sampling....
+INFO:root:count in: 48
+INFO:root:step 5782 : loss -0.006798546140392621 | lr 0.002
+INFO:root:cur target prediction: 0.5807546377182007
+INFO:root:sampling....
+INFO:root:count in: 48
+INFO:root:step 5831 : loss -0.00678900567193826 | lr 0.002
+INFO:root:cur target prediction: 0.5806846618652344
+INFO:root:sampling....
+INFO:root:count in: 48
+INFO:root:step 5880 : loss -0.006783015405138333 | lr 0.002
+INFO:root:cur target prediction: 0.5805497169494629
+INFO:root:sampling....
+INFO:root:count in: 48
+INFO:root:step 5929 : loss -0.006771469488739967 | lr 0.002
+INFO:root:cur target prediction: 0.5802550315856934
+INFO:root:sampling....
+INFO:root:count in: 48
+INFO:root:step 5978 : loss -0.006746259828408559 | lr 0.002
+INFO:root:cur target prediction: 0.5799823999404907
+INFO:root:sampling....
+INFO:root:count in: 48
+INFO:root:step 6027 : loss -0.0067229413737853365 | lr 0.002
+INFO:root:cur target prediction: 0.57956862449646
+INFO:root:sampling....
+INFO:root:count in: 48
+INFO:root:step 6076 : loss -0.006687557324767113 | lr 0.002
+INFO:root:cur target prediction: 0.5794429779052734
+INFO:root:sampling....
+INFO:root:count in: 48
+INFO:root:step 6125 : loss -0.00667681669195493 | lr 0.002
+INFO:root:cur target prediction: 0.5792307257652283
+INFO:root:sampling....
+INFO:root:count in: 48
+INFO:root:step 6174 : loss -0.006658668319384257 | lr 0.002
+INFO:root:cur target prediction: 0.5790136456489563
+INFO:root:sampling....
+INFO:root:count in: 48
+INFO:root:step 6223 : loss -0.006640120719869931 | lr 0.002
+INFO:root:cur target prediction: 0.5787789821624756
+INFO:root:sampling....
+INFO:root:count in: 48
+INFO:root:step 6272 : loss -0.006620064377784729 | lr 0.002
+INFO:root:cur target prediction: 0.5784573554992676
+INFO:root:sampling....
+INFO:root:count in: 48
+INFO:root:step 6321 : loss -0.0065925804277261095 | lr 0.002
+INFO:root:cur target prediction: 0.5780928134918213
+INFO:root:sampling....
+INFO:root:count in: 48
+INFO:root:step 6370 : loss -0.006561437621712685 | lr 0.002
+INFO:root:cur target prediction: 0.5778087377548218
+INFO:root:sampling....
+INFO:root:count in: 48
+INFO:root:step 6419 : loss -0.006537177289525668 | lr 0.002
+INFO:root:cur target prediction: 0.5777620673179626
+INFO:root:sampling....
+INFO:root:count in: 48
+INFO:root:step 6468 : loss -0.006533190608024597 | lr 0.002
+INFO:root:cur target prediction: 0.5774993300437927
+INFO:root:sampling....
+INFO:root:count in: 48
+INFO:root:step 6517 : loss -0.0065107569098472595 | lr 0.002
+INFO:root:cur target prediction: 0.5772656798362732
+INFO:root:sampling....
+INFO:root:count in: 48
+INFO:root:step 6566 : loss -0.0064908067385355634 | lr 0.002
+INFO:root:cur target prediction: 0.5771348476409912
+INFO:root:sampling....
+INFO:root:count in: 48
+INFO:root:step 6615 : loss -0.006479638318220775 | lr 0.002
+INFO:root:cur target prediction: 0.5767614841461182
+INFO:root:sampling....
+INFO:root:count in: 48
+INFO:root:step 6664 : loss -0.0064477697014808655 | lr 0.002
+INFO:root:cur target prediction: 0.5766361951828003
+INFO:root:sampling....
+INFO:root:count in: 48
+INFO:root:step 6713 : loss -0.006437076876560847 | lr 0.002
+INFO:root:cur target prediction: 0.5769078135490417
+INFO:root:sampling....
+INFO:root:count in: 48
+INFO:root:step 6762 : loss -0.006460263083378474 | lr 0.002
+INFO:root:cur target prediction: 0.5766657590866089
+INFO:root:sampling....
+INFO:root:count in: 48
+INFO:root:step 6811 : loss -0.0064396001398563385 | lr 0.002
+INFO:root:cur target prediction: 0.576595664024353
+INFO:root:sampling....
+INFO:root:count in: 48
+INFO:root:step 6860 : loss -0.006433621669809024 | lr 0.002
+INFO:root:cur target prediction: 0.5762180089950562
+INFO:root:sampling....
+INFO:root:count in: 48
+INFO:root:step 6909 : loss -0.006401394804318746 | lr 0.002
+INFO:root:cur target prediction: 0.576504647731781
+INFO:root:sampling....
+INFO:root:count in: 48
+INFO:root:step 6958 : loss -0.006425855060418447 | lr 0.002
+INFO:root:cur target prediction: 0.5764328241348267
+INFO:root:sampling....
+INFO:root:count in: 48
+INFO:root:step 7007 : loss -0.0064197250952323275 | lr 0.002
+INFO:root:cur target prediction: 0.5762553811073303
+INFO:root:sampling....
+INFO:root:count in: 48
+INFO:root:step 7056 : loss -0.0064045848945776624 | lr 0.002
+INFO:root:cur target prediction: 0.5761141180992126
+INFO:root:sampling....
+INFO:root:count in: 48
+INFO:root:step 7105 : loss -0.006392531096935272 | lr 0.002
+INFO:root:cur target prediction: 0.5758888125419617
+INFO:root:sampling....
+INFO:root:count in: 48
+INFO:root:step 7154 : loss -0.006373311082522075 | lr 0.002
+INFO:root:cur target prediction: 0.5758636593818665
+INFO:root:sampling....
+INFO:root:count in: 48
+INFO:root:step 7203 : loss -0.006371169040600459 | lr 0.002
+INFO:root:cur target prediction: 0.5760337710380554
+INFO:root:sampling....
+INFO:root:count in: 48
+INFO:root:step 7252 : loss -0.006385677804549535 | lr 0.002
+INFO:root:cur target prediction: 0.5758532285690308
+INFO:root:sampling....
+INFO:root:count in: 48
+INFO:root:step 7301 : loss -0.006370280558864276 | lr 0.002
+INFO:root:cur target prediction: 0.575761616230011
+INFO:root:sampling....
+INFO:root:count in: 48
+INFO:root:step 7350 : loss -0.006362465520699819 | lr 0.002
+INFO:root:cur target prediction: 0.5755380988121033
+INFO:root:sampling....
+INFO:root:count in: 48
+INFO:root:step 7399 : loss -0.0063434019684791565 | lr 0.002
+INFO:root:cur target prediction: 0.5749561786651611
+INFO:root:sampling....
+INFO:root:count in: 48
+INFO:root:step 7448 : loss -0.006293776755531629 | lr 0.002
+INFO:root:cur target prediction: 0.5748463869094849
+INFO:root:sampling....
+INFO:root:count in: 48
+INFO:root:step 7497 : loss -0.006284425035119057 | lr 0.002
+INFO:root:cur target prediction: 0.5745592713356018
+INFO:root:sampling....
+INFO:root:count in: 48
+INFO:root:step 7546 : loss -0.00625995546579361 | lr 0.002
+INFO:root:cur target prediction: 0.5746552348136902
+INFO:root:sampling....
+INFO:root:count in: 48
+INFO:root:step 7595 : loss -0.006268129994471868 | lr 0.002
+INFO:root:cur target prediction: 0.5744572877883911
+INFO:root:sampling....
+INFO:root:count in: 48
+INFO:root:step 7644 : loss -0.0062512631217638654 | lr 0.002
+INFO:root:cur target prediction: 0.574345052242279
+INFO:root:sampling....
+INFO:root:count in: 48
+INFO:root:step 7693 : loss -0.0062416959553956985 | lr 0.002
+INFO:root:cur target prediction: 0.5743070840835571
+INFO:root:sampling....
+INFO:root:count in: 48
+INFO:root:step 7742 : loss -0.006238459299008052 | lr 0.002
+INFO:root:cur target prediction: 0.5740556716918945
+INFO:root:sampling....
+INFO:root:count in: 48
+INFO:root:step 7791 : loss -0.0062170376380284624 | lr 0.002
+INFO:root:cur target prediction: 0.5736786723136902
+INFO:root:sampling....
+INFO:root:count in: 48
+INFO:root:step 7840 : loss -0.006184916943311691 | lr 0.002
+INFO:root:cur target prediction: 0.5736315846443176
+INFO:root:sampling....
+INFO:root:count in: 48
+INFO:root:step 7889 : loss -0.00618090604742368 | lr 0.002
+INFO:root:cur target prediction: 0.5733747482299805
+INFO:root:sampling....
+INFO:root:count in: 48
+INFO:root:step 7938 : loss -0.006159036109844844 | lr 0.002
+INFO:root:cur target prediction: 0.5732309818267822
+INFO:root:sampling....
+INFO:root:count in: 48
+INFO:root:step 7987 : loss -0.006146788597106934 | lr 0.002
+INFO:root:cur target prediction: 0.5727423429489136
+INFO:root:sampling....
+INFO:root:count in: 48
+INFO:root:step 8036 : loss -0.006105187038580577 | lr 0.002
+INFO:root:cur target prediction: 0.5726433396339417
+INFO:root:sampling....
+INFO:root:count in: 48
+INFO:root:step 8085 : loss -0.006096752360463142 | lr 0.002
+INFO:root:cur target prediction: 0.5727861523628235
+INFO:root:sampling....
+INFO:root:count in: 48
+INFO:root:step 8134 : loss -0.006108912328879039 | lr 0.002
+INFO:root:cur target prediction: 0.5723843574523926
+INFO:root:sampling....
+INFO:root:count in: 48
+INFO:root:step 8183 : loss -0.006074707955121994 | lr 0.002
+INFO:root:cur target prediction: 0.5721296668052673
+INFO:root:sampling....
+INFO:root:count in: 48
+INFO:root:step 8232 : loss -0.006053031732638677 | lr 0.002
+INFO:root:cur target prediction: 0.571895956993103
+INFO:root:sampling....
+INFO:root:count in: 48
+INFO:root:step 8281 : loss -0.006033146133025487 | lr 0.002
+INFO:root:cur target prediction: 0.5717294812202454
+INFO:root:sampling....
+INFO:root:count in: 48
+INFO:root:step 8330 : loss -0.006018978854020436 | lr 0.002
+INFO:root:cur target prediction: 0.5715557336807251
+INFO:root:sampling....
+INFO:root:count in: 48
+INFO:root:step 8379 : loss -0.006004193797707558 | lr 0.002
+INFO:root:cur target prediction: 0.5716498494148254
+INFO:root:sampling....
+INFO:root:count in: 48
+INFO:root:step 8428 : loss -0.006012203171849251 | lr 0.002
+INFO:root:cur target prediction: 0.5716028809547424
+INFO:root:sampling....
+INFO:root:count in: 48
+INFO:root:step 8477 : loss -0.006008204693595569 | lr 0.002
+INFO:root:cur target prediction: 0.5715311169624329
+INFO:root:sampling....
+INFO:root:count in: 48
+INFO:root:step 8526 : loss -0.006002102047204971 | lr 0.002
+INFO:root:cur target prediction: 0.5714815855026245
+INFO:root:sampling....
+INFO:root:count in: 48
+INFO:root:step 8575 : loss -0.005997885018587112 | lr 0.002
+INFO:root:cur target prediction: 0.5713798403739929
+INFO:root:sampling....
+INFO:root:count in: 48
+INFO:root:step 8624 : loss -0.005989232410987218 | lr 0.002
+INFO:root:cur target prediction: 0.5712927579879761
+INFO:root:sampling....
+INFO:root:count in: 48
+INFO:root:step 8673 : loss -0.005981827775637309 | lr 0.002
+INFO:root:cur target prediction: 0.5709259510040283
+INFO:root:sampling....
+INFO:root:count in: 48
+INFO:root:step 8722 : loss -0.005950629090269406 | lr 0.002
+INFO:root:cur target prediction: 0.5701500177383423
+INFO:root:sampling....
+INFO:root:count in: 48
+INFO:root:step 8771 : loss -0.005884656682610512 | lr 0.002
+INFO:root:cur target prediction: 0.5698457956314087
+INFO:root:sampling....
+INFO:root:count in: 48
+INFO:root:step 8820 : loss -0.005858795717358589 | lr 0.002
+INFO:root:cur target prediction: 0.5698584914207458
+INFO:root:sampling....
+INFO:root:count in: 48
+INFO:root:step 8869 : loss -0.005859874188899994 | lr 0.002
+INFO:root:cur target prediction: 0.56955486536026
+INFO:root:sampling....
+INFO:root:count in: 48
+INFO:root:step 8918 : loss -0.005834071586529414 | lr 0.002
+INFO:root:cur target prediction: 0.5695393085479736
+INFO:root:sampling....
+INFO:root:count in: 48
+INFO:root:step 8967 : loss -0.005832746624946594 | lr 0.002
+INFO:root:cur target prediction: 0.5696575045585632
+INFO:root:sampling....
+INFO:root:count in: 48
+INFO:root:step 9016 : loss -0.005842793111999829 | lr 0.002
+INFO:root:cur target prediction: 0.5692721009254456
+INFO:root:sampling....
+INFO:root:count in: 48
+INFO:root:step 9065 : loss -0.005810040980577469 | lr 0.002
+INFO:root:cur target prediction: 0.5690170526504517
+INFO:root:sampling....
+INFO:root:count in: 48
+INFO:root:step 9114 : loss -0.005788375933965047 | lr 0.002
+INFO:root:cur target prediction: 0.5686723589897156
+INFO:root:sampling....
+INFO:root:count in: 48
+INFO:root:step 9163 : loss -0.005759091426928838 | lr 0.002
+INFO:root:cur target prediction: 0.5686861276626587
+INFO:root:sampling....
+INFO:root:count in: 48
+INFO:root:step 9212 : loss -0.005760268618663152 | lr 0.002
+INFO:root:cur target prediction: 0.5684235095977783
+INFO:root:sampling....
+INFO:root:count in: 48
+INFO:root:step 9261 : loss -0.005737960338592529 | lr 0.002
+INFO:root:cur target prediction: 0.5684399604797363
+INFO:root:sampling....
+INFO:root:count in: 48
+INFO:root:step 9310 : loss -0.005739358564217885 | lr 0.002
+INFO:root:cur target prediction: 0.5681647062301636
+INFO:root:sampling....
+INFO:root:count in: 48
+INFO:root:step 9359 : loss -0.005715988576412201 | lr 0.002
+INFO:root:cur target prediction: 0.5680599808692932
+INFO:root:sampling....
+INFO:root:count in: 48
+INFO:root:step 9408 : loss -0.005707088857889175 | lr 0.002
+INFO:root:cur target prediction: 0.5677311420440674
+INFO:root:sampling....
+INFO:root:count in: 48
+INFO:root:step 9457 : loss -0.005679171532392502 | lr 0.002
+INFO:root:cur target prediction: 0.567486047744751
+INFO:root:sampling....
+INFO:root:count in: 48
+INFO:root:step 9506 : loss -0.005658367027839025 | lr 0.002
+INFO:root:cur target prediction: 0.5676739811897278
+INFO:root:sampling....
+INFO:root:count in: 48
+INFO:root:step 9555 : loss -0.005674320583542188 | lr 0.002
+INFO:root:cur target prediction: 0.5676233172416687
+INFO:root:sampling....
+INFO:root:count in: 48
+INFO:root:step 9604 : loss -0.005670024702946345 | lr 0.002
+INFO:root:cur target prediction: 0.5676153302192688
+INFO:root:sampling....
+INFO:root:count in: 48
+INFO:root:step 9653 : loss -0.005669341733058293 | lr 0.002
+INFO:root:cur target prediction: 0.567284107208252
+INFO:root:sampling....
+INFO:root:count in: 48
+INFO:root:step 9702 : loss -0.0056412313133478165 | lr 0.002
+INFO:root:cur target prediction: 0.5670949220657349
+INFO:root:sampling....
+INFO:root:count in: 48
+INFO:root:step 9751 : loss -0.00562517282863458 | lr 0.002
+INFO:root:cur target prediction: 0.5670028924942017
+INFO:root:sampling....
+INFO:root:count in: 48
+INFO:root:step 9800 : loss -0.0056173646201690035 | lr 0.002
+INFO:root:cur target prediction: 0.5667051076889038
+INFO:root:sampling....
+INFO:root:count in: 48
+INFO:root:step 9849 : loss -0.005592097838719686 | lr 0.002
+INFO:root:cur target prediction: 0.5667096376419067
+INFO:root:sampling....
+INFO:root:count in: 48
+INFO:root:step 9898 : loss -0.005592475334803264 | lr 0.002
+INFO:root:cur target prediction: 0.5667115449905396
+INFO:root:sampling....
+INFO:root:count in: 48
+INFO:root:step 9947 : loss -0.005592641731103261 | lr 0.002
+INFO:root:cur target prediction: 0.5667767524719238
+INFO:root:sampling....
+INFO:root:count in: 48
+INFO:root:step 9996 : loss -0.00559817502895991 | lr 0.002
+INFO:root:cur target prediction: 0.566399335861206
+INFO:root:sampling....
+INFO:root:count in: 48
+INFO:root:step 10045 : loss -0.00556615615884463 | lr 0.002
+INFO:root:cur target prediction: 0.5664291977882385
+INFO:root:sampling....
+INFO:root:count in: 48
+INFO:root:step 10094 : loss -0.0055686912188927335 | lr 0.002
+INFO:root:cur target prediction: 0.566637396812439
+INFO:root:sampling....
+INFO:root:count in: 48
+INFO:root:step 10143 : loss -0.005586352199316025 | lr 0.002
+INFO:root:cur target prediction: 0.5667073130607605
+INFO:root:sampling....
+INFO:root:count in: 48
+INFO:root:step 10192 : loss -0.0055922822405894594 | lr 0.002
+INFO:root:cur target prediction: 0.5662567019462585
+INFO:root:sampling....
+INFO:root:count in: 48
+INFO:root:step 10241 : loss -0.005554056415955226 | lr 0.002
+INFO:root:cur target prediction: 0.5661681294441223
+INFO:root:sampling....
+INFO:root:count in: 48
+INFO:root:step 10290 : loss -0.005546543747186661 | lr 0.002
+INFO:root:cur target prediction: 0.5659694075584412
+INFO:root:sampling....
+INFO:root:count in: 48
+INFO:root:step 10339 : loss -0.00552968867123127 | lr 0.002
+INFO:root:cur target prediction: 0.5658051371574402
+INFO:root:sampling....
+INFO:root:count in: 48
+INFO:root:step 10388 : loss -0.0055157604316870374 | lr 0.002
+INFO:root:cur target prediction: 0.5659973621368408
+INFO:root:sampling....
+INFO:root:count in: 48
+INFO:root:step 10437 : loss -0.005532063543796539 | lr 0.002
+INFO:root:cur target prediction: 0.5656954646110535
+INFO:root:sampling....
+INFO:root:count in: 48
+INFO:root:step 10486 : loss -0.005506455898284912 | lr 0.002
+INFO:root:cur target prediction: 0.5654385089874268
+INFO:root:sampling....
+INFO:root:count in: 48
+INFO:root:step 10535 : loss -0.005484666675329208 | lr 0.002
+INFO:root:cur target prediction: 0.5652821660041809
+INFO:root:sampling....
+INFO:root:count in: 48
+INFO:root:step 10584 : loss -0.00547141395509243 | lr 0.002
+INFO:root:cur target prediction: 0.5650076866149902
+INFO:root:sampling....
+INFO:root:count in: 48
+INFO:root:step 10633 : loss -0.005448148896296819 | lr 0.002
+INFO:root:cur target prediction: 0.5646654963493347
+INFO:root:sampling....
+INFO:root:count in: 48
+INFO:root:step 10682 : loss -0.005419144406914711 | lr 0.002
+INFO:root:cur target prediction: 0.5643623471260071
+INFO:root:sampling....
+INFO:root:count in: 48
+INFO:root:step 10731 : loss -0.005393452321489652 | lr 0.002
+INFO:root:cur target prediction: 0.5639424920082092
+INFO:root:sampling....
+INFO:root:count in: 48
+INFO:root:step 10780 : loss -0.005357880145311356 | lr 0.002
+INFO:root:cur target prediction: 0.5635861754417419
+INFO:root:sampling....
+INFO:root:count in: 48
+INFO:root:step 10829 : loss -0.0053276922553777695 | lr 0.002
+INFO:root:cur target prediction: 0.5637166500091553
+INFO:root:sampling....
+INFO:root:count in: 48
+INFO:root:step 10878 : loss -0.005338747054338455 | lr 0.002
+INFO:root:cur target prediction: 0.5635077953338623
+INFO:root:sampling....
+INFO:root:count in: 48
+INFO:root:step 10927 : loss -0.005321056892474492 | lr 0.002
+INFO:root:cur target prediction: 0.5634037256240845
+INFO:root:sampling....
+INFO:root:count in: 48
+INFO:root:step 10976 : loss -0.005312243476510048 | lr 0.002
+INFO:root:cur target prediction: 0.5635285377502441
+INFO:root:sampling....
+INFO:root:count in: 48
+INFO:root:step 11025 : loss -0.005322811504205068 | lr 0.002
+INFO:root:cur target prediction: 0.5634673833847046
+INFO:root:sampling....
+INFO:root:count in: 48
+INFO:root:step 11074 : loss -0.005317633350690206 | lr 0.002
+INFO:root:cur target prediction: 0.5636030435562134
+INFO:root:sampling....
+INFO:root:count in: 48
+INFO:root:step 11123 : loss -0.005329125871260961 | lr 0.002
+INFO:root:cur target prediction: 0.5635140538215637
+INFO:root:sampling....
+INFO:root:count in: 48
+INFO:root:step 11172 : loss -0.005321588988105456 | lr 0.002
+INFO:root:cur target prediction: 0.5636456608772278
+INFO:root:sampling....
+INFO:root:count in: 48
+INFO:root:step 11221 : loss -0.005332736298441887 | lr 0.002
+INFO:root:cur target prediction: 0.5636727213859558
+INFO:root:sampling....
+INFO:root:count in: 48
+INFO:root:step 11270 : loss -0.005335027351975441 | lr 0.002
+INFO:root:cur target prediction: 0.5632004141807556
+INFO:root:sampling....
+INFO:root:count in: 48
+INFO:root:step 11319 : loss -0.005295027047395706 | lr 0.002
+INFO:root:cur target prediction: 0.5632883310317993
+INFO:root:sampling....
+INFO:root:count in: 48
+INFO:root:step 11368 : loss -0.005302471419175466 | lr 0.002
+INFO:root:cur target prediction: 0.563101589679718
+INFO:root:sampling....
+INFO:root:count in: 48
+INFO:root:step 11417 : loss -0.005286654457449913 | lr 0.002
+INFO:root:cur target prediction: 0.5631306171417236
+INFO:root:sampling....
+INFO:root:count in: 48
+INFO:root:step 11466 : loss -0.005289117495218913 | lr 0.002
+INFO:root:cur target prediction: 0.562522828578949
+INFO:root:sampling....
+INFO:root:count in: 48
+INFO:root:step 11515 : loss -0.0052376557141542435 | lr 0.002
+INFO:root:cur target prediction: 0.5625146627426147
+INFO:root:sampling....
+INFO:root:count in: 48
+INFO:root:step 11564 : loss -0.005236959084868431 | lr 0.002
+INFO:root:cur target prediction: 0.5621002912521362
+INFO:root:sampling....
+INFO:root:count in: 48
+INFO:root:step 11613 : loss -0.005201886097590129 | lr 0.002
+INFO:root:cur target prediction: 0.5621315240859985
+INFO:root:sampling....
+INFO:root:count in: 48
+INFO:root:step 11662 : loss -0.005204529191056888 | lr 0.002
+INFO:root:cur target prediction: 0.5622185468673706
+INFO:root:sampling....
+INFO:root:count in: 48
+INFO:root:step 11711 : loss -0.005211895952622096 | lr 0.002
+INFO:root:cur target prediction: 0.5622974038124084
+INFO:root:sampling....
+INFO:root:count in: 48
+INFO:root:step 11760 : loss -0.005218565464019775 | lr 0.002
+INFO:root:cur target prediction: 0.5621033906936646
+INFO:root:sampling....
+INFO:root:count in: 48
+INFO:root:step 11809 : loss -0.005202145005265872 | lr 0.002
+INFO:root:cur target prediction: 0.5618839859962463
+INFO:root:sampling....
+INFO:root:count in: 48
+INFO:root:step 11858 : loss -0.005183582504590352 | lr 0.002
+INFO:root:cur target prediction: 0.5616487860679626
+INFO:root:sampling....
+INFO:root:count in: 48
+INFO:root:step 11907 : loss -0.005163673001031081 | lr 0.002
+INFO:root:cur target prediction: 0.5615531802177429
+INFO:root:sampling....
+INFO:root:count in: 48
+INFO:root:step 11956 : loss -0.005155580739180247 | lr 0.002
+INFO:root:cur target prediction: 0.561259925365448
+INFO:root:sampling....
+INFO:root:count in: 48
+INFO:root:step 12005 : loss -0.005130769684910774 | lr 0.002
+INFO:root:cur target prediction: 0.5610580444335938
+INFO:root:sampling....
+INFO:root:count in: 48
+INFO:root:step 12054 : loss -0.005113696058591207 | lr 0.002
+INFO:root:cur target prediction: 0.5608168244361877
+INFO:root:sampling....
+INFO:root:count in: 48
+INFO:root:step 12103 : loss -0.005093287366131942 | lr 0.002
+INFO:root:cur target prediction: 0.5608378648757935
+INFO:root:sampling....
+INFO:root:count in: 48
+INFO:root:step 12152 : loss -0.005095069607098897 | lr 0.002
+INFO:root:cur target prediction: 0.5604659914970398
+INFO:root:sampling....
+INFO:root:count in: 48
+INFO:root:step 12201 : loss -0.005063614497582118 | lr 0.002
+INFO:root:cur target prediction: 0.5601072907447815
+INFO:root:sampling....
+INFO:root:count in: 48
+INFO:root:step 12250 : loss -0.005033284425735474 | lr 0.002
+INFO:root:cur target prediction: 0.5600885152816772
+INFO:root:sampling....
+INFO:root:count in: 48
+INFO:root:step 12299 : loss -0.005031692174573739 | lr 0.002
+INFO:root:cur target prediction: 0.5599162578582764
+INFO:root:sampling....
+INFO:root:count in: 48
+INFO:root:step 12348 : loss -0.005017128462592761 | lr 0.002
+INFO:root:cur target prediction: 0.5596446990966797
+INFO:root:sampling....
+INFO:root:count in: 48
+INFO:root:step 12397 : loss -0.004994174775977929 | lr 0.002
+INFO:root:cur target prediction: 0.559573769569397
+INFO:root:sampling....
+INFO:root:count in: 48
+INFO:root:step 12446 : loss -0.00498817798991998 | lr 0.002
+INFO:root:cur target prediction: 0.5596233606338501
+INFO:root:sampling....
+INFO:root:count in: 48
+INFO:root:step 12495 : loss -0.004992373287677765 | lr 0.002
+INFO:root:cur target prediction: 0.5596631765365601
+INFO:root:sampling....
+INFO:root:count in: 48
+INFO:root:step 12544 : loss -0.004995736914376418 | lr 0.002
+INFO:root:cur target prediction: 0.5594897866249084
+INFO:root:sampling....
+INFO:root:count in: 48
+INFO:root:step 12593 : loss -0.004981072929998239 | lr 0.002
+INFO:root:cur target prediction: 0.5593265891075134
+INFO:root:sampling....
+INFO:root:count in: 48
+INFO:root:step 12642 : loss -0.004967282215754191 | lr 0.002
+INFO:root:cur target prediction: 0.5594987869262695
+INFO:root:sampling....
+INFO:root:count in: 48
+INFO:root:step 12691 : loss -0.004981838166713715 | lr 0.002
+INFO:root:cur target prediction: 0.5597067475318909
+INFO:root:sampling....
+INFO:root:count in: 48
+INFO:root:step 12740 : loss -0.004999418432513873 | lr 0.002
+INFO:root:cur target prediction: 0.5597699880599976
+INFO:root:sampling....
+INFO:root:count in: 48
+INFO:root:step 12789 : loss -0.005004767949382464 | lr 0.002
+INFO:root:cur target prediction: 0.5594164729118347
+INFO:root:sampling....
+INFO:root:count in: 48
+INFO:root:step 12838 : loss -0.0049748774617910385 | lr 0.002
+INFO:root:cur target prediction: 0.5592230558395386
+INFO:root:sampling....
+INFO:root:count in: 48
+INFO:root:step 12887 : loss -0.004958532750606537 | lr 0.002
+INFO:root:cur target prediction: 0.5586917400360107
+INFO:root:sampling....
+INFO:root:count in: 48
+INFO:root:step 12936 : loss -0.004913633689284325 | lr 0.002
+INFO:root:cur target prediction: 0.5583108067512512
+INFO:root:sampling....
+INFO:root:count in: 48
+INFO:root:step 12985 : loss -0.004881452148159345 | lr 0.002
+INFO:root:cur target prediction: 0.5584546327590942
+INFO:root:sampling....
+INFO:root:count in: 48
+INFO:root:step 13034 : loss -0.004893597215414047 | lr 0.002
+INFO:root:cur target prediction: 0.558404803276062
+INFO:root:sampling....
+INFO:root:count in: 48
+INFO:root:step 13083 : loss -0.004889389810462792 | lr 0.002
+INFO:root:cur target prediction: 0.5582384467124939
+INFO:root:sampling....
+INFO:root:count in: 48
+INFO:root:step 13132 : loss -0.004875334600607554 | lr 0.002
+INFO:root:cur target prediction: 0.5580382943153381
+INFO:root:sampling....
+INFO:root:count in: 48
+INFO:root:step 13181 : loss -0.004858425197501977 | lr 0.002
+INFO:root:cur target prediction: 0.5578179359436035
+INFO:root:sampling....
+INFO:root:count in: 48
+INFO:root:step 13230 : loss -0.004839813647170861 | lr 0.002
+INFO:root:cur target prediction: 0.5573302507400513
+INFO:root:sampling....
+INFO:root:count in: 48
+INFO:root:step 13279 : loss -0.004798625285426776 | lr 0.002
+INFO:root:cur target prediction: 0.5566052794456482
+INFO:root:sampling....
+INFO:root:count in: 48
+INFO:root:step 13328 : loss -0.004737416903177897 | lr 0.002
+INFO:root:cur target prediction: 0.5566051006317139
+INFO:root:sampling....
+INFO:root:count in: 48
+INFO:root:step 13377 : loss -0.004737403864661853 | lr 0.002
+INFO:root:cur target prediction: 0.5563610196113586
+INFO:root:sampling....
+INFO:root:count in: 48
+INFO:root:step 13426 : loss -0.004716798663139343 | lr 0.002
+INFO:root:cur target prediction: 0.5564407706260681
+INFO:root:sampling....
+INFO:root:count in: 48
+INFO:root:step 13475 : loss -0.004723528400063515 | lr 0.002
+INFO:root:cur target prediction: 0.5561479926109314
+INFO:root:sampling....
+INFO:root:count in: 48
+INFO:root:step 13524 : loss -0.004698820412158966 | lr 0.002
+INFO:root:cur target prediction: 0.5563667416572571
+INFO:root:sampling....
+INFO:root:count in: 48
+INFO:root:step 13573 : loss -0.004717278915146987 | lr 0.002
+INFO:root:cur target prediction: 0.5563498139381409
+INFO:root:sampling....
+INFO:root:count in: 48
+INFO:root:step 13622 : loss -0.0047158549229304 | lr 0.002
+INFO:root:cur target prediction: 0.5565897822380066
+INFO:root:sampling....
+INFO:root:count in: 48
+INFO:root:step 13671 : loss -0.004736112741132577 | lr 0.002
+INFO:root:cur target prediction: 0.5564865469932556
+INFO:root:sampling....
+INFO:root:count in: 48
+INFO:root:step 13720 : loss -0.004727390594780445 | lr 0.002
+INFO:root:cur target prediction: 0.5564460158348083
+INFO:root:sampling....
+INFO:root:count in: 48
+INFO:root:step 13769 : loss -0.00472397202004989 | lr 0.002
+INFO:root:cur target prediction: 0.5564538240432739
+INFO:root:sampling....
+INFO:root:count in: 48
+INFO:root:step 13818 : loss -0.004724632948637009 | lr 0.002
+INFO:root:cur target prediction: 0.5564950108528137
+INFO:root:sampling....
+INFO:root:count in: 48
+INFO:root:step 13867 : loss -0.004728108644485474 | lr 0.002
+INFO:root:cur target prediction: 0.5564951300621033
+INFO:root:sampling....
+INFO:root:count in: 48
+INFO:root:step 13916 : loss -0.004728124166528384 | lr 0.002
+INFO:root:cur target prediction: 0.556272029876709
+INFO:root:sampling....
+INFO:root:count in: 48
+INFO:root:step 13965 : loss -0.004709289409220219 | lr 0.002
+INFO:root:cur target prediction: 0.5561668276786804
+INFO:root:sampling....
+INFO:root:count in: 48
+INFO:root:step 14014 : loss -0.004700410800675551 | lr 0.002
+INFO:root:cur target prediction: 0.5557169318199158
+INFO:root:sampling....
+INFO:root:count in: 48
+INFO:root:step 14063 : loss -0.004662441710631053 | lr 0.002
+INFO:root:cur target prediction: 0.5551007390022278
+INFO:root:sampling....
+INFO:root:count in: 48
+INFO:root:step 14112 : loss -0.004610454974075158 | lr 0.002
+INFO:root:cur target prediction: 0.5547906160354614
+INFO:root:sampling....
+INFO:root:count in: 48
+INFO:root:step 14161 : loss -0.004584299400448799 | lr 0.002
+INFO:root:cur target prediction: 0.5544523000717163
+INFO:root:sampling....
+INFO:root:count in: 48
+INFO:root:step 14210 : loss -0.004555761193235715 | lr 0.002
+INFO:root:cur target prediction: 0.5544302463531494
+INFO:root:sampling....
+INFO:root:count in: 48
+INFO:root:step 14259 : loss -0.004553902894258499 | lr 0.002
+INFO:root:cur target prediction: 0.554022490978241
+INFO:root:sampling....
+INFO:root:count in: 48
+INFO:root:step 14308 : loss -0.004519519706567128 | lr 0.002
+INFO:root:cur target prediction: 0.5537927150726318
+INFO:root:sampling....
+INFO:root:count in: 48
+INFO:root:step 14357 : loss -0.004500144471724828 | lr 0.002
+INFO:root:cur target prediction: 0.5535151958465576
+INFO:root:sampling....
+INFO:root:count in: 48
+INFO:root:step 14406 : loss -0.0044767480964461965 | lr 0.002
+INFO:root:cur target prediction: 0.5531050562858582
+INFO:root:sampling....
+INFO:root:count in: 48
+INFO:root:step 14455 : loss -0.0044421761607130366 | lr 0.002
+INFO:root:cur target prediction: 0.5529252290725708
+INFO:root:sampling....
+INFO:root:count in: 48
+INFO:root:step 14504 : loss -0.0044270216797788935 | lr 0.002
+INFO:root:cur target prediction: 0.5531079769134521
+INFO:root:sampling....
+INFO:root:count in: 48
+INFO:root:step 14553 : loss -0.004442426065603892 | lr 0.002
+INFO:root:cur target prediction: 0.5526471138000488
+INFO:root:sampling....
+INFO:root:count in: 48
+INFO:root:step 14602 : loss -0.00440357718616724 | lr 0.002
+INFO:root:cur target prediction: 0.5523481965065002
+INFO:root:sampling....
+INFO:root:count in: 48
+INFO:root:step 14651 : loss -0.0043784016743302345 | lr 0.002
+INFO:root:cur target prediction: 0.5527580976486206
+INFO:root:sampling....
+INFO:root:count in: 48
+INFO:root:step 14700 : loss -0.0044129351153969765 | lr 0.002
+INFO:root:cur target prediction: 0.552529513835907
+INFO:root:sampling....
+INFO:root:count in: 48
+INFO:root:step 14749 : loss -0.004393675364553928 | lr 0.002
+INFO:root:cur target prediction: 0.5520902872085571
+INFO:root:sampling....
+INFO:root:count in: 48
+INFO:root:step 14798 : loss -0.00435666802028815 | lr 0.002
+INFO:root:cur target prediction: 0.5519936680793762
+INFO:root:sampling....
+INFO:root:count in: 48
+INFO:root:step 14847 : loss -0.004348526398340861 | lr 0.002
+INFO:root:cur target prediction: 0.5519047975540161
+INFO:root:sampling....
+INFO:root:count in: 48
+INFO:root:step 14896 : loss -0.004341038564840953 | lr 0.002
+INFO:root:cur target prediction: 0.5517843961715698
+INFO:root:sampling....
+INFO:root:count in: 48
+INFO:root:step 14945 : loss -0.0043308983246485395 | lr 0.002
+INFO:root:cur target prediction: 0.5515090823173523
+INFO:root:sampling....
+INFO:root:count in: 48
+INFO:root:step 14994 : loss -0.004307710565626621 | lr 0.002
+INFO:root:cur target prediction: 0.5515486598014832
+INFO:root:sampling....
+INFO:root:count in: 48
+INFO:root:step 15043 : loss -0.004311043458680312 | lr 0.002
+INFO:root:cur target prediction: 0.5511642098426819
+INFO:root:sampling....
+INFO:root:count in: 48
+INFO:root:step 15092 : loss -0.004278660751879215 | lr 0.002
+INFO:root:cur target prediction: 0.5510022640228271
+INFO:root:sampling....
+INFO:root:count in: 48
+INFO:root:step 15141 : loss -0.004265027741591136 | lr 0.002
+INFO:root:cur target prediction: 0.5508420467376709
+INFO:root:sampling....
+INFO:root:count in: 48
+INFO:root:step 15190 : loss -0.00425153070439895 | lr 0.002
+INFO:root:cur target prediction: 0.5504740476608276
+INFO:root:sampling....
+INFO:root:count in: 48
+INFO:root:step 15239 : loss -0.004220548706750075 | lr 0.002
+INFO:root:cur target prediction: 0.5504822134971619
+INFO:root:sampling....
+INFO:root:count in: 48
+INFO:root:step 15288 : loss -0.004221235712369283 | lr 0.002
+INFO:root:cur target prediction: 0.5505726933479309
+INFO:root:sampling....
+INFO:root:count in: 48
+INFO:root:step 15337 : loss -0.0042288536205887794 | lr 0.002
+INFO:root:cur target prediction: 0.5502398610115051
+INFO:root:sampling....
+INFO:root:count in: 48
+INFO:root:step 15386 : loss -0.004200834470490615 | lr 0.002
+INFO:root:cur target prediction: 0.5500839948654175
+INFO:root:sampling....
+INFO:root:count in: 48
+INFO:root:step 15435 : loss -0.004187711514532566 | lr 0.002
+INFO:root:cur target prediction: 0.5497384667396545
+INFO:root:sampling....
+INFO:root:count in: 48
+INFO:root:step 15484 : loss -0.004158627862731616 | lr 0.002
+INFO:root:cur target prediction: 0.5496821403503418
+INFO:root:sampling....
+INFO:root:count in: 48
+INFO:root:step 15533 : loss -0.004153890535235405 | lr 0.002
+INFO:root:cur target prediction: 0.5496050119400024
+INFO:root:sampling....
+INFO:root:count in: 48
+INFO:root:step 15582 : loss -0.004147398906449477 | lr 0.002
+INFO:root:cur target prediction: 0.5497781038284302
+INFO:root:sampling....
+INFO:root:count in: 48
+INFO:root:step 15631 : loss -0.004161966033279896 | lr 0.002
+INFO:root:cur target prediction: 0.5492954850196838
+INFO:root:sampling....
+INFO:root:count in: 48
+INFO:root:step 15680 : loss -0.0041213495035966234 | lr 0.002
+INFO:root:cur target prediction: 0.5492332577705383
+INFO:root:sampling....
+INFO:root:count in: 48
+INFO:root:step 15729 : loss -0.004116114849845569 | lr 0.002
+INFO:root:cur target prediction: 0.5489839911460876
+INFO:root:sampling....
+INFO:root:count in: 48
+INFO:root:step 15778 : loss -0.004095135567088922 | lr 0.002
+INFO:root:cur target prediction: 0.5487049221992493
+INFO:root:sampling....
+INFO:root:count in: 48
+INFO:root:step 15827 : loss -0.004071659098068873 | lr 0.002
+INFO:root:cur target prediction: 0.5486461520195007
+INFO:root:sampling....
+INFO:root:count in: 48
+INFO:root:step 15876 : loss -0.004066712533434232 | lr 0.002
+INFO:root:cur target prediction: 0.5489410758018494
+INFO:root:sampling....
+INFO:root:count in: 48
+INFO:root:step 15925 : loss -0.004091523587703705 | lr 0.002
+INFO:root:cur target prediction: 0.5490410923957825
+INFO:root:sampling....
+INFO:root:count in: 48
+INFO:root:step 15974 : loss -0.004099942433337371 | lr 0.002
+INFO:root:cur target prediction: 0.5487849712371826
+INFO:root:sampling....
+INFO:root:count in: 48
+INFO:root:step 16023 : loss -0.004078390076756477 | lr 0.002
+INFO:root:cur target prediction: 0.5488437414169312
+INFO:root:sampling....
+INFO:root:count in: 48
+INFO:root:step 16072 : loss -0.004083338504036267 | lr 0.002
+INFO:root:cur target prediction: 0.5485051274299622
+INFO:root:sampling....
+INFO:root:count in: 48
+INFO:root:step 16121 : loss -0.0040548502778013544 | lr 0.002
+INFO:root:cur target prediction: 0.547973096370697
+INFO:root:sampling....
+INFO:root:count in: 48
+INFO:root:step 16170 : loss -0.004010096192359924 | lr 0.002
+INFO:root:cur target prediction: 0.5478088855743408
+INFO:root:sampling....
+INFO:root:count in: 48
+INFO:root:step 16219 : loss -0.0039962902665138245 | lr 0.002
+INFO:root:cur target prediction: 0.5480164885520935
+INFO:root:sampling....
+INFO:root:count in: 48
+INFO:root:step 16268 : loss -0.0040137463559707 | lr 0.002
+INFO:root:cur target prediction: 0.5477259755134583
+INFO:root:sampling....
+INFO:root:count in: 48
+INFO:root:step 16317 : loss -0.0039893028636773424 | lr 0.002
+INFO:root:cur target prediction: 0.5472221374511719
+INFO:root:sampling....
+INFO:root:count in: 48
+INFO:root:step 16366 : loss -0.003946944450338681 | lr 0.002
+INFO:root:cur target prediction: 0.5467034578323364
+INFO:root:sampling....
+INFO:root:count in: 48
+INFO:root:step 16415 : loss -0.0039033337185780206 | lr 0.002
+INFO:root:cur target prediction: 0.5465953350067139
+INFO:root:sampling....
+INFO:root:count in: 48
+INFO:root:step 16464 : loss -0.003894248977303505 | lr 0.002
+INFO:root:cur target prediction: 0.54661625623703
+INFO:root:sampling....
+INFO:root:count in: 48
+INFO:root:step 16513 : loss -0.003896010418732961 | lr 0.002
+INFO:root:cur target prediction: 0.5467166304588318
+INFO:root:sampling....
+INFO:root:count in: 48
+INFO:root:step 16562 : loss -0.0039044413715600967 | lr 0.002
+INFO:root:cur target prediction: 0.5468478798866272
+INFO:root:sampling....
+INFO:root:count in: 48
+INFO:root:step 16611 : loss -0.003915478164951007 | lr 0.002
+INFO:root:cur target prediction: 0.546275794506073
+INFO:root:sampling....
+INFO:root:count in: 48
+INFO:root:step 16660 : loss -0.003867384046316147 | lr 0.002
+INFO:root:cur target prediction: 0.5459470748901367
+INFO:root:sampling....
+INFO:root:count in: 48
+INFO:root:step 16709 : loss -0.0038397619500756264 | lr 0.002
+INFO:root:cur target prediction: 0.545725405216217
+INFO:root:sampling....
+INFO:root:count in: 48
+INFO:root:step 16758 : loss -0.0038211317732930183 | lr 0.002
+INFO:root:cur target prediction: 0.5452974438667297
+INFO:root:sampling....
+INFO:root:count in: 48
+INFO:root:step 16807 : loss -0.0037851690625151 | lr 0.002
+INFO:root:cur target prediction: 0.5450728535652161
+INFO:root:sampling....
+INFO:root:count in: 48
+INFO:root:step 16856 : loss -0.0037662958105405173 | lr 0.002
+INFO:root:cur target prediction: 0.5448819398880005
+INFO:root:sampling....
+INFO:root:count in: 48
+INFO:root:step 16905 : loss -0.0037502565731604895 | lr 0.002
+INFO:root:cur target prediction: 0.5452682375907898
+INFO:root:sampling....
+INFO:root:count in: 48
+INFO:root:step 16954 : loss -0.0037827125440041223 | lr 0.002
+INFO:root:cur target prediction: 0.5449582934379578
+INFO:root:sampling....
+INFO:root:count in: 48
+INFO:root:step 17003 : loss -0.0037566755587855973 | lr 0.002
+INFO:root:cur target prediction: 0.5450653433799744
+INFO:root:sampling....
+INFO:root:count in: 48
+INFO:root:step 17052 : loss -0.00376566747824351 | lr 0.002
+INFO:root:cur target prediction: 0.5448272824287415
+INFO:root:sampling....
+INFO:root:count in: 48
+INFO:root:step 17101 : loss -0.0037456673259536424 | lr 0.002
+INFO:root:cur target prediction: 0.5444164872169495
+INFO:root:sampling....
+INFO:root:count in: 48
+INFO:root:step 17150 : loss -0.003711158720155557 | lr 0.002
+INFO:root:cur target prediction: 0.5443181395530701
+INFO:root:sampling....
+INFO:root:count in: 48
+INFO:root:step 17199 : loss -0.0037028981993595758 | lr 0.002
+INFO:root:cur target prediction: 0.5440505743026733
+INFO:root:sampling....
+INFO:root:count in: 48
+INFO:root:step 17248 : loss -0.003680424764752388 | lr 0.002
+INFO:root:cur target prediction: 0.5437902808189392
+INFO:root:sampling....
+INFO:root:count in: 48
+INFO:root:step 17297 : loss -0.003658567244807879 | lr 0.002
+INFO:root:cur target prediction: 0.5439115166664124
+INFO:root:sampling....
+INFO:root:count in: 48
+INFO:root:step 17346 : loss -0.003668747842311859 | lr 0.002
+INFO:root:cur target prediction: 0.5440388321876526
+INFO:root:sampling....
+INFO:root:count in: 48
+INFO:root:step 17395 : loss -0.0036794388045867286 | lr 0.002
+INFO:root:cur target prediction: 0.5438145995140076
+INFO:root:sampling....
+INFO:root:count in: 48
+INFO:root:step 17444 : loss -0.003660608703891436 | lr 0.002
+INFO:root:cur target prediction: 0.5437741279602051
+INFO:root:sampling....
+INFO:root:count in: 48
+INFO:root:step 17493 : loss -0.0036572053407629332 | lr 0.002
+INFO:root:cur target prediction: 0.543923020362854
+INFO:root:sampling....
+INFO:root:count in: 48
+INFO:root:step 17542 : loss -0.0036697148655851683 | lr 0.002
+INFO:root:cur target prediction: 0.5440060496330261
+INFO:root:sampling....
+INFO:root:count in: 48
+INFO:root:step 17591 : loss -0.003676683952411016 | lr 0.002
+INFO:root:cur target prediction: 0.5438252091407776
+INFO:root:sampling....
+INFO:root:count in: 48
+INFO:root:step 17640 : loss -0.0036615018422404924 | lr 0.002
+INFO:root:cur target prediction: 0.5442094802856445
+INFO:root:sampling....
+INFO:root:count in: 48
+INFO:root:step 17689 : loss -0.0036937727903326354 | lr 0.002
+INFO:root:cur target prediction: 0.5442514419555664
+INFO:root:sampling....
+INFO:root:count in: 48
+INFO:root:step 17738 : loss -0.0036972959836324057 | lr 0.002
+INFO:root:cur target prediction: 0.5440479516983032
+INFO:root:sampling....
+INFO:root:count in: 48
+INFO:root:step 17787 : loss -0.0036802024890979133 | lr 0.002
+INFO:root:cur target prediction: 0.5440095067024231
+INFO:root:sampling....
+INFO:root:count in: 48
+INFO:root:step 17836 : loss -0.0036769804234306016 | lr 0.002
+INFO:root:cur target prediction: 0.5442489385604858
+INFO:root:sampling....
+INFO:root:count in: 48
+INFO:root:step 17885 : loss -0.0036970824003219604 | lr 0.002
+INFO:root:cur target prediction: 0.5437891483306885
+INFO:root:sampling....
+INFO:root:count in: 48
+INFO:root:step 17934 : loss -0.003658473491668701 | lr 0.002
+INFO:root:cur target prediction: 0.543165922164917
+INFO:root:sampling....
+INFO:root:count in: 48
+INFO:root:step 17983 : loss -0.0036061381300290427 | lr 0.002
+INFO:root:cur target prediction: 0.542402446269989
+INFO:root:sampling....
+INFO:root:count in: 48
+INFO:root:step 18032 : loss -0.00354204885661602 | lr 0.002
+INFO:root:cur target prediction: 0.5424705147743225
+INFO:root:sampling....
+INFO:root:count in: 48
+INFO:root:step 18081 : loss -0.003547754759589831 | lr 0.002
+INFO:root:cur target prediction: 0.5422202944755554
+INFO:root:sampling....
+INFO:root:count in: 48
+INFO:root:step 18130 : loss -0.0035267633696397147 | lr 0.002
+INFO:root:cur target prediction: 0.5427600741386414
+INFO:root:sampling....
+INFO:root:count in: 48
+INFO:root:step 18179 : loss -0.003572063830991586 | lr 0.002
+INFO:root:cur target prediction: 0.542439877986908
+INFO:root:sampling....
+INFO:root:count in: 48
+INFO:root:step 18228 : loss -0.00354518989721934 | lr 0.002
+INFO:root:cur target prediction: 0.5421167016029358
+INFO:root:sampling....
+INFO:root:count in: 48
+INFO:root:step 18277 : loss -0.0035180685420831046 | lr 0.002
+INFO:root:cur target prediction: 0.5420037508010864
+INFO:root:sampling....
+INFO:root:count in: 48
+INFO:root:step 18326 : loss -0.003508583332101504 | lr 0.002
+INFO:root:cur target prediction: 0.5416895151138306
+INFO:root:sampling....
+INFO:root:count in: 48
+INFO:root:step 18375 : loss -0.003482212002078692 | lr 0.002
+INFO:root:cur target prediction: 0.5416476130485535
+INFO:root:sampling....
+INFO:root:count in: 48
+INFO:root:step 18424 : loss -0.0034787009159723916 | lr 0.002
+INFO:root:cur target prediction: 0.5411991477012634
+INFO:root:sampling....
+INFO:root:count in: 48
+INFO:root:step 18473 : loss -0.0034410692751407623 | lr 0.002
+INFO:root:cur target prediction: 0.5410289168357849
+INFO:root:sampling....
+INFO:root:count in: 48
+INFO:root:step 18522 : loss -0.003426778440674146 | lr 0.002
+INFO:root:cur target prediction: 0.5407333970069885
+INFO:root:sampling....
+INFO:root:count in: 48
+INFO:root:step 18571 : loss -0.0034019965678453445 | lr 0.002
+INFO:root:cur target prediction: 0.5402929782867432
+INFO:root:sampling....
+INFO:root:count in: 48
+INFO:root:step 18620 : loss -0.003365048517783483 | lr 0.002
+INFO:root:cur target prediction: 0.5404200553894043
+INFO:root:sampling....
+INFO:root:count in: 48
+INFO:root:step 18669 : loss -0.0033757068837682405 | lr 0.002
+INFO:root:cur target prediction: 0.5410653948783875
+INFO:root:sampling....
+INFO:root:count in: 48
+INFO:root:step 18718 : loss -0.0034298431128263474 | lr 0.002
+INFO:root:cur target prediction: 0.5410463213920593
+INFO:root:sampling....
+INFO:root:count in: 48
+INFO:root:step 18767 : loss -0.003428244652847449 | lr 0.002
+INFO:root:cur target prediction: 0.5407207012176514
+INFO:root:sampling....
+INFO:root:count in: 48
+INFO:root:step 18816 : loss -0.0034009280304114022 | lr 0.002
+INFO:root:cur target prediction: 0.5411186218261719
+INFO:root:sampling....
+INFO:root:count in: 48
+INFO:root:step 18865 : loss -0.0034343178073565164 | lr 0.002
+INFO:root:cur target prediction: 0.5408997535705566
+INFO:root:sampling....
+INFO:root:count in: 48
+INFO:root:step 18914 : loss -0.003415945917367935 | lr 0.002
+INFO:root:cur target prediction: 0.5410876274108887
+INFO:root:sampling....
+INFO:root:count in: 48
+INFO:root:step 18963 : loss -0.003431708241502444 | lr 0.002
+INFO:root:cur target prediction: 0.5410833358764648
+INFO:root:sampling....
+INFO:root:count in: 48
+INFO:root:step 19012 : loss -0.0034313506136337915 | lr 0.002
+INFO:root:cur target prediction: 0.5410665273666382
+INFO:root:sampling....
+INFO:root:count in: 48
+INFO:root:step 19061 : loss -0.0034299458687504134 | lr 0.002
+INFO:root:cur target prediction: 0.540907084941864
+INFO:root:sampling....
+INFO:root:count in: 48
+INFO:root:step 19110 : loss -0.00341656773040692 | lr 0.002
+INFO:root:cur target prediction: 0.5411043167114258
+INFO:root:sampling....
+INFO:root:count in: 48
+INFO:root:step 19159 : loss -0.0034331089506546655 | lr 0.002
+INFO:root:cur target prediction: 0.5408454537391663
+INFO:root:sampling....
+INFO:root:count in: 48
+INFO:root:step 19208 : loss -0.0034113960961500802 | lr 0.002
+INFO:root:cur target prediction: 0.5408017039299011
+INFO:root:sampling....
+INFO:root:count in: 48
+INFO:root:step 19257 : loss -0.0034077217181523642 | lr 0.002
+INFO:root:cur target prediction: 0.5413779020309448
+INFO:root:sampling....
+INFO:root:count in: 48
+INFO:root:step 19306 : loss -0.003456059843301773 | lr 0.002
+INFO:root:cur target prediction: 0.5418403744697571
+INFO:root:sampling....
+INFO:root:count in: 48
+INFO:root:step 19355 : loss -0.0034948733324805894 | lr 0.002
+INFO:root:cur target prediction: 0.5416666269302368
+INFO:root:sampling....
+INFO:root:count in: 48
+INFO:root:step 19404 : loss -0.003480291304488977 | lr 0.002
+INFO:root:cur target prediction: 0.5414804220199585
+INFO:root:sampling....
+INFO:root:count in: 48
+INFO:root:step 19453 : loss -0.003464669920504093 | lr 0.002
+INFO:root:cur target prediction: 0.5416299104690552
+INFO:root:sampling....
+INFO:root:count in: 48
+INFO:root:step 19502 : loss -0.00347721204161644 | lr 0.002
+INFO:root:cur target prediction: 0.5410014390945435
+INFO:root:sampling....
+INFO:root:count in: 48
+INFO:root:step 19551 : loss -0.0034244793156782785 | lr 0.002
+INFO:root:cur target prediction: 0.5407606959342957
+INFO:root:sampling....
+INFO:root:count in: 48
+INFO:root:step 19600 : loss -0.0034042814125617347 | lr 0.002
+INFO:root:cur target prediction: 0.5407739877700806
+INFO:root:sampling....
+INFO:root:count in: 48
+INFO:root:step 19649 : loss -0.003405397447446982 | lr 0.002
+INFO:root:cur target prediction: 0.5406302809715271
+INFO:root:sampling....
+INFO:root:count in: 48
+INFO:root:step 19698 : loss -0.0033933501690626144 | lr 0.002
+INFO:root:cur target prediction: 0.5404903888702393
+INFO:root:sampling....
+INFO:root:count in: 48
+INFO:root:step 19747 : loss -0.0033816096062461534 | lr 0.002
+INFO:root:cur target prediction: 0.5404573082923889
+INFO:root:sampling....
+INFO:root:count in: 48
+INFO:root:step 19796 : loss -0.0033788358171780906 | lr 0.002
+INFO:root:cur target prediction: 0.5404583811759949
+INFO:root:sampling....
+INFO:root:count in: 48
+INFO:root:step 19845 : loss -0.003378923051059246 | lr 0.002
+INFO:root:cur target prediction: 0.5402295589447021
+INFO:root:sampling....
+INFO:root:count in: 48
+INFO:root:step 19894 : loss -0.003359725388387839 | lr 0.002
+INFO:root:cur target prediction: 0.5399368405342102
+INFO:root:sampling....
+INFO:root:count in: 48
+INFO:root:step 19943 : loss -0.0033351751044392586 | lr 0.002
+INFO:root:cur target prediction: 0.5398626327514648
+INFO:root:sampling....
+INFO:root:count in: 48
+INFO:root:step 19992 : loss -0.0033289572844902673 | lr 0.002
+INFO:root:cur target prediction: 0.5397534966468811
+INFO:root:sampling....
+INFO:root:count in: 48
+INFO:root:step 20041 : loss -0.0033197992791732154 | lr 0.002
+INFO:root:cur target prediction: 0.539036214351654
+INFO:root:sampling....
+INFO:root:count in: 48
+INFO:root:step 20090 : loss -0.0032596572612722716 | lr 0.002
+INFO:root:cur target prediction: 0.5385808348655701
+INFO:root:sampling....
+INFO:root:count in: 48
+INFO:root:step 20139 : loss -0.003221475208799044 | lr 0.002
+INFO:root:cur target prediction: 0.5384694933891296
+INFO:root:sampling....
+INFO:root:count in: 48
+INFO:root:step 20188 : loss -0.003212138389547666 | lr 0.002
+INFO:root:cur target prediction: 0.5375653505325317
+INFO:root:sampling....
+INFO:root:count in: 48
+INFO:root:step 20237 : loss -0.003136360396941503 | lr 0.002
+INFO:root:cur target prediction: 0.537140429019928
+INFO:root:sampling....
+INFO:root:count in: 48
+INFO:root:step 20286 : loss -0.003100746621688207 | lr 0.002
+INFO:root:cur target prediction: 0.5372467041015625
+INFO:root:sampling....
+INFO:root:count in: 48
+INFO:root:step 20335 : loss -0.0031096522385875383 | lr 0.002
+INFO:root:cur target prediction: 0.5372987389564514
+INFO:root:sampling....
+INFO:root:count in: 48
+INFO:root:step 20384 : loss -0.0031140117595593133 | lr 0.002
+INFO:root:cur target prediction: 0.5371591448783875
+INFO:root:sampling....
+INFO:root:count in: 48
+INFO:root:step 20433 : loss -0.003102314348022143 | lr 0.002
+INFO:root:cur target prediction: 0.5373182892799377
+INFO:root:sampling....
+INFO:root:count in: 48
+INFO:root:step 20482 : loss -0.003115658648312092 | lr 0.002
+INFO:root:cur target prediction: 0.5375970602035522
+INFO:root:sampling....
+INFO:root:count in: 48
+INFO:root:step 20531 : loss -0.0031390165289243064 | lr 0.002
+INFO:root:cur target prediction: 0.5376724600791931
+INFO:root:sampling....
+INFO:root:count in: 48
+INFO:root:step 20580 : loss -0.003145338036119938 | lr 0.002
+INFO:root:cur target prediction: 0.5376731753349304
+INFO:root:sampling....
+INFO:root:count in: 48
+INFO:root:step 20629 : loss -0.003145399813850721 | lr 0.002
+INFO:root:cur target prediction: 0.5379918813705444
+INFO:root:sampling....
+INFO:root:count in: 48
+INFO:root:step 20678 : loss -0.0031721054886778197 | lr 0.002
+INFO:root:cur target prediction: 0.5381013751029968
+INFO:root:sampling....
+INFO:root:count in: 48
+INFO:root:step 20727 : loss -0.00318128801882267 | lr 0.002
+INFO:root:cur target prediction: 0.5379323363304138
+INFO:root:sampling....
+INFO:root:count in: 48
+INFO:root:step 20776 : loss -0.003167117635409037 | lr 0.002
+INFO:root:cur target prediction: 0.5382905006408691
+INFO:root:sampling....
+INFO:root:count in: 48
+INFO:root:step 20825 : loss -0.0031971378872791925 | lr 0.002
+INFO:root:cur target prediction: 0.5378325581550598
+INFO:root:sampling....
+INFO:root:count in: 48
+INFO:root:step 20874 : loss -0.0031587577735384307 | lr 0.002
+INFO:root:cur target prediction: 0.5378334522247314
+INFO:root:sampling....
+INFO:root:count in: 48
+INFO:root:step 20923 : loss -0.0031588322793444 | lr 0.002
+INFO:root:cur target prediction: 0.5380098223686218
+INFO:root:sampling....
+INFO:root:count in: 48
+INFO:root:step 20972 : loss -0.003173603986700376 | lr 0.002
+INFO:root:cur target prediction: 0.5377304553985596
+INFO:root:sampling....
+INFO:root:count in: 48
+INFO:root:step 21021 : loss -0.0031501945729056993 | lr 0.002
+INFO:root:cur target prediction: 0.5374013185501099
+INFO:root:sampling....
+INFO:root:count in: 48
+INFO:root:step 21070 : loss -0.00312261035044988 | lr 0.002
+INFO:root:cur target prediction: 0.537324070930481
+INFO:root:sampling....
+INFO:root:count in: 48
+INFO:root:step 21119 : loss -0.0031161451091368995 | lr 0.002
+INFO:root:cur target prediction: 0.5373890995979309
+INFO:root:sampling....
+INFO:root:count in: 48
+INFO:root:step 21168 : loss -0.0031215865164995193 | lr 0.002
+INFO:root:cur target prediction: 0.5369953513145447
+INFO:root:sampling....
+INFO:root:count in: 48
+INFO:root:step 21217 : loss -0.0030885891367991767 | lr 0.002
+INFO:root:cur target prediction: 0.5364091992378235
+INFO:root:sampling....
+INFO:root:count in: 48
+INFO:root:step 21266 : loss -0.0030394836018482843 | lr 0.002
+INFO:root:cur target prediction: 0.5361889004707336
+INFO:root:sampling....
+INFO:root:count in: 48
+INFO:root:step 21315 : loss -0.0030210294450322786 | lr 0.002
+INFO:root:cur target prediction: 0.5360308885574341
+INFO:root:sampling....
+INFO:root:count in: 48
+INFO:root:step 21364 : loss -0.0030077947303652763 | lr 0.002
+INFO:root:cur target prediction: 0.5358195900917053
+INFO:root:sampling....
+INFO:root:count in: 48
+INFO:root:step 21413 : loss -0.00299008438984553 | lr 0.002
+INFO:root:cur target prediction: 0.5359719395637512
+INFO:root:sampling....
+INFO:root:count in: 48
+INFO:root:step 21462 : loss -0.0030028540641069412 | lr 0.002
+INFO:root:cur target prediction: 0.5360624194145203
+INFO:root:sampling....
+INFO:root:count in: 48
+INFO:root:step 21511 : loss -0.003010431925455729 | lr 0.002
+INFO:root:cur target prediction: 0.5360132455825806
+INFO:root:sampling....
+INFO:root:count in: 48
+INFO:root:step 21560 : loss -0.0030063105126221976 | lr 0.002
+INFO:root:cur target prediction: 0.5357775688171387
+INFO:root:sampling....
+INFO:root:count in: 48
+INFO:root:step 21609 : loss -0.0029865729932983718 | lr 0.002
+INFO:root:cur target prediction: 0.535584568977356
+INFO:root:sampling....
+INFO:root:count in: 48
+INFO:root:step 21658 : loss -0.002970408027370771 | lr 0.002
+INFO:root:cur target prediction: 0.5357890725135803
+INFO:root:sampling....
+INFO:root:count in: 48
+INFO:root:step 21707 : loss -0.002987531324227651 | lr 0.002
+INFO:root:cur target prediction: 0.5356622338294983
+INFO:root:sampling....
+INFO:root:count in: 48
+INFO:root:step 21756 : loss -0.00297691331555446 | lr 0.002
+INFO:root:cur target prediction: 0.5355011820793152
+INFO:root:sampling....
+INFO:root:count in: 48
+INFO:root:step 21805 : loss -0.00296342217673858 | lr 0.002
+INFO:root:cur target prediction: 0.5351066589355469
+INFO:root:sampling....
+INFO:root:count in: 48
+INFO:root:step 21854 : loss -0.0029303779204686484 | lr 0.002
+INFO:root:cur target prediction: 0.5350048542022705
+INFO:root:sampling....
+INFO:root:count in: 48
+INFO:root:step 21903 : loss -0.002921860354642073 | lr 0.002
+INFO:root:cur target prediction: 0.534858763217926
+INFO:root:sampling....
+INFO:root:count in: 48
+INFO:root:step 21952 : loss -0.0029096255699793496 | lr 0.002
+INFO:root:cur target prediction: 0.5343945026397705
+INFO:root:sampling....
+INFO:root:count in: 48
+INFO:root:step 22001 : loss -0.002870740989844004 | lr 0.002
+INFO:root:cur target prediction: 0.5341325998306274
+INFO:root:sampling....
+INFO:root:count in: 48
+INFO:root:step 22050 : loss -0.002848814862469832 | lr 0.002
+INFO:root:cur target prediction: 0.5340732932090759
+INFO:root:sampling....
+INFO:root:count in: 48
+INFO:root:step 22099 : loss -0.002843853086233139 | lr 0.002
+INFO:root:cur target prediction: 0.5342223048210144
+INFO:root:sampling....
+INFO:root:count in: 48
+INFO:root:step 22148 : loss -0.0028563272207975388 | lr 0.002
+INFO:root:cur target prediction: 0.5345147252082825
+INFO:root:sampling....
+INFO:root:count in: 48
+INFO:root:step 22197 : loss -0.0028808110704024634 | lr 0.002
+INFO:root:cur target prediction: 0.5342935919761658
+INFO:root:sampling....
+INFO:root:count in: 48
+INFO:root:step 22246 : loss -0.002862292962769667 | lr 0.002
+INFO:root:cur target prediction: 0.5344864130020142
+INFO:root:sampling....
+INFO:root:count in: 48
+INFO:root:step 22295 : loss -0.0028784433379769325 | lr 0.002
+INFO:root:cur target prediction: 0.534236490726471
+INFO:root:sampling....
+INFO:root:count in: 48
+INFO:root:step 22344 : loss -0.002857516830166181 | lr 0.002
+INFO:root:cur target prediction: 0.5340890288352966
+INFO:root:sampling....
+INFO:root:count in: 48
+INFO:root:step 22393 : loss -0.002845169665912787 | lr 0.002
+INFO:root:cur target prediction: 0.5337589383125305
+INFO:root:sampling....
+INFO:root:count in: 48
+INFO:root:step 22442 : loss -0.0028175379460056624 | lr 0.002
+INFO:root:cur target prediction: 0.5337430834770203
+INFO:root:sampling....
+INFO:root:count in: 48
+INFO:root:step 22491 : loss -0.0028162039816379547 | lr 0.002
+INFO:root:cur target prediction: 0.5339000225067139
+INFO:root:sampling....
+INFO:root:count in: 48
+INFO:root:step 22540 : loss -0.0028293399761120477 | lr 0.002
+INFO:root:cur target prediction: 0.5331470370292664
+INFO:root:sampling....
+INFO:root:count in: 48
+INFO:root:step 22589 : loss -0.0027663124104340873 | lr 0.002
+INFO:root:cur target prediction: 0.5332273840904236
+INFO:root:sampling....
+INFO:root:count in: 48
+INFO:root:step 22638 : loss -0.002773039974272251 | lr 0.002
+INFO:root:cur target prediction: 0.5333396196365356
+INFO:root:sampling....
+INFO:root:count in: 48
+INFO:root:step 22687 : loss -0.0027824348459641137 | lr 0.002
+INFO:root:cur target prediction: 0.5329844355583191
+INFO:root:sampling....
+INFO:root:count in: 48
+INFO:root:step 22736 : loss -0.002752702683210373 | lr 0.002
+INFO:root:cur target prediction: 0.5328481793403625
+INFO:root:sampling....
+INFO:root:count in: 48
+INFO:root:step 22785 : loss -0.002741305778423945 | lr 0.002
+INFO:root:cur target prediction: 0.532795786857605
+INFO:root:sampling....
+INFO:root:count in: 48
+INFO:root:step 22834 : loss -0.0027369136611620584 | lr 0.002
+INFO:root:cur target prediction: 0.5326170921325684
+INFO:root:sampling....
+INFO:root:count in: 48
+INFO:root:step 22883 : loss -0.0027219575519363084 | lr 0.002
+INFO:root:cur target prediction: 0.5326894521713257
+INFO:root:sampling....
+INFO:root:count in: 48
+INFO:root:step 22932 : loss -0.0027280148739616075 | lr 0.002
+INFO:root:cur target prediction: 0.5331205129623413
+INFO:root:sampling....
+INFO:root:count in: 48
+INFO:root:step 22981 : loss -0.002764099587996801 | lr 0.002
+INFO:root:cur target prediction: 0.5328167080879211
+INFO:root:sampling....
+INFO:root:count in: 48
+INFO:root:step 23030 : loss -0.002738667962451776 | lr 0.002
+INFO:root:cur target prediction: 0.532811164855957
+INFO:root:sampling....
+INFO:root:count in: 48
+INFO:root:step 23079 : loss -0.0027381982654333115 | lr 0.002
+INFO:root:cur target prediction: 0.5326232314109802
+INFO:root:sampling....
+INFO:root:count in: 48
+INFO:root:step 23128 : loss -0.0027224700897932053 | lr 0.002
+INFO:root:cur target prediction: 0.5327380895614624
+INFO:root:sampling....
+INFO:root:count in: 48
+INFO:root:step 23177 : loss -0.0027320819596449533 | lr 0.002
+INFO:root:cur target prediction: 0.5329700708389282
+INFO:root:sampling....
+INFO:root:count in: 48
+INFO:root:step 23226 : loss -0.002751505933701992 | lr 0.002
+INFO:root:cur target prediction: 0.5326728820800781
+INFO:root:sampling....
+INFO:root:count in: 48
+INFO:root:step 23275 : loss -0.0027266331017017365 | lr 0.002
+INFO:root:cur target prediction: 0.5319218635559082
+INFO:root:sampling....
+INFO:root:count in: 48
+INFO:root:step 23324 : loss -0.002663780003786087 | lr 0.002
+INFO:root:cur target prediction: 0.5325638055801392
+INFO:root:sampling....
+INFO:root:count in: 48
+INFO:root:step 23373 : loss -0.002717498689889908 | lr 0.002
+INFO:root:cur target prediction: 0.5331503748893738
+INFO:root:sampling....
+INFO:root:count in: 48
+INFO:root:step 23422 : loss -0.002766593359410763 | lr 0.002
+INFO:root:cur target prediction: 0.5331065058708191
+INFO:root:sampling....
+INFO:root:count in: 48
+INFO:root:step 23471 : loss -0.002762921154499054 | lr 0.002
+INFO:root:cur target prediction: 0.5321505069732666
+INFO:root:sampling....
+INFO:root:count in: 48
+INFO:root:step 23520 : loss -0.002682919924457868 | lr 0.002
+INFO:root:cur target prediction: 0.5312638878822327
+INFO:root:sampling....
+INFO:root:count in: 48
+INFO:root:step 23569 : loss -0.0026087326308091483 | lr 0.002
+INFO:root:cur target prediction: 0.5309308767318726
+INFO:root:sampling....
+INFO:root:count in: 48
+INFO:root:step 23618 : loss -0.002580867148935795 | lr 0.002
+INFO:root:cur target prediction: 0.5308718681335449
+INFO:root:sampling....
+INFO:root:count in: 48
+INFO:root:step 23667 : loss -0.002575938900311788 | lr 0.002
+INFO:root:cur target prediction: 0.5305939316749573
+INFO:root:sampling....
+INFO:root:count in: 48
+INFO:root:step 23716 : loss -0.0025526837756236396 | lr 0.002
+INFO:root:cur target prediction: 0.5302875638008118
+INFO:root:sampling....
+INFO:root:count in: 48
+INFO:root:step 23765 : loss -0.0025270593663056693 | lr 0.002
+INFO:root:cur target prediction: 0.529945433139801
+INFO:root:sampling....
+INFO:root:count in: 48
+INFO:root:step 23814 : loss -0.0024984472741683326 | lr 0.002
+INFO:root:cur target prediction: 0.5301244258880615
+INFO:root:sampling....
+INFO:root:count in: 48
+INFO:root:step 23863 : loss -0.002513414559264978 | lr 0.002
+INFO:root:cur target prediction: 0.5294978618621826
+INFO:root:sampling....
+INFO:root:count in: 48
+INFO:root:step 23912 : loss -0.002461016488571962 | lr 0.002
+INFO:root:cur target prediction: 0.52897709608078
+INFO:root:sampling....
+INFO:root:count in: 48
+INFO:root:step 23961 : loss -0.0024174718807140985 | lr 0.002
+INFO:root:cur target prediction: 0.5290238261222839
+INFO:root:sampling....
+INFO:root:count in: 48
+INFO:root:step 24010 : loss -0.002421378313253323 | lr 0.002
+INFO:root:cur target prediction: 0.528300404548645
+INFO:root:sampling....
+INFO:root:count in: 48
+INFO:root:step 24059 : loss -0.0023608931029836335 | lr 0.002
+INFO:root:cur target prediction: 0.5281708240509033
+INFO:root:sampling....
+INFO:root:count in: 48
+INFO:root:step 24108 : loss -0.002350062131881714 | lr 0.002
+INFO:root:cur target prediction: 0.5279368162155151
+INFO:root:sampling....
+INFO:root:count in: 48
+INFO:root:step 24157 : loss -0.002330502805610498 | lr 0.002
+INFO:root:cur target prediction: 0.52866131067276
+INFO:root:sampling....
+INFO:root:count in: 48
+INFO:root:step 24206 : loss -0.0023910648499925933 | lr 0.002
+INFO:root:cur target prediction: 0.5281203389167786
+INFO:root:sampling....
+INFO:root:count in: 48
+INFO:root:step 24255 : loss -0.002345842309296131 | lr 0.002
+INFO:root:cur target prediction: 0.5281796455383301
+INFO:root:sampling....
+INFO:root:count in: 48
+INFO:root:step 24304 : loss -0.0023507989632586637 | lr 0.002
+INFO:root:cur target prediction: 0.528214156627655
+INFO:root:sampling....
+INFO:root:count in: 48
+INFO:root:step 24353 : loss -0.002353683424492677 | lr 0.002
+INFO:root:cur target prediction: 0.5281859040260315
+INFO:root:sampling....
+INFO:root:count in: 48
+INFO:root:step 24402 : loss -0.0023513155368467173 | lr 0.002
+INFO:root:cur target prediction: 0.5278925895690918
+INFO:root:sampling....
+INFO:root:count in: 48
+INFO:root:step 24451 : loss -0.002326800643155972 | lr 0.002
+INFO:root:cur target prediction: 0.5278388261795044
+INFO:root:sampling....
+INFO:root:count in: 48
+INFO:root:step 24500 : loss -0.0023223116683463254 | lr 0.002
+INFO:root:cur target prediction: 0.5284252166748047
+INFO:root:sampling....
+INFO:root:count in: 48
+INFO:root:step 24549 : loss -0.0023713341603676477 | lr 0.002
+INFO:root:cur target prediction: 0.5278399586677551
+INFO:root:sampling....
+INFO:root:count in: 48
+INFO:root:step 24598 : loss -0.002322401230533918 | lr 0.002
+INFO:root:cur target prediction: 0.5277834534645081
+INFO:root:sampling....
+INFO:root:count in: 48
+INFO:root:step 24647 : loss -0.0023176753893494606 | lr 0.002
+INFO:root:cur target prediction: 0.5272249579429626
+INFO:root:sampling....
+INFO:root:count in: 48
+INFO:root:step 24696 : loss -0.002270987257361412 | lr 0.002
+INFO:root:cur target prediction: 0.5271667838096619
+INFO:root:sampling....
+INFO:root:count in: 48
+INFO:root:step 24745 : loss -0.002266134135425091 | lr 0.002
+INFO:root:cur target prediction: 0.5266776084899902
+INFO:root:sampling....
+INFO:root:count in: 48
+INFO:root:step 24794 : loss -0.0022252509370446205 | lr 0.002
+INFO:root:cur target prediction: 0.5269179940223694
+INFO:root:sampling....
+INFO:root:count in: 48
+INFO:root:step 24843 : loss -0.00224533723667264 | lr 0.002
+INFO:root:cur target prediction: 0.526698112487793
+INFO:root:sampling....
+INFO:root:count in: 48
+INFO:root:step 24892 : loss -0.0022269664332270622 | lr 0.002
+INFO:root:cur target prediction: 0.5267137289047241
+INFO:root:sampling....
+INFO:root:count in: 48
+INFO:root:step 24941 : loss -0.0022282667147616544 | lr 0.002
+INFO:root:cur target prediction: 0.5263438820838928
+INFO:root:sampling....
+INFO:root:count in: 48
+INFO:root:step 24990 : loss -0.0021973635690907636 | lr 0.002
+INFO:root:cur target prediction: 0.5263978242874146
+INFO:root:sampling....
+INFO:root:count in: 48
+INFO:root:step 25039 : loss -0.002201863874991735 | lr 0.002
+INFO:root:cur target prediction: 0.5265398621559143
+INFO:root:sampling....
+INFO:root:count in: 48
+INFO:root:step 25088 : loss -0.002213739790022373 | lr 0.002
+INFO:root:cur target prediction: 0.5268979668617249
+INFO:root:sampling....
+INFO:root:count in: 48
+INFO:root:step 25137 : loss -0.00224367498109738 | lr 0.002
+INFO:root:cur target prediction: 0.5275359153747559
+INFO:root:sampling....
+INFO:root:count in: 48
+INFO:root:step 25186 : loss -0.0022969904045263925 | lr 0.002
+INFO:root:cur target prediction: 0.5276183485984802
+INFO:root:sampling....
+INFO:root:count in: 48
+INFO:root:step 25235 : loss -0.0023038784662882486 | lr 0.002
+INFO:root:cur target prediction: 0.5273704528808594
+INFO:root:sampling....
+INFO:root:count in: 48
+INFO:root:step 25284 : loss -0.0022831537450353303 | lr 0.002
+INFO:root:cur target prediction: 0.5272324681282043
+INFO:root:sampling....
+INFO:root:count in: 48
+INFO:root:step 25333 : loss -0.002271628472954035 | lr 0.002
+INFO:root:cur target prediction: 0.5272948741912842
+INFO:root:sampling....
+INFO:root:count in: 48
+INFO:root:step 25382 : loss -0.002276841551065445 | lr 0.002
+INFO:root:cur target prediction: 0.5273469090461731
+INFO:root:sampling....
+INFO:root:count in: 48
+INFO:root:step 25431 : loss -0.002281184929112593 | lr 0.002
+INFO:root:cur target prediction: 0.5273042917251587
+INFO:root:sampling....
+INFO:root:count in: 48
+INFO:root:step 25480 : loss -0.002277632554372152 | lr 0.002
+INFO:root:cur target prediction: 0.5271942615509033
+INFO:root:sampling....
+INFO:root:count in: 48
+INFO:root:step 25529 : loss -0.0022684309321145215 | lr 0.002
+INFO:root:cur target prediction: 0.5266807079315186
+INFO:root:sampling....
+INFO:root:count in: 48
+INFO:root:step 25578 : loss -0.0022255067403117814 | lr 0.002
+INFO:root:cur target prediction: 0.5266619324684143
+INFO:root:sampling....
+INFO:root:count in: 48
+INFO:root:step 25627 : loss -0.0022239387035369873 | lr 0.002
+INFO:root:cur target prediction: 0.526633620262146
+INFO:root:sampling....
+INFO:root:count in: 48
+INFO:root:step 25676 : loss -0.0022215723680953183 | lr 0.002
+INFO:root:cur target prediction: 0.526758074760437
+INFO:root:sampling....
+INFO:root:count in: 48
+INFO:root:step 25725 : loss -0.0022319763277967772 | lr 0.002
+INFO:root:cur target prediction: 0.5268121957778931
+INFO:root:sampling....
+INFO:root:count in: 48
+INFO:root:step 25774 : loss -0.0022364966571331024 | lr 0.002
+INFO:root:cur target prediction: 0.5264061093330383
+INFO:root:sampling....
+INFO:root:count in: 48
+INFO:root:step 25823 : loss -0.0022025592625141144 | lr 0.002
+INFO:root:cur target prediction: 0.5257951021194458
+INFO:root:sampling....
+INFO:root:count in: 48
+INFO:root:step 25872 : loss -0.0021515021411081157 | lr 0.002
+INFO:root:cur target prediction: 0.5255613327026367
+INFO:root:sampling....
+INFO:root:count in: 48
+INFO:root:step 25921 : loss -0.0021319667187829814 | lr 0.002
+INFO:root:cur target prediction: 0.525202751159668
+INFO:root:sampling....
+INFO:root:count in: 48
+INFO:root:step 25970 : loss -0.0021020135221381984 | lr 0.002
+INFO:root:cur target prediction: 0.5247942805290222
+INFO:root:sampling....
+INFO:root:count in: 48
+INFO:root:step 26019 : loss -0.0020678921913107238 | lr 0.002
+INFO:root:cur target prediction: 0.5246292948722839
+INFO:root:sampling....
+INFO:root:count in: 48
+INFO:root:step 26068 : loss -0.0020541024083892503 | lr 0.002
+INFO:root:cur target prediction: 0.5252598524093628
+INFO:root:sampling....
+INFO:root:count in: 48
+INFO:root:step 26117 : loss -0.002106783911585808 | lr 0.002
+INFO:root:cur target prediction: 0.5251842737197876
+INFO:root:sampling....
+INFO:root:count in: 48
+INFO:root:step 26166 : loss -0.002100472648938497 | lr 0.002
+INFO:root:cur target prediction: 0.5251003503799438
+INFO:root:sampling....
+INFO:root:count in: 48
+INFO:root:step 26215 : loss -0.002093456375102202 | lr 0.002
+INFO:root:cur target prediction: 0.5248163938522339
+INFO:root:sampling....
+INFO:root:count in: 48
+INFO:root:step 26264 : loss -0.002069732795159022 | lr 0.002
+INFO:root:cur target prediction: 0.5242565870285034
+INFO:root:sampling....
+INFO:root:count in: 48
+INFO:root:step 26313 : loss -0.0020229752796391645 | lr 0.002
+INFO:root:cur target prediction: 0.5242222547531128
+INFO:root:sampling....
+INFO:root:count in: 48
+INFO:root:step 26362 : loss -0.0020201074269910655 | lr 0.002
+INFO:root:cur target prediction: 0.5240375399589539
+INFO:root:sampling....
+INFO:root:count in: 48
+INFO:root:step 26411 : loss -0.0020046760328114033 | lr 0.002
+INFO:root:cur target prediction: 0.524143397808075
+INFO:root:sampling....
+INFO:root:count in: 48
+INFO:root:step 26460 : loss -0.0020135194063186646 | lr 0.002
+INFO:root:cur target prediction: 0.523959219455719
+INFO:root:sampling....
+INFO:root:count in: 48
+INFO:root:step 26509 : loss -0.001998137372235457 | lr 0.002
+INFO:root:cur target prediction: 0.5240209698677063
+INFO:root:sampling....
+INFO:root:count in: 48
+INFO:root:step 26558 : loss -0.0020032968992988267 | lr 0.002
+INFO:root:cur target prediction: 0.5242241621017456
+INFO:root:sampling....
+INFO:root:count in: 48
+INFO:root:step 26607 : loss -0.002020265907049179 | lr 0.002
+INFO:root:cur target prediction: 0.5243578553199768
+INFO:root:sampling....
+INFO:root:count in: 48
+INFO:root:step 26656 : loss -0.0020314285842080912 | lr 0.002
+INFO:root:cur target prediction: 0.5244830250740051
+INFO:root:sampling....
+INFO:root:count in: 48
+INFO:root:step 26705 : loss -0.0020418941664199033 | lr 0.002
+INFO:root:cur target prediction: 0.524667501449585
+INFO:root:sampling....
+INFO:root:count in: 48
+INFO:root:step 26754 : loss -0.0020572987074653306 | lr 0.002
+INFO:root:cur target prediction: 0.5243762135505676
+INFO:root:sampling....
+INFO:root:count in: 48
+INFO:root:step 26803 : loss -0.00203296464557449 | lr 0.002
+INFO:root:cur target prediction: 0.5241544246673584
+INFO:root:sampling....
+INFO:root:count in: 48
+INFO:root:step 26852 : loss -0.0020144417261083922 | lr 0.002
+INFO:root:cur target prediction: 0.524438202381134
+INFO:root:sampling....
+INFO:root:count in: 48
+INFO:root:step 26901 : loss -0.0020381417125463486 | lr 0.002
+INFO:root:cur target prediction: 0.5235046148300171
+INFO:root:sampling....
+INFO:root:count in: 48
+INFO:root:step 26950 : loss -0.0019601724731425443 | lr 0.002
+INFO:root:cur target prediction: 0.5232114791870117
+INFO:root:sampling....
+INFO:root:count in: 48
+INFO:root:step 26999 : loss -0.0019356848982473214 | lr 0.002
+INFO:root:cur target prediction: 0.5227893590927124
+INFO:root:sampling....
+INFO:root:count in: 48
+INFO:root:step 27048 : loss -0.0019004374432067077 | lr 0.002
+INFO:root:cur target prediction: 0.5224195122718811
+INFO:root:sampling....
+INFO:root:count in: 48
+INFO:root:step 27097 : loss -0.0018695471808314323 | lr 0.002
+INFO:root:cur target prediction: 0.5221192240715027
+INFO:root:sampling....
+INFO:root:count in: 48
+INFO:root:step 27146 : loss -0.0018444821859399478 | lr 0.002
+INFO:root:cur target prediction: 0.5218412280082703
+INFO:root:sampling....
+INFO:root:count in: 48
+INFO:root:step 27195 : loss -0.0018212658663590748 | lr 0.002
+INFO:root:cur target prediction: 0.5218512415885925
+INFO:root:sampling....
+INFO:root:count in: 48
+INFO:root:step 27244 : loss -0.0018220978478590648 | lr 0.002
+INFO:root:cur target prediction: 0.5216084718704224
+INFO:root:sampling....
+INFO:root:count in: 48
+INFO:root:step 27293 : loss -0.0018018352178235848 | lr 0.002
+INFO:root:cur target prediction: 0.5220428109169006
+INFO:root:sampling....
+INFO:root:count in: 48
+INFO:root:step 27342 : loss -0.0018380942444006603 | lr 0.002
+INFO:root:cur target prediction: 0.5216886401176453
+INFO:root:sampling....
+INFO:root:count in: 48
+INFO:root:step 27391 : loss -0.0018085290988286336 | lr 0.002
+INFO:root:cur target prediction: 0.5212946534156799
+INFO:root:sampling....
+INFO:root:count in: 48
+INFO:root:step 27440 : loss -0.0017756296632190545 | lr 0.002
+INFO:root:cur target prediction: 0.5210821628570557
+INFO:root:sampling....
+INFO:root:count in: 48
+INFO:root:step 27489 : loss -0.0017578912278016408 | lr 0.002
+INFO:root:cur target prediction: 0.5211242437362671
+INFO:root:sampling....
+INFO:root:count in: 48
+INFO:root:step 27538 : loss -0.0017613984333972137 | lr 0.002
+INFO:root:cur target prediction: 0.5206531286239624
+INFO:root:sampling....
+INFO:root:count in: 48
+INFO:root:step 27587 : loss -0.001722076131651799 | lr 0.002
+INFO:root:cur target prediction: 0.520679235458374
+INFO:root:sampling....
+INFO:root:count in: 48
+INFO:root:step 27636 : loss -0.0017242520116269588 | lr 0.002
+INFO:root:cur target prediction: 0.5201607346534729
+INFO:root:sampling....
+INFO:root:count in: 48
+INFO:root:step 27685 : loss -0.0016809770216544468 | lr 0.002
+INFO:root:cur target prediction: 0.5193089842796326
+INFO:root:sampling....
+INFO:root:count in: 48
+INFO:root:step 27734 : loss -0.0016098834263781707 | lr 0.002
+INFO:root:cur target prediction: 0.5193670988082886
+INFO:root:sampling....
+INFO:root:count in: 48
+INFO:root:step 27783 : loss -0.0016147394975026448 | lr 0.002
+INFO:root:cur target prediction: 0.5193994045257568
+INFO:root:sampling....
+INFO:root:count in: 48
+INFO:root:step 27832 : loss -0.0016174339689314365 | lr 0.002
+INFO:root:cur target prediction: 0.518826961517334
+INFO:root:sampling....
+INFO:root:count in: 48
+INFO:root:step 27881 : loss -0.0015696633296708267 | lr 0.002
+INFO:root:cur target prediction: 0.5184682607650757
+INFO:root:sampling....
+INFO:root:count in: 48
+INFO:root:step 27930 : loss -0.001539725810289383 | lr 0.002
+INFO:root:cur target prediction: 0.5180057287216187
+INFO:root:sampling....
+INFO:root:count in: 48
+INFO:root:step 27979 : loss -0.0015011271461844444 | lr 0.002
+INFO:root:cur target prediction: 0.5176575779914856
+INFO:root:sampling....
+INFO:root:count in: 48
+INFO:root:step 28028 : loss -0.0014720801264047623 | lr 0.002
+INFO:root:cur target prediction: 0.5179519653320312
+INFO:root:sampling....
+INFO:root:count in: 48
+INFO:root:step 28077 : loss -0.001496637084831794 | lr 0.002
+INFO:root:cur target prediction: 0.517355740070343
+INFO:root:sampling....
+INFO:root:count in: 48
+INFO:root:step 28126 : loss -0.001446899337073167 | lr 0.002
+INFO:root:cur target prediction: 0.517906129360199
+INFO:root:sampling....
+INFO:root:count in: 48
+INFO:root:step 28175 : loss -0.0014928213010231655 | lr 0.002
+INFO:root:cur target prediction: 0.5176254510879517
+INFO:root:sampling....
+INFO:root:count in: 48
+INFO:root:step 28224 : loss -0.001469405988852183 | lr 0.002
+INFO:root:cur target prediction: 0.5171911716461182
+INFO:root:sampling....
+INFO:root:count in: 48
+INFO:root:step 28273 : loss -0.0014331683826943238 | lr 0.002
+INFO:root:cur target prediction: 0.5173889994621277
+INFO:root:sampling....
+INFO:root:count in: 48
+INFO:root:step 28322 : loss -0.0014496765409906704 | lr 0.002
+INFO:root:cur target prediction: 0.5175212025642395
+INFO:root:sampling....
+INFO:root:count in: 48
+INFO:root:step 28371 : loss -0.0014606984332203865 | lr 0.002
+INFO:root:cur target prediction: 0.5175784230232239
+INFO:root:sampling....
+INFO:root:count in: 48
+INFO:root:step 28420 : loss -0.0014654754971464474 | lr 0.002
+INFO:root:cur target prediction: 0.5173187851905823
+INFO:root:sampling....
+INFO:root:count in: 48
+INFO:root:step 28469 : loss -0.0014438070356845856 | lr 0.002
+INFO:root:cur target prediction: 0.5166572332382202
+INFO:root:sampling....
+INFO:root:count in: 48
+INFO:root:step 28518 : loss -0.0013886174807945888 | lr 0.002
+INFO:root:cur target prediction: 0.5163756608963013
+INFO:root:sampling....
+INFO:root:count in: 48
+INFO:root:step 28567 : loss -0.001365130456785361 | lr 0.002
+INFO:root:cur target prediction: 0.516327440738678
+INFO:root:sampling....
+INFO:root:count in: 48
+INFO:root:step 28616 : loss -0.0013611049701770146 | lr 0.002
+INFO:root:cur target prediction: 0.5166429877281189
+INFO:root:sampling....
+INFO:root:count in: 48
+INFO:root:step 28665 : loss -0.0013874278714259465 | lr 0.002
+INFO:root:cur target prediction: 0.5167128443717957
+INFO:root:sampling....
+INFO:root:count in: 48
+INFO:root:step 28714 : loss -0.0013932615208129089 | lr 0.002
+INFO:root:cur target prediction: 0.5164771676063538
+INFO:root:sampling....
+INFO:root:count in: 48
+INFO:root:step 28763 : loss -0.0013736009908219178 | lr 0.002
+INFO:root:cur target prediction: 0.516330361366272
+INFO:root:sampling....
+INFO:root:count in: 48
+INFO:root:step 28812 : loss -0.0013613531676431496 | lr 0.002
+INFO:root:cur target prediction: 0.5158919095993042
+INFO:root:sampling....
+INFO:root:count in: 48
+INFO:root:step 28861 : loss -0.0013247720586756866 | lr 0.002
+INFO:root:cur target prediction: 0.5156456232070923
+INFO:root:sampling....
+INFO:root:count in: 48
+INFO:root:step 28910 : loss -0.0013042334467172623 | lr 0.002
+INFO:root:cur target prediction: 0.5155287981033325
+INFO:root:sampling....
+INFO:root:count in: 48
+INFO:root:step 28959 : loss -0.0012944877768556278 | lr 0.002
+INFO:root:cur target prediction: 0.5155995488166809
+INFO:root:sampling....
+INFO:root:count in: 48
+INFO:root:step 29008 : loss -0.0013003908097743988 | lr 0.002
+INFO:root:cur target prediction: 0.515773355960846
+INFO:root:sampling....
+INFO:root:count in: 48
+INFO:root:step 29057 : loss -0.0013148840516805649 | lr 0.002
+INFO:root:cur target prediction: 0.5154271721839905
+INFO:root:sampling....
+INFO:root:count in: 48
+INFO:root:step 29106 : loss -0.001286009792238474 | lr 0.002
+INFO:root:cur target prediction: 0.5146138668060303
+INFO:root:sampling....
+INFO:root:count in: 48
+INFO:root:step 29155 : loss -0.0012181756707529228 | lr 0.002
+INFO:root:cur target prediction: 0.5146586298942566
+INFO:root:sampling....
+INFO:root:count in: 48
+INFO:root:step 29204 : loss -0.0012219068594276905 | lr 0.002
+INFO:root:cur target prediction: 0.515504777431488
+INFO:root:sampling....
+INFO:root:count in: 48
+INFO:root:step 29253 : loss -0.0012924849676589172 | lr 0.002
+INFO:root:cur target prediction: 0.5156799554824829
+INFO:root:sampling....
+INFO:root:count in: 48
+INFO:root:step 29302 : loss -0.001307092762241761 | lr 0.002
+INFO:root:cur target prediction: 0.5162198543548584
+INFO:root:sampling....
+INFO:root:count in: 48
+INFO:root:step 29351 : loss -0.0013521344711383183 | lr 0.002
+INFO:root:cur target prediction: 0.5158746242523193
+INFO:root:sampling....
+INFO:root:count in: 48
+INFO:root:step 29400 : loss -0.001323337045808633 | lr 0.002
+INFO:root:cur target prediction: 0.5157729387283325
+INFO:root:sampling....
+INFO:root:count in: 48
+INFO:root:step 29449 : loss -0.0013148497479657333 | lr 0.002
+INFO:root:cur target prediction: 0.515608549118042
+INFO:root:sampling....
+INFO:root:count in: 48
+INFO:root:step 29498 : loss -0.0013011409901082516 | lr 0.002
+INFO:root:cur target prediction: 0.5159594416618347
+INFO:root:sampling....
+INFO:root:count in: 48
+INFO:root:step 29547 : loss -0.0013304068706929684 | lr 0.002
+INFO:root:cur target prediction: 0.5161125063896179
+INFO:root:sampling....
+INFO:root:count in: 48
+INFO:root:step 29596 : loss -0.0013431782523790996 | lr 0.002
+INFO:root:cur target prediction: 0.5156390070915222
+INFO:root:sampling....
+INFO:root:count in: 48
+INFO:root:step 29645 : loss -0.001303676360597213 | lr 0.002
+INFO:root:cur target prediction: 0.5158606171607971
+INFO:root:sampling....
+INFO:root:count in: 48
+INFO:root:step 29694 : loss -0.001322163889805476 | lr 0.002
+INFO:root:cur target prediction: 0.5156398415565491
+INFO:root:sampling....
+INFO:root:count in: 48
+INFO:root:step 29743 : loss -0.0013037479172150295 | lr 0.002
+INFO:root:cur target prediction: 0.5165905356407166
+INFO:root:sampling....
+INFO:root:count in: 48
+INFO:root:step 29792 : loss -0.0013830526731908321 | lr 0.002
+INFO:root:cur target prediction: 0.5164000391960144
+INFO:root:sampling....
+INFO:root:count in: 48
+INFO:root:step 29841 : loss -0.0013671681905786197 | lr 0.002
+INFO:root:cur target prediction: 0.5167666077613831
+INFO:root:sampling....
+INFO:root:count in: 48
+INFO:root:step 29890 : loss -0.001397740716735522 | lr 0.002
+INFO:root:cur target prediction: 0.5168840289115906
+INFO:root:sampling....
+INFO:root:count in: 48
+INFO:root:step 29939 : loss -0.001407541489849488 | lr 0.002
+INFO:root:cur target prediction: 0.5156121253967285
+INFO:root:sampling....
+INFO:root:count in: 48
+INFO:root:step 29988 : loss -0.0013014409535874922 | lr 0.002
+INFO:root:cur target prediction: 0.5158931016921997
+INFO:root:sampling....
+INFO:root:count in: 48
+INFO:root:step 30037 : loss -0.0013248749698201816 | lr 0.002
+INFO:root:cur target prediction: 0.5160618424415588
+INFO:root:sampling....
+INFO:root:count in: 48
+INFO:root:step 30086 : loss -0.0013389581193526585 | lr 0.002
+INFO:root:cur target prediction: 0.5157692432403564
+INFO:root:sampling....
+INFO:root:count in: 48
+INFO:root:step 30135 : loss -0.0013145464472472668 | lr 0.002
+INFO:root:cur target prediction: 0.515781044960022
+INFO:root:sampling....
+INFO:root:count in: 48
+INFO:root:step 30184 : loss -0.0013155251120527585 | lr 0.002
+INFO:root:cur target prediction: 0.5154895186424255
+INFO:root:sampling....
+INFO:root:count in: 48
+INFO:root:step 30233 : loss -0.0012912116168687742 | lr 0.002
+INFO:root:cur target prediction: 0.5153926610946655
+INFO:root:sampling....
+INFO:root:count in: 48
+INFO:root:step 30282 : loss -0.0012831333248565595 | lr 0.002
+INFO:root:cur target prediction: 0.5153279900550842
+INFO:root:sampling....
+INFO:root:count in: 48
+INFO:root:step 30331 : loss -0.0012777427521844704 | lr 0.002
+INFO:root:cur target prediction: 0.5141507387161255
+INFO:root:sampling....
+INFO:root:count in: 48
+INFO:root:step 30380 : loss -0.001179549687852462 | lr 0.002
+INFO:root:cur target prediction: 0.5140687227249146
+INFO:root:sampling....
+INFO:root:count in: 48
+INFO:root:step 30429 : loss -0.0011727033803860347 | lr 0.002
+INFO:root:cur target prediction: 0.514163613319397
+INFO:root:sampling....
+INFO:root:count in: 48
+INFO:root:step 30478 : loss -0.0011806223386277754 | lr 0.002
+INFO:root:cur target prediction: 0.5137893557548523
+INFO:root:sampling....
+INFO:root:count in: 48
+INFO:root:step 30527 : loss -0.0011494068894535303 | lr 0.002
+INFO:root:cur target prediction: 0.5140218138694763
+INFO:root:sampling....
+INFO:root:count in: 48
+INFO:root:step 30576 : loss -0.0011687935329973698 | lr 0.002
+INFO:root:cur target prediction: 0.5135317444801331
+INFO:root:sampling....
+INFO:root:count in: 48
+INFO:root:step 30625 : loss -0.0011279215880980094 | lr 0.002
+INFO:root:cur target prediction: 0.5133035778999329
+INFO:root:sampling....
+INFO:root:count in: 48
+INFO:root:step 30674 : loss -0.0011088968409846227 | lr 0.002
+INFO:root:cur target prediction: 0.5135037899017334
+INFO:root:sampling....
+INFO:root:count in: 48
+INFO:root:step 30723 : loss -0.0011255949114759762 | lr 0.002
+INFO:root:cur target prediction: 0.5137176513671875
+INFO:root:sampling....
+INFO:root:count in: 48
+INFO:root:step 30772 : loss -0.0011434298940002918 | lr 0.002
+INFO:root:cur target prediction: 0.5134880542755127
+INFO:root:sampling....
+INFO:root:count in: 48
+INFO:root:step 30821 : loss -0.0011242864032586415 | lr 0.002
+INFO:root:cur target prediction: 0.5130977034568787
+INFO:root:sampling....
+INFO:root:count in: 48
+INFO:root:step 30870 : loss -0.001091731945052743 | lr 0.002
+INFO:root:cur target prediction: 0.5127782821655273
+INFO:root:sampling....
+INFO:root:count in: 48
+INFO:root:step 30919 : loss -0.0010650901434322198 | lr 0.002
+INFO:root:cur target prediction: 0.5121076107025146
+INFO:root:sampling....
+INFO:root:count in: 48
+INFO:root:step 30968 : loss -0.0010091643780469894 | lr 0.002
+INFO:root:cur target prediction: 0.512546718120575
+INFO:root:sampling....
+INFO:root:count in: 48
+INFO:root:step 31017 : loss -0.0010457780833045642 | lr 0.002
+INFO:root:cur target prediction: 0.5127078294754028
+INFO:root:sampling....
+INFO:root:count in: 48
+INFO:root:step 31066 : loss -0.0010592158262928326 | lr 0.002
+INFO:root:cur target prediction: 0.512019693851471
+INFO:root:sampling....
+INFO:root:count in: 48
+INFO:root:step 31115 : loss -0.001001836887250344 | lr 0.002
+INFO:root:cur target prediction: 0.511023223400116
+INFO:root:sampling....
+INFO:root:count in: 48
+INFO:root:step 31164 : loss -0.0009187618270516396 | lr 0.002
+INFO:root:cur target prediction: 0.5113334655761719
+INFO:root:sampling....
+INFO:root:count in: 48
+INFO:root:step 31213 : loss -0.0009446260519325733 | lr 0.002
+INFO:root:cur target prediction: 0.5111746788024902
+INFO:root:sampling....
+INFO:root:count in: 48
+INFO:root:step 31262 : loss -0.0009313824897011121 | lr 0.002
+INFO:root:cur target prediction: 0.5112435221672058
+INFO:root:sampling....
+INFO:root:count in: 48
+INFO:root:step 31311 : loss -0.0009371166427930196 | lr 0.002
+INFO:root:cur target prediction: 0.5110345482826233
+INFO:root:sampling....
+INFO:root:count in: 48
+INFO:root:step 31360 : loss -0.000919700600206852 | lr 0.002
+INFO:root:cur target prediction: 0.510377049446106
+INFO:root:sampling....
+INFO:root:count in: 48
+INFO:root:step 31409 : loss -0.0008648785296827555 | lr 0.002
+INFO:root:cur target prediction: 0.5103563070297241
+INFO:root:sampling....
+INFO:root:count in: 48
+INFO:root:step 31458 : loss -0.0008631537978847822 | lr 0.002
+INFO:root:cur target prediction: 0.5104321837425232
+INFO:root:sampling....
+INFO:root:count in: 48
+INFO:root:step 31507 : loss -0.0008694827556610107 | lr 0.002
+INFO:root:cur target prediction: 0.5104763507843018
+INFO:root:sampling....
+INFO:root:count in: 48
+INFO:root:step 31556 : loss -0.0008731552710135778 | lr 0.002
+INFO:root:cur target prediction: 0.5108156204223633
+INFO:root:sampling....
+INFO:root:count in: 48
+INFO:root:step 31605 : loss -0.000901446600134174 | lr 0.002
+INFO:root:cur target prediction: 0.5108928084373474
+INFO:root:sampling....
+INFO:root:count in: 48
+INFO:root:step 31654 : loss -0.0009078853763639927 | lr 0.002
+INFO:root:cur target prediction: 0.5102941989898682
+INFO:root:sampling....
+INFO:root:count in: 48
+INFO:root:step 31703 : loss -0.0008579751787086328 | lr 0.002
+INFO:root:cur target prediction: 0.5097157955169678
+INFO:root:sampling....
+INFO:root:count in: 48
+INFO:root:step 31752 : loss -0.0008097545554240545 | lr 0.002
+INFO:root:cur target prediction: 0.5099324584007263
+INFO:root:sampling....
+INFO:root:count in: 48
+INFO:root:step 31801 : loss -0.0008278156941135725 | lr 0.002
+INFO:root:cur target prediction: 0.5099225044250488
+INFO:root:sampling....
+INFO:root:count in: 48
+INFO:root:step 31850 : loss -0.0008269958198070526 | lr 0.002
+INFO:root:cur target prediction: 0.5103151798248291
+INFO:root:sampling....
+INFO:root:count in: 48
+INFO:root:step 31899 : loss -0.0008597234264016151 | lr 0.002
+INFO:root:cur target prediction: 0.5109795928001404
+INFO:root:sampling....
+INFO:root:count in: 48
+INFO:root:step 31948 : loss -0.0009151103440672159 | lr 0.002
+INFO:root:cur target prediction: 0.5103500485420227
+INFO:root:sampling....
+INFO:root:count in: 48
+INFO:root:step 31997 : loss -0.0008626308602591356 | lr 0.002
+INFO:root:cur target prediction: 0.5100535750389099
+INFO:root:sampling....
+INFO:root:count in: 48
+INFO:root:step 32046 : loss -0.0008379134039084116 | lr 0.002
+INFO:root:cur target prediction: 0.5098960399627686
+INFO:root:sampling....
+INFO:root:count in: 48
+INFO:root:step 32095 : loss -0.0008247847047944864 | lr 0.002
+INFO:root:cur target prediction: 0.5100215077400208
+INFO:root:sampling....
+INFO:root:count in: 48
+INFO:root:step 32144 : loss -0.0008352407409499089 | lr 0.002
+INFO:root:cur target prediction: 0.5104777812957764
+INFO:root:sampling....
+INFO:root:count in: 48
+INFO:root:step 32193 : loss -0.0008732820861041546 | lr 0.002
+INFO:root:cur target prediction: 0.510114848613739
+INFO:root:sampling....
+INFO:root:count in: 48
+INFO:root:step 32242 : loss -0.000843020078415672 | lr 0.002
+INFO:root:cur target prediction: 0.5091862082481384
+INFO:root:sampling....
+INFO:root:count in: 48
+INFO:root:step 32291 : loss -0.0007656082355727752 | lr 0.002
+INFO:root:cur target prediction: 0.5092388391494751
+INFO:root:sampling....
+INFO:root:count in: 48
+INFO:root:step 32340 : loss -0.0007699960842728615 | lr 0.002
+INFO:root:cur target prediction: 0.5084829926490784
+INFO:root:sampling....
+INFO:root:count in: 48
+INFO:root:step 32389 : loss -0.0007069849719603857 | lr 0.002
+INFO:root:cur target prediction: 0.5084147453308105
+INFO:root:sampling....
+INFO:root:count in: 48
+INFO:root:step 32438 : loss -0.0007012979282687107 | lr 0.002
+INFO:root:cur target prediction: 0.5084645748138428
+INFO:root:sampling....
+INFO:root:count in: 48
+INFO:root:step 32487 : loss -0.0007054565940052271 | lr 0.002
+INFO:root:cur target prediction: 0.5085321068763733
+INFO:root:sampling....
+INFO:root:count in: 48
+INFO:root:step 32536 : loss -0.0007110883792241415 | lr 0.002
+INFO:root:cur target prediction: 0.5088015198707581
+INFO:root:sampling....
+INFO:root:count in: 48
+INFO:root:step 32585 : loss -0.000733538685987393 | lr 0.002
+INFO:root:cur target prediction: 0.5084214210510254
+INFO:root:sampling....
+INFO:root:count in: 48
+INFO:root:step 32634 : loss -0.0007018564889828364 | lr 0.002
+INFO:root:cur target prediction: 0.5086525082588196
+INFO:root:sampling....
+INFO:root:count in: 48
+INFO:root:step 32683 : loss -0.0007211171711484591 | lr 0.002
+INFO:root:cur target prediction: 0.5083456039428711
+INFO:root:sampling....
+INFO:root:count in: 48
+INFO:root:step 32732 : loss -0.0006955382414162159 | lr 0.002
+INFO:root:cur target prediction: 0.5083292722702026
+INFO:root:sampling....
+INFO:root:count in: 48
+INFO:root:step 32781 : loss -0.0006941718359788259 | lr 0.002
+INFO:root:cur target prediction: 0.5085917711257935
+INFO:root:sampling....
+INFO:root:count in: 48
+INFO:root:step 32830 : loss -0.0007160521733264128 | lr 0.002
+INFO:root:cur target prediction: 0.5088863968849182
+INFO:root:sampling....
+INFO:root:count in: 48
+INFO:root:step 32879 : loss -0.0007406189106404781 | lr 0.002
+INFO:root:cur target prediction: 0.5090934634208679
+INFO:root:sampling....
+INFO:root:count in: 48
+INFO:root:step 32928 : loss -0.0007578800432384014 | lr 0.002
+INFO:root:cur target prediction: 0.5095169544219971
+INFO:root:sampling....
+INFO:root:count in: 48
+INFO:root:step 32977 : loss -0.000793178721020619 | lr 0.002
+INFO:root:cur target prediction: 0.5097134113311768
+INFO:root:sampling....
+INFO:root:count in: 48
+INFO:root:step 33026 : loss -0.0008095494316269954 | lr 0.002
+INFO:root:cur target prediction: 0.5097699165344238
+INFO:root:sampling....
+INFO:root:count in: 48
+INFO:root:step 33075 : loss -0.00081426533870399 | lr 0.002
+INFO:root:cur target prediction: 0.5095758438110352
+INFO:root:sampling....
+INFO:root:count in: 48
+INFO:root:step 33124 : loss -0.0007980900506178538 | lr 0.002
+INFO:root:cur target prediction: 0.509688138961792
+INFO:root:sampling....
+INFO:root:count in: 48
+INFO:root:step 33173 : loss -0.0008074501529335976 | lr 0.002
+INFO:root:cur target prediction: 0.509239912033081
+INFO:root:sampling....
+INFO:root:count in: 48
+INFO:root:step 33222 : loss -0.0007700859569013119 | lr 0.002
+INFO:root:cur target prediction: 0.5084637999534607
+INFO:root:sampling....
+INFO:root:count in: 48
+INFO:root:step 33271 : loss -0.0007053849597771963 | lr 0.002
+INFO:root:cur target prediction: 0.5086398720741272
+INFO:root:sampling....
+INFO:root:count in: 48
+INFO:root:step 33320 : loss -0.0007200653975208601 | lr 0.002
+INFO:root:cur target prediction: 0.5083716511726379
+INFO:root:sampling....
+INFO:root:count in: 48
+INFO:root:step 33369 : loss -0.0006977026350796223 | lr 0.002
+INFO:root:cur target prediction: 0.5074438452720642
+INFO:root:sampling....
+INFO:root:count in: 48
+INFO:root:step 33418 : loss -0.000620370963588357 | lr 0.002
+INFO:root:cur target prediction: 0.5074834823608398
+INFO:root:sampling....
+INFO:root:count in: 48
+INFO:root:step 33467 : loss -0.0006236784781018893 | lr 0.002
+INFO:root:cur target prediction: 0.5080163478851318
+INFO:root:sampling....
+INFO:root:count in: 48
+INFO:root:step 33516 : loss -0.0006680930964648724 | lr 0.002
+INFO:root:cur target prediction: 0.5083364844322205
+INFO:root:sampling....
+INFO:root:count in: 48
+INFO:root:step 33565 : loss -0.0006947772732625405 | lr 0.002
+INFO:root:cur target prediction: 0.5087137222290039
+INFO:root:sampling....
+INFO:root:count in: 48
+INFO:root:step 33614 : loss -0.0007262248545885086 | lr 0.002
+INFO:root:cur target prediction: 0.5085359811782837
+INFO:root:sampling....
+INFO:root:count in: 48
+INFO:root:step 33663 : loss -0.0007114082885285219 | lr 0.002
+INFO:root:cur target prediction: 0.5081512331962585
+INFO:root:sampling....
+INFO:root:count in: 48
+INFO:root:step 33712 : loss -0.0006793312107523283 | lr 0.002
+INFO:root:cur target prediction: 0.5086950063705444
+INFO:root:sampling....
+INFO:root:count in: 48
+INFO:root:step 33761 : loss -0.0007246665190905333 | lr 0.002
+INFO:root:cur target prediction: 0.509498119354248
+INFO:root:sampling....
+INFO:root:count in: 48
+INFO:root:step 33810 : loss -0.0007916091320415338 | lr 0.002
+INFO:root:cur target prediction: 0.5090364813804626
+INFO:root:sampling....
+INFO:root:count in: 48
+INFO:root:step 33859 : loss -0.0007531295220057169 | lr 0.002
+INFO:root:cur target prediction: 0.5099332332611084
+INFO:root:sampling....
+INFO:root:count in: 48
+INFO:root:step 33908 : loss -0.0008278842239330212 | lr 0.002
+INFO:root:cur target prediction: 0.5101802349090576
+INFO:root:sampling....
+INFO:root:count in: 48
+INFO:root:step 33957 : loss -0.0008484819748749336 | lr 0.002
+INFO:root:cur target prediction: 0.5100041031837463
+INFO:root:sampling....
+INFO:root:count in: 48
+INFO:root:step 34006 : loss -0.0008337916806340218 | lr 0.002
+INFO:root:cur target prediction: 0.5101604461669922
+INFO:root:sampling....
+INFO:root:count in: 48
+INFO:root:step 34055 : loss -0.0008468319041033586 | lr 0.002
+INFO:root:cur target prediction: 0.5098021030426025
+INFO:root:sampling....
+INFO:root:count in: 48
+INFO:root:step 34104 : loss -0.0008169529028236866 | lr 0.002
+INFO:root:cur target prediction: 0.5101557374000549
+INFO:root:sampling....
+INFO:root:count in: 48
+INFO:root:step 34153 : loss -0.0008464343845844269 | lr 0.002
+INFO:root:cur target prediction: 0.5100737810134888
+INFO:root:sampling....
+INFO:root:count in: 48
+INFO:root:step 34202 : loss -0.0008396023573974768 | lr 0.002
+INFO:root:cur target prediction: 0.5101470947265625
+INFO:root:sampling....
+INFO:root:count in: 48
+INFO:root:step 34251 : loss -0.0008457124543686708 | lr 0.002
+INFO:root:cur target prediction: 0.5103051066398621
+INFO:root:sampling....
+INFO:root:count in: 48
+INFO:root:step 34300 : loss -0.000858884227151672 | lr 0.002
+INFO:root:cur target prediction: 0.5107213258743286
+INFO:root:sampling....
+INFO:root:count in: 48
+INFO:root:step 34349 : loss -0.0008935836764673392 | lr 0.002
+INFO:root:cur target prediction: 0.5097908973693848
+INFO:root:sampling....
+INFO:root:count in: 48
+INFO:root:step 34398 : loss -0.0008160145177195469 | lr 0.002
+INFO:root:cur target prediction: 0.5088582038879395
+INFO:root:sampling....
+INFO:root:count in: 48
+INFO:root:step 34447 : loss -0.000738261267542839 | lr 0.002
+INFO:root:cur target prediction: 0.5087977647781372
+INFO:root:sampling....
+INFO:root:count in: 48
+INFO:root:step 34496 : loss -0.0007332264600942532 | lr 0.002
+INFO:root:cur target prediction: 0.5082417130470276
+INFO:root:sampling....
+INFO:root:count in: 48
+INFO:root:step 34545 : loss -0.0006868834607303143 | lr 0.002
+INFO:root:cur target prediction: 0.5086773633956909
+INFO:root:sampling....
+INFO:root:count in: 48
+INFO:root:step 34594 : loss -0.0007231902175893387 | lr 0.002
+INFO:root:cur target prediction: 0.5083259344100952
+INFO:root:sampling....
+INFO:root:count in: 48
+INFO:root:step 34643 : loss -0.0006938933705290159 | lr 0.002
+INFO:root:cur target prediction: 0.5070593953132629
+INFO:root:sampling....
+INFO:root:count in: 48
+INFO:root:step 34692 : loss -0.000588329314875106 | lr 0.002
+INFO:root:cur target prediction: 0.5066905617713928
+INFO:root:sampling....
+INFO:root:count in: 48
+INFO:root:step 34741 : loss -0.0005575804583107432 | lr 0.002
+INFO:root:cur target prediction: 0.5067794322967529
+INFO:root:sampling....
+INFO:root:count in: 48
+INFO:root:step 34790 : loss -0.0005649944068863988 | lr 0.002
+INFO:root:cur target prediction: 0.506739616394043
+INFO:root:sampling....
+INFO:root:count in: 48
+INFO:root:step 34839 : loss -0.0005616737374415001 | lr 0.002
+INFO:root:cur target prediction: 0.5070829391479492
+INFO:root:sampling....
+INFO:root:count in: 48
+INFO:root:step 34888 : loss -0.0005902891668180624 | lr 0.002
+INFO:root:cur target prediction: 0.5069765448570251
+INFO:root:sampling....
+INFO:root:count in: 48
+INFO:root:step 34937 : loss -0.0005814237520098686 | lr 0.002
+INFO:root:cur target prediction: 0.506400465965271
+INFO:root:sampling....
+INFO:root:count in: 48
+INFO:root:step 34986 : loss -0.0005334104644134641 | lr 0.002
+INFO:root:cur target prediction: 0.5063002705574036
+INFO:root:sampling....
+INFO:root:count in: 48
+INFO:root:step 35035 : loss -0.0005250560352578759 | lr 0.002
+INFO:root:cur target prediction: 0.505970299243927
+INFO:root:sampling....
+INFO:root:count in: 48
+INFO:root:step 35084 : loss -0.0004975563691308101 | lr 0.002
+INFO:root:cur target prediction: 0.5057158470153809
+INFO:root:sampling....
+INFO:root:count in: 48
+INFO:root:step 35133 : loss -0.000476349222784241 | lr 0.002
+INFO:root:cur target prediction: 0.5056565403938293
+INFO:root:sampling....
+INFO:root:count in: 48
+INFO:root:step 35182 : loss -0.00047140362827728194 | lr 0.002
+INFO:root:cur target prediction: 0.5055516958236694
+INFO:root:sampling....
+INFO:root:count in: 48
+INFO:root:step 35231 : loss -0.0004626708881308635 | lr 0.002
+INFO:root:cur target prediction: 0.5056093335151672
+INFO:root:sampling....
+INFO:root:count in: 48
+INFO:root:step 35280 : loss -0.0004674668113390605 | lr 0.002
+INFO:root:cur target prediction: 0.5055494904518127
+INFO:root:sampling....
+INFO:root:count in: 48
+INFO:root:step 35329 : loss -0.0004624848176414768 | lr 0.002
+INFO:root:cur target prediction: 0.5057157278060913
+INFO:root:sampling....
+INFO:root:count in: 48
+INFO:root:step 35378 : loss -0.0004763413841525714 | lr 0.002
+INFO:root:cur target prediction: 0.5058044791221619
+INFO:root:sampling....
+INFO:root:count in: 48
+INFO:root:step 35427 : loss -0.0004837310407310724 | lr 0.002
+INFO:root:cur target prediction: 0.5053346753120422
+INFO:root:sampling....
+INFO:root:count in: 48
+INFO:root:step 35476 : loss -0.0004445804903904597 | lr 0.002
+INFO:root:cur target prediction: 0.50536048412323
+INFO:root:sampling....
+INFO:root:count in: 48
+INFO:root:step 35525 : loss -0.00044672482181340456 | lr 0.002
+INFO:root:cur target prediction: 0.505176305770874
+INFO:root:sampling....
+INFO:root:count in: 48
+INFO:root:step 35574 : loss -0.00043138097195575636 | lr 0.002
+INFO:root:cur target prediction: 0.5054201483726501
+INFO:root:sampling....
+INFO:root:count in: 48
+INFO:root:step 35623 : loss -0.00045170770802845556 | lr 0.002
+INFO:root:cur target prediction: 0.5053994655609131
+INFO:root:sampling....
+INFO:root:count in: 48
+INFO:root:step 35672 : loss -0.0004499766898031036 | lr 0.002
+INFO:root:cur target prediction: 0.5054342150688171
+INFO:root:sampling....
+INFO:root:count in: 48
+INFO:root:step 35721 : loss -0.0004528722104926904 | lr 0.002
+INFO:root:cur target prediction: 0.5058580040931702
+INFO:root:sampling....
+INFO:root:count in: 48
+INFO:root:step 35770 : loss -0.00048819673247635365 | lr 0.002
+INFO:root:cur target prediction: 0.505605936050415
+INFO:root:sampling....
+INFO:root:count in: 48
+INFO:root:step 35819 : loss -0.00046718163260569173 | lr 0.002
+INFO:root:cur target prediction: 0.5057605504989624
+INFO:root:sampling....
+INFO:root:count in: 48
+INFO:root:step 35868 : loss -0.0004800718743354082 | lr 0.002
+INFO:root:cur target prediction: 0.5059235095977783
+INFO:root:sampling....
+INFO:root:count in: 48
+INFO:root:step 35917 : loss -0.0004936507514988383 | lr 0.002
+INFO:root:cur target prediction: 0.5060025453567505
+INFO:root:sampling....
+INFO:root:count in: 48
+INFO:root:step 35966 : loss -0.0005002392766376337 | lr 0.002
+INFO:root:cur target prediction: 0.5055338740348816
+INFO:root:sampling....
+INFO:root:count in: 48
+INFO:root:step 36015 : loss -0.0004611797242735823 | lr 0.002
+INFO:root:cur target prediction: 0.5057633519172668
+INFO:root:sampling....
+INFO:root:count in: 48
+INFO:root:step 36064 : loss -0.0004803047825892766 | lr 0.002
+INFO:root:cur target prediction: 0.5060282349586487
+INFO:root:sampling....
+INFO:root:count in: 48
+INFO:root:step 36113 : loss -0.0005023820946613947 | lr 0.002
+INFO:root:cur target prediction: 0.5060595870018005
+INFO:root:sampling....
+INFO:root:count in: 48
+INFO:root:step 36162 : loss -0.0005049950753649076 | lr 0.002
+INFO:root:cur target prediction: 0.5062599182128906
+INFO:root:sampling....
+INFO:root:count in: 48
+INFO:root:step 36211 : loss -0.0005216934951022267 | lr 0.002
+INFO:root:cur target prediction: 0.506345808506012
+INFO:root:sampling....
+INFO:root:count in: 48
+INFO:root:step 36260 : loss -0.0005288476046795646 | lr 0.002
+INFO:root:cur target prediction: 0.506651759147644
+INFO:root:sampling....
+INFO:root:count in: 48
+INFO:root:step 36309 : loss -0.0005543528047079841 | lr 0.002
+INFO:root:cur target prediction: 0.5059253573417664
+INFO:root:sampling....
+INFO:root:count in: 48
+INFO:root:step 36358 : loss -0.0004938075629373392 | lr 0.002
+INFO:root:cur target prediction: 0.5056037902832031
+INFO:root:sampling....
+INFO:root:count in: 48
+INFO:root:step 36407 : loss -0.0004670082901914914 | lr 0.002
+INFO:root:cur target prediction: 0.506075918674469
+INFO:root:sampling....
+INFO:root:count in: 48
+INFO:root:step 36456 : loss -0.000506353797391057 | lr 0.002
+INFO:root:cur target prediction: 0.5060061812400818
+INFO:root:sampling....
+INFO:root:count in: 48
+INFO:root:step 36505 : loss -0.0005005442071706057 | lr 0.002
+INFO:root:cur target prediction: 0.5057433247566223
+INFO:root:sampling....
+INFO:root:count in: 48
+INFO:root:step 36554 : loss -0.00047863802562157315 | lr 0.002
+INFO:root:cur target prediction: 0.5048278570175171
+INFO:root:sampling....
+INFO:root:count in: 48
+INFO:root:step 36603 : loss -0.00040233402978628874 | lr 0.002
+INFO:root:cur target prediction: 0.5051658749580383
+INFO:root:sampling....
+INFO:root:count in: 48
+INFO:root:step 36652 : loss -0.0004305066540837288 | lr 0.002
+INFO:root:cur target prediction: 0.5054534673690796
+INFO:root:sampling....
+INFO:root:count in: 48
+INFO:root:step 36701 : loss -0.000454475909161071 | lr 0.002
+INFO:root:cur target prediction: 0.5057327747344971
+INFO:root:sampling....
+INFO:root:count in: 48
+INFO:root:step 36750 : loss -0.0004777595556030671 | lr 0.002
+INFO:root:cur target prediction: 0.5058653950691223
+INFO:root:sampling....
+INFO:root:count in: 48
+INFO:root:step 36799 : loss -0.0004888056622197231 | lr 0.002
+INFO:root:cur target prediction: 0.5054119229316711
+INFO:root:sampling....
+INFO:root:count in: 48
+INFO:root:step 36848 : loss -0.00045101309660822153 | lr 0.002
+INFO:root:cur target prediction: 0.5054218173027039
+INFO:root:sampling....
+INFO:root:count in: 48
+INFO:root:step 36897 : loss -0.0004518375887225072 | lr 0.002
+INFO:root:cur target prediction: 0.5050978660583496
+INFO:root:sampling....
+INFO:root:count in: 48
+INFO:root:step 36946 : loss -0.00042483963382740814 | lr 0.002
+INFO:root:cur target prediction: 0.5058830976486206
+INFO:root:sampling....
+INFO:root:count in: 48
+INFO:root:step 36995 : loss -0.0004902835935354233 | lr 0.002
+INFO:root:cur target prediction: 0.5054306387901306
+INFO:root:sampling....
+INFO:root:count in: 48
+INFO:root:step 37044 : loss -0.00045256960826615494 | lr 0.002
+INFO:root:cur target prediction: 0.5049986839294434
+INFO:root:sampling....
+INFO:root:count in: 48
+INFO:root:step 37093 : loss -0.00041657849214971066 | lr 0.002
+INFO:root:cur target prediction: 0.5046160221099854
+INFO:root:sampling....
+INFO:root:count in: 48
+INFO:root:step 37142 : loss -0.00038469415934135515 | lr 0.002
+INFO:root:cur target prediction: 0.5051454305648804
+INFO:root:sampling....
+INFO:root:count in: 48
+INFO:root:step 37191 : loss -0.0004288067575544119 | lr 0.002
+INFO:root:cur target prediction: 0.5039849877357483
+INFO:root:sampling....
+INFO:root:count in: 48
+INFO:root:step 37240 : loss -0.0003320940692598621 | lr 0.002
+INFO:root:cur target prediction: 0.5035366415977478
+INFO:root:sampling....
+INFO:root:count in: 48
+INFO:root:step 37289 : loss -0.00029472564347088337 | lr 0.002
+INFO:root:cur target prediction: 0.5030645728111267
+INFO:root:sampling....
+INFO:root:count in: 48
+INFO:root:step 37338 : loss -0.00025538966292515397 | lr 0.002
+INFO:root:cur target prediction: 0.5035116672515869
+INFO:root:sampling....
+INFO:root:count in: 48
+INFO:root:step 37387 : loss -0.0002926490075575809 | lr 0.002
+INFO:root:cur target prediction: 0.503450334072113
+INFO:root:sampling....
+INFO:root:count in: 48
+INFO:root:step 37436 : loss -0.00028754083905369043 | lr 0.002
+INFO:root:cur target prediction: 0.5029130578041077
+INFO:root:sampling....
+INFO:root:count in: 48
+INFO:root:step 37485 : loss -0.00024276471231132746 | lr 0.002
+INFO:root:cur target prediction: 0.5030557513237
+INFO:root:sampling....
+INFO:root:count in: 48
+INFO:root:step 37534 : loss -0.0002546506002545357 | lr 0.002
+INFO:root:cur target prediction: 0.5031458139419556
+INFO:root:sampling....
+INFO:root:count in: 48
+INFO:root:step 37583 : loss -0.00026215756467233103 | lr 0.002
+INFO:root:cur target prediction: 0.5025889277458191
+INFO:root:sampling....
+INFO:root:count in: 48
+INFO:root:step 37632 : loss -0.0002157477429136634 | lr 0.002
+INFO:root:cur target prediction: 0.5024586319923401
+INFO:root:sampling....
+INFO:root:count in: 48
+INFO:root:step 37681 : loss -0.000204896069287012 | lr 0.002
+INFO:root:cur target prediction: 0.5027961134910583
+INFO:root:sampling....
+INFO:root:count in: 48
+INFO:root:step 37730 : loss -0.00023300548006470004 | lr 0.002
+INFO:root:cur target prediction: 0.5023053884506226
+INFO:root:sampling....
+INFO:root:count in: 48
+INFO:root:step 37779 : loss -0.00019211832356328765 | lr 0.002
+INFO:root:cur target prediction: 0.5027835369110107
+INFO:root:sampling....
+INFO:root:count in: 48
+INFO:root:step 37828 : loss -0.00023196990756938854 | lr 0.002
+INFO:root:cur target prediction: 0.5032413005828857
+INFO:root:sampling....
+INFO:root:count in: 48
+INFO:root:step 37877 : loss -0.00027011728767926496 | lr 0.002
+INFO:root:cur target prediction: 0.5034162402153015
+INFO:root:sampling....
+INFO:root:count in: 48
+INFO:root:step 37926 : loss -0.0002846930098409454 | lr 0.002
+INFO:root:cur target prediction: 0.5028095245361328
+INFO:root:sampling....
+INFO:root:count in: 48
+INFO:root:step 37975 : loss -0.00023412937298417091 | lr 0.002
+INFO:root:cur target prediction: 0.5027603507041931
+INFO:root:sampling....
+INFO:root:count in: 48
+INFO:root:step 38024 : loss -0.00023002670301745334 | lr 0.002
+INFO:root:cur target prediction: 0.5029634237289429
+INFO:root:sampling....
+INFO:root:count in: 48
+INFO:root:step 38073 : loss -0.00024695015357186395 | lr 0.002
+INFO:root:cur target prediction: 0.5022542476654053
+INFO:root:sampling....
+INFO:root:count in: 48
+INFO:root:step 38122 : loss -0.0001878580660559237 | lr 0.002
+INFO:root:cur target prediction: 0.5024165511131287
+INFO:root:sampling....
+INFO:root:count in: 48
+INFO:root:step 38171 : loss -0.0002013909009595712 | lr 0.002
+INFO:root:cur target prediction: 0.5024405717849731
+INFO:root:sampling....
+INFO:root:count in: 48
+INFO:root:step 38220 : loss -0.00020338261189560095 | lr 0.002
+INFO:root:cur target prediction: 0.501846969127655
+INFO:root:sampling....
+INFO:root:count in: 48
+INFO:root:step 38269 : loss -0.00015391865357135734 | lr 0.002
+INFO:root:cur target prediction: 0.5012549757957458
+INFO:root:sampling....
+INFO:root:count in: 48
+INFO:root:step 38318 : loss -0.00010458932956680655 | lr 0.002
+INFO:root:cur target prediction: 0.5014609098434448
+INFO:root:sampling....
+INFO:root:count in: 48
+INFO:root:step 38367 : loss -0.00012175234345098336 | lr 0.002
+INFO:root:cur target prediction: 0.5013217329978943
+INFO:root:sampling....
+INFO:root:count in: 48
+INFO:root:step 38416 : loss -0.0001101494999602437 | lr 0.002
+INFO:root:cur target prediction: 0.5017282366752625
+INFO:root:sampling....
+INFO:root:count in: 48
+INFO:root:step 38465 : loss -0.00014401816103296974 | lr 0.002
+INFO:root:cur target prediction: 0.5015750527381897
+INFO:root:sampling....
+INFO:root:count in: 48
+INFO:root:step 38514 : loss -0.00013124958301583925 | lr 0.002
+INFO:root:cur target prediction: 0.5009647011756897
+INFO:root:sampling....
+INFO:root:count in: 48
+INFO:root:step 38563 : loss -8.039795405541857e-05 | lr 0.002
+INFO:root:cur target prediction: 0.5003751516342163
+INFO:root:sampling....
+INFO:root:count in: 48
+INFO:root:step 38612 : loss -3.127139401234066e-05 | lr 0.002
+INFO:root:cur target prediction: 0.5003358125686646
+INFO:root:sampling....
+INFO:root:count in: 48
+INFO:root:step 38661 : loss -2.7983895658204954e-05 | lr 0.002
+INFO:root:cur target prediction: 0.5004218220710754
+INFO:root:sampling....
+INFO:root:count in: 48
+INFO:root:step 38710 : loss -3.51553656704103e-05 | lr 0.002
+INFO:root:cur target prediction: 0.5001216530799866
+INFO:root:sampling....
+INFO:root:count in: 48
+INFO:root:step 38759 : loss -1.0145346701998884e-05 | lr 0.002
+INFO:root:cur target prediction: 0.5003116726875305
+INFO:root:sampling....
+INFO:root:count in: 48
+INFO:root:step 38808 : loss -2.5972641500023503e-05 | lr 0.002
+INFO:root:cur target prediction: 0.5008689761161804
+INFO:root:sampling....
+INFO:root:count in: 48
+INFO:root:step 38857 : loss -7.241898371527593e-05 | lr 0.002
+INFO:root:early stop at iterartion 38858
+INFO:root:final video score tensor([[0.5000]], device='cuda:0', grad_fn=<SigmoidBackward0>)
+INFO:root:total frame 100, total fake frame 76
+INFO:root:fianl l2,1 nrom tensor(3.0075, device='cuda:0')
