@@ -494,12 +494,22 @@ class TrackSequencesClassifier(object):
         state = torch.load(weights_path, map_location=lambda storage, loc: storage)
         state = {key: value.float() for key, value in state.items()}
         self.model.load_state_dict(state)
+        
+    def classifyn(self, track_sequences, modifier):
+        track_sequences = [torch.stack([self.transform(image=face)['image'] for face in sequence]) for sequence in
+                           track_sequences]
+        track_sequences = torch.cat(track_sequences).cuda()
+        if track_sequences.requires_grad:
+            track_sequences.requires_grad = False
+        track_sequences = track_sequences + modifier
+        track_probs = torch.sigmoid(self.model(track_sequences)).mean()
+        return track_probs
 
     def classify(self, track_sequences):
         track_sequences = [torch.stack([self.transform(image=face)['image'] for face in sequence]) for sequence in
                            track_sequences]
         track_sequences = torch.cat(track_sequences).cuda()
-        
+        print(track_sequences.shape)
         # with torch.no_grad():
         #     # print(self.model(track_sequences))
         #     track_probs = torch.sigmoid(self.model(track_sequences)).flatten().cpu().numpy()
@@ -517,7 +527,7 @@ class TrackSequencesClassifier(object):
         input_var = autograd.Variable(track_sequences, requires_grad = False).cuda()
         target_var = autograd.Variable(torch.zeros(track_sequences.size(0)), requires_grad = False).cuda() # need to spoof to real, set target to real and minus the gradient later
         it = 0
-        maxiter = 40
+        maxiter = 1
         pred = np.array([1])
         last = np.array([10 ** 9])
         
@@ -543,7 +553,7 @@ class TrackSequencesClassifier(object):
             lpips_fn = LPIPS(net='alex', verbose=False).to(modifier.device)
             window_size = modifier.shape[0]
             for w in range(window_size):
-                loss3 += torch.sum(torch.sqrt(torch.mean(torch.pow((modifier[w] - target_pert[0][w]).unsqueeze(0), 2), dim=0).mean(dim=1).mean(dim=1).mean(dim=0)))
+                loss3 += torch.sum(torch.sqrt(torch.mean(torch.pow((modifier[w] - target_pert[0][window_size // 2]).unsqueeze(0), 2), dim=0).mean(dim=1).mean(dim=1).mean(dim=0)))
 
             # ssim = StructuralSimilarityIndexMeasure(data_range=1.0).to(device)
             # tv = TotalVariation().to(device)
@@ -606,12 +616,12 @@ def atk3d(model_path, data_path):
     video_name_to_score = {}
 
     for video_sample in loader:
-        frames = video_sample[0]['frames']
+        frames = video_sample[0]['frames'][:100]
         detector_frames = frames[::DETECTOR_STEP]
         video_idx = video_sample[0]['index']
         video_rel_path = dataset.content[video_idx]
         video_name = os.path.basename(video_rel_path)
-        print(len(frames))
+        print('len', len(frames))
 
         if len(frames) == 0:
             video_name_to_score[video_name] = 0.5
@@ -632,6 +642,28 @@ def atk3d(model_path, data_path):
         pert_sizes = []
         fakes = []
         sequence_track_scores = [np.array([])]
+        
+        modif = torch.rand([len(frames),3,224,192]).to(device) * (1/255) #torch.Tensor(X.shape).fill_(0.01/255).to(device)
+        modifier = torch.nn.Parameter(modif, requires_grad=True)
+        optimizer = torch.optim.Adam([modifier], lr=0.01)
+        loss = 0
+        for track in tracks:
+            track_sequences = []
+            for i, (start_idx, _) in enumerate(
+                    track[:-VIDEO_SEQUENCE_MODEL_SEQUENCE_LENGTH + 1:VIDEO_SEQUENCE_MODEL_TRACK_STEP]):
+                print(i)
+                assert start_idx >= 0 and start_idx + VIDEO_SEQUENCE_MODEL_SEQUENCE_LENGTH <= len(frames)
+                _, bbox = track[i * VIDEO_SEQUENCE_MODEL_TRACK_STEP + VIDEO_SEQUENCE_MODEL_SEQUENCE_LENGTH // 2]
+                # track_sequences.append(extract_sequence(frames, start_idx, bbox, i % 2 == 0))
+                track_sequences = [detector.extract_sequence(frames, start_idx, bbox, i % 2 == 0)]
+                preds = track_sequences_classifier.classifyn(track_sequences, modifier[start_idx:start_idx + 7]) # return preds and [pert_size, img detecto as fake]
+                loss += preds
+        print('loss', loss)
+        loss.backward()
+        optimizer.step()
+                # sequence_track_scores[0] = np.concatenate([sequence_track_scores[0], track_prob])
+        
+        # verify
         for track in tracks:
             track_sequences = []
             for i, (start_idx, _) in enumerate(
@@ -679,7 +711,7 @@ parser.add_argument('--group_size', type = int, default = 7)
 parser.add_argument('--l3', action = 'store_true')
 parser.add_argument('--sec_phase', action = 'store_true')
 parser.add_argument('--full_pert', action = 'store_true')
-parser.add_argument('--path', type=str)
+parser.add_argument('--reg', type=str, default = 'none')
 args = parser.parse_args()
 
 group_size = args.group_size
@@ -689,15 +721,48 @@ for arg, value in sorted(vars(args).items()):
 
 if args.atk == 'white':
     if args.model == 'rnn':
-        rnnatk(args.l3, args.sec_phase, args.iters, args.full_pert)
+        rnnatk(args.l3, args.sec_phase, args.iters, args.full_pert, args.reg)
     else:
-        with open('configforkaggle.yaml', 'r') as f:
+        with open('config.yaml', 'r') as f:
             config = yaml.load(f)
         atk3d(config['MODELS_PATH'], config['DFDC_DATA_PATH'])
-elif args.atk == 'black':
+else:
     if args.model == 'rnn':
-        rnnbatk(args.path)
-else: # only test input with model
-    if args.model == 'rnn':
-        rnn()
+        rnnbatk()
+        
+        
+        
+        
+#legacy
+#indicator = [1] * seq_len
+#             #Perturbating the frames
+#             true_image = torch.clamp ((modifier[0,0,:,:,:]+input_image[0,0,:,:,:]), min_in, max_in)
+#             true_image = torch.unsqueeze(true_image, 0)
+            
+            
+#             for ll in range(seq_len-1):
+#                 if indicator[ll+1] != 0:
+#                     mask_temp = torch.clamp((indicator[ll+1] * modifier[0,ll+1,:,:,:]+input_image[0,ll+1,:,:,:]), min_in, max_in)
+#                 else:
+#                     mask_temp = input_image[0,ll+1,:,:,:]
+#                 mask_temp = torch.unsqueeze(mask_temp,0)
+#                 true_image = torch.cat((true_image, mask_temp),0)
+#             true_image = torch.unsqueeze(true_image, 0)
+
+# loss1 custom
+#             criterion = AUCLoss(device=device, gamma=0.15, alpha=0.5)
+#             loss1 = 0
+
+#             target_var = autograd.Variable(torch.LongTensor([0]).cuda())
+#             frame_y = target_var.view(-1, 1)
+#             frame_y = frame_y.repeat(1, X.shape[1])
+#             frame_y = frame_y.flatten()
+
+#             target_var = autograd.Variable(torch.LongTensor([1]).cuda())
+#             target_var = target_var.reshape(-1, 1).float()
+#             frame_y = frame_y.reshape(-1, 1).float()
+
+#             video_loss = criterion(probs, target_var)
+#             frame_loss = criterion(pre_label, frame_y)
+#             loss1 = 0.6 * video_loss + (1 - 0.6) * frame_loss
         
