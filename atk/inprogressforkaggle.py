@@ -472,6 +472,7 @@ VIDEO_SEQUENCE_MODEL_WEIGHTS_PATH = 'snapshot_100000.fp16.pth'
 VIDEO_BATCH_SIZE = 1
 VIDEO_TARGET_FPS = 15
 VIDEO_NUM_WORKERS = 0
+device = torch.device("cuda" if torch.cuda.is_available() else "cpu")
 
 class TrackSequencesClassifier(object):
     def __init__(self, weights_path):
@@ -484,8 +485,9 @@ class TrackSequencesClassifier(object):
                     seq_expand_conv = detector.SeqExpandConv(expand_conv.in_channels, expand_conv.out_channels,
                                                     VIDEO_SEQUENCE_MODEL_SEQUENCE_LENGTH)
                     module._expand_conv = seq_expand_conv
-        self.model = model.cuda().eval()
-
+        
+        self.model = nn.DataParallel(self.model)
+        self.model = model.to(device)
         normalize = Normalize(mean=[0.485, 0.456, 0.406], std=[0.229, 0.224, 0.225])
         self.transform = Compose(
             [SmallestMaxSize(VIDEO_MODEL_MIN_SIZE), CenterCrop(VIDEO_MODEL_CROP_HEIGHT, VIDEO_MODEL_CROP_WIDTH),
