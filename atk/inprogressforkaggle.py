@@ -606,7 +606,7 @@ def atk3d(model_path, data_path):
     fd = detector.Detector(os.path.join(model_path, DETECTOR_WEIGHTS_PATH))
     track_sequences_classifier = TrackSequencesClassifier(os.path.join(model_path, VIDEO_SEQUENCE_MODEL_WEIGHTS_PATH))
 
-    dataset = detector.UnlabeledVideoDataset(os.path.join(data_path, 'test_videos'))
+    dataset = detector.UnlabeledVideoDataset(data_path)
     print('Total number of videos: {}'.format(len(dataset)))
 
     loader = DataLoader(dataset, batch_size=VIDEO_BATCH_SIZE, shuffle=False, num_workers=VIDEO_NUM_WORKERS,
