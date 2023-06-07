@@ -72,6 +72,8 @@ def video_loader(url):
         vids = []
         for vid_name in os.listdir(url):
             vid_path = os.path.join(url, vid_name)
+            if not vid_path.endswith('.mp4'):
+                continue
             # if vid_path not in ok:
             #     continue
             vids.append((vid_path, loader.load(vid_path)))
@@ -221,18 +223,18 @@ def rnnatk(l3, sec_phase, max_iters, full_pert, reg_type):
         
         target_pert = dict()
         
-        
+        model = detector.load_model(model_path, device)
+        model.train()
+        # modify for train mode
+        for _, m in model.named_modules():
+            if 'BatchNorm' in m.__class__.__name__:
+                    m = m.eval()
+            if 'Dropout' in m.__class__.__name__:
+                    m = m.eval()
         while it < maxiter:
             print('iter', it)
             logging.info('iter %d', it)
-            model = detector.load_model(model_path, device)
-            model.train()
-            # modify for train mode
-            for _, m in model.named_modules():
-                if 'BatchNorm' in m.__class__.__name__:
-                        m = m.eval()
-                if 'Dropout' in m.__class__.__name__:
-                        m = m.eval()
+            
             
             window_size = 9
             step_size = 7
@@ -457,12 +459,22 @@ class TrackSequencesClassifier(object):
         state = torch.load(weights_path, map_location=lambda storage, loc: storage)
         state = {key: value.float() for key, value in state.items()}
         self.model.load_state_dict(state)
+        
+    def classifyn(self, track_sequences, modifier):
+        track_sequences = [torch.stack([self.transform(image=face)['image'] for face in sequence]) for sequence in
+                           track_sequences]
+        track_sequences = torch.cat(track_sequences).cuda()
+        if track_sequences.requires_grad:
+            track_sequences.requires_grad = False
+        track_sequences = track_sequences + modifier
+        track_probs = torch.sigmoid(self.model(track_sequences)).mean()
+        return track_probs
 
     def classify(self, track_sequences):
         track_sequences = [torch.stack([self.transform(image=face)['image'] for face in sequence]) for sequence in
                            track_sequences]
         track_sequences = torch.cat(track_sequences).cuda()
-        
+        print(track_sequences.shape)
         # with torch.no_grad():
         #     # print(self.model(track_sequences))
         #     track_probs = torch.sigmoid(self.model(track_sequences)).flatten().cpu().numpy()
@@ -480,7 +492,7 @@ class TrackSequencesClassifier(object):
         input_var = autograd.Variable(track_sequences, requires_grad = False).cuda()
         target_var = autograd.Variable(torch.zeros(track_sequences.size(0)), requires_grad = False).cuda() # need to spoof to real, set target to real and minus the gradient later
         it = 0
-        maxiter = 40
+        maxiter = 1
         pred = np.array([1])
         last = np.array([10 ** 9])
         
@@ -569,12 +581,12 @@ def atk3d(model_path, data_path):
     video_name_to_score = {}
 
     for video_sample in loader:
-        frames = video_sample[0]['frames']
+        frames = video_sample[0]['frames'][:100]
         detector_frames = frames[::DETECTOR_STEP]
         video_idx = video_sample[0]['index']
         video_rel_path = dataset.content[video_idx]
         video_name = os.path.basename(video_rel_path)
-        print(len(frames))
+        print('len', len(frames))
 
         if len(frames) == 0:
             video_name_to_score[video_name] = 0.5
@@ -595,6 +607,28 @@ def atk3d(model_path, data_path):
         pert_sizes = []
         fakes = []
         sequence_track_scores = [np.array([])]
+        
+        modif = torch.rand([len(frames),3,224,192]).to(device) * (1/255) #torch.Tensor(X.shape).fill_(0.01/255).to(device)
+        modifier = torch.nn.Parameter(modif, requires_grad=True)
+        optimizer = torch.optim.Adam([modifier], lr=0.01)
+        loss = 0
+        for track in tracks:
+            track_sequences = []
+            for i, (start_idx, _) in enumerate(
+                    track[:-VIDEO_SEQUENCE_MODEL_SEQUENCE_LENGTH + 1:VIDEO_SEQUENCE_MODEL_TRACK_STEP]):
+                print(i)
+                assert start_idx >= 0 and start_idx + VIDEO_SEQUENCE_MODEL_SEQUENCE_LENGTH <= len(frames)
+                _, bbox = track[i * VIDEO_SEQUENCE_MODEL_TRACK_STEP + VIDEO_SEQUENCE_MODEL_SEQUENCE_LENGTH // 2]
+                # track_sequences.append(extract_sequence(frames, start_idx, bbox, i % 2 == 0))
+                track_sequences = [detector.extract_sequence(frames, start_idx, bbox, i % 2 == 0)]
+                preds = track_sequences_classifier.classifyn(track_sequences, modifier[start_idx:start_idx + 7]) # return preds and [pert_size, img detecto as fake]
+                loss += preds
+        print('loss', loss)
+        loss.backward()
+        optimizer.step()
+                # sequence_track_scores[0] = np.concatenate([sequence_track_scores[0], track_prob])
+        
+        # verify
         for track in tracks:
             track_sequences = []
             for i, (start_idx, _) in enumerate(
