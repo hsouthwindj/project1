@@ -484,9 +484,8 @@ class TrackSequencesClassifier(object):
                     seq_expand_conv = detector.SeqExpandConv(expand_conv.in_channels, expand_conv.out_channels,
                                                     VIDEO_SEQUENCE_MODEL_SEQUENCE_LENGTH)
                     module._expand_conv = seq_expand_conv
-        
-        self.model = nn.DataParallel(model)
-        self.model = self.model.to(device)          
+        self.model = model
+               
         normalize = Normalize(mean=[0.485, 0.456, 0.406], std=[0.229, 0.224, 0.225])
         self.transform = Compose(
             [SmallestMaxSize(VIDEO_MODEL_MIN_SIZE), CenterCrop(VIDEO_MODEL_CROP_HEIGHT, VIDEO_MODEL_CROP_WIDTH),
@@ -495,6 +494,8 @@ class TrackSequencesClassifier(object):
         state = torch.load(weights_path, map_location=lambda storage, loc: storage)
         state = {key: value.float() for key, value in state.items()}
         self.model.load_state_dict(state)
+        self.model = nn.DataParallel(model)
+        self.model = self.model.to(device)   
         
     def classifyn(self, track_sequences, modifier):
         track_sequences = [torch.stack([self.transform(image=face)['image'] for face in sequence]) for sequence in
