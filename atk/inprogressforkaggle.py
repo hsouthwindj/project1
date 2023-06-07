@@ -723,7 +723,7 @@ if args.atk == 'white':
     if args.model == 'rnn':
         rnnatk(args.l3, args.sec_phase, args.iters, args.full_pert, args.reg)
     else:
-        with open('config.yaml', 'r') as f:
+        with open('configforkaggle.yaml', 'r') as f:
             config = yaml.load(f)
         atk3d(config['MODELS_PATH'], config['DFDC_DATA_PATH'])
 else:
