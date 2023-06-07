@@ -486,7 +486,7 @@ class TrackSequencesClassifier(object):
                     module._expand_conv = seq_expand_conv
         
         self.model = nn.DataParallel(model)
-        self.model = model.cuda().eval()          
+        self.model = model.to(device)          
         normalize = Normalize(mean=[0.485, 0.456, 0.406], std=[0.229, 0.224, 0.225])
         self.transform = Compose(
             [SmallestMaxSize(VIDEO_MODEL_MIN_SIZE), CenterCrop(VIDEO_MODEL_CROP_HEIGHT, VIDEO_MODEL_CROP_WIDTH),
