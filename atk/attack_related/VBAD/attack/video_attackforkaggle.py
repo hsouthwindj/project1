@@ -169,7 +169,7 @@ def untargeted_video_attack(vid_model, vid, directions_generator, ori_class,
     max_lr = 2*1e-2
     min_lr = 1*1e-3
     
-    fake_rate_mi = 0.2
+    fake_rate_mi = 0.25
     fake_rate_ma = 0.5
     image_flag = True
 
@@ -204,8 +204,8 @@ def untargeted_video_attack(vid_model, vid, directions_generator, ori_class,
         # tensor([[0.9987]], device='cuda:0') tensor(0.9987, device='cuda:0') tensor([[0, 0]], device='cuda:0')
 
         last_score.append(pre_score)
-        last_score = last_score[-200:]
-        if last_score[-1] >= last_score[0] and len(last_score) == 200:
+        last_score = last_score[-400:]
+        if last_score[-1] >= last_score[0] and len(last_score) == 400:
             print('FAIL: No Descent, Stop iteration')
             return False, pre_score.cpu().item(), adv_vid
 
