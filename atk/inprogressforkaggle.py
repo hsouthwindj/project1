@@ -238,8 +238,10 @@ def rnnbatk(path):
             f += t
             if t != 0:
                 print('f', i, end = ' ')
+        print('total frame and total fake frame', len(adv[0]), f)
         logging.info('total frame %d, total fake frame %d', len(adv[0]), f)
         l21 = torch.sum(torch.sqrt(torch.mean(torch.pow((adv - X), 2), dim=0).mean(dim=2).mean(dim=2).mean(dim=1)))
+        print('final l2,1 norm', l21)
         logging.info('fianl l2,1 nrom %s', l21)
 
 def rnnatk(l3, sec_phase, max_iters, full_pert):

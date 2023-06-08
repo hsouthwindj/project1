@@ -193,6 +193,7 @@ def untargeted_video_attack(vid_model, vid, directions_generator, ori_class,
         top_idx = 1 if top_val.mean() > 0.5 else 0
         num_iter += 1
         if ori_class != top_idx and image_flag == False:
+            print('early stop', num_iter)
             logging.info('early stop at iterartion {}'.format(num_iter))
             return True, num_iter, adv_vid
         idx = [[0, 0]] # idk waht's this but it's always [0, 0] when i testing
