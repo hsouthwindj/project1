@@ -1,0 +1,16 @@
+early stop 52970
+final video score tensor([[0.4999]], device='cuda:0', grad_fn=<SigmoidBackward0>), apzckowxpy.mp4
+f 0 f 11 f 14 f 22 f 26 f 27 f 34 f 35 f 36 f 37 f 39 total frame and total fake frame 40 11
+final l2,1 norm tensor(1.7081, device='cuda:0')
+early stop 47678
+final video score tensor([[0.4997]], device='cuda:0', grad_fn=<SigmoidBackward0>), aaqaifqrwn.mp4
+f 2 f 3 f 4 f 7 f 9 f 12 f 22 f 23 f 24 f 25 f 29 f 30 f 34 f 37 total frame and total fake frame 40 14
+final l2,1 norm tensor(1.7270, device='cuda:0')
+early stop 30332
+final video score tensor([[0.5000]], device='cuda:0', grad_fn=<SigmoidBackward0>), abhggqdift.mp4
+f 0 f 5 f 10 f 12 f 24 f 30 f 33 f 35 total frame and total fake frame 40 8
+final l2,1 norm tensor(1.7506, device='cuda:0')
+early stop 27490
+final video score tensor([[0.5000]], device='cuda:0', grad_fn=<SigmoidBackward0>), acagallncj.mp4
+f 0 f 1 f 2 f 5 f 6 f 15 f 16 f 18 f 21 f 24 f 25 f 31 f 32 total frame and total fake frame 40 13
+final l2,1 norm tensor(1.7116, device='cuda:0')
