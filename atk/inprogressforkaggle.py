@@ -713,6 +713,7 @@ parser.add_argument('--l3', action = 'store_true')
 parser.add_argument('--sec_phase', action = 'store_true')
 parser.add_argument('--full_pert', action = 'store_true')
 parser.add_argument('--reg', type=str, default = 'none')
+parser.add_argument('--path', type=str)
 args = parser.parse_args()
 
 group_size = args.group_size
@@ -727,6 +728,9 @@ if args.atk == 'white':
         with open('configforkaggle.yaml', 'r') as f:
             config = yaml.load(f)
         atk3d(config['MODELS_PATH'], config['DFDC_DATA_PATH'])
+elif args.atk == 'black':
+    if args.model == 'rnn':
+        rnnbatk(args.path)
 else:
     if args.model == 'rnn':
         rnnbatk()
