@@ -169,8 +169,8 @@ def untargeted_video_attack(vid_model, vid, directions_generator, ori_class,
     max_lr = 2*1e-2
     min_lr = 1*1e-3
     
-    fake_rate_mi = 0.1
-    fake_rate_ma = 0.25
+    fake_rate_mi = 0.2
+    fake_rate_ma = 0.5
     image_flag = True
 
     while num_iter < max_iter:
