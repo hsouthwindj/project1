@@ -644,6 +644,7 @@ class TrackSequencesClassifier(object):
         last = np.array([10 ** 9])
         
         while pred.mean() > 0:
+            print(pred)
             torch.cuda.empty_cache()
             if it > 100:
                 break
@@ -677,7 +678,7 @@ class TrackSequencesClassifier(object):
             input_adv = track_sequences + total_pert
             input_adv = torch.clamp(input_adv, 0, 1)
             input_var.data = input_adv.detach()
-            print(pred, total_pert.max())
+            
             it += 1
         img_model = torch.load(image_model_path)
         f = 0
@@ -686,6 +687,7 @@ class TrackSequencesClassifier(object):
             f += t
         l21 = torch.sum(torch.sqrt(torch.mean(torch.pow((input_var - track_sequences).unsqueeze(0), 2), dim=0).mean(dim=2).mean(dim=2).mean(dim=1)))
         track_probs = torch.sigmoid(pred).detach().cpu().numpy()
+        print(l21, f)
         return track_probs, l21, f
 
     def classify(self, track_sequences):
