@@ -55,7 +55,7 @@ def img_pert(img_model, img):
         
 
 def sim_rectification_vector(model, vid, tentative_directions, n, sigma, target_class, rank_transform, sub_num,
-                             group_gen, img_model, fake_r, image_flag, untargeted):
+                             group_gen, img_model, fake_r, image_flag, untargeted, vc = 'rnn'):
     with torch.no_grad():
         sigma *= (100*fake_r + 1)
         model.cuda()
@@ -99,7 +99,10 @@ def sim_rectification_vector(model, vid, tentative_directions, n, sigma, target_
             
             # top_val, top_idx, logits = model(adv_vid_rs)
             # temp = [model(adv_vid_rs[i].unsqueeze(0)) for i in range(sub_num)]
-            logits, cnn_y = model(adv_vid_rs)
+            if vc == 'rnn':
+                logits, cnn_y = model(adv_vid_rs)
+            else:
+                logits = torch.tensor([[model.get_score(model.ori_classify(adv_vid_rs[i]))] for i in range(sub_num)]).cuda()
             top_idx = torch.sigmoid(logits) > 0.5
             if image_flag:
                 loss = -torch.max(logits, 1)[0] - torch.stack([ns[i][0] for i in range(len(ns))]) * fake_r
@@ -157,7 +160,7 @@ def sim_rectification_vector(model, vid, tentative_directions, n, sigma, target_
 # The input should be normalized to [0, 1]
 def untargeted_video_attack(vid_model, vid, directions_generator, ori_class,
                             rank_transform=False, eps=0.05, max_lr=1e-2, min_lr=2 * 1e-3, sample_per_draw=48,
-                            max_iter=10000, sigma=1e-5, sub_num_sample=12, image_split=1):
+                            max_iter=10000, sigma=1e-5, sub_num_sample=12, image_split=1, vc='rnn'):
     num_iter = 0
     adv_vid = torch.clamp(vid.clone() + (torch.rand_like(vid) * 2 - 1) * eps, 0., 1.).cuda()
     cur_lr = max_lr
@@ -174,11 +177,11 @@ def untargeted_video_attack(vid_model, vid, directions_generator, ori_class,
     image_flag = True
 
     while num_iter < max_iter:
-        ip = img_pert(img_model, adv_vid[len(adv_vid) // 2].detach().clone())
-        with torch.no_grad():
-            adv_vid[len(adv_vid) // 2] += ip
-        clip_frame = torch.clamp(adv_vid, 0., 1.)
-        adv_vid = clip_frame.clone()
+        #ip = img_pert(img_model, adv_vid[len(adv_vid) // 2].detach().clone())
+        #with torch.no_grad():
+        #    adv_vid[len(adv_vid) // 2] += ip
+        #clip_frame = torch.clamp(adv_vid, 0., 1.)
+        #adv_vid = clip_frame.clone()
         fake_r = fake_rate(img_model, adv_vid)
         if fake_r < fake_rate_mi:
             image_flag = False
@@ -189,8 +192,13 @@ def untargeted_video_attack(vid_model, vid, directions_generator, ori_class,
         # print(adv_vid[None, :].shape)
         # top_val, top_idx, _ = vid_model(adv_vid[None, :])
         with torch.no_grad():
-            top_val = torch.sigmoid(vid_model(adv_vid.unsqueeze(dim = 0))[0])
-        top_idx = 1 if top_val.mean() >= 0.5 else 0
+            if vc != 'rnn':
+                top_val = vid_model.get_score(vid_model.ori_classify(adv_vid))
+                top_val = torch.tensor([[top_val, 1 - top_val]]) # [fake, real]
+                top_idx = 1 if top_val[0][0] >= 0.5 else 0
+            else:
+                top_val = torch.sigmoid(vid_model(adv_vid.unsqueeze(dim = 0))[0])
+                top_idx = 1 if top_val.mean() > 0.5 else 0
         num_iter += 1
         if ori_class != top_idx and image_flag == False:
             print('early stop', num_iter)

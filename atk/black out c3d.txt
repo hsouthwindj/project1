@@ -1,0 +1,6 @@
+INFO:root:final video score 0.4894368052482605, apzckowxpy.mp4
+INFO:root:total frame 42, total fake frame 4
+INFO:root:fianl l2,1 nrom tensor(1.3055, device='cuda:0')
+INFO:root:final video score 0.30097976326942444, 
+INFO:root:total frame 42, total fake frame 3
+INFO:root:fianl l2,1 nrom tensor(1.2986, device='cuda:0')

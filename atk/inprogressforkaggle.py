@@ -704,6 +704,102 @@ def atk3d(model_path, data_path):
                                                                  video_rel_path))
         logging.info('total norm {} and total fake image detected by img detector {}'.format(sum(pert_sizes), sum(fakes)))
 
+def batk3d(model_path, data_path):
+    fd = detector.Detector(os.path.join(model_path, DETECTOR_WEIGHTS_PATH))
+    track_sequences_classifier = TrackSequencesClassifier(os.path.join(model_path, VIDEO_SEQUENCE_MODEL_WEIGHTS_PATH))
+
+    dataset = detector.UnlabeledVideoDataset(os.path.join(data_path, 'cur'))
+    print('Total number of videos: {}'.format(len(dataset)))
+
+    loader = DataLoader(dataset, batch_size=VIDEO_BATCH_SIZE, shuffle=False, num_workers=VIDEO_NUM_WORKERS,
+                        collate_fn=lambda X: X,
+                        drop_last=False)
+
+    video_name_to_score = {}
+
+    for video_sample in loader:
+        frames = video_sample[0]['frames'][:100]
+        detector_frames = frames[::DETECTOR_STEP]
+        video_idx = video_sample[0]['index']
+        video_rel_path = dataset.content[video_idx]
+        video_name = os.path.basename(video_rel_path)
+        print('len', len(frames))
+
+        if len(frames) == 0:
+            video_name_to_score[video_name] = 0.5
+            continue
+
+        detections = []
+        for start in range(0, len(detector_frames), DETECTOR_BATCH_SIZE):
+            end = min(len(detector_frames), start + DETECTOR_BATCH_SIZE)
+            detections_batch = fd.detect(detector_frames[start:end])
+            for detections_per_frame in detections_batch:
+                detections.append({key: value.cpu().numpy() for key, value in detections_per_frame.items()})
+
+        tracks = detector.get_tracks(detections)
+        if len(tracks) == 0:
+            video_name_to_score[video_name] = 0.5
+            continue
+        
+        sequence_track_scores = [np.array([])]
+        # optimizer = torch.optim.Adam([modifier], lr=0.01)
+        track_sequences = []
+        for track in tracks:
+            track_sequences = []
+            for i, (start_idx, _) in enumerate(
+                    track[:-VIDEO_SEQUENCE_MODEL_SEQUENCE_LENGTH + 1:7]):
+                assert start_idx >= 0 and start_idx + VIDEO_SEQUENCE_MODEL_SEQUENCE_LENGTH <= len(frames)
+                _, bbox = track[i * 7 + VIDEO_SEQUENCE_MODEL_SEQUENCE_LENGTH // 2]
+                # track_sequences.append(extract_sequence(frames, start_idx, bbox, i % 2 == 0))
+                track_sequences.append(detector.extract_sequence(frames, start_idx, bbox, i % 2 == 0))
+                
+                
+        track_sequences = [torch.stack([track_sequences_classifier.transform(image=face)['image'] for face in sequence]) for sequence in
+                           track_sequences]
+        X = torch.cat(track_sequences).cuda().unsqueeze(0)
+        # do atk
+        img_model = torch.load(image_model_path)
+        # vbad partial generator declaration
+        def VBAD_items():
+            extractors = []
+            resnet50 = tvmodels.resnet50(pretrained=True)
+            resnet50_extractor = ResNetFeatureExtractor(resnet50, ['fc']).eval().cuda()
+            # extractors.append(img_model)
+            extractors.append(resnet50_extractor)
+            directions_generator = TentativePerturbationGenerator(extractors, part_size=32, preprocess=False,
+                                                                  device=0)
+            return directions_generator
+        X = X[0, :42,:,:,:].unsqueeze(0)
+        X.squeeze_(dim = 0)
+        directions_generator = VBAD_items()
+        directions_generator.set_untargeted_params(X, random_mask = 1., scale=5.)
+        advs = []
+        for i in range(len(X) // 7):
+            _, _, adv = untargeted_video_attack(track_sequences_classifier, X[7*i:7*i + 7], directions_generator,
+                                     1, rank_transform=False,
+                                     image_split=1,
+                                     sub_num_sample=12, sigma=1e-5,
+                                     eps=0.05, max_iter=2500,
+                                     sample_per_draw=48, vc = 'c3d')
+            adv = adv.unsqueeze(0)
+            advs.append(adv)
+        adv = torch.cat(advs, dim = 1)
+        # check final video output
+        # print(adv)
+        probs = track_sequences_classifier.get_score(track_sequences_classifier.ori_classify(adv.squeeze(0)))
+        logging.info('final video score %s', probs)
+        # check image detector performance
+
+        f = 0
+        for i in range(len(adv[0])):
+            t, _ = predict_image(img_model, adv[0][i], model_type)
+            f += t
+            if t != 0:
+                print('f', i, end = ' ')
+        logging.info('total frame %d, total fake frame %d', len(adv[0]), f)
+        l21 = torch.sum(torch.sqrt(torch.mean(torch.pow((adv - X), 2), dim=0).mean(dim=2).mean(dim=2).mean(dim=1)))
+        logging.info('fianl l2,1 nrom %s', l21)
+
 import argparse
 
 parser = argparse.ArgumentParser()
@@ -733,6 +829,10 @@ if args.atk == 'white':
 elif args.atk == 'black':
     if args.model == 'rnn':
         rnnbatk(args.path)
+    else:
+        with open('config.yaml', 'r') as f:
+            config = yaml.load(f)
+        batk3d(config['MODELS_PATH'], config['DFDC_DATA_PATH'])
 else:
     if args.model == 'rnn':
         rnnbatk()
