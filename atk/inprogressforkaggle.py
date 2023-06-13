@@ -684,7 +684,7 @@ class TrackSequencesClassifier(object):
         for i in range(len(adv[0])):
             t, _ = predict_image(img_model, input_var[i], 'xception')
             f += t
-        l21 = torch.sum(torch.sqrt(torch.mean(torch.pow((input_var - track_sequences), 2), dim=0).mean(dim=2).mean(dim=2).mean(dim=1)))
+        l21 = torch.sum(torch.sqrt(torch.mean(torch.pow((input_var - track_sequences).unsqueeze(0), 2), dim=0).mean(dim=2).mean(dim=2).mean(dim=1)))
         track_probs = torch.sigmoid(pred).detach().cpu().numpy()
         return track_probs, l21, f
 
