@@ -491,8 +491,7 @@ class TrackSequencesClassifier(object):
                      
         normalize = Normalize(mean=[0.485, 0.456, 0.406], std=[0.229, 0.224, 0.225])
         self.transform = Compose(
-            [SmallestMaxSize(VIDEO_MODEL_MIN_SIZE), CenterCrop(VIDEO_MODEL_CROP_HEIGHT, VIDEO_MODEL_CROP_WIDTH),
-             normalize, ToTensor()])
+            [SmallestMaxSize(VIDEO_MODEL_MIN_SIZE), CenterCrop(VIDEO_MODEL_CROP_HEIGHT, VIDEO_MODEL_CROP_WIDTH), ToTensor()])
 
         state = torch.load(weights_path, map_location=lambda storage, loc: storage)
         state = {key: value.float() for key, value in state.items()}
