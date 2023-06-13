@@ -707,7 +707,7 @@ def batk3d(model_path, data_path):
     fd = detector.Detector(os.path.join(model_path, DETECTOR_WEIGHTS_PATH))
     track_sequences_classifier = TrackSequencesClassifier(os.path.join(model_path, VIDEO_SEQUENCE_MODEL_WEIGHTS_PATH))
 
-    dataset = detector.UnlabeledVideoDataset(os.path.join(data_path, 'cur'))
+    dataset = detector.UnlabeledVideoDataset(data_path)
     print('Total number of videos: {}'.format(len(dataset)))
 
     loader = DataLoader(dataset, batch_size=VIDEO_BATCH_SIZE, shuffle=False, num_workers=VIDEO_NUM_WORKERS,
@@ -831,7 +831,7 @@ elif args.atk == 'black':
     else:
         with open('config.yaml', 'r') as f:
             config = yaml.load(f)
-        batk3d(config['MODELS_PATH'], config['DFDC_DATA_PATH'])
+        batk3d(config['MODELS_PATH'], args.path)
 else:
     if args.model == 'rnn':
         rnnbatk()
