@@ -914,7 +914,7 @@ def benchatk(model_path, data_path):
                 assert start_idx >= 0 and start_idx + VIDEO_SEQUENCE_MODEL_SEQUENCE_LENGTH <= len(frames)
                 _, bbox = track[i * 7 + VIDEO_SEQUENCE_MODEL_SEQUENCE_LENGTH // 2]
                 track_sequences = [detector.extract_sequence(frames, start_idx, bbox, i % 2 == 0)]
-                one_step, pert_size, sf = track_sequences_classifier.benchmark_atk(track_sequences, attack = args.attack)
+                one_step, pert_size, sf = track_sequences_classifier.benchmark_atk(track_sequences, attack = args.atk)
                 f += sf
                 l21 += pert_size
                 sequence_track_scores[0] = np.concatenate([sequence_track_scores[0], one_step])
