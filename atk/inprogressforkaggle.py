@@ -829,7 +829,7 @@ elif args.atk == 'black':
     if args.model == 'rnn':
         rnnbatk(args.path)
     else:
-        with open('config.yaml', 'r') as f:
+        with open('configforkaggle.yaml', 'r') as f:
             config = yaml.load(f)
         batk3d(config['MODELS_PATH'], args.path)
 else:
