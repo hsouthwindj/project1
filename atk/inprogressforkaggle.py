@@ -701,7 +701,7 @@ def atk3d(model_path, data_path):
                                                                  video_rel_path))
         logging.info('NUM DETECTION FRAMES: {}, VIDEO SCORE: {}. {}'.format(len(detections), video_name_to_score[video_name],
                                                                  video_rel_path))
-        logging.info('total norm {} and total fake image detected by img detector {}'.format(sum(pert_sizes), sum(fakes)))
+        logging.info('total norm {} and total fake image detected by img detector {}'.format(sum(pert_sizes), sum(fakes)))       
 
 def batk3d(model_path, data_path):
     fd = detector.Detector(os.path.join(model_path, DETECTOR_WEIGHTS_PATH))
@@ -827,11 +827,11 @@ if args.atk == 'white':
         atk3d(config['MODELS_PATH'], config['DFDC_DATA_PATH'])
 elif args.atk == 'black':
     if args.model == 'rnn':
-        rnnbatk(args.path)
+        rnnbatk(args.path) 
     else:
         with open('configforkaggle.yaml', 'r') as f:
             config = yaml.load(f)
-        batk3d(config['MODELS_PATH'], args.path)
+        batk3d(config['MODELS_PATH'], config['DFDC_DATA_PATH'])    
 else:
     if args.model == 'rnn':
         rnnbatk()
