@@ -496,7 +496,12 @@ class TrackSequencesClassifier(object):
         state = torch.load(weights_path, map_location=lambda storage, loc: storage)
         state = {key: value.float() for key, value in state.items()}
         self.model.load_state_dict(state)    
+    def ori_classify(self, track_sequences):
         
+        with torch.no_grad():
+            track_probs = torch.sigmoid(self.model(track_sequences)).flatten().cpu().numpy()
+
+        return track_probs    
     def classifyn(self, track_sequences, modifier):
         track_sequences = [torch.stack([self.transform(image=face)['image'] for face in sequence]) for sequence in
                            track_sequences]
