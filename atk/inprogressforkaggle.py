@@ -531,7 +531,7 @@ class TrackSequencesClassifier(object):
             if it > 100:
                 break
     
-            if attack == 'white':
+            if attack == 'bench_white':
                 loss_criterion = nn.CrossEntropyLoss()
                 temptotal = []
                 for transform_fn in _get_transforms({"gauss_noise", "gauss_blur", "resize"}):
@@ -543,7 +543,7 @@ class TrackSequencesClassifier(object):
                 # loss = torch.nn.functional.binary_cross_entropy_with_logits(pred, target_var)
                     loss.backward()
                     temptotal.append(torch.sign(input_var.grad.detach()))
-                adv = input_var.detach() + (1/255) * sum(temptotal)
+                adv = input_var.detach() + (1/255) * sum(temptotal) /3
                 with torch.no_grad():
                     pred = self.model(input_var).flatten()
                 if last.mean() < pred.mean():
