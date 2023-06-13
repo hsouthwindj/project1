@@ -970,43 +970,15 @@ elif args.atk == 'black':
         with open('configforkaggle.yaml', 'r') as f:
             config = yaml.load(f)
         batk3d(config['MODELS_PATH'], config['DFDC_DATA_PATH'])    
+elif args.atk == 'bench_white':
+    if args.model == 'c3d':
+        with open('configforkaggle.yaml', 'r') as f:
+            config = yaml.load(f)
+        benchatk(config['MODELS_PATH'], config['DFDC_DATA_PATH'])
 else:
     if args.model == 'rnn':
         rnnbatk()
         
         
         
-        
-#legacy
-#indicator = [1] * seq_len
-#             #Perturbating the frames
-#             true_image = torch.clamp ((modifier[0,0,:,:,:]+input_image[0,0,:,:,:]), min_in, max_in)
-#             true_image = torch.unsqueeze(true_image, 0)
-            
-            
-#             for ll in range(seq_len-1):
-#                 if indicator[ll+1] != 0:
-#                     mask_temp = torch.clamp((indicator[ll+1] * modifier[0,ll+1,:,:,:]+input_image[0,ll+1,:,:,:]), min_in, max_in)
-#                 else:
-#                     mask_temp = input_image[0,ll+1,:,:,:]
-#                 mask_temp = torch.unsqueeze(mask_temp,0)
-#                 true_image = torch.cat((true_image, mask_temp),0)
-#             true_image = torch.unsqueeze(true_image, 0)
-
-# loss1 custom
-#             criterion = AUCLoss(device=device, gamma=0.15, alpha=0.5)
-#             loss1 = 0
-
-#             target_var = autograd.Variable(torch.LongTensor([0]).cuda())
-#             frame_y = target_var.view(-1, 1)
-#             frame_y = frame_y.repeat(1, X.shape[1])
-#             frame_y = frame_y.flatten()
-
-#             target_var = autograd.Variable(torch.LongTensor([1]).cuda())
-#             target_var = target_var.reshape(-1, 1).float()
-#             frame_y = frame_y.reshape(-1, 1).float()
-
-#             video_loss = criterion(probs, target_var)
-#             frame_loss = criterion(pre_label, frame_y)
-#             loss1 = 0.6 * video_loss + (1 - 0.6) * frame_loss
-        
+    
