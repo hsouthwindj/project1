@@ -679,6 +679,7 @@ class TrackSequencesClassifier(object):
             input_adv = torch.clamp(input_adv, 0, 1)
             input_var.data = input_adv.detach()
             print(pred, pred.mean())
+            print(pred.mean() > 0)
             it += 1
         img_model = torch.load(image_model_path)
         f = 0
