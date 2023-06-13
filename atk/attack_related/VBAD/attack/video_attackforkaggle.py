@@ -58,7 +58,7 @@ def sim_rectification_vector(model, vid, tentative_directions, n, sigma, target_
                              group_gen, img_model, fake_r, image_flag, untargeted, vc = 'rnn'):
     with torch.no_grad():
         sigma *= (100*fake_r + 1)
-        model.cuda()
+        #model.cuda()
         grads = torch.zeros(len(group_gen), device='cuda')
         count_in = 0
         loss_total = 0
