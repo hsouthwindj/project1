@@ -664,10 +664,10 @@ class TrackSequencesClassifier(object):
                 adv = input_var.detach() + (1/255) * sum(temptotal) /3
                 with torch.no_grad():
                     pred = self.model(input_var).flatten()
-                if last.mean() < pred.mean():
-                    pred = last
-                    break
-                last = pred
+                #if last.mean() < pred.mean():
+                #    pred = last
+                #    break
+                #last = pred
                 # adv = input_var.detach() + (1/255) * torch.sign(input_var.grad.detach())
             elif attack == 'black':
                 with torch.no_grad():
