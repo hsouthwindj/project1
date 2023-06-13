@@ -231,7 +231,7 @@ def untargeted_video_attack(vid_model, vid, directions_generator, ori_class,
         group_gen.initialize(tentative_directions)
         
         l, g = sim_rectification_vector(vid_model, adv_vid, tentative_directions, sample_per_draw, sigma,
-                                        ori_class, rank_transform, sub_num_sample, group_gen, img_model, fake_r, image_flag, untargeted=True)
+                                        ori_class, rank_transform, sub_num_sample, group_gen, img_model, fake_r, image_flag, untargeted=True,vc=vc)
 
         if l is None and g is None:
             logging.info('nes sim fails, try again....')
