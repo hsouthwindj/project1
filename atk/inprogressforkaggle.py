@@ -511,6 +511,65 @@ class TrackSequencesClassifier(object):
         track_sequences = track_sequences + modifier
         track_probs = torch.sigmoid(self.model(track_sequences)).mean()
         return track_probs
+        
+    def benchmark_atk(self, track_sequences, attack = 'white'):
+        eps = 0.006
+        track_sequences = [torch.stack([self.transform(image=face)['image'] for face in sequence]) for sequence in
+                           track_sequences]
+        track_sequences = torch.cat(track_sequences).cuda()
+        
+        for param in self.model.parameters():
+            param.requires_grad = False
+        input_var = autograd.Variable(track_sequences, requires_grad = True).cuda()
+        target_var = autograd.Variable(torch.zeros(track_sequences.size(0)), requires_grad = True).cuda() # need to spoof to real, set target to real and minus the gradient later
+        it = 0
+        pred = np.array([1])
+        last = np.array([10 ** 9])
+        
+        while pred.mean() > 0:
+            torch.cuda.empty_cache()
+            if it > 100:
+                break
+    
+            if attack == 'white':
+                loss_criterion = nn.CrossEntropyLoss()
+                temptotal = []
+                for transform_fn in _get_transforms({"gauss_noise", "gauss_blur", "resize"}):
+                    loss = 0
+                    transformed_img = transform_fn(input_var)
+                    logits = self.model(transformed_img).flatten()
+                    loss += logits.sum()
+                # pred = self.model(input_var).flatten()
+                # loss = torch.nn.functional.binary_cross_entropy_with_logits(pred, target_var)
+                    loss.backward()
+                    temptotal.append(torch.sign(input_var.grad.detach()))
+                adv = input_var.detach() + (1/255) * sum(temptotal)
+                with torch.no_grad():
+                    pred = self.model(input_var).flatten()
+                if last.mean() < pred.mean():
+                    pred = last
+                    break
+                last = pred
+                # adv = input_var.detach() + (1/255) * torch.sign(input_var.grad.detach())
+            elif attack == 'black':
+                with torch.no_grad():
+                    pred = self.model(input_var).flatten()
+                adv = input_var.detach() + (1/255) * self._nes_gradient_estimator(input_var, self.model)
+            total_pert = adv - track_sequences
+            total_pert = torch.clamp(total_pert, -eps, eps)
+            input_adv = track_sequences + total_pert
+            input_adv = torch.clamp(input_adv, 0, 1)
+            input_var.data = input_adv.detach()
+            print(pred, total_pert.max())
+            it += 1
+        img_model = torch.load(image_model_path)
+        f = 0
+        for i in range(len(adv[0])):
+            t, _ = predict_image(img_model, input[i], 'xception')
+            f += t
+        l21 = torch.sum(torch.sqrt(torch.mean(torch.pow((input_var - track_sequences), 2), dim=0).mean(dim=2).mean(dim=2).mean(dim=1)))
+        track_probs = torch.sigmoid(pred).detach().cpu().numpy()
+        return track_probs, l21, f
 
     def classify(self, track_sequences):
         track_sequences = [torch.stack([self.transform(image=face)['image'] for face in sequence]) for sequence in
@@ -807,6 +866,76 @@ def batk3d(model_path, data_path):
         l21 = torch.sum(torch.sqrt(torch.mean(torch.pow((adv - X), 2), dim=0).mean(dim=2).mean(dim=2).mean(dim=1)))
         logging.info('fianl l2,1 nrom %s', l21)
         print('norm ', l21)
+
+def benchatk(model_path, data_path):
+    fd = detector.Detector(os.path.join(model_path, DETECTOR_WEIGHTS_PATH))
+    track_sequences_classifier = TrackSequencesClassifier(os.path.join(model_path, VIDEO_SEQUENCE_MODEL_WEIGHTS_PATH))
+
+    dataset = detector.UnlabeledVideoDataset(data_path)
+    print('Total number of videos: {}'.format(len(dataset)))
+
+    loader = DataLoader(dataset, batch_size=VIDEO_BATCH_SIZE, shuffle=False, num_workers=VIDEO_NUM_WORKERS,
+                        collate_fn=lambda X: X,
+                        drop_last=False)
+
+    video_name_to_score = {}
+
+    for video_sample in loader:
+        frames = video_sample[0]['frames'][:100]
+        detector_frames = frames[::DETECTOR_STEP]
+        video_idx = video_sample[0]['index']
+        video_rel_path = dataset.content[video_idx]
+        video_name = os.path.basename(video_rel_path)
+        print('len', len(frames))
+
+        if len(frames) == 0:
+            video_name_to_score[video_name] = 0.5
+            continue
+
+        detections = []
+        for start in range(0, len(detector_frames), DETECTOR_BATCH_SIZE):
+            end = min(len(detector_frames), start + DETECTOR_BATCH_SIZE)
+            detections_batch = fd.detect(detector_frames[start:end])
+            for detections_per_frame in detections_batch:
+                detections.append({key: value.cpu().numpy() for key, value in detections_per_frame.items()})
+
+        tracks = detector.get_tracks(detections)
+        if len(tracks) == 0:
+            video_name_to_score[video_name] = 0.5
+            continue
+        
+        sequence_track_scores = [np.array([])]
+        f = 0
+        l21 = 0
+        for track in tracks:
+            track_sequences = []
+            for i, (start_idx, _) in enumerate(
+                    track[:-VIDEO_SEQUENCE_MODEL_SEQUENCE_LENGTH + 1:7]):
+                assert start_idx >= 0 and start_idx + VIDEO_SEQUENCE_MODEL_SEQUENCE_LENGTH <= len(frames)
+                _, bbox = track[i * 7 + VIDEO_SEQUENCE_MODEL_SEQUENCE_LENGTH // 2]
+                track_sequences = [extract_sequence(frames, start_idx, bbox, i % 2 == 0)]
+                one_step, pert_size, sf = track_sequences_classifier.benchmark_atk(track_sequences, attack = args.attack)
+                f += sf
+                l21 += pert_size
+                sequence_track_scores[0] = np.concatenate([sequence_track_scores[0], one_step])
+
+        sequence_track_scores = np.concatenate(sequence_track_scores)
+        track_probs = sequence_track_scores
+
+        delta = track_probs - 0.5
+        sign = np.sign(delta)
+        pos_delta = delta > 0
+        neg_delta = delta < 0
+        track_probs[pos_delta] = np.clip(0.5 + sign[pos_delta] * np.power(abs(delta[pos_delta]), 0.65), 0.01, 0.99)
+        track_probs[neg_delta] = np.clip(0.5 + sign[neg_delta] * np.power(abs(delta[neg_delta]), 0.65), 0.01, 0.99)
+        weights = np.power(abs(delta), 1.0) + 1e-4
+        video_score = float((track_probs * weights).sum() / weights.sum())
+
+        video_name_to_score[video_name] = video_score
+        print('NUM DETECTION FRAMES: {}, VIDEO SCORE: {}. {}'.format(len(detections), video_name_to_score[video_name],
+                                                                     video_rel_path))
+        print('fianl l21 norm {}'.format(l21))
+        print('total fake frame ', f)
 
 import argparse
 
