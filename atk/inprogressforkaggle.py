@@ -630,7 +630,7 @@ class TrackSequencesClassifier(object):
         return track_probs
         
     def benchmark_atk(self, track_sequences, attack = 'white'):
-        eps = 0.006
+        eps = 4/255
         track_sequences = [torch.stack([self.transform(image=face)['image'] for face in sequence]) for sequence in
                            track_sequences]
         track_sequences = torch.cat(track_sequences).cuda()
