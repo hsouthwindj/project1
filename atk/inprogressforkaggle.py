@@ -792,6 +792,7 @@ def batk3d(model_path, data_path):
         # print(adv)
         probs = track_sequences_classifier.get_score(track_sequences_classifier.ori_classify(adv.squeeze(0)))
         logging.info('final video score %s', probs)
+        print('final video score', probs)
         # check image detector performance
 
         f = 0
@@ -800,9 +801,12 @@ def batk3d(model_path, data_path):
             f += t
             if t != 0:
                 print('f', i, end = ' ')
+        print('=======================================')
         logging.info('total frame %d, total fake frame %d', len(adv[0]), f)
+        print('total frames and total fake frames', len(adv[0]), f)
         l21 = torch.sum(torch.sqrt(torch.mean(torch.pow((adv - X), 2), dim=0).mean(dim=2).mean(dim=2).mean(dim=1)))
         logging.info('fianl l2,1 nrom %s', l21)
+        print('norm ', l21)
 
 import argparse
 

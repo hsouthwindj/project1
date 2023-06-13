@@ -1,6 +1,18 @@
 INFO:root:final video score 0.4894368052482605, apzckowxpy.mp4
 INFO:root:total frame 42, total fake frame 4
 INFO:root:fianl l2,1 nrom tensor(1.3055, device='cuda:0')
-INFO:root:final video score 0.30097976326942444, 
+INFO:root:final video score 0.30097976326942444, adftmlvzfs.mp4
 INFO:root:total frame 42, total fake frame 3
 INFO:root:fianl l2,1 nrom tensor(1.2986, device='cuda:0')
+INFO:root:final video score 0.5545727014541626, abhggqdift.mp4
+INFO:root:total frame 42, total fake frame 2
+INFO:root:fianl l2,1 nrom tensor(1.2807, device='cuda:0')
+INFO:root:final video score 0.6546931266784668, acagallncj.mp4
+INFO:root:total frame 42, total fake frame 2
+INFO:root:fianl l2,1 nrom tensor(1.3072, device='cuda:0')
+INFO:root:final video score 0.4028272330760956, acagallncj.mp4
+INFO:root:total frame 42, total fake frame 3
+INFO:root:fianl l2,1 nrom tensor(1.2179, device='cuda:0')
+INFO:root:final video score 0.5392118692398071, adftmlvzfs.mp4
+INFO:root:total frame 42, total fake frame 1
+INFO:root:fianl l2,1 nrom tensor(1.2887, device='cuda:0')
