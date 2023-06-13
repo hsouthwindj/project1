@@ -643,7 +643,7 @@ class TrackSequencesClassifier(object):
         pred = np.array([1])
         last = np.array([10 ** 9])
         
-        while pred.mean() > 0:
+        while pred.mean().item() > 0:
             
             torch.cuda.empty_cache()
             if it > 100:
@@ -661,7 +661,7 @@ class TrackSequencesClassifier(object):
                 # loss = torch.nn.functional.binary_cross_entropy_with_logits(pred, target_var)
                     loss.backward()
                     temptotal.append(torch.sign(input_var.grad.detach()))
-                adv = input_var.detach() + (1/255) * sum(temptotal) /3
+                adv = input_var.detach() - (1/255) * sum(temptotal) /3
                 with torch.no_grad():
                     pred = self.model(input_var).flatten()
                 #if last.mean() < pred.mean():
@@ -678,8 +678,6 @@ class TrackSequencesClassifier(object):
             input_adv = track_sequences + total_pert
             input_adv = torch.clamp(input_adv, 0, 1)
             input_var.data = input_adv.detach()
-            print(pred, pred.mean())
-            print(pred.mean().item() > 0)
             it += 1
         img_model = torch.load(image_model_path)
         f = 0
