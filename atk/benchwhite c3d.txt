@@ -260,3 +260,28 @@ len 100
 NUM DETECTION FRAMES: 34, VIDEO SCORE: 0.10817939398947618. aymlynzeni.mp4
 fianl l21 norm 1.3896585702896118
 total fake frame  96
+Total number of videos: 6
+len 100
+NUM DETECTION FRAMES: 34, VIDEO SCORE: 0.35487189757039495. bbnesewcot.mp4
+fianl l21 norm 1.193421483039856
+total fake frame  92
+len 100
+NUM DETECTION FRAMES: 34, VIDEO SCORE: 0.3288908526262453. bbxqtnztyy.mp4
+fianl l21 norm 1.2607359886169434
+total fake frame  61
+len 100
+NUM DETECTION FRAMES: 34, VIDEO SCORE: 0.05212518305644943. bdnoxibdvz.mp4
+fianl l21 norm 1.3028970956802368
+total fake frame  77
+len 100
+NUM DETECTION FRAMES: 34, VIDEO SCORE: 0.28032200968171156. bemkbovwsz.mp4
+fianl l21 norm 1.1951603889465332
+total fake frame  95
+len 100
+NUM DETECTION FRAMES: 34, VIDEO SCORE: 0.42342717621272524. bfktkdugru.mp4
+fianl l21 norm 1.06065034866333
+total fake frame  75
+len 100
+NUM DETECTION FRAMES: 34, VIDEO SCORE: 0.412503984164646. bhvnfaylpk.mp4
+fianl l21 norm 1.0711910724639893
+total fake frame  77

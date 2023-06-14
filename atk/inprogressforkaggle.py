@@ -629,6 +629,27 @@ class TrackSequencesClassifier(object):
         track_probs = torch.sigmoid(self.model(track_sequences)).mean()
         return track_probs
         
+    def _nes_gradient_estimator(self, input_var, model, sample_num = 20, sigma = 0.001):
+        g = 0
+        print('nes')
+        for sample in range(sample_num):
+            print(sample)
+            for transform_fn in _get_transforms({"gauss_noise", "gauss_blur", "resize"}):
+                
+                rand_noise = torch.randn_like(input_var)
+                i1 = input_var + sigma * rand_noise
+                i2 = input_var - sigma * rand_noise
+
+                with torch.no_grad():
+                    prob1 = torch.mean(model(transform_fn(i1)))
+                    prob2 = torch.mean(model(transform_fn(i2)))
+
+                g = g + prob1 * rand_noise
+                g = g - prob2 * rand_noise
+                g = g.data.detach()
+            
+        return (1./(2. * sample_num * sigma)) * g
+        
     def benchmark_atk(self, track_sequences, attack = 'white'):
         eps = 4/255
         track_sequences = [torch.stack([self.transform(image=face)['image'] for face in sequence]) for sequence in
