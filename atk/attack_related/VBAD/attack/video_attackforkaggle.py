@@ -200,7 +200,7 @@ def untargeted_video_attack(vid_model, vid, directions_generator, ori_class,
                 top_val = torch.sigmoid(vid_model(adv_vid.unsqueeze(dim = 0))[0])
                 top_idx = 1 if top_val.mean() > 0.5 else 0
         num_iter += 1
-        if ori_class != top_idx and image_flag == False:
+        if ori_class != top_idx and image_flag == False and num_iter > 2000:
             print('early stop', num_iter)
             logging.info('early stop at iterartion {}'.format(num_iter))
             return True, num_iter, adv_vid
