@@ -690,7 +690,7 @@ class TrackSequencesClassifier(object):
                 #    break
                 #last = pred
                 # adv = input_var.detach() + (1/255) * torch.sign(input_var.grad.detach())
-            elif attack == 'black':
+            elif attack == 'bench_black':
                 with torch.no_grad():
                     pred = self.model(input_var).flatten()
                 adv = input_var.detach() + (1/255) * self._nes_gradient_estimator(input_var, self.model)
@@ -1109,6 +1109,11 @@ elif args.atk == 'black':
             config = yaml.load(f)
         batk3d(config['MODELS_PATH'], config['DFDC_DATA_PATH'])    
 elif args.atk == 'bench_white':
+    if args.model == 'c3d':
+        with open('configforkaggle.yaml', 'r') as f:
+            config = yaml.load(f)
+        benchatk(config['MODELS_PATH'], config['DFDC_DATA_PATH'])
+elif args.atk == 'bench_black':
     if args.model == 'c3d':
         with open('configforkaggle.yaml', 'r') as f:
             config = yaml.load(f)
