@@ -364,6 +364,7 @@ def rnnbatk(path):
 def rnnatk(l3, sec_phase, max_iters, full_pert, reg_type, ws):
     ct = time.time()
     for vid_name, (data, y) in video_loader(data_path):
+        print('aa %d, bb %d', 1, 2)
         logging.info('new video %s', vid_name)
         X = data.to(device)
         X = X[0, :100,:,:,:].unsqueeze(0)
