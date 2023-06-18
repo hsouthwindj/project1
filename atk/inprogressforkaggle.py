@@ -278,7 +278,7 @@ device = torch.device('cuda' if use_cuda else 'cpu')
 group_size = 7 # default 7
 # rnn + cnn
 
-data_path = '/notebooks/atk/input/test_videos/apzckowxpy.mp4'
+data_path = '/notebooks/atk/input/wsvids'
 model_path = '/kaggle/input/models/bi-model_type-baseline_gru_auc_0.150000_ep-10.pth'
 image_model_path = '/kaggle/input/models/all_c40.p' #all_c40 works well, full_raw works fine, the rest are terrible
 model_type = 'xception'
@@ -361,7 +361,8 @@ def rnnbatk(path):
         print('final l2,1 norm', l21)
         logging.info('fianl l2,1 nrom %s', l21)
 
-def rnnatk(l3, sec_phase, max_iters, full_pert):
+def rnnatk(l3, sec_phase, max_iters, full_pert, reg_type, ws):
+    ct = time.time()
     for vid_name, (data, y) in video_loader(data_path):
         logging.info('new video %s', vid_name)
         X = data.to(device)
@@ -392,35 +393,40 @@ def rnnatk(l3, sec_phase, max_iters, full_pert):
             f += t
         logging.info('origin total frame %d, origin total fake frame %d', len(X[0]), f)
         
+        target_pert = dict()
         
+        model = detector.load_model(model_path, device)
+        model.train()
+        # modify for train mode
+        for _, m in model.named_modules():
+            if 'BatchNorm' in m.__class__.__name__:
+                    m = m.eval()
+            if 'Dropout' in m.__class__.__name__:
+                    m = m.eval()
         while it < maxiter:
-            model = detector.load_model(model_path, device)
-            model.train()
-            # modify for train mode
-            for _, m in model.named_modules():
-                if 'BatchNorm' in m.__class__.__name__:
-                        m = m.eval()
-                if 'Dropout' in m.__class__.__name__:
-                        m = m.eval()
+            #print('iter', it)
+            logging.info('iter %d', it)
             
-            window_size = 10
-            step_size = 8
+            
+            window_size = ws # default 9
+            step_size = window_size - 2 # default 7
             # check image detector performance
             f = 0
             ti = X + modifier
             for i in range(len(modifier[0])):
                 t, _ = predict_image(img_model, ti[0][i], model_type)
                 f += t
-                if t != 0:
-                    print('f', i, end = ' ')
-            print('total frame %d, total fake frame %d', len(modifier[0]), f)
-            print(torch.sum(torch.sqrt(torch.mean(torch.pow(modifier, 2), dim=0).mean(dim=2).mean(dim=2).mean(dim=1))))
+                # if t != 0:
+                #     print('f', i, end = ' ')
+            #print('total frame %d, total fake frame %d', len(modifier[0]), f)
+            #print(torch.sum(torch.sqrt(torch.mean(torch.pow(modifier, 2), dim=0).mean(dim=2).mean(dim=2).mean(dim=1))))
+            #print('video probs', torch.sigmoid(model(X + modifier)[0]))
+            logging.info('video probs %s', torch.sigmoid(model(X + modifier)[0]))
             loss1 = 0
             loss2 = 0
             loss3 = 0
-            reg = 1e-6
+            reg = 0
             for i in range(0, seq_len - window_size + 1, step_size):
-                print('i', i)
                 input_image = autograd.Variable(X[0][i:i + window_size], requires_grad=False).unsqueeze(0)
             
                 true_image = input_image + modifier[0][i:i + window_size]
@@ -428,10 +434,7 @@ def rnnatk(l3, sec_phase, max_iters, full_pert):
                 #Prediction on the adversarial video
                 probs, pre_label = model(true_image)
                 probs = torch.sigmoid(probs)
-                print('iter', it)
-                logging.info('iter %d', it)
-                print(probs)
-                logging.info(probs)
+                
 
                 #extracting the probability of true label 
                 zero_array = torch.zeros(2).to(device)
@@ -450,16 +453,20 @@ def rnnatk(l3, sec_phase, max_iters, full_pert):
                 norm_frame = torch.mean(torch.abs(modifier), dim=3).mean(dim=3).mean(dim=2) 
 
                 # loss3 = 0
-                print('loss3  ', loss3)
+                # print('loss3  ', loss3)
                 from lpips import LPIPS
                 # target_frame = input_image[0][window_size // 2]
-                target_pert = image_pert(img_model, input_image, modifier[0][i:i + window_size].clone().detach().requires_grad_(True), 'xception')
-                target_pert = target_pert.unsqueeze(0)
+                if it == 0:
+                    target_pert[i] = image_pert(img_model, input_image, modifier[0][i : i + window_size].clone().detach().requires_grad_(True), 'xception')
+                    # target_pert[i] = target_pert[i].unsqueeze(0)
+                
                 lpips_distance = 0.0
                 lpips_fn = LPIPS(net='alex', verbose=False).to(modifier.device)
+                
                 for w in range(window_size):
+                    target_prepert = window_size // 4 if w < window_size // 2 else window_size * 3 // 4
                     # lpips_distance += lpips_fn(modifier[0][w + i].cuda(), target_pert[0][w].cuda()).item()
-                    loss3 += torch.sum(torch.sqrt(torch.mean(torch.pow((modifier[0][w + i] - target_pert[0][w]).unsqueeze(0), 2), dim=0).mean(dim=1).mean(dim=1).mean(dim=0)))
+                    loss3 += torch.sum(torch.sqrt(torch.mean(torch.pow((modifier[0][w + i] - target_pert[i][target_prepert]).unsqueeze(0), 2), dim=0).mean(dim=1).mean(dim=1).mean(dim=0)))
                     # loss3 += img_model(true_image[0][w].unsqueeze(0))[0][1].item()
                 # loss3 += (lpips_distance / window_size)
                 # loss3 = -torch.log(1 - loss3 + 1e-6)
@@ -469,17 +476,24 @@ def rnnatk(l3, sec_phase, max_iters, full_pert):
                 mse = torch.nn.MSELoss()
                 treg = 0
                 for w in range(window_size - 1):
-                    # treg += tv(torch.abs(modifier[0][w + i] - modifier[0][w + i + 1]).unsqueeze(0))
-                    # treg += ssim(modifier[0][w + i].unsqueeze(0), modifier[0][w + i + 1].unsqueeze(0))
-                    treg += mse(modifier[0][w + i].unsqueeze(0), modifier[0][w + i + 1].unsqueeze(0))
-                # reg += -torch.log(treg / window_size)
-                reg += (treg / window_size)
-            # reg /= 2500
-
-            weight_loss2 = 2 #default is 1
+                    if reg_type == 'tv':
+                        treg += tv(torch.abs(modifier[0][w + i] - modifier[0][w + i + 1]).unsqueeze(0))
+                    elif reg_type == 'ssim':
+                        treg += ssim(modifier[0][w + i].unsqueeze(0), modifier[0][w + i + 1].unsqueeze(0))
+                    elif reg_type == 'mse':
+                        treg += mse(modifier[0][w + i].unsqueeze(0), modifier[0][w + i + 1].unsqueeze(0))
+                if reg_type == 'ssim':
+                    reg += -torch.log(treg / window_size)
+                else:
+                    reg += (treg / window_size)
+            if reg_type == 'tv':
+                reg /= 2500
+            
+            # windows size exp var => 2, 1.25, 0.8
+            weight_loss2 = 1.25 #default is 1
             if l3 == True:
-                loss = 0.7 * loss1 + weight_loss2 * loss2 + 1.3 * loss3 + 0.8 * reg
-                print(loss1, loss2, loss3, reg)
+                loss = 2 * loss1 + weight_loss2 * loss2 + 1.3 * loss3# + 0.8 * reg # default 0.5, 1.25, 1.3
+                #print(loss1, loss2, loss3, reg)
                 logging.info('%s, %s, %s', loss1, loss2, loss3)
             else:
                 loss = loss1 + weight_loss2 * loss2
@@ -489,26 +503,6 @@ def rnnatk(l3, sec_phase, max_iters, full_pert):
             optimizer.zero_grad()
             loss.backward()
             optimizer.step()
-            
-            
-#                 pivot_step = 0
-#                 if sec_phase == True:
-#                     # for i in range(0, seq_len, group_size):
-#                     #     img_imp[i // group_size] = 1 + 1 * group_img_dec(true_image[0][i:min(i + 7, seq_len)], img_model, model_type)
-#                     if it % 1 == 0:
-
-#                         if full_pert:
-#                             tperts = image_pert(img_model, input_image, torch.tensor(modifier), 'xception')
-#                             for i in range(len(modifier[0])):
-#                                 with torch.no_grad():
-#                                     modifier[0][i] = tperts[0][i]
-#                         else:
-#                             pivot = (pivot + pivot_step) % group_size
-#                             tperts = image_pert(img_model, input_image, torch.tensor(modifier), 'xception', pivot, group_size)
-#                             for i in range(len(modifier[0])):
-#                                 if i % group_size == pivot:
-#                                     with torch.no_grad():
-#                                         modifier[0][i] = tperts[0][i]
             
             
             if it % 100 == 0: 
@@ -522,10 +516,10 @@ def rnnatk(l3, sec_phase, max_iters, full_pert):
                 min_loss = loss
 
             if it + 1 == maxiter or break_condition:
-                print ('Norm frame for each frame: ')
+                #print ('Norm frame for each frame: ')
                 for pp in range(seq_len):
                     # print the map value for each frame
-                    print(str(pp) + ' ' + str((norm_frame[0][pp]).detach().cpu().numpy()))
+                    #print(str(pp) + ' ' + str((norm_frame[0][pp]).detach().cpu().numpy()))
                     logging.info(str(pp) + ' ' + str((norm_frame[0][pp]).detach().cpu().numpy()))
 
             # print (f'Prediction for adversarial video: {pre_label.cpu().detach().numpy()}')
@@ -534,20 +528,25 @@ def rnnatk(l3, sec_phase, max_iters, full_pert):
             if torch.cuda.is_available():
                 torch.cuda.empty_cache()
             it += 1
+        #print('time taken', time.time() - ct)
         # check final video output
         true_image = X + modifier
-        invTrans = transforms.Compose([ transforms.Normalize(mean = [ 0., 0., 0. ],
-                                                     std = [ 1/0.229, 1/0.224, 1/0.225 ]),
-                                transforms.Normalize(mean = [ -0.485, -0.456, -0.406 ],
-                                                     std = [ 1., 1., 1. ]),
-                               ])
-
-        inv_image = invTrans(true_image)
-        inv_pert = invTrans(modifier)
-        # save image
-        cv2.imwrite('img.jpg', inv_image[5].cpu().numpy())
-        cv2.imwrite('pert.jpg', inv_pert[5].cpu().numpy())
+        torchvision.utils.save_image(true_image[0][5], 'img.jpg', normalize = True)
+        torchvision.utils.save_image(X[0][5], 'ori.jpg', normalize = True)
+        torchvision.utils.save_image(modifier[0][5], 'pert.jpg', normalize = True)
         
+        a = X[0][0:60:10]
+        b = true_image[0][0:60:10]
+        c = modifier[0][0:60:10]*255
+        
+        torchvision.utils.save_image(torch.cat([a,b]), 'merge.jpg', nrow = 6, normalize = True)
+        torchvision.utils.save_image(c, 'perts.jpg', nrow = 6, normalize = True)
+        
+        probs, pre_label = eval_model(true_image)
+        probs = torch.sigmoid(probs)
+        logging.info('final video score %s', probs)
+        
+        true_image = X + modifier
         probs, pre_label = eval_model(true_image)
         probs = torch.sigmoid(probs)
         logging.info('final video score %s', probs)
@@ -1096,7 +1095,7 @@ for arg, value in sorted(vars(args).items()):
 
 if args.atk == 'white':
     if args.model == 'rnn':
-        rnnatk(args.l3, args.sec_phase, args.iters, args.full_pert, args.reg)
+        rnnatk(args.l3, args.sec_phase, args.iters, args.full_pert, args.reg, args.group_size)
     else:
         with open('configforkaggle.yaml', 'r') as f:
             config = yaml.load(f)
