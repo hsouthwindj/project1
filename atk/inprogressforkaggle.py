@@ -550,6 +550,7 @@ def rnnatk(l3, sec_phase, max_iters, full_pert, reg_type, ws):
         probs, pre_label = eval_model(true_image)
         probs = torch.sigmoid(probs)
         logging.info('final video score %s', probs)
+        print('final video score %s', probs)
         # check image detector performance
         f = 0
         for i in range(len(true_image[0])):
@@ -558,8 +559,10 @@ def rnnatk(l3, sec_phase, max_iters, full_pert, reg_type, ws):
             if t != 0:
                 print('f', i, end = ' ')
         logging.info('total frame %d, total fake frame %d', len(true_image[0]), f)
+        print('total frame %d, total fake frame %d', len(true_image[0]), f)
         l21 = torch.sum(torch.sqrt(torch.mean(torch.pow((modifier), 2), dim=0).mean(dim=2).mean(dim=2).mean(dim=1)))
         logging.info('fianl l2,1 nrom %s', l21)
+        print('fianl l2,1 nrom %s', l21)
         
         
 # for 3dcnn
