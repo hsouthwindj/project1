@@ -278,7 +278,7 @@ device = torch.device('cuda' if use_cuda else 'cpu')
 group_size = 7 # default 7
 # rnn + cnn
 
-data_path = '/notebooks/atk/input/wsvids'
+data_path = '/kaggle/input/wsvids'
 model_path = '/kaggle/input/models/bi-model_type-baseline_gru_auc_0.150000_ep-10.pth'
 image_model_path = '/kaggle/input/models/all_c40.p' #all_c40 works well, full_raw works fine, the rest are terrible
 model_type = 'xception'
