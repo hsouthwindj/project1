@@ -1,0 +1,242 @@
+Probability for ground truth label : [0.5174373]
+final video score %s tensor([[0.2019]], device='cuda:0', grad_fn=<SigmoidBackward0>)
+f 14 f 15 f 19 f 32 f 33 f 42 f 43 f 56 f 57 f 63 f 64 f 91 total frame %d, total fake frame %d 100 12
+fianl l2,1 nrom %s tensor(1.3179, device='cuda:0', grad_fn=<SumBackward0>)
+aa %d, bb %d 1 2
+Model is loaded from /kaggle/input/models/bi-model_type-baseline_gru_auc_0.150000_ep-10.pth
+Model is loaded from /kaggle/input/models/bi-model_type-baseline_gru_auc_0.150000_ep-10.pth
+Probability for ground truth label : [0.5628229]
+final video score %s tensor([[0.1980]], device='cuda:0', grad_fn=<SigmoidBackward0>)
+f 5 f 7 f 8 f 14 f 15 f 21 f 22 f 25 f 32 f 85 f 92 f 94 total frame %d, total fake frame %d 100 12
+fianl l2,1 nrom %s tensor(1.1248, device='cuda:0', grad_fn=<SumBackward0>)
+aa %d, bb %d 1 2
+Model is loaded from /kaggle/input/models/bi-model_type-baseline_gru_auc_0.150000_ep-10.pth
+Model is loaded from /kaggle/input/models/bi-model_type-baseline_gru_auc_0.150000_ep-10.pth
+Probability for ground truth label : [0.5506126]
+final video score %s tensor([[0.1962]], device='cuda:0', grad_fn=<SigmoidBackward0>)
+f 7 f 8 f 17 f 18 f 45 f 61 f 74 total frame %d, total fake frame %d 100 7
+fianl l2,1 nrom %s tensor(1.2924, device='cuda:0', grad_fn=<SumBackward0>)
+aa %d, bb %d 1 2
+Model is loaded from /kaggle/input/models/bi-model_type-baseline_gru_auc_0.150000_ep-10.pth
+Model is loaded from /kaggle/input/models/bi-model_type-baseline_gru_auc_0.150000_ep-10.pth
+Probability for ground truth label : [0.5446835]
+final video score %s tensor([[0.2818]], device='cuda:0', grad_fn=<SigmoidBackward0>)
+f 0 f 3 f 4 f 5 f 7 f 8 f 22 f 28 f 29 f 35 f 36 f 42 f 43 f 45 f 49 f 50 f 56 f 57 f 63 f 64 f 70 f 71 f 77 f 78 f 84 f 89 f 92 total frame %d, total fake frame %d 100 27
+fianl l2,1 nrom %s tensor(1.2086, device='cuda:0', grad_fn=<SumBackward0>)
+aa %d, bb %d 1 2
+Model is loaded from /kaggle/input/models/bi-model_type-baseline_gru_auc_0.150000_ep-10.pth
+Model is loaded from /kaggle/input/models/bi-model_type-baseline_gru_auc_0.150000_ep-10.pth
+Probability for ground truth label : [0.5614206]
+final video score %s tensor([[0.2022]], device='cuda:0', grad_fn=<SigmoidBackward0>)
+f 8 f 14 f 15 f 49 f 50 f 85 total frame %d, total fake frame %d 100 6
+fianl l2,1 nrom %s tensor(1.2519, device='cuda:0', grad_fn=<SumBackward0>)
+aa %d, bb %d 1 2
+Model is loaded from /kaggle/input/models/bi-model_type-baseline_gru_auc_0.150000_ep-10.pth
+Model is loaded from /kaggle/input/models/bi-model_type-baseline_gru_auc_0.150000_ep-10.pth
+Probability for ground truth label : [0.5637689]
+final video score %s tensor([[0.2437]], device='cuda:0', grad_fn=<SigmoidBackward0>)
+f 14 f 22 f 25 f 26 f 28 f 29 f 31 f 35 f 36 f 42 f 43 f 46 f 49 f 50 f 52 f 56 f 57 f 59 f 63 f 64 f 67 f 70 f 71 f 78 total frame %d, total fake frame %d 100 24
+fianl l2,1 nrom %s tensor(1.2873, device='cuda:0', grad_fn=<SumBackward0>)
+aa %d, bb %d 1 2
+Model is loaded from /kaggle/input/models/bi-model_type-baseline_gru_auc_0.150000_ep-10.pth
+Model is loaded from /kaggle/input/models/bi-model_type-baseline_gru_auc_0.150000_ep-10.pth
+Probability for ground truth label : [0.51547945]
+final video score %s tensor([[0.2010]], device='cuda:0', grad_fn=<SigmoidBackward0>)
+f 0 f 1 f 3 f 4 f 8 f 10 f 14 f 18 f 19 f 21 f 22 f 29 f 32 f 36 f 42 f 43 f 49 f 52 f 56 f 57 f 64 f 67 f 84 f 85 f 92 f 94 f 95 f 99 total frame %d, total fake frame %d 100 28
+fianl l2,1 nrom %s tensor(1.3462, device='cuda:0', grad_fn=<SumBackward0>)
+aa %d, bb %d 1 2
+Model is loaded from /kaggle/input/models/bi-model_type-baseline_gru_auc_0.150000_ep-10.pth
+Model is loaded from /kaggle/input/models/bi-model_type-baseline_gru_auc_0.150000_ep-10.pth
+Probability for ground truth label : [0.51107526]
+final video score %s tensor([[0.2017]], device='cuda:0', grad_fn=<SigmoidBackward0>)
+f 8 f 21 f 28 f 49 f 50 f 56 f 57 f 60 f 64 f 70 f 71 f 73 f 74 f 77 f 78 f 80 f 82 f 84 f 85 f 92 f 94 f 99 total frame %d, total fake frame %d 100 22
+fianl l2,1 nrom %s tensor(1.4842, device='cuda:0', grad_fn=<SumBackward0>)
+aa %d, bb %d 1 2
+Model is loaded from /kaggle/input/models/bi-model_type-baseline_gru_auc_0.150000_ep-10.pth
+Model is loaded from /kaggle/input/models/bi-model_type-baseline_gru_auc_0.150000_ep-10.pth
+Probability for ground truth label : [0.5533307]
+final video score %s tensor([[0.2005]], device='cuda:0', grad_fn=<SigmoidBackward0>)
+f 3 f 4 f 7 f 8 f 11 f 14 f 15 f 21 f 22 f 25 f 28 f 29 f 31 f 32 f 35 f 36 f 42 f 43 f 46 f 49 f 50 f 52 f 56 f 57 f 60 f 63 f 64 f 67 f 70 f 71 f 73 f 74 f 75 f 77 f 78 f 81 f 84 f 85 f 91 f 92 total frame %d, total fake frame %d 100 40
+fianl l2,1 nrom %s tensor(1.4634, device='cuda:0', grad_fn=<SumBackward0>)
+aa %d, bb %d 1 2
+Model is loaded from /kaggle/input/models/bi-model_type-baseline_gru_auc_0.150000_ep-10.pth
+Model is loaded from /kaggle/input/models/bi-model_type-baseline_gru_auc_0.150000_ep-10.pth
+Probability for ground truth label : [0.39623705]
+final video score %s tensor([[0.2018]], device='cuda:0', grad_fn=<SigmoidBackward0>)
+total frame %d, total fake frame %d 100 0
+fianl l2,1 nrom %s tensor(1.0132, device='cuda:0', grad_fn=<SumBackward0>)
+aa %d, bb %d 1 2
+Model is loaded from /kaggle/input/models/bi-model_type-baseline_gru_auc_0.150000_ep-10.pth
+Model is loaded from /kaggle/input/models/bi-model_type-baseline_gru_auc_0.150000_ep-10.pth
+Probability for ground truth label : [0.52680933]
+final video score %s tensor([[0.2278]], device='cuda:0', grad_fn=<SigmoidBackward0>)
+total frame %d, total fake frame %d 51 0
+fianl l2,1 nrom %s tensor(0.6543, device='cuda:0', grad_fn=<SumBackward0>)
+aa %d, bb %d 1 2
+Model is loaded from /kaggle/input/models/bi-model_type-baseline_gru_auc_0.150000_ep-10.pth
+Model is loaded from /kaggle/input/models/bi-model_type-baseline_gru_auc_0.150000_ep-10.pth
+Probability for ground truth label : [0.53544074]
+final video score %s tensor([[0.2011]], device='cuda:0', grad_fn=<SigmoidBackward0>)
+f 0 f 4 f 5 f 7 f 8 f 10 f 11 f 12 f 14 f 15 f 21 f 22 f 24 f 28 f 29 f 31 f 35 f 36 f 38 f 39 f 40 f 42 f 43 f 45 f 49 f 50 f 53 f 54 f 56 f 57 f 60 f 63 f 64 f 66 f 67 f 70 f 71 f 73 f 74 f 77 f 78 f 80 f 81 f 84 f 85 f 88 f 89 f 91 f 92 total frame %d, total fake frame %d 100 49
+fianl l2,1 nrom %s tensor(1.4621, device='cuda:0', grad_fn=<SumBackward0>)
+aa %d, bb %d 1 2
+Model is loaded from /kaggle/input/models/bi-model_type-baseline_gru_auc_0.150000_ep-10.pth
+Model is loaded from /kaggle/input/models/bi-model_type-baseline_gru_auc_0.150000_ep-10.pth
+Probability for ground truth label : [0.5343836]
+final video score %s tensor([[0.3663]], device='cuda:0', grad_fn=<SigmoidBackward0>)
+f 0 f 1 f 3 f 4 f 5 f 7 f 8 f 10 f 11 f 14 f 15 f 21 f 22 f 24 f 25 f 26 f 28 f 29 f 31 f 32 f 33 f 35 f 36 f 38 f 39 f 40 f 42 f 43 f 45 f 47 f 49 f 50 f 56 f 57 f 59 f 60 f 61 f 63 f 64 f 66 f 67 f 70 f 71 f 77 f 78 f 81 f 82 f 84 f 85 f 87 f 89 f 91 f 92 f 95 f 96 f 98 f 99 total frame %d, total fake frame %d 100 57
+fianl l2,1 nrom %s tensor(1.1473, device='cuda:0', grad_fn=<SumBackward0>)
+aa %d, bb %d 1 2
+Model is loaded from /kaggle/input/models/bi-model_type-baseline_gru_auc_0.150000_ep-10.pth
+Model is loaded from /kaggle/input/models/bi-model_type-baseline_gru_auc_0.150000_ep-10.pth
+Probability for ground truth label : [0.52450883]
+final video score %s tensor([[0.2024]], device='cuda:0', grad_fn=<SigmoidBackward0>)
+f 4 f 7 f 8 f 11 f 12 f 15 f 17 f 18 f 21 f 22 f 25 f 28 f 35 f 36 f 40 f 42 f 43 f 45 f 46 f 47 f 49 f 50 f 53 f 63 f 70 f 74 f 75 f 77 f 91 total frame %d, total fake frame %d 100 29
+fianl l2,1 nrom %s tensor(1.3123, device='cuda:0', grad_fn=<SumBackward0>)
+aa %d, bb %d 1 2
+Model is loaded from /kaggle/input/models/bi-model_type-baseline_gru_auc_0.150000_ep-10.pth
+Model is loaded from /kaggle/input/models/bi-model_type-baseline_gru_auc_0.150000_ep-10.pth
+Probability for ground truth label : [0.5328081]
+final video score %s tensor([[0.2031]], device='cuda:0', grad_fn=<SigmoidBackward0>)
+f 0 f 1 f 3 f 5 f 7 f 8 f 11 f 14 f 15 f 21 f 22 f 24 f 28 f 29 f 36 f 42 f 43 f 46 f 49 f 50 f 53 f 56 f 57 f 63 f 64 f 67 f 70 f 71 f 73 f 74 f 75 f 77 f 78 f 80 f 81 f 82 f 84 f 85 f 87 f 88 f 91 f 92 f 94 f 95 f 96 f 98 f 99 total frame %d, total fake frame %d 100 47
+fianl l2,1 nrom %s tensor(1.4446, device='cuda:0', grad_fn=<SumBackward0>)
+aa %d, bb %d 1 2
+Model is loaded from /kaggle/input/models/bi-model_type-baseline_gru_auc_0.150000_ep-10.pth
+Model is loaded from /kaggle/input/models/bi-model_type-baseline_gru_auc_0.150000_ep-10.pth
+Probability for ground truth label : [0.52884436]
+final video score %s tensor([[0.2005]], device='cuda:0', grad_fn=<SigmoidBackward0>)
+f 1 f 3 f 8 f 10 f 14 f 15 f 17 f 18 f 32 f 33 f 35 f 36 f 39 f 40 f 42 f 43 f 45 f 46 f 47 f 49 f 50 f 71 f 77 f 78 f 81 f 82 f 84 f 85 f 91 f 92 total frame %d, total fake frame %d 100 30
+fianl l2,1 nrom %s tensor(1.3071, device='cuda:0', grad_fn=<SumBackward0>)
+aa %d, bb %d 1 2
+Model is loaded from /kaggle/input/models/bi-model_type-baseline_gru_auc_0.150000_ep-10.pth
+Model is loaded from /kaggle/input/models/bi-model_type-baseline_gru_auc_0.150000_ep-10.pth
+Probability for ground truth label : [0.5077892]
+final video score %s tensor([[0.2030]], device='cuda:0', grad_fn=<SigmoidBackward0>)
+f 0 f 1 f 2 f 3 f 4 f 7 f 8 f 10 f 11 f 12 f 14 f 15 f 18 f 19 f 21 f 22 f 31 f 32 f 35 f 36 f 38 f 40 f 42 f 43 f 46 f 47 f 49 f 50 f 53 f 54 f 56 f 57 f 59 f 64 f 70 f 71 f 73 f 74 f 77 f 78 f 80 f 81 f 82 f 84 f 85 f 87 f 88 f 89 f 91 f 92 f 94 f 95 f 96 f 99 total frame %d, total fake frame %d 100 54
+fianl l2,1 nrom %s tensor(1.3625, device='cuda:0', grad_fn=<SumBackward0>)
+aa %d, bb %d 1 2
+Model is loaded from /kaggle/input/models/bi-model_type-baseline_gru_auc_0.150000_ep-10.pth
+Model is loaded from /kaggle/input/models/bi-model_type-baseline_gru_auc_0.150000_ep-10.pth
+Probability for ground truth label : [0.47972777]
+final video score %s tensor([[0.2284]], device='cuda:0', grad_fn=<SigmoidBackward0>)
+f 26 f 35 f 43 f 45 f 46 f 49 f 51 f 52 f 53 f 54 f 55 total frame %d, total fake frame %d 56 11
+fianl l2,1 nrom %s tensor(0.6408, device='cuda:0', grad_fn=<SumBackward0>)
+aa %d, bb %d 1 2
+Model is loaded from /kaggle/input/models/bi-model_type-baseline_gru_auc_0.150000_ep-10.pth
+Model is loaded from /kaggle/input/models/bi-model_type-baseline_gru_auc_0.150000_ep-10.pth
+Probability for ground truth label : [0.521668]
+final video score %s tensor([[0.1983]], device='cuda:0', grad_fn=<SigmoidBackward0>)
+f 11 f 12 f 14 f 15 f 18 f 19 f 22 f 25 f 46 f 50 f 77 f 78 f 81 f 82 f 94 f 99 total frame %d, total fake frame %d 100 16
+fianl l2,1 nrom %s tensor(1.1890, device='cuda:0', grad_fn=<SumBackward0>)
+aa %d, bb %d 1 2
+Model is loaded from /kaggle/input/models/bi-model_type-baseline_gru_auc_0.150000_ep-10.pth
+Model is loaded from /kaggle/input/models/bi-model_type-baseline_gru_auc_0.150000_ep-10.pth
+Probability for ground truth label : [0.41066444]
+final video score %s tensor([[0.2028]], device='cuda:0', grad_fn=<SigmoidBackward0>)
+f 8 f 15 f 21 f 22 f 28 f 29 f 36 f 38 f 39 f 42 f 43 f 50 f 63 f 64 f 78 f 85 f 91 f 95 f 96 f 98 total frame %d, total fake frame %d 100 20
+fianl l2,1 nrom %s tensor(1.1454, device='cuda:0', grad_fn=<SumBackward0>)
+aa %d, bb %d 1 2
+Model is loaded from /kaggle/input/models/bi-model_type-baseline_gru_auc_0.150000_ep-10.pth
+Model is loaded from /kaggle/input/models/bi-model_type-baseline_gru_auc_0.150000_ep-10.pth
+Probability for ground truth label : [0.55256146]
+final video score %s tensor([[0.4333]], device='cuda:0', grad_fn=<SigmoidBackward0>)
+f 0 f 8 f 17 f 18 f 21 f 35 f 42 f 43 f 50 f 57 f 85 f 94 total frame %d, total fake frame %d 100 12
+fianl l2,1 nrom %s tensor(1.4804, device='cuda:0', grad_fn=<SumBackward0>)
+aa %d, bb %d 1 2
+Model is loaded from /kaggle/input/models/bi-model_type-baseline_gru_auc_0.150000_ep-10.pth
+Model is loaded from /kaggle/input/models/bi-model_type-baseline_gru_auc_0.150000_ep-10.pth
+Probability for ground truth label : [0.5169061]
+final video score %s tensor([[0.2020]], device='cuda:0', grad_fn=<SigmoidBackward0>)
+f 8 f 12 f 14 f 15 f 24 f 36 f 42 f 43 f 57 f 59 f 60 f 64 total frame %d, total fake frame %d 100 12
+fianl l2,1 nrom %s tensor(1.3322, device='cuda:0', grad_fn=<SumBackward0>)
+aa %d, bb %d 1 2
+Model is loaded from /kaggle/input/models/bi-model_type-baseline_gru_auc_0.150000_ep-10.pth
+Model is loaded from /kaggle/input/models/bi-model_type-baseline_gru_auc_0.150000_ep-10.pth
+Probability for ground truth label : [0.52718925]
+final video score %s tensor([[0.5159]], device='cuda:0', grad_fn=<SigmoidBackward0>)
+f 7 f 8 f 21 f 22 f 28 f 29 f 35 f 42 f 43 f 50 f 54 f 56 f 57 f 63 f 64 f 70 f 84 f 91 f 92 total frame %d, total fake frame %d 100 19
+fianl l2,1 nrom %s tensor(1.0781, device='cuda:0', grad_fn=<SumBackward0>)
+aa %d, bb %d 1 2
+Model is loaded from /kaggle/input/models/bi-model_type-baseline_gru_auc_0.150000_ep-10.pth
+Model is loaded from /kaggle/input/models/bi-model_type-baseline_gru_auc_0.150000_ep-10.pth
+Probability for ground truth label : [0.5240968]
+final video score %s tensor([[0.2009]], device='cuda:0', grad_fn=<SigmoidBackward0>)
+f 4 f 5 f 11 f 12 f 14 f 15 f 21 f 22 f 43 f 57 f 60 f 92 f 94 total frame %d, total fake frame %d 100 13
+fianl l2,1 nrom %s tensor(1.2704, device='cuda:0', grad_fn=<SumBackward0>)
+aa %d, bb %d 1 2
+Model is loaded from /kaggle/input/models/bi-model_type-baseline_gru_auc_0.150000_ep-10.pth
+Model is loaded from /kaggle/input/models/bi-model_type-baseline_gru_auc_0.150000_ep-10.pth
+Probability for ground truth label : [0.5633167]
+final video score %s tensor([[0.1926]], device='cuda:0', grad_fn=<SigmoidBackward0>)
+f 0 f 3 f 7 f 8 f 35 f 56 f 57 f 59 f 61 f 63 f 70 f 71 f 91 total frame %d, total fake frame %d 100 13
+fianl l2,1 nrom %s tensor(1.3167, device='cuda:0', grad_fn=<SumBackward0>)
+aa %d, bb %d 1 2
+Model is loaded from /kaggle/input/models/bi-model_type-baseline_gru_auc_0.150000_ep-10.pth
+Model is loaded from /kaggle/input/models/bi-model_type-baseline_gru_auc_0.150000_ep-10.pth
+Probability for ground truth label : [0.5477629]
+final video score %s tensor([[0.2153]], device='cuda:0', grad_fn=<SigmoidBackward0>)
+f 7 f 8 f 11 f 56 f 70 f 78 f 85 f 98 total frame %d, total fake frame %d 100 8
+fianl l2,1 nrom %s tensor(1.2254, device='cuda:0', grad_fn=<SumBackward0>)
+aa %d, bb %d 1 2
+Model is loaded from /kaggle/input/models/bi-model_type-baseline_gru_auc_0.150000_ep-10.pth
+Model is loaded from /kaggle/input/models/bi-model_type-baseline_gru_auc_0.150000_ep-10.pth
+Probability for ground truth label : [0.42117694]
+final video score %s tensor([[0.2020]], device='cuda:0', grad_fn=<SigmoidBackward0>)
+f 0 f 18 f 19 f 21 f 22 f 39 f 42 f 43 f 46 f 49 f 52 f 53 f 54 f 56 f 57 f 60 f 61 f 63 f 64 f 67 f 68 f 70 f 71 f 73 f 74 f 75 f 77 f 78 f 81 f 84 f 85 f 88 f 91 f 92 total frame %d, total fake frame %d 100 34
+fianl l2,1 nrom %s tensor(1.1310, device='cuda:0', grad_fn=<SumBackward0>)
+aa %d, bb %d 1 2
+Model is loaded from /kaggle/input/models/bi-model_type-baseline_gru_auc_0.150000_ep-10.pth
+Model is loaded from /kaggle/input/models/bi-model_type-baseline_gru_auc_0.150000_ep-10.pth
+Probability for ground truth label : [0.55551326]
+final video score %s tensor([[0.2022]], device='cuda:0', grad_fn=<SigmoidBackward0>)
+f 7 f 8 f 10 f 11 f 15 f 36 f 46 f 49 f 50 f 54 f 57 f 59 f 60 f 61 f 63 f 64 f 67 f 70 f 71 f 77 f 78 f 80 f 81 f 82 f 84 f 88 f 89 f 91 f 92 total frame %d, total fake frame %d 100 29
+fianl l2,1 nrom %s tensor(1.3180, device='cuda:0', grad_fn=<SumBackward0>)
+aa %d, bb %d 1 2
+Model is loaded from /kaggle/input/models/bi-model_type-baseline_gru_auc_0.150000_ep-10.pth
+Model is loaded from /kaggle/input/models/bi-model_type-baseline_gru_auc_0.150000_ep-10.pth
+Probability for ground truth label : [0.5365943]
+final video score %s tensor([[0.5186]], device='cuda:0', grad_fn=<SigmoidBackward0>)
+f 0 f 7 f 8 f 10 f 12 f 14 f 15 f 21 f 24 f 29 f 31 f 32 f 33 f 35 f 36 f 42 f 43 f 49 f 50 f 52 f 56 f 57 f 60 f 63 f 64 f 70 f 71 f 78 f 84 f 85 f 91 f 92 f 98 f 99 total frame %d, total fake frame %d 100 34
+fianl l2,1 nrom %s tensor(1.5253, device='cuda:0', grad_fn=<SumBackward0>)
+aa %d, bb %d 1 2
+Model is loaded from /kaggle/input/models/bi-model_type-baseline_gru_auc_0.150000_ep-10.pth
+Model is loaded from /kaggle/input/models/bi-model_type-baseline_gru_auc_0.150000_ep-10.pth
+Probability for ground truth label : [0.5536051]
+final video score %s tensor([[0.2402]], device='cuda:0', grad_fn=<SigmoidBackward0>)
+f 11 f 14 f 15 f 17 f 21 f 22 f 28 f 29 f 32 f 33 f 35 f 36 f 43 f 46 f 47 f 49 f 50 f 56 f 57 f 60 f 61 f 63 f 64 f 66 f 67 f 68 f 70 f 71 f 73 f 77 f 81 f 84 f 85 f 87 f 88 f 89 f 91 f 96 f 98 total frame %d, total fake frame %d 100 39
+fianl l2,1 nrom %s tensor(1.2837, device='cuda:0', grad_fn=<SumBackward0>)
+aa %d, bb %d 1 2
+Model is loaded from /kaggle/input/models/bi-model_type-baseline_gru_auc_0.150000_ep-10.pth
+Model is loaded from /kaggle/input/models/bi-model_type-baseline_gru_auc_0.150000_ep-10.pth
+Probability for ground truth label : [0.56334066]
+final video score %s tensor([[0.2030]], device='cuda:0', grad_fn=<SigmoidBackward0>)
+f 4 f 7 f 8 f 14 f 15 f 18 f 21 f 22 f 24 f 28 f 29 f 32 f 35 f 36 f 42 f 43 f 45 f 49 f 50 f 56 f 57 f 58 f 59 f 64 f 67 f 68 f 70 f 71 f 74 f 77 f 78 f 81 f 84 f 85 f 89 total frame %d, total fake frame %d 100 35
+fianl l2,1 nrom %s tensor(1.4676, device='cuda:0', grad_fn=<SumBackward0>)
+aa %d, bb %d 1 2
+Model is loaded from /kaggle/input/models/bi-model_type-baseline_gru_auc_0.150000_ep-10.pth
+Model is loaded from /kaggle/input/models/bi-model_type-baseline_gru_auc_0.150000_ep-10.pth
+Probability for ground truth label : [0.5473941]
+final video score %s tensor([[0.1999]], device='cuda:0', grad_fn=<SigmoidBackward0>)
+f 0 f 1 f 4 f 5 f 7 f 8 f 11 f 12 f 14 f 15 f 17 f 18 f 19 f 21 f 22 f 24 f 25 f 26 f 28 f 29 f 31 f 32 f 35 f 36 f 39 f 42 f 43 f 44 f 45 f 49 f 50 f 53 f 56 f 57 f 58 f 59 f 60 f 63 f 64 f 70 f 71 f 74 f 77 f 78 f 81 f 84 f 85 f 87 f 88 f 91 f 92 f 96 f 99 total frame %d, total fake frame %d 100 53
+fianl l2,1 nrom %s tensor(1.2753, device='cuda:0', grad_fn=<SumBackward0>)
+aa %d, bb %d 1 2
+Model is loaded from /kaggle/input/models/bi-model_type-baseline_gru_auc_0.150000_ep-10.pth
+Model is loaded from /kaggle/input/models/bi-model_type-baseline_gru_auc_0.150000_ep-10.pth
+Probability for ground truth label : [0.51194775]
+final video score %s tensor([[0.2014]], device='cuda:0', grad_fn=<SigmoidBackward0>)
+f 7 f 14 f 15 f 17 f 18 f 19 f 21 f 26 f 28 f 29 f 35 f 42 f 43 f 47 f 49 f 50 f 54 f 56 f 57 f 63 f 64 f 70 f 71 f 74 f 77 f 78 f 91 f 92 f 94 total frame %d, total fake frame %d 100 29
+fianl l2,1 nrom %s tensor(1.3410, device='cuda:0', grad_fn=<SumBackward0>)
+aa %d, bb %d 1 2
+Model is loaded from /kaggle/input/models/bi-model_type-baseline_gru_auc_0.150000_ep-10.pth
+Model is loaded from /kaggle/input/models/bi-model_type-baseline_gru_auc_0.150000_ep-10.pth
+Probability for ground truth label : [0.5440206]
+final video score %s tensor([[0.2023]], device='cuda:0', grad_fn=<SigmoidBackward0>)
+f 10 f 14 f 17 f 28 f 29 f 32 f 33 f 39 f 40 f 43 f 45 f 46 f 50 f 56 f 63 f 64 f 66 f 67 f 68 f 70 f 71 f 74 f 77 f 78 f 81 f 82 f 84 f 85 f 88 f 89 f 91 f 92 f 98 f 99 total frame %d, total fake frame %d 100 34
+fianl l2,1 nrom %s tensor(1.3740, device='cuda:0', grad_fn=<SumBackward0>)
+aa %d, bb %d 1 2
+Model is loaded from /kaggle/input/models/bi-model_type-baseline_gru_auc_0.150000_ep-10.pth
+Model is loaded from /kaggle/input/models/bi-model_type-baseline_gru_auc_0.150000_ep-10.pth
+Probability for ground truth label : [0.5220727]
+final video score %s tensor([[0.2016]], device='cuda:0', grad_fn=<SigmoidBackward0>)
+f 21 f 22 f 28 f 29 f 35 f 38 f 46 f 47 f 49 f 50 f 52 f 56 f 57 f 70 f 71 f 77 f 78 f 81 f 84 f 85 f 87 f 88 f 89 f 92 total frame %d, total fake frame %d 100 24
+fianl l2,1 nrom %s tensor(1.5420, device='cuda:0', grad_fn=<SumBackward0>)
