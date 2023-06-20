@@ -367,7 +367,7 @@ def rnnatk(l3, sec_phase, max_iters, full_pert, reg_type, ws):
         print('aa %d, bb %d', 1, 2)
         logging.info('new video %s', vid_name)
         X = data.to(device)
-        X = X[0, :100,:,:,:].unsqueeze(0)
+        X = X[0, :95,:,:,:].unsqueeze(0)
         it = 0
         maxiter = max_iters
 
