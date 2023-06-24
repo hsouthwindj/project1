@@ -151,8 +151,8 @@ def sim_rectification_vector(model, vid, tentative_directions, n, sigma, target_
             all_noise = torch.cat([noise_list, -noise_list], 0)
 
             perturbation_sample = group_gen.apply_group_change(tentative_directions, all_noise) # [frame_num, c, w, h], [sub_num, len(group_gen)]
-            if image_flag:
-                ns = [(video_score(img_model, (vid.repeat((len(all_noise),) + (1,) * len(vid.size())).cuda() + perturbation_sample)[i]), perturbation_sample[i], all_noise[i]) for i in range(len(all_noise))]
+            #if image_flag:
+            #    ns = [(video_score(img_model, (vid.repeat((len(all_noise),) + (1,) * len(vid.size())).cuda() + perturbation_sample)[i]), perturbation_sample[i], all_noise[i]) for i in range(len(all_noise))]
             if image_flag:
                 ns = [(video_score_meso(img_model, (vid.repeat((len(all_noise),) + (1,) * len(vid.size())).cuda() + perturbation_sample)[i]), perturbation_sample[i], all_noise[i]) for i in range(len(all_noise))]
             # ns = sorted(ns, key = lambda x : x[0])
