@@ -5,6 +5,10 @@ import torch
 # from attack.group_generator import EquallySplitGrouping
 from ..attack.group_generator import EquallySplitGrouping
 
+from network.classifier import Meso4
+
+from model.classifiers import DeepFakeClassifier
+
 import sys
 sys.path.append('../../..')
 
@@ -52,6 +56,51 @@ def img_pert(img_model, img):
     # print('cur score', fake_score, 'it', it, 'sp_rate', sp_rate)
     return pert
     
+def predict_image(model, img, model_type):
+    # preprocess ??
+    # print(img.shape)
+    f = nn.Softmax(dim = 1)
+    if model_type == 'xception':
+        out = model(img.unsqueeze(dim = 0))
+        out = f(out)
+        # print('img prediction ', out)
+        _, prediction = torch.max(out, dim = 1)
+        # print(prediction)
+
+        prediction = float(prediction.cpu().numpy()) # prediction == 1 => fake
+
+        return int(prediction), out
+    elif model_type == 'meso':
+        rsf = torchvision.transforms.Resize((256, 256))
+        imgs = rsf(img)
+        out = model(imgs.unsqueeze(0))
+        out = f(out)
+        # print('prediction', out)
+        _, prediction = torch.max(out, dim = 1)
+        # print(prediction)
+        prediction = float(prediction.cpu().numpy())
+
+        return int(prediction), out
+
+def image_checker(X, model, model_type): # X dim = 5
+    f = 0
+    if model_type == 'meso':
+        for i in range(len(X[0])):
+            t, _ = predict_image(model, X[0][i], 'meso')
+            if t == 0:
+                f += 1
+    elif model_type == 'xception':
+        for i in range(len(X[0])):
+            t, _ = predict_image(model, X[0][i], 'xception')
+            f += t
+    elif model_type == 'ef':
+        with torch.no_grad():
+            rsf = torchvision.transforms.Resize(380)
+            for i in range(len(X[0])):
+                t = model(rsf(X[0][i].unsqueeze(0)))
+                if t[0] < 0:
+                    f += 1
+    logging.info('detector %s, origin total frame %d, origin total fake frame %d', model_type, len(X[0]), f)    
         
 
 def sim_rectification_vector(model, vid, tentative_directions, n, sigma, target_class, rank_transform, sub_num,
@@ -175,6 +224,19 @@ def untargeted_video_attack(vid_model, vid, directions_generator, ori_class,
     fake_rate_mi = 0.25
     fake_rate_ma = 0.5
     image_flag = True
+    
+    #meso img model
+    cp = torch.load('/kaggle/input/othermodels/best.pkl')
+    mesomodel = Meso4()
+    mesomodel.load_state_dict(cp)
+    mesomodel = mesomodel.cuda()
+    
+    pth = '/kaggle/input/othermodels/final_111_DeepFakeClassifier_tf_efficientnet_b7_ns_0_36'
+    efmodel = DeepFakeClassifier(encoder="tf_efficientnet_b7_ns").to("cuda")
+    checkpoint = torch.load(pth, map_location="cpu")
+    state_dict = checkpoint.get("state_dict", checkpoint)
+    efmodel.load_state_dict({re.sub("^module.", "", k): v for k, v in state_dict.items()}, strict=True)
+    efmodel.eval()
 
     while num_iter < max_iter:
         #ip = img_pert(img_model, adv_vid[len(adv_vid) // 2].detach().clone())
@@ -202,6 +264,9 @@ def untargeted_video_attack(vid_model, vid, directions_generator, ori_class,
         num_iter += 1
         if ori_class != top_idx and image_flag == False and num_iter > 2500:
             print('early stop', num_iter)
+            image_checker(adv_vid, img_model, 'xception')
+            image_checker(adv_vid, mesomodel, 'meso')
+            image_checker(adv_vid, efmodel, 'ef')
             logging.info('early stop at iterartion {}'.format(num_iter))
             return True, num_iter, adv_vid
         idx = [[0, 0]] # idk waht's this but it's always [0, 0] when i testing
@@ -215,6 +280,9 @@ def untargeted_video_attack(vid_model, vid, directions_generator, ori_class,
         last_score.append(pre_score)
         last_score = last_score[-400:]
         if last_score[-1] >= last_score[0] and len(last_score) == 400:
+            image_checker(adv_vid, img_model, 'xception')
+            image_checker(adv_vid, mesomodel, 'meso')
+            image_checker(adv_vid, efmodel, 'ef')
             print('FAIL: No Descent, Stop iteration')
             return False, pre_score.cpu().item(), adv_vid
 
