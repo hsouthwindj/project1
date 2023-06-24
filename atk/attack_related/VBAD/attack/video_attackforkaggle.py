@@ -102,7 +102,7 @@ def image_checker(X, model, model_type): # X dim = 5
                 t = model(rsf(X[0][i].unsqueeze(0)))
                 if t[0] < 0:
                     f += 1
-    logging.info('detector %s, origin total frame %d, origin total fake frame %d', model_type, len(X[0]), f)    
+    print('detector %s, origin total frame %d, origin total fake frame %d', model_type, len(X[0]), f)    
         
 
 def sim_rectification_vector(model, vid, tentative_directions, n, sigma, target_class, rank_transform, sub_num,
