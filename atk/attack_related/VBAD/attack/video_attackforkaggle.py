@@ -324,4 +324,7 @@ def untargeted_video_attack(vid_model, vid, directions_generator, ori_class,
         adv_vid = clip_frame.clone()
 
         logging.info('step {} : loss {} | lr {}'.format(num_iter, l, cur_lr))
+    image_checker(adv_vid, img_model, 'xception')
+    image_checker(adv_vid, mesomodel, 'meso')
+    image_checker(adv_vid, efmodel, 'ef')
     return False, pre_score.cpu().item(), adv_vid
