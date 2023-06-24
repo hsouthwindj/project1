@@ -93,6 +93,7 @@ def image_checker(X, model, model_type): # X dim = 5
             if t == 0:
                 f += 1
     elif model_type == 'xception':
+        print(X.shape)
         for i in range(len(X[0])):
             t, _ = predict_image(model, X[0][i], 'xception')
             f += t
