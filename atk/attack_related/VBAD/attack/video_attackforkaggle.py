@@ -86,6 +86,7 @@ def predict_image(model, img, model_type):
         return int(prediction), out
 
 def image_checker(X, model, model_type): # X dim = 5
+    X = X.unsqueeze(0)
     f = 0
     if model_type == 'meso':
         for i in range(len(X[0])):
@@ -93,7 +94,6 @@ def image_checker(X, model, model_type): # X dim = 5
             if t == 0:
                 f += 1
     elif model_type == 'xception':
-        print(X.shape)
         for i in range(len(X[0])):
             t, _ = predict_image(model, X[0][i], 'xception')
             f += t
