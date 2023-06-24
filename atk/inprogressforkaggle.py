@@ -330,7 +330,7 @@ def rnnbatk(path):
             if 'Dropout' in m.__class__.__name__:
                     m = m.eval()
         X = data.to(device)
-        X = X[0, :40,:,:,:].unsqueeze(0)
+        X = X[0, :43,:,:,:].unsqueeze(0)
         X.squeeze_(dim = 0)
         directions_generator = VBAD_items()
         directions_generator.set_untargeted_params(X, random_mask = 1., scale=5.)
@@ -338,7 +338,7 @@ def rnnbatk(path):
                                  1, rank_transform=False,
                                  image_split=1,
                                  sub_num_sample=12, sigma=1e-5,
-                                 eps=0.05, max_iter=20,
+                                 eps=0.05, max_iter=100000,
                                  sample_per_draw=48)
         adv = adv.unsqueeze(0)
         # check final video output
