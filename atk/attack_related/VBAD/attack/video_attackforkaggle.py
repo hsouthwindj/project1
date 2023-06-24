@@ -9,6 +9,8 @@ from network.classifier import Meso4
 
 from model.classifiers import DeepFakeClassifier
 
+import re
+
 import sys
 sys.path.append('../../..')
 
