@@ -5,6 +5,7 @@ import torch
 # from attack.group_generator import EquallySplitGrouping
 from ..attack.group_generator import EquallySplitGrouping
 from torch import nn
+import torchvision
 
 from network.classifier import Meso4
 
