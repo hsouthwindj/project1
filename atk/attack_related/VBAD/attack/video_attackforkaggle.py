@@ -26,6 +26,15 @@ def video_score(img_model, vid):
         for i in range(len(vid)):
             re += img_model(vid[i].unsqueeze(0))[0][1]
     return re
+    
+def video_score_meso(img_model, vid):
+    with torch.no_grad():
+        rsf = torchvision.transforms.Resize((256, 256))
+        vid = rsf(vid)
+        re = 0
+        for i in range(len(vid)):
+            re += img_model(vid[i].unsqueeze(0))[0][0]
+    return re
 
 def fake_rate(img_model, vid):
     with torch.no_grad():
@@ -144,6 +153,8 @@ def sim_rectification_vector(model, vid, tentative_directions, n, sigma, target_
             perturbation_sample = group_gen.apply_group_change(tentative_directions, all_noise) # [frame_num, c, w, h], [sub_num, len(group_gen)]
             if image_flag:
                 ns = [(video_score(img_model, (vid.repeat((len(all_noise),) + (1,) * len(vid.size())).cuda() + perturbation_sample)[i]), perturbation_sample[i], all_noise[i]) for i in range(len(all_noise))]
+            if image_flag:
+                ns = [(video_score_meso(img_model, (vid.repeat((len(all_noise),) + (1,) * len(vid.size())).cuda() + perturbation_sample)[i]), perturbation_sample[i], all_noise[i]) for i in range(len(all_noise))]
             # ns = sorted(ns, key = lambda x : x[0])
             # all_noise = torch.stack([ns[i][2] for i in range(sub_num)])
             # perturbation_sample = torch.stack([ns[i][1] for i in range(sub_num)])
@@ -304,7 +315,7 @@ def untargeted_video_attack(vid_model, vid, directions_generator, ori_class,
         group_gen.initialize(tentative_directions)
         
         l, g = sim_rectification_vector(vid_model, adv_vid, tentative_directions, sample_per_draw, sigma,
-                                        ori_class, rank_transform, sub_num_sample, group_gen, img_model, fake_r, image_flag, untargeted=True,vc=vc)
+                                        ori_class, rank_transform, sub_num_sample, group_gen, mesomodel, fake_r, image_flag, untargeted=True,vc=vc)
 
         if l is None and g is None:
             logging.info('nes sim fails, try again....')
