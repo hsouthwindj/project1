@@ -4,6 +4,7 @@ import numpy as np
 import torch
 # from attack.group_generator import EquallySplitGrouping
 from ..attack.group_generator import EquallySplitGrouping
+from torch import nn
 
 from network.classifier import Meso4
 
