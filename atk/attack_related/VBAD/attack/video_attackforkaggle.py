@@ -48,6 +48,8 @@ def fake_rate(img_model, vid):
 def fake_rate_meso(img_model, vid):
     with torch.no_grad():
         re = 0
+        rsf = torchvision.transforms.Resize((256, 256))
+        vid = rsf(vid)
         print(vid.shape)
         for i in range(len(vid)):
             out = img_model(vid[i].unsqueeze(0))
