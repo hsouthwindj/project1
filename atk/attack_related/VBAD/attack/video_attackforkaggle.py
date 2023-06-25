@@ -27,10 +27,10 @@ def video_score(img_model, vid):
             re += img_model(vid[i].unsqueeze(0))[0][1]
     return re
     
-def video_score_meso(img_model, vid):
+def video_score_meso(img_model, vid):            
     with torch.no_grad():
         rsf = torchvision.transforms.Resize((256, 256))
-        vid = rsf(vid)
+        vid = rsf(vid)                             
         re = 0
         for i in range(len(vid)):
             re += img_model(vid[i].unsqueeze(0))[0][0]
@@ -48,6 +48,7 @@ def fake_rate(img_model, vid):
 def fake_rate_meso(img_model, vid):
     with torch.no_grad():
         re = 0
+        print(vid.shape)
         for i in range(len(vid)):
             out = img_model(vid[i].unsqueeze(0))
             if out[0][1] < out[0][0]:
@@ -270,7 +271,7 @@ def untargeted_video_attack(vid_model, vid, directions_generator, ori_class,
         #clip_frame = torch.clamp(adv_vid, 0., 1.)
         #adv_vid = clip_frame.clone()
         #fake_r = fake_rate(img_model, adv_vid)
-        fake_r = fake_rate_meso(mesomodel, adv_vid)
+        fake_r = fake_rate_meso(meso_model, adv_vid)
         if fake_r < fake_rate_mi:
             image_flag = False
         elif fake_r > fake_rate_ma:
