@@ -45,6 +45,15 @@ def fake_rate(img_model, vid):
                 re += 1
     return re / len(vid)
 
+def fake_rate_meso(img_model, vid):
+    with torch.no_grad():
+        re = 0
+        for i in range(len(vid)):
+            out = img_model(vid[i].unsqueeze(0))
+            if out[0][1] < out[0][0]:
+                re += 1
+    return re / len(vid)
+
 def img_pert(img_model, img):
     modif = torch.rand(img.shape).to(device) * (1/255)
     pert = torch.nn.Parameter(modif)
@@ -260,7 +269,8 @@ def untargeted_video_attack(vid_model, vid, directions_generator, ori_class,
         #    adv_vid[len(adv_vid) // 2] += ip
         #clip_frame = torch.clamp(adv_vid, 0., 1.)
         #adv_vid = clip_frame.clone()
-        fake_r = fake_rate(img_model, adv_vid)
+        #fake_r = fake_rate(img_model, adv_vid)
+        fake_r = fake_rate_meso(meso_model, adv_vid)
         if fake_r < fake_rate_mi:
             image_flag = False
         elif fake_r > fake_rate_ma:
