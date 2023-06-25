@@ -33,6 +33,7 @@ def video_score_meso(img_model, vid):
         vid = rsf(vid)                             
         re = 0
         for i in range(len(vid)):
+            print(vid[i].unsqueeze(0))
             re += img_model(vid[i].unsqueeze(0))[0][0]
     return re
 
@@ -50,7 +51,6 @@ def fake_rate_meso(img_model, vid):
         re = 0
         rsf = torchvision.transforms.Resize((256, 256))
         vid = rsf(vid)
-        print(vid.shape)
         for i in range(len(vid)):
             out = img_model(vid[i].unsqueeze(0))
             if out[0][1] < out[0][0]:
