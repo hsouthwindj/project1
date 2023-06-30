@@ -357,13 +357,13 @@ def rnnatk(l3, sec_phase, max_iters, full_pert, reg_type, ws):
         print('final video score %s', probs)
         # check image detector performance
         f = 0
-        for i in range(len(true_image[0])):
+        for i in range(len(adv[0])):
             t, _ = predict_image(img_model, adv[0][i], model_type)
             f += t
             if t != 0:
                 print('f', i, end = ' ')
-        logging.info('total frame %d, total fake frame %d', len(true_image[0]), f)
-        print('total frame %d, total fake frame %d', len(true_image[0]), f)
+        logging.info('total frame %d, total fake frame %d', len(adv[0]), f)
+        print('total frame %d, total fake frame %d', len(adv[0]), f)
         l21 = torch.sum(torch.sqrt(torch.mean(torch.pow((adv - X), 2), dim=0).mean(dim=2).mean(dim=2).mean(dim=1)))
         logging.info('fianl l2,1 nrom %s', l21)
         print('fianl l2,1 nrom %s', l21)
