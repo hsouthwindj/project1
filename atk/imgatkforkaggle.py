@@ -43,28 +43,24 @@ from attack_related.VBAD.model_wrapper.image_model_wrapper import ResNetFeatureE
 from attack_related.VBAD.attack.video_attackforkaggle import untargeted_video_attack
 from torchvision import models as tvmodels
 
+from utils.cw import L2Adversary
+
 mid_out = []
 
-def hook_fn(module, i, o): #module, input, output
-    mid_out.append(o)
-
-def group_diff(vs):
-    return sum([torch.pow((vs[i + 1] - vs[i]), 2).flatten().sum() for i in range(len(vs) - 1)])
-
-def group_cs_center(vs, c):
-    if len(vs) <= c:
-        return group_cs(vs)
-    re = []
-    for i in range(len(vs)):
-        re.append(-1 * (spatial.distance.cosine(vs[c].flatten().detach().cpu(), vs[i].flatten().detach().cpu()) - 1))
-    return sum(re)
-
-
-def group_cs(vs):
-    # print(vs.shape)
-    total = sum(vs)
-    return sum([-1 * (spatial.distance.cosine(total.flatten().detach().cpu(), vs[i].flatten().detach().cpu()) - 1) for i in range(len(vs))])
-    # return sum([-1 * (spatial.distance.cosine(vs[i].flatten().detach().cpu(), vs[i + 1].flatten().detach().cpu()) - 1) for i in range(len(vs) - 1)])
+def atk_with_img_model(model, imgs, at):
+    if at == 'cw':
+        adversary = L2Adversary(targeted=False,
+                           confidence=200,
+                           c_range=(1e2, 1e4),
+                           search_steps=5,
+                           max_steps=1000,
+                           optimizer_lr=1e-2,
+                           init_rand=True)
+        ress = []
+        for i in range(len(imgs)):
+            res = adversary(model, imgs[i], 1, model.device)
+            ress.append(res)
+        return torch.cat(ress)
 
 def group_img_dec(vs, model, model_type):
     fake = 0
@@ -303,63 +299,6 @@ def rnn():
         else:
             real += 1
     logging.info('total video %d, fake video count %d, fake rate %6f', fake + real, fake, fake / (fake + real))
-    
-
-            
-            
-def rnnbatk(path):
-    img_model = torch.load(image_model_path)
-    data_path = path
-    # vbad partial generator declaration
-    def VBAD_items():
-        extractors = []
-        resnet50 = tvmodels.resnet50(pretrained=True)
-        resnet50_extractor = ResNetFeatureExtractor(resnet50, ['fc']).eval().cuda()
-        # extractors.append(img_model)
-        extractors.append(resnet50_extractor)
-        directions_generator = TentativePerturbationGenerator(extractors, part_size=32, preprocess=False,
-                                                              device=0)
-        return directions_generator
-    for vid_name, (data, y) in video_loader(data_path):
-        model = detector.load_model(model_path, device)
-        model.train()
-        # modify for train mode
-        for _, m in model.named_modules():
-            if 'BatchNorm' in m.__class__.__name__:
-                    m = m.eval()
-            if 'Dropout' in m.__class__.__name__:
-                    m = m.eval()
-        X = data.to(device)
-        X = X[0, :43,:,:,:].unsqueeze(0)
-        X.squeeze_(dim = 0)
-        directions_generator = VBAD_items()
-        directions_generator.set_untargeted_params(X, random_mask = 1., scale=5.)
-        _, _, adv = untargeted_video_attack(model, X, directions_generator,
-                                 1, rank_transform=False,
-                                 image_split=1,
-                                 sub_num_sample=12, sigma=1e-5,
-                                 eps=0.05, max_iter=100000,
-                                 sample_per_draw=48)
-        adv = adv.unsqueeze(0)
-        # check final video output
-        # print(adv)
-        probs, pre_label = model(adv)
-        probs = torch.sigmoid(probs)
-        print('final video score', probs)
-        logging.info('final video score %s', probs)
-        # check image detector performance
-        
-        f = 0
-        for i in range(len(adv[0])):
-            t, _ = predict_image(img_model, adv[0][i], model_type)
-            f += t
-            if t != 0:
-                print('f', i, end = ' ')
-        print('total frame and total fake frame', len(adv[0]), f)
-        logging.info('total frame %d, total fake frame %d', len(adv[0]), f)
-        l21 = torch.sum(torch.sqrt(torch.mean(torch.pow((adv - X), 2), dim=0).mean(dim=2).mean(dim=2).mean(dim=1)))
-        print('final l2,1 norm', l21)
-        logging.info('fianl l2,1 nrom %s', l21)
 
 def rnnatk(l3, sec_phase, max_iters, full_pert, reg_type, ws):
     ct = time.time()
@@ -367,7 +306,7 @@ def rnnatk(l3, sec_phase, max_iters, full_pert, reg_type, ws):
         print('aa %d, bb %d', 1, 2)
         logging.info('new video %s', vid_name)
         X = data.to(device)
-        X = X[0, :95,:,:,:].unsqueeze(0)
+        X = X[0, :100,:,:,:].unsqueeze(0)
         it = 0
         maxiter = max_iters
 
@@ -404,164 +343,27 @@ def rnnatk(l3, sec_phase, max_iters, full_pert, reg_type, ws):
                     m = m.eval()
             if 'Dropout' in m.__class__.__name__:
                     m = m.eval()
-        while it < maxiter:
-            #print('iter', it)
-            logging.info('iter %d', it)
-            
-            
-            window_size = ws # default 9
-            step_size = window_size - 2 # default 7
-            # check image detector performance
-            f = 0
-            ti = X + modifier
-            for i in range(len(modifier[0])):
-                t, _ = predict_image(img_model, ti[0][i], model_type)
-                f += t
-                # if t != 0:
-                #     print('f', i, end = ' ')
-            #print('total frame %d, total fake frame %d', len(modifier[0]), f)
-            #print(torch.sum(torch.sqrt(torch.mean(torch.pow(modifier, 2), dim=0).mean(dim=2).mean(dim=2).mean(dim=1))))
-            #print('video probs', torch.sigmoid(model(X + modifier)[0]))
-            logging.info('video probs %s', torch.sigmoid(model(X + modifier)[0]))
-            loss1 = 0
-            loss2 = 0
-            loss3 = 0
-            reg = 0
-            for i in range(0, seq_len - window_size + 1, step_size):
-                input_image = autograd.Variable(X[0][i:i + window_size], requires_grad=False).unsqueeze(0)
-            
-                true_image = input_image + modifier[0][i:i + window_size]
-            
-                #Prediction on the adversarial video
-                probs, pre_label = model(true_image)
-                probs = torch.sigmoid(probs)
-                
-
-                #extracting the probability of true label 
-                zero_array = torch.zeros(2).to(device)
-                zero_array[1] = 1
-                true_label_onehot = probs*zero_array
-                true_label_prob = torch.sum(true_label_onehot, 1)
-
-                #Loss1
-                # loss1 = -torch.log(1 - true_label_prob + 1e-6)
-                loss1 += -torch.log(1 - true_label_prob + 1e-6) # true_label_prob = sigmoid(prob)
-
-                
-                # loss2 = torch.sum(torch.sqrt(torch.mean(torch.pow((true_image - input_image), 2), dim=0).mean(dim=2).mean(dim=2).mean(dim=1)))
-                loss2 += torch.sum(torch.sqrt(torch.mean(torch.pow((true_image - input_image), 2), dim=0).mean(dim=2).mean(dim=2).mean(dim=1)))
-                # loss2 = torch.sum(torch.sqrt(torch.mean(torch.pow((modifier - ttm), 2), dim=0).mean(dim=2).mean(dim=2).mean(dim=1)))
-                norm_frame = torch.mean(torch.abs(modifier), dim=3).mean(dim=3).mean(dim=2) 
-
-                # loss3 = 0
-                # print('loss3  ', loss3)
-                from lpips import LPIPS
-                # target_frame = input_image[0][window_size // 2]
-                if it == 0:
-                    target_pert[i] = image_pert(img_model, input_image, modifier[0][i : i + window_size].clone().detach().requires_grad_(True), 'xception')
-                    # target_pert[i] = target_pert[i].unsqueeze(0)
-                
-                lpips_distance = 0.0
-                lpips_fn = LPIPS(net='alex', verbose=False).to(modifier.device)
-                
-                for w in range(window_size):
-                    target_prepert = window_size // 4 if w < window_size // 2 else window_size * 3 // 4
-                    # lpips_distance += lpips_fn(modifier[0][w + i].cuda(), target_pert[0][w].cuda()).item()
-                    loss3 += torch.sum(torch.sqrt(torch.mean(torch.pow((modifier[0][w + i] - target_pert[i][target_prepert]).unsqueeze(0), 2), dim=0).mean(dim=1).mean(dim=1).mean(dim=0)))
-                    # loss3 += img_model(true_image[0][w].unsqueeze(0))[0][1].item()
-                # loss3 += (lpips_distance / window_size)
-                # loss3 = -torch.log(1 - loss3 + 1e-6)
-                
-                ssim = StructuralSimilarityIndexMeasure(data_range=1.0).to(device)
-                tv = TotalVariation().to(device)
-                mse = torch.nn.MSELoss()
-                treg = 0
-                for w in range(window_size - 1):
-                    if reg_type == 'tv':
-                        treg += tv(torch.abs(modifier[0][w + i] - modifier[0][w + i + 1]).unsqueeze(0))
-                    elif reg_type == 'ssim':
-                        treg += ssim(modifier[0][w + i].unsqueeze(0), modifier[0][w + i + 1].unsqueeze(0))
-                    elif reg_type == 'mse':
-                        treg += mse(modifier[0][w + i].unsqueeze(0), modifier[0][w + i + 1].unsqueeze(0))
-                if reg_type == 'ssim':
-                    reg += -torch.log(treg / window_size)
-                else:
-                    reg += (treg / window_size)
-            if reg_type == 'tv':
-                reg /= 2500
-            
-            # windows size exp var => 2, 1.25, 0.8
-            weight_loss2 = 1.25 #default is 1
-            if l3 == True:
-                loss = 2 * loss1 + weight_loss2 * loss2 + 1.3 * loss3# + 0.8 * reg # default 0.5, 1.25, 1.3
-                #print(loss1, loss2, loss3, reg)
-                logging.info('%s, %s, %s', loss1, loss2, loss3)
-            else:
-                loss = loss1 + weight_loss2 * loss2
-                print(loss1, loss2)
-                logging.info('%s, %s', loss1, loss2)
-
-            optimizer.zero_grad()
-            loss.backward()
-            optimizer.step()
-            
-            
-            if it % 100 == 0: 
-                print (f'Probability for ground truth label : {true_label_prob.detach().cpu().numpy()}')
-
-            break_condition = False
-            if loss < min_loss:
-                if torch.abs(loss-min_loss) < 0.0001:
-                   break_condition = True
-                   print ('Aborting early!')
-                min_loss = loss
-
-            if it + 1 == maxiter or break_condition:
-                #print ('Norm frame for each frame: ')
-                for pp in range(seq_len):
-                    # print the map value for each frame
-                    #print(str(pp) + ' ' + str((norm_frame[0][pp]).detach().cpu().numpy()))
-                    logging.info(str(pp) + ' ' + str((norm_frame[0][pp]).detach().cpu().numpy()))
-
-            # print (f'Prediction for adversarial video: {pre_label.cpu().detach().numpy()}')
-
-            # Empty cache
-            if torch.cuda.is_available():
-                torch.cuda.empty_cache()
-            it += 1
-        #print('time taken', time.time() - ct)
-        # check final video output
-        true_image = X + modifier
-        torchvision.utils.save_image(true_image[0][5], 'img.jpg', normalize = True)
-        torchvision.utils.save_image(X[0][5], 'ori.jpg', normalize = True)
-        torchvision.utils.save_image(modifier[0][5], 'pert.jpg', normalize = True)
+        logging.info('iter %d', it)
         
-        a = X[0][0:60:10]
-        b = true_image[0][0:60:10]
-        c = modifier[0][0:60:10]*255
         
-        torchvision.utils.save_image(torch.cat([a,b]), 'merge.jpg', nrow = 6, normalize = True)
-        torchvision.utils.save_image(c, 'perts.jpg', nrow = 6, normalize = True)
+        atktype = 'cw'
+        adv = atk_with_img_model(img_model, X, atktype)
         
-        probs, pre_label = eval_model(true_image)
-        probs = torch.sigmoid(probs)
-        logging.info('final video score %s', probs)
         
-        true_image = X + modifier
-        probs, pre_label = eval_model(true_image)
+        probs, pre_label = eval_model(adv)
         probs = torch.sigmoid(probs)
         logging.info('final video score %s', probs)
         print('final video score %s', probs)
         # check image detector performance
         f = 0
         for i in range(len(true_image[0])):
-            t, _ = predict_image(img_model, true_image[0][i], model_type)
+            t, _ = predict_image(img_model, adv[0][i], model_type)
             f += t
             if t != 0:
                 print('f', i, end = ' ')
         logging.info('total frame %d, total fake frame %d', len(true_image[0]), f)
         print('total frame %d, total fake frame %d', len(true_image[0]), f)
-        l21 = torch.sum(torch.sqrt(torch.mean(torch.pow((modifier), 2), dim=0).mean(dim=2).mean(dim=2).mean(dim=1)))
+        l21 = torch.sum(torch.sqrt(torch.mean(torch.pow((adv - X), 2), dim=0).mean(dim=2).mean(dim=2).mean(dim=1)))
         logging.info('fianl l2,1 nrom %s', l21)
         print('fianl l2,1 nrom %s', l21)
         

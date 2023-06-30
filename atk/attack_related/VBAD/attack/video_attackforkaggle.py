@@ -33,7 +33,7 @@ def video_score_meso(img_model, vid):
         vid = rsf(vid)                             
         re = 0
         for i in range(len(vid)):
-            print(vid[i].unsqueeze(0))
+            print(img_model(vid[i].unsqueeze(0)))
             re += img_model(vid[i].unsqueeze(0))[0][0]
     return re
 
