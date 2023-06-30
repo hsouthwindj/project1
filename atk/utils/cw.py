@@ -475,7 +475,7 @@ class L2Adversary(object):
                                 + self.confidence, min=0.0)
         # the total loss of current batch, should be of dimension [1]
         #batch_loss_var = torch.sum(perts_norm_var + c_var * f_var)  # type: Variable
-        batch_loss_var = torch.sum(l21 + c_var * f_var)
+        batch_loss_var = torch.sum(l21*100 + c_var * f_var)
                                                                    
         # Do optimization for one step
         optimizer.zero_grad()
