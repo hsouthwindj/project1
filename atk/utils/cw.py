@@ -346,6 +346,8 @@ class L2Adversary(object):
                         self._compensate_confidence(pert_outputs_np,
                                                     targets_np),
                         axis=1)
+                print('comp', comp_pert_predictions_np)
+                print('pert', pert_predictions_np)
                 for i in range(batch_size):
                     l2 = pert_norms_np[i]
                     cppred = comp_pert_predictions_np[i]
