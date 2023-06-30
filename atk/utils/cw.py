@@ -329,6 +329,8 @@ class L2Adversary(object):
                         if i[0].item() > i[1].item():
                             sp += 1
                     print('spn ', sp)
+                    l21 = torch.sum(torch.sqrt(torch.mean(torch.pow((torch.from_numpy(advxs_np)).unsqueeze(0), 2), dim=0).mean(dim=2).mean(dim=2).mean(dim=1)))
+                    print('cur l21 ', l21)
                     if sp > 90:
                         return torch.from_numpy(advxs_np).cuda() + inputs
                     print('batch [{}] loss: {}'.format(optim_step, batch_loss))  # FIXME
