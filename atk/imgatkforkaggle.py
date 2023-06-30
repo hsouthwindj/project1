@@ -348,8 +348,7 @@ def rnnatk(l3, sec_phase, max_iters, full_pert, reg_type, ws):
         
         
         atktype = 'cw'
-        adv = atk_with_img_model(img_model, X, atktype)
-        print(adv.shape)
+        adv = atk_with_img_model(img_model, X, atktype).unsqueeze(0)
         
         
         probs, pre_label = eval_model(adv)
