@@ -410,6 +410,7 @@ class L2Adversary(object):
         advxs_var = self._from_tanh_space(inputs_tanh_var + pert_tanh_var)  # type: Variable
         # the perturbed activation before softmax
         pert_outputs_var = model(advxs_var)  # type: Variable
+        print(pert_outputs_var)
         # the original inputs
         inputs_var = self._from_tanh_space(inputs_tanh_var)  # type: Variable
 
