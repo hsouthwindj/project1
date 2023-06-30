@@ -425,10 +425,10 @@ class L2Adversary(object):
         # the original inputs
         inputs_var = self._from_tanh_space(inputs_tanh_var)  # type: Variable
 
-        #perts_norm_var = torch.pow(advxs_var - inputs_var, 2)
-        #perts_norm_var = torch.sum(perts_norm_var.view(
-        #        perts_norm_var.size(0), -1), 1)
-        perts_norm_var = torch.sum(torch.sqrt(torch.mean(torch.pow((pert_tanh_var).unsqueeze(0), 2), dim=0).mean(dim=2).mean(dim=2).mean(dim=1)))
+        perts_norm_var = torch.pow(advxs_var - inputs_var, 2)
+        perts_norm_var = torch.sum(perts_norm_var.view(
+                perts_norm_var.size(0), -1), 1)
+        l21 = torch.sum(torch.sqrt(torch.mean(torch.pow((pert_tanh_var).unsqueeze(0), 2), dim=0).mean(dim=2).mean(dim=2).mean(dim=1)))
 
         # In Carlini's code, `target_activ_var` is called `real`.
         # It should be a Variable of tensor of dimension [B], such that the
@@ -474,8 +474,9 @@ class L2Adversary(object):
             f_var = torch.clamp(target_activ_var - maxother_activ_var
                                 + self.confidence, min=0.0)
         # the total loss of current batch, should be of dimension [1]
-        batch_loss_var = torch.sum(perts_norm_var + c_var * f_var)  # type: Variable
-
+        #batch_loss_var = torch.sum(perts_norm_var + c_var * f_var)  # type: Variable
+        batch_loss_var = torch.sum(l21 + c_var * f_var)
+                                                                   
         # Do optimization for one step
         optimizer.zero_grad()
         batch_loss_var.backward()
