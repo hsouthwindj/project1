@@ -322,7 +322,12 @@ class L2Adversary(object):
                                    pert_tanh_var, targets_oh_var,
                                    scale_consts_var)
                 if optim_step % 10 == 0: 
-                    print(model(inputs_tanh_var + torch.from_numpy(advxs_np).cuda()))
+                    outs = print(model(inputs_tanh_var + torch.from_numpy(advxs_np).cuda()))
+                    for i in outs[0]:
+                        if i[0] > i[1]:
+                            sp += 1
+                    if sp > 90:
+                        return torch.from_numpy(advxs_np).cuda() + inputs
                     print('batch [{}] loss: {}'.format(optim_step, batch_loss))  # FIXME
 
                 if self.abort_early and not optim_step % (self.max_steps // 10):
