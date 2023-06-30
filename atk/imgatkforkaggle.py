@@ -51,7 +51,7 @@ def atk_with_img_model(model, imgs, at):
     if at == 'cw':
         adversary = L2Adversary(targeted=False,
                            confidence=200,
-                           c_range=(1e2, 1e4),
+                           c_range=(0, 1),
                            search_steps=5,
                            max_steps=1000,
                            optimizer_lr=1e-2,
