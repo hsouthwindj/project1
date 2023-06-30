@@ -58,7 +58,8 @@ def atk_with_img_model(model, imgs, at):
                            init_rand=True)
         ress = []
         for i in range(len(imgs)):
-            res = adversary(model, imgs[i], torch.tensor([1]), imgs.device)
+            la = torch.tensor([1]).cuda()                   
+            res = adversary(model, imgs[i], la, imgs.device)
             ress.append(res)
         return torch.cat(ress)
 
