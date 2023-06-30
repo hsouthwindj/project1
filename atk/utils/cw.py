@@ -243,6 +243,7 @@ class L2Adversary(object):
         :return: the adversarial examples on CPU, of dimension [B x C x H x W]
         """
         # sanity check
+        print(targets.size())
         assert isinstance(model, nn.Module)
         assert len(inputs.size()) == 4
         assert len(targets.size()) == 1
