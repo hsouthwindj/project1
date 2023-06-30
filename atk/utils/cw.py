@@ -323,9 +323,11 @@ class L2Adversary(object):
                                    scale_consts_var)
                 if optim_step % 10 == 0: 
                     outs = print(model(inputs_tanh_var + torch.from_numpy(advxs_np).cuda()))
+                    sp = 0
                     for i in outs[0]:
                         if i[0] > i[1]:
                             sp += 1
+                    print('spn ', sp)
                     if sp > 90:
                         return torch.from_numpy(advxs_np).cuda() + inputs
                     print('batch [{}] loss: {}'.format(optim_step, batch_loss))  # FIXME
