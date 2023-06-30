@@ -321,7 +321,9 @@ class L2Adversary(object):
                     self._optimize(model, optimizer, inputs_tanh_var,
                                    pert_tanh_var, targets_oh_var,
                                    scale_consts_var)
-                if optim_step % 10 == 0: print('batch [{}] loss: {}'.format(optim_step, batch_loss))  # FIXME
+                if optim_step % 10 == 0: 
+                    print(model(inputs_tanh_var + torch.from_numpy(advxs_np)))
+                    print('batch [{}] loss: {}'.format(optim_step, batch_loss))  # FIXME
 
                 if self.abort_early and not optim_step % (self.max_steps // 10):
                     if batch_loss > prev_batch_loss * (1 - self.ae_tol):
@@ -410,7 +412,6 @@ class L2Adversary(object):
         advxs_var = self._from_tanh_space(inputs_tanh_var + pert_tanh_var)  # type: Variable
         # the perturbed activation before softmax
         pert_outputs_var = model(advxs_var)  # type: Variable
-        print(pert_outputs_var)
         # the original inputs
         inputs_var = self._from_tanh_space(inputs_tanh_var)  # type: Variable
 
