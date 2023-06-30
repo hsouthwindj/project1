@@ -325,7 +325,7 @@ class L2Adversary(object):
                     outs = model(inputs_tanh_var + torch.from_numpy(advxs_np).cuda())
                     sp = 0
                     for i in outs[0]:
-                        if i[0] > i[1]:
+                        if i[0].item() > i[1].item():
                             sp += 1
                     print('spn ', sp)
                     if sp > 90:
