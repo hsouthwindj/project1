@@ -354,6 +354,7 @@ class L2Adversary(object):
                     ppred = pert_predictions_np[i]
                     tlabel = targets_np[i]
                     ax = advxs_np[i]
+                    print('c and p pred and label', cppred, ppred, tlabel)
                     if self._attack_successful(cppred, tlabel):
                         print('nice')
                         assert cppred == ppred
