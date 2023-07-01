@@ -341,9 +341,9 @@ class L2Adversary(object):
                     prev_batch_loss = batch_loss
 
                 # update best attack found during optimization
-                print(pert_outputs_np)
+                #print(pert_outputs_np)
                 pert_predictions_np = np.argmax(pert_outputs_np, axis=1)
-                print(pert_predictions_np)
+                #print(pert_predictions_np)
                 comp_pert_predictions_np = np.argmax(
                         self._compensate_confidence(pert_outputs_np,
                                                     targets_np),
@@ -355,6 +355,7 @@ class L2Adversary(object):
                     tlabel = targets_np[i]
                     ax = advxs_np[i]
                     if self._attack_successful(cppred, tlabel):
+                        print('nice')
                         assert cppred == ppred
                         if l2 < best_l2[i]:
                             best_l2[i] = l2
