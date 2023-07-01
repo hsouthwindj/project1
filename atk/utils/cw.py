@@ -483,7 +483,7 @@ class L2Adversary(object):
         #print(maxother_activ_var)
         #print(target_activ_var)
         #print(l21, c_var, f_var)
-        batch_loss_var = torch.sum(l21*5000 + c_var * f_var)
+        batch_loss_var = torch.sum(l21*100 + c_var * f_var)
                                                                    
         # Do optimization for one step
         optimizer.zero_grad()
