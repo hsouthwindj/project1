@@ -50,8 +50,8 @@ mid_out = []
 def atk_with_img_model(model, imgs, at):
     if at == 'cw':
         adversary = L2Adversary(targeted=False,
-                           confidence=0.01,
-                           c_range=(0.01, 1),
+                           confidence=0.5,
+                           c_range=(0.1, 10),
                            search_steps=5,
                            max_steps=1000,
                            optimizer_lr=1e-2,
@@ -348,8 +348,8 @@ def rnnatk(l3, sec_phase, max_iters, full_pert, reg_type, ws):
         
         
         atktype = 'cw'
-        adv = atk_with_img_model(img_model, X[0][0].unsqueeze(0).unsqueeze(0), atktype).unsqueeze(0).cuda()
-        #adv = atk_with_img_model(img_model, X, atktype).unsqueeze(0).cuda()
+        #adv = atk_with_img_model(img_model, X[0][0].unsqueeze(0).unsqueeze(0), atktype).unsqueeze(0).cuda()
+        adv = atk_with_img_model(img_model, X, atktype).unsqueeze(0).cuda()
         
         
         probs, pre_label = eval_model(adv)
@@ -365,8 +365,8 @@ def rnnatk(l3, sec_phase, max_iters, full_pert, reg_type, ws):
                 print('f', i, end = ' ')
         logging.info('total frame %d, total fake frame %d', len(adv[0]), f)
         print('total frame %d, total fake frame %d', len(adv[0]), f)
-        #l21 = torch.sum(torch.sqrt(torch.mean(torch.pow((adv - X), 2), dim=0).mean(dim=2).mean(dim=2).mean(dim=1)))
-        l21 = torch.sum(torch.sqrt(torch.mean(torch.pow((adv - X[0][0].unsqueeze(0).unsqueeze(0)), 2), dim=0).mean(dim=2).mean(dim=2).mean(dim=1)))
+        l21 = torch.sum(torch.sqrt(torch.mean(torch.pow((adv - X), 2), dim=0).mean(dim=2).mean(dim=2).mean(dim=1)))
+        #l21 = torch.sum(torch.sqrt(torch.mean(torch.pow((adv - X[0][0].unsqueeze(0).unsqueeze(0)), 2), dim=0).mean(dim=2).mean(dim=2).mean(dim=1)))
         logging.info('fianl l2,1 nrom %s', l21)
         print('fianl l2,1 nrom %s', l21)
         
