@@ -365,7 +365,8 @@ def rnnatk(l3, sec_phase, max_iters, full_pert, reg_type, ws):
                 print('f', i, end = ' ')
         logging.info('total frame %d, total fake frame %d', len(adv[0]), f)
         print('total frame %d, total fake frame %d', len(adv[0]), f)
-        l21 = torch.sum(torch.sqrt(torch.mean(torch.pow((adv - X), 2), dim=0).mean(dim=2).mean(dim=2).mean(dim=1)))
+        #l21 = torch.sum(torch.sqrt(torch.mean(torch.pow((adv - X), 2), dim=0).mean(dim=2).mean(dim=2).mean(dim=1)))
+        l21 = torch.sum(torch.sqrt(torch.mean(torch.pow((adv - X[0][0].unsqueeze(0).unsqueeze(0)), 2), dim=0).mean(dim=2).mean(dim=2).mean(dim=1)))
         logging.info('fianl l2,1 nrom %s', l21)
         print('fianl l2,1 nrom %s', l21)
         
