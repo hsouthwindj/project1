@@ -343,6 +343,7 @@ class L2Adversary(object):
                 # update best attack found during optimization
                 pert_predictions_np = np.argmax(pert_outputs_np, axis=1)
                 print(pert_predictions_np)
+                print(targets_np)
                 comp_pert_predictions_np = np.argmax(
                         self._compensate_confidence(pert_outputs_np,
                                                     targets_np),
