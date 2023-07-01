@@ -485,6 +485,9 @@ class L2Adversary(object):
         optimizer.zero_grad()
         batch_loss_var.backward()
         optimizer.step()
+        
+        print('before', pert_outputs_var)
+        print('after', model(advxs_var))
 
         # Make some records in python/numpy on CPU
         batch_loss = batch_loss_var.data  # type: float
