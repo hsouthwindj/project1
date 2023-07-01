@@ -343,6 +343,7 @@ class L2Adversary(object):
                 # update best attack found during optimization
                 print(pert_outputs_np)
                 pert_predictions_np = np.argmax(pert_outputs_np, axis=1)
+                print(pert_predictions_np)
                 comp_pert_predictions_np = np.argmax(
                         self._compensate_confidence(pert_outputs_np,
                                                     targets_np),
@@ -486,8 +487,8 @@ class L2Adversary(object):
         batch_loss_var.backward()
         optimizer.step()
         
-        print('before', pert_outputs_var)
-        print('after', model(advxs_var))
+        #print('before', pert_outputs_var)
+        #print('after', model(advxs_var))
 
         # Make some records in python/numpy on CPU
         batch_loss = batch_loss_var.data  # type: float
