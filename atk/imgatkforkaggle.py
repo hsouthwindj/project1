@@ -50,7 +50,7 @@ mid_out = []
 def atk_with_img_model(model, imgs, at):
     if at == 'cw':
         adversary = L2Adversary(targeted=False,
-                           confidence=200,
+                           confidence=0.01,
                            c_range=(0.01, 1),
                            search_steps=5,
                            max_steps=1000,
