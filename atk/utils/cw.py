@@ -328,12 +328,12 @@ class L2Adversary(object):
                     for i in outs:
                         if i[0].item() > i[1].item():
                             sp += 1
-                    print('spn ', sp)
+                    #print('spn ', sp)
                     l21 = torch.sum(torch.sqrt(torch.mean(torch.pow((torch.from_numpy(advxs_np)).unsqueeze(0), 2), dim=0).mean(dim=2).mean(dim=2).mean(dim=1)))
-                    print('cur l21 ', l21)
+                    #print('cur l21 ', l21)
                     if sp > 90 and l21.item() < 1.5:
                         return torch.from_numpy(advxs_np).cuda() + inputs
-                    print('batch [{}] loss: {}'.format(optim_step, batch_loss))  # FIXME
+                    #print('batch [{}] loss: {}'.format(optim_step, batch_loss))  # FIXME
 
                 if self.abort_early and not optim_step % (self.max_steps // 10):
                     if batch_loss > prev_batch_loss * (1 - self.ae_tol):
