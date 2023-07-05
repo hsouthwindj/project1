@@ -307,7 +307,7 @@ class L2Adversary(object):
             scale_consts = torch.from_numpy(np.copy(scale_consts_np)).float()  # type: torch.FloatTensor
             scale_consts = scale_consts.to(device)
             scale_consts_var = Variable(scale_consts, requires_grad=False)
-            print('Using scale consts:', list(scale_consts_np))  # FIXME
+            #print('Using scale consts:', list(scale_consts_np))  # FIXME
 
             # the minimum L2 norms of perturbations found during optimization
             best_l2 = np.ones(batch_size) * np.inf
