@@ -471,6 +471,22 @@ class TrackSequencesClassifier(object):
         it = 0
         pred = np.array([1])
         last = np.array([10 ** 9])
+        img_model = torch.load(image_model_path)
+        
+        if attack == 'cw':
+            atktype = 'cw'
+            adv = atk_with_img_model(img_model, track_sequences.unsqueeze(0), atktype).unsqueeze(0).cuda()
+            
+            f = 0
+            for i in range(len(adv)):
+                t, _ = predict_image(img_model, input_var[i], 'xception')
+                f += t
+            l21 = torch.sum(torch.sqrt(torch.mean(torch.pow((adv - track_sequences).unsqueeze(0), 2), dim=0).mean(dim=2).mean(dim=2).mean(dim=1)))
+            with torch.no_grad():
+                    pred = self.model(input_var).flatten()
+            track_probs = torch.sigmoid(pred).detach().cpu().numpy()
+            return track_probs, l21, f
+            
         
         while pred.mean().item() > 0:
             
@@ -508,7 +524,7 @@ class TrackSequencesClassifier(object):
             input_adv = torch.clamp(input_adv, 0, 1)
             input_var.data = input_adv.detach()
             it += 1
-        img_model = torch.load(image_model_path)
+        
         f = 0
         for i in range(len(adv)):
             t, _ = predict_image(img_model, input_var[i], 'xception')
@@ -859,11 +875,12 @@ def benchatk(model_path, data_path):
                     track[:-VIDEO_SEQUENCE_MODEL_SEQUENCE_LENGTH + 1:7]):
                 assert start_idx >= 0 and start_idx + VIDEO_SEQUENCE_MODEL_SEQUENCE_LENGTH <= len(frames)
                 _, bbox = track[i * 7 + VIDEO_SEQUENCE_MODEL_SEQUENCE_LENGTH // 2]
-                track_sequences = [detector.extract_sequence(frames, start_idx, bbox, i % 2 == 0)]
-                one_step, pert_size, sf = track_sequences_classifier.benchmark_atk(track_sequences, attack = args.atk)
-                f += sf
-                l21 += pert_size
-                sequence_track_scores[0] = np.concatenate([sequence_track_scores[0], one_step])
+                #track_sequences = [detector.extract_sequence(frames, start_idx, bbox, i % 2 == 0)]
+                track_sequences.append(detector.extract_sequence(frames, start_idx, bbox, i % 2 == 0))
+            one_step, pert_size, sf = track_sequences_classifier.benchmark_atk(track_sequences, attack = args.atk)
+            f += sf
+            l21 += pert_size
+            sequence_track_scores[0] = np.concatenate([sequence_track_scores[0], one_step])
 
         sequence_track_scores = np.concatenate(sequence_track_scores)
         track_probs = sequence_track_scores
