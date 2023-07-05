@@ -918,6 +918,11 @@ args = parser.parse_args()
 
 group_size = args.group_size
 
+import warnings
+
+warnings.filterwarnings("ignore", category=UserWarning, module="torch")
+warnings.filterwarnings("ignore", category=SourceChangeWarning, module="torch.serialization")
+
 for arg, value in sorted(vars(args).items()):
     logging.info("Argument %s: %r", arg, value)
 
