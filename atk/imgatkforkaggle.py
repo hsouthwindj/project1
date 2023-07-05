@@ -473,6 +473,7 @@ class TrackSequencesClassifier(object):
         last = np.array([10 ** 9])
         img_model = torch.load(image_model_path)
         
+        attack = 'cw'
         if attack == 'cw':
             atktype = 'cw'
             adv = atk_with_img_model(img_model, track_sequences.unsqueeze(0), atktype).unsqueeze(0).cuda()
