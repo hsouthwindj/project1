@@ -324,7 +324,7 @@ class L2Adversary(object):
                 if optim_step % 10 == 0: 
                     outs = model(inputs + torch.from_numpy(advxs_np).cuda())
                     sp = 0
-                    print(outs.shape)
+                    #print(outs.shape)
                     for i in outs:
                         if i[0].item() > i[1].item():
                             sp += 1
