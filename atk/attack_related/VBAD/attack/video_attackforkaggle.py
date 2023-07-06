@@ -273,12 +273,14 @@ def untargeted_video_attack(vid_model, vid, directions_generator, ori_class,
         #clip_frame = torch.clamp(adv_vid, 0., 1.)
         #adv_vid = clip_frame.clone()
         #fake_r = fake_rate(img_model, adv_vid)
-        fake_r = fake_rate_meso(mesomodel, adv_vid)
-        if fake_r < fake_rate_mi:
-            image_flag = False
-        elif fake_r > fake_rate_ma:
-            image_flag = True
-        print('image fake rate', fake_r)
+        #fake_r = fake_rate_meso(mesomodel, adv_vid)
+        #if fake_r < fake_rate_mi:
+        #    image_flag = False
+        #elif fake_r > fake_rate_ma:
+        #    image_flag = True
+        #print('image fake rate', fake_r)
+        fake_r = 1
+        image_flag = False
         # print(adv_vid.shape)
         # print(adv_vid[None, :].shape)
         # top_val, top_idx, _ = vid_model(adv_vid[None, :])
