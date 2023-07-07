@@ -1,20 +1,35 @@
-final video score 0.7283698916435242
-f 0 f 1 f 4 f 5 f 7 f 8 f 9 f 10 f 11 f 12 f 13 =======================================
-total frames and total fake frames 14 11
-norm  tensor(0.4298, device='cuda:0')
-final video score 0.17896810173988342
-f 1 =======================================
-total frames and total fake frames 14 1
-norm  tensor(0.4314, device='cuda:0')
-final video score 0.646061360836029 droping
-=======================================
-total frames and total fake frames 14 0
-norm  tensor(0.4317, device='cuda:0')
-final video score 0.03706914931535721
-f 3 f 4 f 9 =======================================
-total frames and total fake frames 14 3
-norm  tensor(0.4338, device='cuda:0')
-final video score 0.29019853472709656
-=======================================
-total frames and total fake frames 14 0
-norm  tensor(0.4319, device='cuda:0')
+len 100
+early stop 1
+detector %s, origin total frame %d, origin total fake frame %d xception 7 0
+final video score 0.16044670343399048
+f 0 f 1 f 2 f 3 f 4 f 5 f 6 =======================================
+total frames and total fake frames 7 7
+norm  tensor(0.2015, device='cuda:0')
+len 100
+early stop 1
+detector %s, origin total frame %d, origin total fake frame %d xception 7 0
+final video score 0.49418914318084717
+f 0 f 1 f 2 f 3 f 4 f 5 f 6 =======================================
+total frames and total fake frames 7 7
+norm  tensor(0.2019, device='cuda:0')
+len 100
+early stop 1
+detector %s, origin total frame %d, origin total fake frame %d xception 7 0
+final video score 0.20828279852867126
+f 0 f 1 f 2 f 3 f 5 f 6 =======================================
+total frames and total fake frames 7 6
+norm  tensor(0.2023, device='cuda:0')
+len 100
+early stop 1
+detector %s, origin total frame %d, origin total fake frame %d xception 7 0
+final video score 0.07854168117046356
+f 0 f 1 f 2 f 3 =======================================
+total frames and total fake frames 7 4
+norm  tensor(0.1996, device='cuda:0')
+len 100
+early stop 1
+detector %s, origin total frame %d, origin total fake frame %d xception 7 0
+final video score 0.08303315192461014
+f 0 f 1 f 2 f 3 f 4 f 5 f 6 =======================================
+total frames and total fake frames 7 7
+norm  tensor(0.2009, device='cuda:0')

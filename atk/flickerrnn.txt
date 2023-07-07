@@ -1,0 +1,720 @@
+INFO:root:Argument atk: 'white'
+INFO:root:Argument full_pert: False
+INFO:root:Argument group_size: 9
+INFO:root:Argument iters: 100
+INFO:root:Argument l3: False
+INFO:root:Argument model: 'rnn'
+INFO:root:Argument reg: 'none'
+INFO:root:Argument sec_phase: False
+INFO:timm.models._builder:Loading pretrained weights from Hugging Face hub (timm/tf_efficientnet_b7.ns_jft_in1k)
+INFO:timm.models._hub:[timm/tf_efficientnet_b7.ns_jft_in1k] Safe alternative available for 'pytorch_model.bin' (as 'model.safetensors'). Loading weights using safetensors.
+INFO:root:new video /notebooks/atk/input/cur/abhggqdift.mp4
+INFO:root:detector xception, origin total frame 100, origin total fake frame 100
+INFO:root:detector meso, origin total frame 100, origin total fake frame 99
+INFO:root:detector ef, origin total frame 100, origin total fake frame 0
+INFO:root:video probs tensor([[0.5279]], device='cuda:0', grad_fn=<SigmoidBackward0>)
+INFO:root:final video score tensor([[0.4779]], device='cuda:0', grad_fn=<SigmoidBackward0>)
+INFO:root:detector xception, origin total frame 100, origin total fake frame 99
+INFO:root:detector meso, origin total frame 100, origin total fake frame 100
+INFO:root:detector ef, origin total frame 100, origin total fake frame 0
+INFO:root:fianl l2,1 nrom tensor(1.0233, device='cuda:0', grad_fn=<SumBackward0>)
+INFO:root:new video /notebooks/atk/input/cur/adftmlvzfs.mp4
+INFO:root:detector xception, origin total frame 100, origin total fake frame 96
+INFO:root:detector meso, origin total frame 100, origin total fake frame 99
+INFO:root:detector ef, origin total frame 100, origin total fake frame 16
+INFO:root:video probs tensor([[0.4028]], device='cuda:0', grad_fn=<SigmoidBackward0>)
+INFO:root:final video score tensor([[0.4028]], device='cuda:0', grad_fn=<SigmoidBackward0>)
+INFO:root:detector xception, origin total frame 100, origin total fake frame 96
+INFO:root:detector meso, origin total frame 100, origin total fake frame 98
+INFO:root:detector ef, origin total frame 100, origin total fake frame 15
+INFO:root:fianl l2,1 nrom tensor(0.2263, device='cuda:0', grad_fn=<SumBackward0>)
+INFO:root:new video /notebooks/atk/input/cur/003_000.mp4
+INFO:root:detector xception, origin total frame 100, origin total fake frame 98
+INFO:root:detector meso, origin total frame 100, origin total fake frame 94
+INFO:root:detector ef, origin total frame 100, origin total fake frame 74
+INFO:root:video probs tensor([[0.4379]], device='cuda:0', grad_fn=<SigmoidBackward0>)
+INFO:root:final video score tensor([[0.4379]], device='cuda:0', grad_fn=<SigmoidBackward0>)
+INFO:root:detector xception, origin total frame 100, origin total fake frame 97
+INFO:root:detector meso, origin total frame 100, origin total fake frame 92
+INFO:root:detector ef, origin total frame 100, origin total fake frame 74
+INFO:root:fianl l2,1 nrom tensor(0.2263, device='cuda:0', grad_fn=<SumBackward0>)
+INFO:root:new video /notebooks/atk/input/cur/awigxxbbpb.mp4
+INFO:root:detector xception, origin total frame 100, origin total fake frame 99
+INFO:root:detector meso, origin total frame 100, origin total fake frame 97
+INFO:root:detector ef, origin total frame 100, origin total fake frame 0
+INFO:root:video probs tensor([[0.5190]], device='cuda:0', grad_fn=<SigmoidBackward0>)
+INFO:root:final video score tensor([[0.4527]], device='cuda:0', grad_fn=<SigmoidBackward0>)
+INFO:root:detector xception, origin total frame 100, origin total fake frame 98
+INFO:root:detector meso, origin total frame 100, origin total fake frame 99
+INFO:root:detector ef, origin total frame 100, origin total fake frame 0
+INFO:root:fianl l2,1 nrom tensor(1.0243, device='cuda:0', grad_fn=<SumBackward0>)
+INFO:root:new video /notebooks/atk/input/cur/013_883.mp4
+INFO:root:detector xception, origin total frame 100, origin total fake frame 93
+INFO:root:detector meso, origin total frame 100, origin total fake frame 28
+INFO:root:detector ef, origin total frame 100, origin total fake frame 100
+INFO:root:video probs tensor([[0.5874]], device='cuda:0', grad_fn=<SigmoidBackward0>)
+INFO:root:final video score tensor([[0.3570]], device='cuda:0', grad_fn=<SigmoidBackward0>)
+INFO:root:detector xception, origin total frame 100, origin total fake frame 87
+INFO:root:detector meso, origin total frame 100, origin total fake frame 35
+INFO:root:detector ef, origin total frame 100, origin total fake frame 100
+INFO:root:fianl l2,1 nrom tensor(1.0219, device='cuda:0', grad_fn=<SumBackward0>)
+INFO:root:new video /notebooks/atk/input/cur/002_006.mp4
+INFO:root:detector xception, origin total frame 100, origin total fake frame 100
+INFO:root:detector meso, origin total frame 100, origin total fake frame 65
+INFO:root:detector ef, origin total frame 100, origin total fake frame 0
+INFO:root:video probs tensor([[0.5169]], device='cuda:0', grad_fn=<SigmoidBackward0>)
+INFO:root:final video score tensor([[0.2478]], device='cuda:0', grad_fn=<SigmoidBackward0>)
+INFO:root:detector xception, origin total frame 100, origin total fake frame 100
+INFO:root:detector meso, origin total frame 100, origin total fake frame 65
+INFO:root:detector ef, origin total frame 100, origin total fake frame 0
+INFO:root:fianl l2,1 nrom tensor(1.0246, device='cuda:0', grad_fn=<SumBackward0>)
+INFO:root:new video /notebooks/atk/input/cur/aiuimrebtg.mp4
+INFO:root:detector xception, origin total frame 100, origin total fake frame 99
+INFO:root:detector meso, origin total frame 100, origin total fake frame 98
+INFO:root:detector ef, origin total frame 100, origin total fake frame 61
+INFO:root:video probs tensor([[0.5726]], device='cuda:0', grad_fn=<SigmoidBackward0>)
+INFO:root:final video score tensor([[0.4303]], device='cuda:0', grad_fn=<SigmoidBackward0>)
+INFO:root:detector xception, origin total frame 100, origin total fake frame 98
+INFO:root:detector meso, origin total frame 100, origin total fake frame 99
+INFO:root:detector ef, origin total frame 100, origin total fake frame 25
+INFO:root:fianl l2,1 nrom tensor(1.0257, device='cuda:0', grad_fn=<SumBackward0>)
+INFO:root:new video /notebooks/atk/input/cur/axzjovaktp.mp4
+INFO:root:detector xception, origin total frame 100, origin total fake frame 100
+INFO:root:detector meso, origin total frame 100, origin total fake frame 98
+INFO:root:detector ef, origin total frame 100, origin total fake frame 66
+INFO:root:video probs tensor([[0.6153]], device='cuda:0', grad_fn=<SigmoidBackward0>)
+INFO:root:final video score tensor([[0.4127]], device='cuda:0', grad_fn=<SigmoidBackward0>)
+INFO:root:detector xception, origin total frame 100, origin total fake frame 100
+INFO:root:detector meso, origin total frame 100, origin total fake frame 99
+INFO:root:detector ef, origin total frame 100, origin total fake frame 59
+INFO:root:fianl l2,1 nrom tensor(1.5213, device='cuda:0', grad_fn=<SumBackward0>)
+INFO:root:new video /notebooks/atk/input/cur/bhvnfaylpk.mp4
+INFO:root:detector xception, origin total frame 100, origin total fake frame 100
+INFO:root:detector meso, origin total frame 100, origin total fake frame 96
+INFO:root:detector ef, origin total frame 100, origin total fake frame 70
+INFO:root:video probs tensor([[0.5717]], device='cuda:0', grad_fn=<SigmoidBackward0>)
+INFO:root:final video score tensor([[0.4413]], device='cuda:0', grad_fn=<SigmoidBackward0>)
+INFO:root:detector xception, origin total frame 100, origin total fake frame 100
+INFO:root:detector meso, origin total frame 100, origin total fake frame 96
+INFO:root:detector ef, origin total frame 100, origin total fake frame 18
+INFO:root:fianl l2,1 nrom tensor(1.0254, device='cuda:0', grad_fn=<SumBackward0>)
+INFO:root:new video /notebooks/atk/input/cur/atzwrsivnb.mp4
+INFO:root:detector xception, origin total frame 100, origin total fake frame 98
+INFO:root:detector meso, origin total frame 100, origin total fake frame 96
+INFO:root:detector ef, origin total frame 100, origin total fake frame 11
+INFO:root:video probs tensor([[0.5762]], device='cuda:0', grad_fn=<SigmoidBackward0>)
+INFO:root:final video score tensor([[0.4700]], device='cuda:0', grad_fn=<SigmoidBackward0>)
+INFO:root:detector xception, origin total frame 100, origin total fake frame 98
+INFO:root:detector meso, origin total frame 100, origin total fake frame 94
+INFO:root:detector ef, origin total frame 100, origin total fake frame 0
+INFO:root:fianl l2,1 nrom tensor(1.0247, device='cuda:0', grad_fn=<SumBackward0>)
+INFO:root:new video /notebooks/atk/input/cur/016_209.mp4
+INFO:root:detector xception, origin total frame 100, origin total fake frame 93
+INFO:root:detector meso, origin total frame 100, origin total fake frame 30
+INFO:root:detector ef, origin total frame 100, origin total fake frame 0
+INFO:root:video probs tensor([[0.6289]], device='cuda:0', grad_fn=<SigmoidBackward0>)
+INFO:root:final video score tensor([[0.4582]], device='cuda:0', grad_fn=<SigmoidBackward0>)
+INFO:root:detector xception, origin total frame 100, origin total fake frame 53
+INFO:root:detector meso, origin total frame 100, origin total fake frame 28
+INFO:root:detector ef, origin total frame 100, origin total fake frame 0
+INFO:root:fianl l2,1 nrom tensor(1.0219, device='cuda:0', grad_fn=<SumBackward0>)
+INFO:root:new video /notebooks/atk/input/cur/022_489.mp4
+INFO:root:detector xception, origin total frame 100, origin total fake frame 63
+INFO:root:detector meso, origin total frame 100, origin total fake frame 71
+INFO:root:detector ef, origin total frame 100, origin total fake frame 87
+INFO:root:video probs tensor([[0.6158]], device='cuda:0', grad_fn=<SigmoidBackward0>)
+INFO:root:final video score tensor([[0.3672]], device='cuda:0', grad_fn=<SigmoidBackward0>)
+INFO:root:detector xception, origin total frame 100, origin total fake frame 20
+INFO:root:detector meso, origin total frame 100, origin total fake frame 73
+INFO:root:detector ef, origin total frame 100, origin total fake frame 90
+INFO:root:fianl l2,1 nrom tensor(1.5099, device='cuda:0', grad_fn=<SumBackward0>)
+INFO:root:new video /notebooks/atk/input/cur/apzckowxpy.mp4
+INFO:root:detector xception, origin total frame 100, origin total fake frame 100
+INFO:root:detector meso, origin total frame 100, origin total fake frame 97
+INFO:root:detector ef, origin total frame 100, origin total fake frame 96
+INFO:root:video probs tensor([[0.6092]], device='cuda:0', grad_fn=<SigmoidBackward0>)
+INFO:root:final video score tensor([[0.4104]], device='cuda:0', grad_fn=<SigmoidBackward0>)
+INFO:root:detector xception, origin total frame 100, origin total fake frame 100
+INFO:root:detector meso, origin total frame 100, origin total fake frame 99
+INFO:root:detector ef, origin total frame 100, origin total fake frame 88
+INFO:root:fianl l2,1 nrom tensor(1.4943, device='cuda:0', grad_fn=<SumBackward0>)
+INFO:root:new video /notebooks/atk/input/cur/asxhhsants.mp4
+INFO:root:detector xception, origin total frame 100, origin total fake frame 100
+INFO:root:detector meso, origin total frame 100, origin total fake frame 81
+INFO:root:detector ef, origin total frame 100, origin total fake frame 43
+INFO:root:video probs tensor([[0.5355]], device='cuda:0', grad_fn=<SigmoidBackward0>)
+INFO:root:final video score tensor([[0.4636]], device='cuda:0', grad_fn=<SigmoidBackward0>)
+INFO:root:detector xception, origin total frame 100, origin total fake frame 100
+INFO:root:detector meso, origin total frame 100, origin total fake frame 90
+INFO:root:detector ef, origin total frame 100, origin total fake frame 24
+INFO:root:fianl l2,1 nrom tensor(1.0231, device='cuda:0', grad_fn=<SumBackward0>)
+INFO:root:new video /notebooks/atk/input/cur/ajeegjgyzk.mp4
+INFO:root:detector xception, origin total frame 100, origin total fake frame 97
+INFO:root:detector meso, origin total frame 100, origin total fake frame 95
+INFO:root:detector ef, origin total frame 100, origin total fake frame 72
+INFO:root:video probs tensor([[0.5824]], device='cuda:0', grad_fn=<SigmoidBackward0>)
+INFO:root:final video score tensor([[0.4947]], device='cuda:0', grad_fn=<SigmoidBackward0>)
+INFO:root:detector xception, origin total frame 100, origin total fake frame 58
+INFO:root:detector meso, origin total frame 100, origin total fake frame 95
+INFO:root:detector ef, origin total frame 100, origin total fake frame 47
+INFO:root:fianl l2,1 nrom tensor(2.8505, device='cuda:0', grad_fn=<SumBackward0>)
+INFO:root:new video /notebooks/atk/input/cur/alnkzqihau.mp4
+INFO:root:detector xception, origin total frame 100, origin total fake frame 95
+INFO:root:detector meso, origin total frame 100, origin total fake frame 84
+INFO:root:detector ef, origin total frame 100, origin total fake frame 3
+INFO:root:video probs tensor([[0.5263]], device='cuda:0', grad_fn=<SigmoidBackward0>)
+INFO:root:final video score tensor([[0.4847]], device='cuda:0', grad_fn=<SigmoidBackward0>)
+INFO:root:detector xception, origin total frame 100, origin total fake frame 94
+INFO:root:detector meso, origin total frame 100, origin total fake frame 84
+INFO:root:detector ef, origin total frame 100, origin total fake frame 1
+INFO:root:fianl l2,1 nrom tensor(1.0222, device='cuda:0', grad_fn=<SumBackward0>)
+INFO:root:new video /notebooks/atk/input/cur/007_132.mp4
+INFO:root:detector xception, origin total frame 100, origin total fake frame 100
+INFO:root:detector meso, origin total frame 100, origin total fake frame 54
+INFO:root:detector ef, origin total frame 100, origin total fake frame 100
+INFO:root:video probs tensor([[0.5871]], device='cuda:0', grad_fn=<SigmoidBackward0>)
+INFO:root:final video score tensor([[0.4939]], device='cuda:0', grad_fn=<SigmoidBackward0>)
+INFO:root:detector xception, origin total frame 100, origin total fake frame 2
+INFO:root:detector meso, origin total frame 100, origin total fake frame 37
+INFO:root:detector ef, origin total frame 100, origin total fake frame 100
+INFO:root:fianl l2,1 nrom tensor(2.8521, device='cuda:0', grad_fn=<SumBackward0>)
+INFO:root:new video /notebooks/atk/input/cur/008_990.mp4
+INFO:root:detector xception, origin total frame 100, origin total fake frame 100
+INFO:root:detector meso, origin total frame 100, origin total fake frame 96
+INFO:root:detector ef, origin total frame 100, origin total fake frame 100
+INFO:root:video probs tensor([[0.5979]], device='cuda:0', grad_fn=<SigmoidBackward0>)
+INFO:root:final video score tensor([[0.4967]], device='cuda:0', grad_fn=<SigmoidBackward0>)
+INFO:root:detector xception, origin total frame 100, origin total fake frame 66
+INFO:root:detector meso, origin total frame 100, origin total fake frame 98
+INFO:root:detector ef, origin total frame 100, origin total fake frame 100
+INFO:root:fianl l2,1 nrom tensor(3.2551, device='cuda:0', grad_fn=<SumBackward0>)
+INFO:root:new video /notebooks/atk/input/cur/020_344.mp4
+INFO:root:detector xception, origin total frame 100, origin total fake frame 100
+INFO:root:detector meso, origin total frame 100, origin total fake frame 100
+INFO:root:detector ef, origin total frame 100, origin total fake frame 0
+INFO:root:video probs tensor([[0.5715]], device='cuda:0', grad_fn=<SigmoidBackward0>)
+INFO:root:final video score tensor([[0.3616]], device='cuda:0', grad_fn=<SigmoidBackward0>)
+INFO:root:detector xception, origin total frame 100, origin total fake frame 95
+INFO:root:detector meso, origin total frame 100, origin total fake frame 99
+INFO:root:detector ef, origin total frame 100, origin total fake frame 0
+INFO:root:fianl l2,1 nrom tensor(1.0243, device='cuda:0', grad_fn=<SumBackward0>)
+INFO:root:new video /notebooks/atk/input/cur/bbnesewcot.mp4
+INFO:root:detector xception, origin total frame 100, origin total fake frame 100
+INFO:root:detector meso, origin total frame 100, origin total fake frame 68
+INFO:root:detector ef, origin total frame 100, origin total fake frame 44
+INFO:root:video probs tensor([[0.5274]], device='cuda:0', grad_fn=<SigmoidBackward0>)
+INFO:root:final video score tensor([[0.4492]], device='cuda:0', grad_fn=<SigmoidBackward0>)
+INFO:root:detector xception, origin total frame 100, origin total fake frame 100
+INFO:root:detector meso, origin total frame 100, origin total fake frame 59
+INFO:root:detector ef, origin total frame 100, origin total fake frame 23
+INFO:root:fianl l2,1 nrom tensor(1.0239, device='cuda:0', grad_fn=<SumBackward0>)
+INFO:root:new video /notebooks/atk/input/cur/bfktkdugru.mp4
+INFO:root:detector xception, origin total frame 100, origin total fake frame 94
+INFO:root:detector meso, origin total frame 100, origin total fake frame 77
+INFO:root:detector ef, origin total frame 100, origin total fake frame 2
+INFO:root:video probs tensor([[0.5262]], device='cuda:0', grad_fn=<SigmoidBackward0>)
+INFO:root:final video score tensor([[0.4804]], device='cuda:0', grad_fn=<SigmoidBackward0>)
+INFO:root:detector xception, origin total frame 100, origin total fake frame 92
+INFO:root:detector meso, origin total frame 100, origin total fake frame 66
+INFO:root:detector ef, origin total frame 100, origin total fake frame 0
+INFO:root:fianl l2,1 nrom tensor(1.0225, device='cuda:0', grad_fn=<SumBackward0>)
+INFO:root:new video /notebooks/atk/input/cur/aejvkfbtxs.mp4
+INFO:root:detector xception, origin total frame 100, origin total fake frame 100
+INFO:root:detector meso, origin total frame 100, origin total fake frame 99
+INFO:root:detector ef, origin total frame 100, origin total fake frame 50
+INFO:root:video probs tensor([[0.6154]], device='cuda:0', grad_fn=<SigmoidBackward0>)
+INFO:root:final video score tensor([[0.4915]], device='cuda:0', grad_fn=<SigmoidBackward0>)
+INFO:root:detector xception, origin total frame 100, origin total fake frame 94
+INFO:root:detector meso, origin total frame 100, origin total fake frame 98
+INFO:root:detector ef, origin total frame 100, origin total fake frame 36
+INFO:root:fianl l2,1 nrom tensor(1.5277, device='cuda:0', grad_fn=<SumBackward0>)
+INFO:root:new video /notebooks/atk/input/cur/bdnoxibdvz.mp4
+INFO:root:detector xception, origin total frame 100, origin total fake frame 95
+INFO:root:detector meso, origin total frame 100, origin total fake frame 5
+INFO:root:detector ef, origin total frame 100, origin total fake frame 54
+INFO:root:video probs tensor([[0.6044]], device='cuda:0', grad_fn=<SigmoidBackward0>)
+INFO:root:final video score tensor([[0.4268]], device='cuda:0', grad_fn=<SigmoidBackward0>)
+INFO:root:detector xception, origin total frame 100, origin total fake frame 81
+INFO:root:detector meso, origin total frame 100, origin total fake frame 9
+INFO:root:detector ef, origin total frame 100, origin total fake frame 49
+INFO:root:fianl l2,1 nrom tensor(1.0237, device='cuda:0', grad_fn=<SumBackward0>)
+INFO:root:new video /notebooks/atk/input/cur/ahhdprhoww.mp4
+INFO:root:detector xception, origin total frame 51, origin total fake frame 13
+INFO:root:detector meso, origin total frame 51, origin total fake frame 51
+INFO:root:detector ef, origin total frame 51, origin total fake frame 0
+INFO:root:video probs tensor([[0.5159]], device='cuda:0', grad_fn=<SigmoidBackward0>)
+INFO:root:final video score tensor([[0.3964]], device='cuda:0', grad_fn=<SigmoidBackward0>)
+INFO:root:detector xception, origin total frame 51, origin total fake frame 4
+INFO:root:detector meso, origin total frame 51, origin total fake frame 51
+INFO:root:detector ef, origin total frame 51, origin total fake frame 0
+INFO:root:fianl l2,1 nrom tensor(0.5222, device='cuda:0', grad_fn=<SumBackward0>)
+INFO:root:new video /notebooks/atk/input/cur/augowetyej.mp4
+INFO:root:detector xception, origin total frame 100, origin total fake frame 100
+INFO:root:detector meso, origin total frame 100, origin total fake frame 26
+INFO:root:detector ef, origin total frame 100, origin total fake frame 76
+INFO:root:video probs tensor([[0.5772]], device='cuda:0', grad_fn=<SigmoidBackward0>)
+INFO:root:final video score tensor([[0.3670]], device='cuda:0', grad_fn=<SigmoidBackward0>)
+INFO:root:detector xception, origin total frame 100, origin total fake frame 100
+INFO:root:detector meso, origin total frame 100, origin total fake frame 31
+INFO:root:detector ef, origin total frame 100, origin total fake frame 57
+INFO:root:fianl l2,1 nrom tensor(1.0223, device='cuda:0', grad_fn=<SumBackward0>)
+INFO:root:new video /notebooks/atk/input/cur/akpuczgfpk.mp4
+INFO:root:detector xception, origin total frame 100, origin total fake frame 99
+INFO:root:detector meso, origin total frame 100, origin total fake frame 95
+INFO:root:detector ef, origin total frame 100, origin total fake frame 0
+INFO:root:video probs tensor([[0.5314]], device='cuda:0', grad_fn=<SigmoidBackward0>)
+INFO:root:final video score tensor([[0.4737]], device='cuda:0', grad_fn=<SigmoidBackward0>)
+INFO:root:detector xception, origin total frame 100, origin total fake frame 98
+INFO:root:detector meso, origin total frame 100, origin total fake frame 96
+INFO:root:detector ef, origin total frame 100, origin total fake frame 0
+INFO:root:fianl l2,1 nrom tensor(1.0234, device='cuda:0', grad_fn=<SumBackward0>)
+INFO:root:new video /notebooks/atk/input/cur/aegvtnwqoe.mp4
+INFO:root:detector xception, origin total frame 100, origin total fake frame 100
+INFO:root:detector meso, origin total frame 100, origin total fake frame 97
+INFO:root:detector ef, origin total frame 100, origin total fake frame 0
+INFO:root:video probs tensor([[0.6027]], device='cuda:0', grad_fn=<SigmoidBackward0>)
+INFO:root:final video score tensor([[0.4102]], device='cuda:0', grad_fn=<SigmoidBackward0>)
+INFO:root:detector xception, origin total frame 100, origin total fake frame 100
+INFO:root:detector meso, origin total frame 100, origin total fake frame 100
+INFO:root:detector ef, origin total frame 100, origin total fake frame 0
+INFO:root:fianl l2,1 nrom tensor(1.0233, device='cuda:0', grad_fn=<SumBackward0>)
+INFO:root:new video /notebooks/atk/input/cur/axbvoepbdc.mp4
+INFO:root:detector xception, origin total frame 100, origin total fake frame 100
+INFO:root:detector meso, origin total frame 100, origin total fake frame 14
+INFO:root:detector ef, origin total frame 100, origin total fake frame 100
+INFO:root:video probs tensor([[0.6012]], device='cuda:0', grad_fn=<SigmoidBackward0>)
+INFO:root:final video score tensor([[0.4004]], device='cuda:0', grad_fn=<SigmoidBackward0>)
+INFO:root:detector xception, origin total frame 100, origin total fake frame 100
+INFO:root:detector meso, origin total frame 100, origin total fake frame 23
+INFO:root:detector ef, origin total frame 100, origin total fake frame 97
+INFO:root:fianl l2,1 nrom tensor(1.0213, device='cuda:0', grad_fn=<SumBackward0>)
+INFO:root:new video /notebooks/atk/input/cur/021_312.mp4
+INFO:root:detector xception, origin total frame 100, origin total fake frame 100
+INFO:root:detector meso, origin total frame 100, origin total fake frame 65
+INFO:root:detector ef, origin total frame 100, origin total fake frame 82
+INFO:root:video probs tensor([[0.6060]], device='cuda:0', grad_fn=<SigmoidBackward0>)
+INFO:root:final video score tensor([[0.4989]], device='cuda:0', grad_fn=<SigmoidBackward0>)
+INFO:root:detector xception, origin total frame 100, origin total fake frame 27
+INFO:root:detector meso, origin total frame 100, origin total fake frame 85
+INFO:root:detector ef, origin total frame 100, origin total fake frame 50
+INFO:root:fianl l2,1 nrom tensor(3.2829, device='cuda:0', grad_fn=<SumBackward0>)
+INFO:root:new video /notebooks/atk/input/cur/bbxqtnztyy.mp4
+INFO:root:detector xception, origin total frame 100, origin total fake frame 100
+INFO:root:detector meso, origin total frame 100, origin total fake frame 96
+INFO:root:detector ef, origin total frame 100, origin total fake frame 6
+INFO:root:video probs tensor([[0.5278]], device='cuda:0', grad_fn=<SigmoidBackward0>)
+INFO:root:final video score tensor([[0.4793]], device='cuda:0', grad_fn=<SigmoidBackward0>)
+INFO:root:detector xception, origin total frame 100, origin total fake frame 100
+INFO:root:detector meso, origin total frame 100, origin total fake frame 90
+INFO:root:detector ef, origin total frame 100, origin total fake frame 2
+INFO:root:fianl l2,1 nrom tensor(1.0235, device='cuda:0', grad_fn=<SumBackward0>)
+INFO:root:new video /notebooks/atk/input/cur/014_790.mp4
+INFO:root:detector xception, origin total frame 100, origin total fake frame 2
+INFO:root:detector meso, origin total frame 100, origin total fake frame 79
+INFO:root:detector ef, origin total frame 100, origin total fake frame 10
+INFO:root:video probs tensor([[0.6056]], device='cuda:0', grad_fn=<SigmoidBackward0>)
+INFO:root:final video score tensor([[0.4982]], device='cuda:0', grad_fn=<SigmoidBackward0>)
+INFO:root:detector xception, origin total frame 100, origin total fake frame 1
+INFO:root:detector meso, origin total frame 100, origin total fake frame 83
+INFO:root:detector ef, origin total frame 100, origin total fake frame 0
+INFO:root:fianl l2,1 nrom tensor(2.5327, device='cuda:0', grad_fn=<SumBackward0>)
+INFO:root:new video /notebooks/atk/input/cur/awnfpubqmo.mp4
+INFO:root:detector xception, origin total frame 100, origin total fake frame 100
+INFO:root:detector meso, origin total frame 100, origin total fake frame 60
+INFO:root:detector ef, origin total frame 100, origin total fake frame 89
+INFO:root:video probs tensor([[0.5472]], device='cuda:0', grad_fn=<SigmoidBackward0>)
+INFO:root:final video score tensor([[0.4054]], device='cuda:0', grad_fn=<SigmoidBackward0>)
+INFO:root:detector xception, origin total frame 100, origin total fake frame 100
+INFO:root:detector meso, origin total frame 100, origin total fake frame 67
+INFO:root:detector ef, origin total frame 100, origin total fake frame 82
+INFO:root:fianl l2,1 nrom tensor(1.0233, device='cuda:0', grad_fn=<SumBackward0>)
+INFO:root:new video /notebooks/atk/input/cur/axfhbpkdlc.mp4
+INFO:root:detector xception, origin total frame 100, origin total fake frame 99
+INFO:root:detector meso, origin total frame 100, origin total fake frame 100
+INFO:root:detector ef, origin total frame 100, origin total fake frame 100
+INFO:root:video probs tensor([[0.5912]], device='cuda:0', grad_fn=<SigmoidBackward0>)
+INFO:root:final video score tensor([[0.4866]], device='cuda:0', grad_fn=<SigmoidBackward0>)
+INFO:root:detector xception, origin total frame 100, origin total fake frame 76
+INFO:root:detector meso, origin total frame 100, origin total fake frame 100
+INFO:root:detector ef, origin total frame 100, origin total fake frame 70
+INFO:root:fianl l2,1 nrom tensor(2.4566, device='cuda:0', grad_fn=<SumBackward0>)
+INFO:root:new video /notebooks/atk/input/cur/bemkbovwsz.mp4
+INFO:root:detector xception, origin total frame 100, origin total fake frame 100
+INFO:root:detector meso, origin total frame 100, origin total fake frame 70
+INFO:root:detector ef, origin total frame 100, origin total fake frame 19
+INFO:root:video probs tensor([[0.5288]], device='cuda:0', grad_fn=<SigmoidBackward0>)
+INFO:root:final video score tensor([[0.4482]], device='cuda:0', grad_fn=<SigmoidBackward0>)
+INFO:root:detector xception, origin total frame 100, origin total fake frame 100
+INFO:root:detector meso, origin total frame 100, origin total fake frame 68
+INFO:root:detector ef, origin total frame 100, origin total fake frame 15
+INFO:root:fianl l2,1 nrom tensor(1.0241, device='cuda:0', grad_fn=<SumBackward0>)
+INFO:root:new video /notebooks/atk/input/cur/011_805.mp4
+INFO:root:detector xception, origin total frame 100, origin total fake frame 99
+INFO:root:detector meso, origin total frame 100, origin total fake frame 86
+INFO:root:detector ef, origin total frame 100, origin total fake frame 100
+INFO:root:video probs tensor([[0.6147]], device='cuda:0', grad_fn=<SigmoidBackward0>)
+INFO:root:final video score tensor([[0.3657]], device='cuda:0', grad_fn=<SigmoidBackward0>)
+INFO:root:detector xception, origin total frame 100, origin total fake frame 86
+INFO:root:detector meso, origin total frame 100, origin total fake frame 82
+INFO:root:detector ef, origin total frame 100, origin total fake frame 100
+INFO:root:fianl l2,1 nrom tensor(1.0224, device='cuda:0', grad_fn=<SumBackward0>)
+INFO:root:new video /notebooks/atk/input/cur/asdzplbhnm.mp4
+INFO:root:detector xception, origin total frame 100, origin total fake frame 99
+INFO:root:detector meso, origin total frame 100, origin total fake frame 87
+INFO:root:detector ef, origin total frame 100, origin total fake frame 0
+INFO:root:video probs tensor([[0.5050]], device='cuda:0', grad_fn=<SigmoidBackward0>)
+INFO:root:final video score tensor([[0.4144]], device='cuda:0', grad_fn=<SigmoidBackward0>)
+INFO:root:detector xception, origin total frame 100, origin total fake frame 97
+INFO:root:detector meso, origin total frame 100, origin total fake frame 88
+INFO:root:detector ef, origin total frame 100, origin total fake frame 0
+INFO:root:fianl l2,1 nrom tensor(1.0241, device='cuda:0', grad_fn=<SumBackward0>)
+INFO:root:new video /notebooks/atk/input/cur/alhqaurncj.mp4
+INFO:root:detector xception, origin total frame 100, origin total fake frame 99
+INFO:root:detector meso, origin total frame 100, origin total fake frame 92
+INFO:root:detector ef, origin total frame 100, origin total fake frame 0
+INFO:root:video probs tensor([[0.5140]], device='cuda:0', grad_fn=<SigmoidBackward0>)
+INFO:root:final video score tensor([[0.4454]], device='cuda:0', grad_fn=<SigmoidBackward0>)
+INFO:root:detector xception, origin total frame 100, origin total fake frame 99
+INFO:root:detector meso, origin total frame 100, origin total fake frame 95
+INFO:root:detector ef, origin total frame 100, origin total fake frame 0
+INFO:root:fianl l2,1 nrom tensor(1.0239, device='cuda:0', grad_fn=<SumBackward0>)
+INFO:root:new video /notebooks/atk/input/cur/023_923.mp4
+INFO:root:detector xception, origin total frame 100, origin total fake frame 100
+INFO:root:detector meso, origin total frame 100, origin total fake frame 27
+INFO:root:detector ef, origin total frame 100, origin total fake frame 14
+INFO:root:video probs tensor([[0.6145]], device='cuda:0', grad_fn=<SigmoidBackward0>)
+INFO:root:final video score tensor([[0.4097]], device='cuda:0', grad_fn=<SigmoidBackward0>)
+INFO:root:detector xception, origin total frame 100, origin total fake frame 100
+INFO:root:detector meso, origin total frame 100, origin total fake frame 26
+INFO:root:detector ef, origin total frame 100, origin total fake frame 3
+INFO:root:fianl l2,1 nrom tensor(1.5244, device='cuda:0', grad_fn=<SumBackward0>)
+INFO:root:new video /notebooks/atk/input/cur/015_919.mp4
+INFO:root:detector xception, origin total frame 100, origin total fake frame 100
+INFO:root:detector meso, origin total frame 100, origin total fake frame 5
+INFO:root:detector ef, origin total frame 100, origin total fake frame 33
+INFO:root:video probs tensor([[0.5924]], device='cuda:0', grad_fn=<SigmoidBackward0>)
+INFO:root:final video score tensor([[0.4102]], device='cuda:0', grad_fn=<SigmoidBackward0>)
+INFO:root:detector xception, origin total frame 100, origin total fake frame 100
+INFO:root:detector meso, origin total frame 100, origin total fake frame 12
+INFO:root:detector ef, origin total frame 100, origin total fake frame 1
+INFO:root:fianl l2,1 nrom tensor(1.0236, device='cuda:0', grad_fn=<SumBackward0>)
+INFO:root:new video /notebooks/atk/input/cur/biatmogsbv.mp4
+INFO:root:detector xception, origin total frame 100, origin total fake frame 97
+INFO:root:detector meso, origin total frame 100, origin total fake frame 84
+INFO:root:detector ef, origin total frame 100, origin total fake frame 4
+INFO:root:video probs tensor([[0.5411]], device='cuda:0', grad_fn=<SigmoidBackward0>)
+INFO:root:final video score tensor([[0.4744]], device='cuda:0', grad_fn=<SigmoidBackward0>)
+INFO:root:detector xception, origin total frame 100, origin total fake frame 97
+INFO:root:detector meso, origin total frame 100, origin total fake frame 82
+INFO:root:detector ef, origin total frame 100, origin total fake frame 0
+INFO:root:fianl l2,1 nrom tensor(1.0229, device='cuda:0', grad_fn=<SumBackward0>)
+INFO:root:new video /notebooks/atk/input/cur/001_870.mp4
+INFO:root:detector xception, origin total frame 100, origin total fake frame 100
+INFO:root:detector meso, origin total frame 100, origin total fake frame 98
+INFO:root:detector ef, origin total frame 100, origin total fake frame 1
+INFO:root:video probs tensor([[0.5223]], device='cuda:0', grad_fn=<SigmoidBackward0>)
+INFO:root:final video score tensor([[0.3061]], device='cuda:0', grad_fn=<SigmoidBackward0>)
+INFO:root:detector xception, origin total frame 100, origin total fake frame 100
+INFO:root:detector meso, origin total frame 100, origin total fake frame 99
+INFO:root:detector ef, origin total frame 100, origin total fake frame 0
+INFO:root:fianl l2,1 nrom tensor(1.0248, device='cuda:0', grad_fn=<SumBackward0>)
+INFO:root:new video /notebooks/atk/input/cur/aimzesksew.mp4
+INFO:root:detector xception, origin total frame 100, origin total fake frame 96
+INFO:root:detector meso, origin total frame 100, origin total fake frame 27
+INFO:root:detector ef, origin total frame 100, origin total fake frame 0
+INFO:root:video probs tensor([[0.5911]], device='cuda:0', grad_fn=<SigmoidBackward0>)
+INFO:root:final video score tensor([[0.3389]], device='cuda:0', grad_fn=<SigmoidBackward0>)
+INFO:root:detector xception, origin total frame 100, origin total fake frame 86
+INFO:root:detector meso, origin total frame 100, origin total fake frame 30
+INFO:root:detector ef, origin total frame 100, origin total fake frame 0
+INFO:root:fianl l2,1 nrom tensor(1.0239, device='cuda:0', grad_fn=<SumBackward0>)
+INFO:root:new video /notebooks/atk/input/cur/aaqaifqrwn.mp4
+INFO:root:detector xception, origin total frame 100, origin total fake frame 100
+INFO:root:detector meso, origin total frame 100, origin total fake frame 18
+INFO:root:detector ef, origin total frame 100, origin total fake frame 11
+INFO:root:video probs tensor([[0.5970]], device='cuda:0', grad_fn=<SigmoidBackward0>)
+INFO:root:final video score tensor([[0.4094]], device='cuda:0', grad_fn=<SigmoidBackward0>)
+INFO:root:detector xception, origin total frame 100, origin total fake frame 100
+INFO:root:detector meso, origin total frame 100, origin total fake frame 24
+INFO:root:detector ef, origin total frame 100, origin total fake frame 8
+INFO:root:fianl l2,1 nrom tensor(1.0227, device='cuda:0', grad_fn=<SumBackward0>)
+INFO:root:new video /notebooks/atk/input/cur/amluexcfvi.mp4
+INFO:root:detector xception, origin total frame 100, origin total fake frame 99
+INFO:root:detector meso, origin total frame 100, origin total fake frame 97
+INFO:root:detector ef, origin total frame 100, origin total fake frame 17
+INFO:root:video probs tensor([[0.5424]], device='cuda:0', grad_fn=<SigmoidBackward0>)
+INFO:root:final video score tensor([[0.4820]], device='cuda:0', grad_fn=<SigmoidBackward0>)
+INFO:root:detector xception, origin total frame 100, origin total fake frame 98
+INFO:root:detector meso, origin total frame 100, origin total fake frame 99
+INFO:root:detector ef, origin total frame 100, origin total fake frame 13
+INFO:root:fianl l2,1 nrom tensor(1.0226, device='cuda:0', grad_fn=<SumBackward0>)
+INFO:root:new video /notebooks/atk/input/cur/019_018.mp4
+INFO:root:detector xception, origin total frame 100, origin total fake frame 100
+INFO:root:detector meso, origin total frame 100, origin total fake frame 99
+INFO:root:detector ef, origin total frame 100, origin total fake frame 26
+INFO:root:video probs tensor([[0.5711]], device='cuda:0', grad_fn=<SigmoidBackward0>)
+INFO:root:final video score tensor([[0.3684]], device='cuda:0', grad_fn=<SigmoidBackward0>)
+INFO:root:detector xception, origin total frame 100, origin total fake frame 97
+INFO:root:detector meso, origin total frame 100, origin total fake frame 100
+INFO:root:detector ef, origin total frame 100, origin total fake frame 20
+INFO:root:fianl l2,1 nrom tensor(1.0242, device='cuda:0', grad_fn=<SumBackward0>)
+INFO:root:new video /notebooks/atk/input/cur/017_803.mp4
+INFO:root:detector xception, origin total frame 100, origin total fake frame 53
+INFO:root:detector meso, origin total frame 100, origin total fake frame 13
+INFO:root:detector ef, origin total frame 100, origin total fake frame 93
+INFO:root:video probs tensor([[0.5900]], device='cuda:0', grad_fn=<SigmoidBackward0>)
+INFO:root:final video score tensor([[0.4983]], device='cuda:0', grad_fn=<SigmoidBackward0>)
+INFO:root:detector xception, origin total frame 100, origin total fake frame 2
+INFO:root:detector meso, origin total frame 100, origin total fake frame 3
+INFO:root:detector ef, origin total frame 100, origin total fake frame 57
+INFO:root:fianl l2,1 nrom tensor(3.2999, device='cuda:0', grad_fn=<SumBackward0>)
+INFO:root:new video /notebooks/atk/input/cur/012_026.mp4
+INFO:root:detector xception, origin total frame 100, origin total fake frame 100
+INFO:root:detector meso, origin total frame 100, origin total fake frame 89
+INFO:root:detector ef, origin total frame 100, origin total fake frame 76
+INFO:root:video probs tensor([[0.5935]], device='cuda:0', grad_fn=<SigmoidBackward0>)
+INFO:root:final video score tensor([[0.4954]], device='cuda:0', grad_fn=<SigmoidBackward0>)
+INFO:root:detector xception, origin total frame 100, origin total fake frame 75
+INFO:root:detector meso, origin total frame 100, origin total fake frame 71
+INFO:root:detector ef, origin total frame 100, origin total fake frame 13
+INFO:root:fianl l2,1 nrom tensor(3.2008, device='cuda:0', grad_fn=<SumBackward0>)
+INFO:root:new video /notebooks/atk/input/cur/010_005.mp4
+INFO:root:detector xception, origin total frame 100, origin total fake frame 81
+INFO:root:detector meso, origin total frame 100, origin total fake frame 16
+INFO:root:detector ef, origin total frame 100, origin total fake frame 67
+INFO:root:video probs tensor([[0.5975]], device='cuda:0', grad_fn=<SigmoidBackward0>)
+INFO:root:final video score tensor([[0.4962]], device='cuda:0', grad_fn=<SigmoidBackward0>)
+INFO:root:detector xception, origin total frame 100, origin total fake frame 1
+INFO:root:detector meso, origin total frame 100, origin total fake frame 33
+INFO:root:detector ef, origin total frame 100, origin total fake frame 18
+INFO:root:fianl l2,1 nrom tensor(2.9491, device='cuda:0', grad_fn=<SumBackward0>)
+INFO:root:new video /notebooks/atk/input/cur/018_019.mp4
+INFO:root:detector xception, origin total frame 100, origin total fake frame 92
+INFO:root:detector meso, origin total frame 100, origin total fake frame 48
+INFO:root:detector ef, origin total frame 100, origin total fake frame 100
+INFO:root:video probs tensor([[0.6174]], device='cuda:0', grad_fn=<SigmoidBackward0>)
+INFO:root:final video score tensor([[0.4293]], device='cuda:0', grad_fn=<SigmoidBackward0>)
+INFO:root:detector xception, origin total frame 100, origin total fake frame 72
+INFO:root:detector meso, origin total frame 100, origin total fake frame 40
+INFO:root:detector ef, origin total frame 100, origin total fake frame 100
+INFO:root:fianl l2,1 nrom tensor(1.0230, device='cuda:0', grad_fn=<SumBackward0>)
+INFO:root:new video /notebooks/atk/input/cur/awfjdqqygu.mp4
+INFO:root:detector xception, origin total frame 100, origin total fake frame 99
+INFO:root:detector meso, origin total frame 100, origin total fake frame 95
+INFO:root:detector ef, origin total frame 100, origin total fake frame 43
+INFO:root:video probs tensor([[0.5778]], device='cuda:0', grad_fn=<SigmoidBackward0>)
+INFO:root:final video score tensor([[0.4729]], device='cuda:0', grad_fn=<SigmoidBackward0>)
+INFO:root:detector xception, origin total frame 100, origin total fake frame 99
+INFO:root:detector meso, origin total frame 100, origin total fake frame 99
+INFO:root:detector ef, origin total frame 100, origin total fake frame 11
+INFO:root:fianl l2,1 nrom tensor(1.0246, device='cuda:0', grad_fn=<SumBackward0>)
+INFO:root:new video /notebooks/atk/input/cur/arwyjgnvlp.mp4
+INFO:root:detector xception, origin total frame 100, origin total fake frame 100
+INFO:root:detector meso, origin total frame 100, origin total fake frame 43
+INFO:root:detector ef, origin total frame 100, origin total fake frame 0
+INFO:root:video probs tensor([[0.5838]], device='cuda:0', grad_fn=<SigmoidBackward0>)
+INFO:root:final video score tensor([[0.3247]], device='cuda:0', grad_fn=<SigmoidBackward0>)
+INFO:root:detector xception, origin total frame 100, origin total fake frame 100
+INFO:root:detector meso, origin total frame 100, origin total fake frame 53
+INFO:root:detector ef, origin total frame 100, origin total fake frame 0
+INFO:root:fianl l2,1 nrom tensor(1.0222, device='cuda:0', grad_fn=<SumBackward0>)
+INFO:root:new video /notebooks/atk/input/cur/avoqheikrk.mp4
+INFO:root:detector xception, origin total frame 100, origin total fake frame 100
+INFO:root:detector meso, origin total frame 100, origin total fake frame 97
+INFO:root:detector ef, origin total frame 100, origin total fake frame 38
+INFO:root:video probs tensor([[0.6159]], device='cuda:0', grad_fn=<SigmoidBackward0>)
+INFO:root:final video score tensor([[0.3517]], device='cuda:0', grad_fn=<SigmoidBackward0>)
+INFO:root:detector xception, origin total frame 100, origin total fake frame 91
+INFO:root:detector meso, origin total frame 100, origin total fake frame 92
+INFO:root:detector ef, origin total frame 100, origin total fake frame 0
+INFO:root:fianl l2,1 nrom tensor(1.4656, device='cuda:0', grad_fn=<SumBackward0>)
+INFO:root:new video /notebooks/atk/input/cur/aoydktojny.mp4
+INFO:root:detector xception, origin total frame 100, origin total fake frame 95
+INFO:root:detector meso, origin total frame 100, origin total fake frame 85
+INFO:root:detector ef, origin total frame 100, origin total fake frame 6
+INFO:root:video probs tensor([[0.5416]], device='cuda:0', grad_fn=<SigmoidBackward0>)
+INFO:root:final video score tensor([[0.4518]], device='cuda:0', grad_fn=<SigmoidBackward0>)
+INFO:root:detector xception, origin total frame 100, origin total fake frame 87
+INFO:root:detector meso, origin total frame 100, origin total fake frame 82
+INFO:root:detector ef, origin total frame 100, origin total fake frame 0
+INFO:root:fianl l2,1 nrom tensor(1.5279, device='cuda:0', grad_fn=<SumBackward0>)
+INFO:root:new video /notebooks/atk/input/cur/alpkghdgrv.mp4
+INFO:root:detector xception, origin total frame 21, origin total fake frame 7
+INFO:root:detector meso, origin total frame 21, origin total fake frame 18
+INFO:root:detector ef, origin total frame 21, origin total fake frame 13
+INFO:root:video probs tensor([[0.5420]], device='cuda:0', grad_fn=<SigmoidBackward0>)
+INFO:root:final video score tensor([[0.4626]], device='cuda:0', grad_fn=<SigmoidBackward0>)
+INFO:root:detector xception, origin total frame 21, origin total fake frame 6
+INFO:root:detector meso, origin total frame 21, origin total fake frame 20
+INFO:root:detector ef, origin total frame 21, origin total fake frame 12
+INFO:root:fianl l2,1 nrom tensor(0.2150, device='cuda:0', grad_fn=<SumBackward0>)
+INFO:root:new video /notebooks/atk/input/cur/avznxuwvbx.mp4
+INFO:root:detector xception, origin total frame 100, origin total fake frame 100
+INFO:root:detector meso, origin total frame 100, origin total fake frame 28
+INFO:root:detector ef, origin total frame 100, origin total fake frame 30
+INFO:root:video probs tensor([[0.5537]], device='cuda:0', grad_fn=<SigmoidBackward0>)
+INFO:root:final video score tensor([[0.3486]], device='cuda:0', grad_fn=<SigmoidBackward0>)
+INFO:root:detector xception, origin total frame 100, origin total fake frame 100
+INFO:root:detector meso, origin total frame 100, origin total fake frame 34
+INFO:root:detector ef, origin total frame 100, origin total fake frame 9
+INFO:root:fianl l2,1 nrom tensor(1.0229, device='cuda:0', grad_fn=<SumBackward0>)
+INFO:root:new video /notebooks/atk/input/cur/alidfjtwvg.mp4
+INFO:root:detector xception, origin total frame 43, origin total fake frame 20
+INFO:root:detector meso, origin total frame 43, origin total fake frame 43
+INFO:root:detector ef, origin total frame 43, origin total fake frame 0
+INFO:root:video probs tensor([[0.5212]], device='cuda:0', grad_fn=<SigmoidBackward0>)
+INFO:root:final video score tensor([[0.4161]], device='cuda:0', grad_fn=<SigmoidBackward0>)
+INFO:root:detector xception, origin total frame 43, origin total fake frame 9
+INFO:root:detector meso, origin total frame 43, origin total fake frame 43
+INFO:root:detector ef, origin total frame 43, origin total fake frame 0
+INFO:root:fianl l2,1 nrom tensor(0.4403, device='cuda:0', grad_fn=<SumBackward0>)
+INFO:root:new video /notebooks/atk/input/cur/aymlynzeni.mp4
+INFO:root:detector xception, origin total frame 100, origin total fake frame 100
+INFO:root:detector meso, origin total frame 100, origin total fake frame 7
+INFO:root:detector ef, origin total frame 100, origin total fake frame 24
+INFO:root:video probs tensor([[0.5996]], device='cuda:0', grad_fn=<SigmoidBackward0>)
+INFO:root:final video score tensor([[0.4108]], device='cuda:0', grad_fn=<SigmoidBackward0>)
+INFO:root:detector xception, origin total frame 100, origin total fake frame 100
+INFO:root:detector meso, origin total frame 100, origin total fake frame 8
+INFO:root:detector ef, origin total frame 100, origin total fake frame 21
+INFO:root:fianl l2,1 nrom tensor(1.0224, device='cuda:0', grad_fn=<SumBackward0>)
+INFO:root:new video /notebooks/atk/input/cur/acryukkddn.mp4
+INFO:root:detector xception, origin total frame 56, origin total fake frame 39
+INFO:root:detector meso, origin total frame 56, origin total fake frame 56
+INFO:root:detector ef, origin total frame 56, origin total fake frame 23
+INFO:root:video probs tensor([[0.5094]], device='cuda:0', grad_fn=<SigmoidBackward0>)
+INFO:root:final video score tensor([[0.3998]], device='cuda:0', grad_fn=<SigmoidBackward0>)
+INFO:root:detector xception, origin total frame 56, origin total fake frame 25
+INFO:root:detector meso, origin total frame 56, origin total fake frame 53
+INFO:root:detector ef, origin total frame 56, origin total fake frame 22
+INFO:root:fianl l2,1 nrom tensor(0.5736, device='cuda:0', grad_fn=<SumBackward0>)
+INFO:root:new video /notebooks/atk/input/cur/006_002.mp4
+INFO:root:detector xception, origin total frame 100, origin total fake frame 100
+INFO:root:detector meso, origin total frame 100, origin total fake frame 24
+INFO:root:detector ef, origin total frame 100, origin total fake frame 6
+INFO:root:video probs tensor([[0.5666]], device='cuda:0', grad_fn=<SigmoidBackward0>)
+INFO:root:final video score tensor([[0.3220]], device='cuda:0', grad_fn=<SigmoidBackward0>)
+INFO:root:detector xception, origin total frame 100, origin total fake frame 100
+INFO:root:detector meso, origin total frame 100, origin total fake frame 25
+INFO:root:detector ef, origin total frame 100, origin total fake frame 1
+INFO:root:fianl l2,1 nrom tensor(1.0242, device='cuda:0', grad_fn=<SumBackward0>)
+INFO:root:new video /notebooks/atk/input/cur/ansbtntiqu.mp4
+INFO:root:detector xception, origin total frame 100, origin total fake frame 100
+INFO:root:detector meso, origin total frame 100, origin total fake frame 96
+INFO:root:detector ef, origin total frame 100, origin total fake frame 82
+INFO:root:video probs tensor([[0.5818]], device='cuda:0', grad_fn=<SigmoidBackward0>)
+INFO:root:final video score tensor([[0.4595]], device='cuda:0', grad_fn=<SigmoidBackward0>)
+INFO:root:detector xception, origin total frame 100, origin total fake frame 100
+INFO:root:detector meso, origin total frame 100, origin total fake frame 97
+INFO:root:detector ef, origin total frame 100, origin total fake frame 53
+INFO:root:fianl l2,1 nrom tensor(1.0251, device='cuda:0', grad_fn=<SumBackward0>)
+INFO:root:new video /notebooks/atk/input/cur/004_982.mp4
+INFO:root:detector xception, origin total frame 100, origin total fake frame 100
+INFO:root:detector meso, origin total frame 100, origin total fake frame 87
+INFO:root:detector ef, origin total frame 100, origin total fake frame 26
+INFO:root:video probs tensor([[0.3310]], device='cuda:0', grad_fn=<SigmoidBackward0>)
+INFO:root:final video score tensor([[0.3310]], device='cuda:0', grad_fn=<SigmoidBackward0>)
+INFO:root:detector xception, origin total frame 100, origin total fake frame 100
+INFO:root:detector meso, origin total frame 100, origin total fake frame 98
+INFO:root:detector ef, origin total frame 100, origin total fake frame 25
+INFO:root:fianl l2,1 nrom tensor(0.2263, device='cuda:0', grad_fn=<SumBackward0>)
+INFO:root:new video /notebooks/atk/input/cur/birmbtezni.mp4
+INFO:root:detector xception, origin total frame 100, origin total fake frame 100
+INFO:root:detector meso, origin total frame 100, origin total fake frame 99
+INFO:root:detector ef, origin total frame 100, origin total fake frame 7
+INFO:root:video probs tensor([[0.5320]], device='cuda:0', grad_fn=<SigmoidBackward0>)
+INFO:root:final video score tensor([[0.4223]], device='cuda:0', grad_fn=<SigmoidBackward0>)
+INFO:root:detector xception, origin total frame 100, origin total fake frame 100
+INFO:root:detector meso, origin total frame 100, origin total fake frame 100
+INFO:root:detector ef, origin total frame 100, origin total fake frame 1
+INFO:root:fianl l2,1 nrom tensor(1.0242, device='cuda:0', grad_fn=<SumBackward0>)
+INFO:root:new video /notebooks/atk/input/cur/009_027.mp4
+INFO:root:detector xception, origin total frame 100, origin total fake frame 100
+INFO:root:detector meso, origin total frame 100, origin total fake frame 72
+INFO:root:detector ef, origin total frame 100, origin total fake frame 100
+INFO:root:video probs tensor([[0.5596]], device='cuda:0', grad_fn=<SigmoidBackward0>)
+INFO:root:final video score tensor([[0.2643]], device='cuda:0', grad_fn=<SigmoidBackward0>)
+INFO:root:detector xception, origin total frame 100, origin total fake frame 100
+INFO:root:detector meso, origin total frame 100, origin total fake frame 72
+INFO:root:detector ef, origin total frame 100, origin total fake frame 100
+INFO:root:fianl l2,1 nrom tensor(1.0255, device='cuda:0', grad_fn=<SumBackward0>)
+INFO:root:new video /notebooks/atk/input/cur/005_010.mp4
+INFO:root:detector xception, origin total frame 100, origin total fake frame 100
+INFO:root:detector meso, origin total frame 100, origin total fake frame 97
+INFO:root:detector ef, origin total frame 100, origin total fake frame 0
+INFO:root:video probs tensor([[0.5007]], device='cuda:0', grad_fn=<SigmoidBackward0>)
+INFO:root:final video score tensor([[0.2839]], device='cuda:0', grad_fn=<SigmoidBackward0>)
+INFO:root:detector xception, origin total frame 100, origin total fake frame 100
+INFO:root:detector meso, origin total frame 100, origin total fake frame 98
+INFO:root:detector ef, origin total frame 100, origin total fake frame 0
+INFO:root:fianl l2,1 nrom tensor(1.0253, device='cuda:0', grad_fn=<SumBackward0>)
+INFO:root:new video /notebooks/atk/input/cur/baiyzipjbr.mp4
+INFO:root:detector xception, origin total frame 100, origin total fake frame 97
+INFO:root:detector meso, origin total frame 100, origin total fake frame 83
+INFO:root:detector ef, origin total frame 100, origin total fake frame 0
+INFO:root:video probs tensor([[0.5270]], device='cuda:0', grad_fn=<SigmoidBackward0>)
+INFO:root:final video score tensor([[0.4874]], device='cuda:0', grad_fn=<SigmoidBackward0>)
+INFO:root:detector xception, origin total frame 100, origin total fake frame 94
+INFO:root:detector meso, origin total frame 100, origin total fake frame 82
+INFO:root:detector ef, origin total frame 100, origin total fake frame 0
+INFO:root:fianl l2,1 nrom tensor(1.0219, device='cuda:0', grad_fn=<SumBackward0>)
+INFO:root:new video /notebooks/atk/input/cur/augwyjvlqa.mp4
+INFO:root:detector xception, origin total frame 100, origin total fake frame 100
+INFO:root:detector meso, origin total frame 100, origin total fake frame 95
+INFO:root:detector ef, origin total frame 100, origin total fake frame 82
+INFO:root:video probs tensor([[0.6100]], device='cuda:0', grad_fn=<SigmoidBackward0>)
+INFO:root:final video score tensor([[0.4984]], device='cuda:0', grad_fn=<SigmoidBackward0>)
+INFO:root:detector xception, origin total frame 100, origin total fake frame 100
+INFO:root:detector meso, origin total frame 100, origin total fake frame 96
+INFO:root:detector ef, origin total frame 100, origin total fake frame 59
+INFO:root:fianl l2,1 nrom tensor(2.0283, device='cuda:0', grad_fn=<SumBackward0>)
+INFO:root:new video /notebooks/atk/input/cur/acagallncj.mp4
+INFO:root:detector xception, origin total frame 100, origin total fake frame 100
+INFO:root:detector meso, origin total frame 100, origin total fake frame 69
+INFO:root:detector ef, origin total frame 100, origin total fake frame 0
+INFO:root:video probs tensor([[0.5113]], device='cuda:0', grad_fn=<SigmoidBackward0>)
+INFO:root:final video score tensor([[0.3716]], device='cuda:0', grad_fn=<SigmoidBackward0>)
+INFO:root:detector xception, origin total frame 100, origin total fake frame 100
+INFO:root:detector meso, origin total frame 100, origin total fake frame 67
+INFO:root:detector ef, origin total frame 100, origin total fake frame 0
+INFO:root:fianl l2,1 nrom tensor(1.0239, device='cuda:0', grad_fn=<SumBackward0>)
+INFO:root:new video /notebooks/atk/input/cur/ambabjrwbt.mp4
+INFO:root:detector xception, origin total frame 100, origin total fake frame 100
+INFO:root:detector meso, origin total frame 100, origin total fake frame 95
+INFO:root:detector ef, origin total frame 100, origin total fake frame 8
+INFO:root:video probs tensor([[0.6108]], device='cuda:0', grad_fn=<SigmoidBackward0>)
+INFO:root:final video score tensor([[0.4783]], device='cuda:0', grad_fn=<SigmoidBackward0>)
+INFO:root:detector xception, origin total frame 100, origin total fake frame 99
+INFO:root:detector meso, origin total frame 100, origin total fake frame 98
+INFO:root:detector ef, origin total frame 100, origin total fake frame 3
+INFO:root:fianl l2,1 nrom tensor(1.0228, device='cuda:0', grad_fn=<SumBackward0>)
+INFO:root:new video /notebooks/atk/input/cur/000_003.mp4
+INFO:root:detector xception, origin total frame 100, origin total fake frame 0
+INFO:root:detector meso, origin total frame 100, origin total fake frame 0
+INFO:root:detector ef, origin total frame 100, origin total fake frame 0
+INFO:root:video probs tensor([[0.2812]], device='cuda:0', grad_fn=<SigmoidBackward0>)
+INFO:root:final video score tensor([[0.2812]], device='cuda:0', grad_fn=<SigmoidBackward0>)
+INFO:root:detector xception, origin total frame 100, origin total fake frame 0
+INFO:root:detector meso, origin total frame 100, origin total fake frame 0
+INFO:root:detector ef, origin total frame 100, origin total fake frame 0
+INFO:root:fianl l2,1 nrom tensor(0.2264, device='cuda:0', grad_fn=<SumBackward0>)
+INFO:root:new video /notebooks/atk/input/cur/atpngxfnhr.mp4
+INFO:root:detector xception, origin total frame 100, origin total fake frame 100
+INFO:root:detector meso, origin total frame 100, origin total fake frame 17
+INFO:root:detector ef, origin total frame 100, origin total fake frame 1
+INFO:root:video probs tensor([[0.6231]], device='cuda:0', grad_fn=<SigmoidBackward0>)
+INFO:root:final video score tensor([[0.4043]], device='cuda:0', grad_fn=<SigmoidBackward0>)
+INFO:root:detector xception, origin total frame 100, origin total fake frame 100
+INFO:root:detector meso, origin total frame 100, origin total fake frame 14
+INFO:root:detector ef, origin total frame 100, origin total fake frame 2
+INFO:root:fianl l2,1 nrom tensor(1.5226, device='cuda:0', grad_fn=<SumBackward0>)
+INFO:root:new video /notebooks/atk/input/cur/apmzxocjio.mp4
+INFO:root:detector xception, origin total frame 100, origin total fake frame 100
+INFO:root:detector meso, origin total frame 100, origin total fake frame 75
+INFO:root:detector ef, origin total frame 100, origin total fake frame 15
+INFO:root:video probs tensor([[0.5240]], device='cuda:0', grad_fn=<SigmoidBackward0>)
+INFO:root:final video score tensor([[0.4446]], device='cuda:0', grad_fn=<SigmoidBackward0>)
+INFO:root:detector xception, origin total frame 100, origin total fake frame 100
+INFO:root:detector meso, origin total frame 100, origin total fake frame 73
+INFO:root:detector ef, origin total frame 100, origin total fake frame 8
+INFO:root:fianl l2,1 nrom tensor(1.0242, device='cuda:0', grad_fn=<SumBackward0>)

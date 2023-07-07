@@ -961,7 +961,7 @@ def batk3d(model_path, data_path):
         track_sequences = [torch.stack([track_sequences_classifier.transform(image=face)['image'] for face in sequence]) for sequence in
                            track_sequences]
         X = torch.cat(track_sequences).cuda().unsqueeze(0)
-        image_model_path = '/kaggle/input/models2/all_raw.p'
+        image_model_path = '/content/drive/MyDrive/pr1model/all_raw.p'
         # do atk
         img_model = torch.load(image_model_path)
         # vbad partial generator declaration

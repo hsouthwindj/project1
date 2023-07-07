@@ -1,0 +1,146 @@
+INFO:root:NUM DETECTION FRAMES: 34, VIDEO SCORE: 0.19873050003252046. 000_003.mp4
+INFO:root:total norm 1.3605799674987793 and total fake image detected by img detector 98
+INFO:root:NUM DETECTION FRAMES: 34, VIDEO SCORE: 0.14754325466636098. 001_870.mp4
+INFO:root:total norm 1.360581874847412 and total fake image detected by img detector 98
+INFO:root:NUM DETECTION FRAMES: 34, VIDEO SCORE: 0.1369135997285999. 002_006.mp4
+INFO:root:total norm 1.360581636428833 and total fake image detected by img detector 98
+INFO:root:NUM DETECTION FRAMES: 34, VIDEO SCORE: 0.02388867929345818. 003_000.mp4
+INFO:root:total norm 1.3605804443359375 and total fake image detected by img detector 96
+INFO:root:NUM DETECTION FRAMES: 34, VIDEO SCORE: 0.14373553574922382. 004_982.mp4
+INFO:root:total norm 1.3605821132659912 and total fake image detected by img detector 98
+INFO:root:NUM DETECTION FRAMES: 34, VIDEO SCORE: 0.010702065755486592. 005_010.mp4
+INFO:root:total norm 1.360581636428833 and total fake image detected by img detector 98
+INFO:root:NUM DETECTION FRAMES: 34, VIDEO SCORE: 0.012186423852644474. 006_002.mp4
+INFO:root:total norm 1.3605825901031494 and total fake image detected by img detector 98
+INFO:root:NUM DETECTION FRAMES: 34, VIDEO SCORE: 0.010079369826409945. 007_132.mp4
+INFO:root:total norm 1.360579252243042 and total fake image detected by img detector 98
+INFO:root:NUM DETECTION FRAMES: 34, VIDEO SCORE: 0.010081983775897075. 008_990.mp4
+INFO:root:total norm 1.3605821132659912 and total fake image detected by img detector 98
+INFO:root:NUM DETECTION FRAMES: 34, VIDEO SCORE: 0.010000000000000002. 009_027.mp4
+INFO:root:total norm 1.360581636428833 and total fake image detected by img detector 98
+INFO:root:NUM DETECTION FRAMES: 34, VIDEO SCORE: 0.010000000000000002. 010_005.mp4
+INFO:root:total norm 1.3605809211730957 and total fake image detected by img detector 98
+INFO:root:NUM DETECTION FRAMES: 34, VIDEO SCORE: 0.12268235612258417. 011_805.mp4
+INFO:root:total norm 1.3605785369873047 and total fake image detected by img detector 90
+INFO:root:NUM DETECTION FRAMES: 34, VIDEO SCORE: 0.029282615591292766. 012_026.mp4
+INFO:root:total norm 1.3605823516845703 and total fake image detected by img detector 98
+INFO:root:NUM DETECTION FRAMES: 34, VIDEO SCORE: 0.010000000000000002. 013_883.mp4
+INFO:root:total norm 1.3605797290802002 and total fake image detected by img detector 98
+INFO:root:NUM DETECTION FRAMES: 34, VIDEO SCORE: 0.20012950320260198. 014_790.mp4
+INFO:root:total norm 0.6802919507026672 and total fake image detected by img detector 48
+INFO:root:NUM DETECTION FRAMES: 34, VIDEO SCORE: 0.010988772585076197. 015_919.mp4
+INFO:root:total norm 1.3605821132659912 and total fake image detected by img detector 98
+INFO:root:NUM DETECTION FRAMES: 34, VIDEO SCORE: 0.024658203669622993. 016_209.mp4
+INFO:root:total norm 1.3605797290802002 and total fake image detected by img detector 98
+INFO:root:NUM DETECTION FRAMES: 34, VIDEO SCORE: 0.01. 017_803.mp4
+INFO:root:total norm 1.360581398010254 and total fake image detected by img detector 98
+INFO:root:NUM DETECTION FRAMES: 34, VIDEO SCORE: 0.014101038263116795. 018_019.mp4
+INFO:root:total norm 1.360579490661621 and total fake image detected by img detector 98
+INFO:root:NUM DETECTION FRAMES: 34, VIDEO SCORE: 0.02261150935447952. 019_018.mp4
+INFO:root:total norm 1.360578179359436 and total fake image detected by img detector 98
+INFO:root:NUM DETECTION FRAMES: 34, VIDEO SCORE: 0.18992971450624038. 020_344.mp4
+INFO:root:total norm 1.360581398010254 and total fake image detected by img detector 98
+INFO:root:NUM DETECTION FRAMES: 34, VIDEO SCORE: 0.02809917301254333. 021_312.mp4
+INFO:root:total norm 1.3605809211730957 and total fake image detected by img detector 98
+INFO:root:NUM DETECTION FRAMES: 34, VIDEO SCORE: 0.010002657786927235. 022_489.mp4
+INFO:root:total norm 1.3605821132659912 and total fake image detected by img detector 98
+INFO:root:NUM DETECTION FRAMES: 34, VIDEO SCORE: 0.010332548704470649. 023_923.mp4
+INFO:root:total norm 1.360581874847412 and total fake image detected by img detector 98
+INFO:root:NUM DETECTION FRAMES: 34, VIDEO SCORE: 0.029366809120259643. aaqaifqrwn.mp4
+INFO:root:total norm 1.3605823516845703 and total fake image detected by img detector 98
+INFO:root:NUM DETECTION FRAMES: 34, VIDEO SCORE: 0.373408373995234. abhggqdift.mp4
+INFO:root:total norm 1.7586400508880615 and total fake image detected by img detector 95
+INFO:root:NUM DETECTION FRAMES: 34, VIDEO SCORE: 0.3313594123471043. acagallncj.mp4
+INFO:root:total norm 1.3817203044891357 and total fake image detected by img detector 85
+INFO:root:NUM DETECTION FRAMES: 34, VIDEO SCORE: 0.336144701828552. acryukkddn.mp4
+INFO:root:total norm 1.3605812788009644 and total fake image detected by img detector 98
+INFO:root:NUM DETECTION FRAMES: 34, VIDEO SCORE: 0.22686845241756684. adftmlvzfs.mp4
+INFO:root:total norm 1.4808530807495117 and total fake image detected by img detector 98
+INFO:root:NUM DETECTION FRAMES: 34, VIDEO SCORE: 0.13972354534331277. aegvtnwqoe.mp4
+INFO:root:total norm 1.3605811595916748 and total fake image detected by img detector 97
+INFO:root:NUM DETECTION FRAMES: 34, VIDEO SCORE: 0.10522519895761115. aejvkfbtxs.mp4
+INFO:root:total norm 1.3605811595916748 and total fake image detected by img detector 98
+INFO:root:NUM DETECTION FRAMES: 34, VIDEO SCORE: 0.3822810822757846. ahhdprhoww.mp4
+INFO:root:total norm 1.360581398010254 and total fake image detected by img detector 98
+INFO:root:NUM DETECTION FRAMES: 34, VIDEO SCORE: 0.01162494984803066. aimzesksew.mp4
+INFO:root:total norm 1.360581636428833 and total fake image detected by img detector 92
+INFO:root:NUM DETECTION FRAMES: 34, VIDEO SCORE: 0.21876931096352253. aiuimrebtg.mp4
+INFO:root:total norm 1.3605821132659912 and total fake image detected by img detector 98
+INFO:root:NUM DETECTION FRAMES: 34, VIDEO SCORE: 0.08542626384788832. ajeegjgyzk.mp4
+INFO:root:total norm 1.0690277814865112 and total fake image detected by img detector 70
+INFO:root:NUM DETECTION FRAMES: 34, VIDEO SCORE: 0.3849253843635357. akpuczgfpk.mp4
+INFO:root:total norm 1.5259180068969727 and total fake image detected by img detector 90
+INFO:root:NUM DETECTION FRAMES: 34, VIDEO SCORE: 0.31421902551048975. alhqaurncj.mp4
+INFO:root:total norm 1.069029688835144 and total fake image detected by img detector 76
+INFO:root:NUM DETECTION FRAMES: 34, VIDEO SCORE: 0.34956866864999325. alidfjtwvg.mp4
+INFO:root:total norm 1.3605812788009644 and total fake image detected by img detector 98
+INFO:root:NUM DETECTION FRAMES: 34, VIDEO SCORE: 0.3246341017676466. alnkzqihau.mp4
+INFO:root:total norm 1.4286110401153564 and total fake image detected by img detector 65
+INFO:root:NUM DETECTION FRAMES: 34, VIDEO SCORE: 0.2616667771779795. alpkghdgrv.mp4
+INFO:root:total norm 1.3973132371902466 and total fake image detected by img detector 98
+INFO:root:NUM DETECTION FRAMES: 34, VIDEO SCORE: 0.04934574071285362. ambabjrwbt.mp4
+INFO:root:total norm 1.3605811595916748 and total fake image detected by img detector 97
+INFO:root:NUM DETECTION FRAMES: 34, VIDEO SCORE: 0.300937384889394. amluexcfvi.mp4
+INFO:root:total norm 1.5929007530212402 and total fake image detected by img detector 94
+INFO:root:NUM DETECTION FRAMES: 34, VIDEO SCORE: 0.15327477343208654. ansbtntiqu.mp4
+INFO:root:total norm 1.3605823516845703 and total fake image detected by img detector 98
+INFO:root:NUM DETECTION FRAMES: 34, VIDEO SCORE: 0.32770861114671407. aoydktojny.mp4
+INFO:root:total norm 1.4816992282867432 and total fake image detected by img detector 88
+INFO:root:NUM DETECTION FRAMES: 34, VIDEO SCORE: 0.3044474923877285. apmzxocjio.mp4
+INFO:root:total norm 1.4443168640136719 and total fake image detected by img detector 97
+INFO:root:NUM DETECTION FRAMES: 34, VIDEO SCORE: 0.1367726677243156. apzckowxpy.mp4
+INFO:root:total norm 1.3605821132659912 and total fake image detected by img detector 98
+INFO:root:NUM DETECTION FRAMES: 34, VIDEO SCORE: 0.06380989207219553. arwyjgnvlp.mp4
+INFO:root:total norm 1.3605821132659912 and total fake image detected by img detector 98
+INFO:root:NUM DETECTION FRAMES: 34, VIDEO SCORE: 0.35964276399832135. asdzplbhnm.mp4
+INFO:root:total norm 1.1077369451522827 and total fake image detected by img detector 77
+INFO:root:NUM DETECTION FRAMES: 34, VIDEO SCORE: 0.26936902564912946. asxhhsants.mp4
+INFO:root:total norm 1.4832167625427246 and total fake image detected by img detector 73
+INFO:root:NUM DETECTION FRAMES: 34, VIDEO SCORE: 0.06300245748536511. atpngxfnhr.mp4
+INFO:root:total norm 1.3605823516845703 and total fake image detected by img detector 98
+INFO:root:NUM DETECTION FRAMES: 34, VIDEO SCORE: 0.23281656998952927. atzwrsivnb.mp4
+INFO:root:total norm 1.3605825901031494 and total fake image detected by img detector 98
+INFO:root:NUM DETECTION FRAMES: 34, VIDEO SCORE: 0.023196016029816892. augowetyej.mp4
+INFO:root:total norm 1.3605821132659912 and total fake image detected by img detector 98
+INFO:root:NUM DETECTION FRAMES: 34, VIDEO SCORE: 0.10858204922332995. augwyjvlqa.mp4
+INFO:root:total norm 1.2633967399597168 and total fake image detected by img detector 85
+INFO:root:NUM DETECTION FRAMES: 34, VIDEO SCORE: 0.13236755434665093. avoqheikrk.mp4
+INFO:root:total norm 1.3605811595916748 and total fake image detected by img detector 98
+INFO:root:NUM DETECTION FRAMES: 34, VIDEO SCORE: 0.011022364317486828. avznxuwvbx.mp4
+INFO:root:total norm 1.3605819940567017 and total fake image detected by img detector 98
+INFO:root:NUM DETECTION FRAMES: 34, VIDEO SCORE: 0.21094630428419892. awfjdqqygu.mp4
+INFO:root:total norm 1.3605821132659912 and total fake image detected by img detector 98
+INFO:root:NUM DETECTION FRAMES: 34, VIDEO SCORE: 0.3814380574921658. awigxxbbpb.mp4
+INFO:root:total norm 1.069029688835144 and total fake image detected by img detector 76
+INFO:root:NUM DETECTION FRAMES: 34, VIDEO SCORE: 0.06302298069112044. awnfpubqmo.mp4
+INFO:root:total norm 1.360581636428833 and total fake image detected by img detector 98
+INFO:root:NUM DETECTION FRAMES: 34, VIDEO SCORE: 0.012390581230533021. axbvoepbdc.mp4
+INFO:root:total norm 1.3605821132659912 and total fake image detected by img detector 98
+INFO:root:NUM DETECTION FRAMES: 34, VIDEO SCORE: 0.1314759490412006. axfhbpkdlc.mp4
+INFO:root:total norm 1.3605811595916748 and total fake image detected by img detector 98
+INFO:root:NUM DETECTION FRAMES: 34, VIDEO SCORE: 0.05216464648087816. axzjovaktp.mp4
+INFO:root:total norm 1.263397455215454 and total fake image detected by img detector 90
+INFO:root:NUM DETECTION FRAMES: 34, VIDEO SCORE: 0.052714599839847116. aymlynzeni.mp4
+INFO:root:total norm 1.3605819940567017 and total fake image detected by img detector 98
+INFO:root:NUM DETECTION FRAMES: 34, VIDEO SCORE: 0.3144910607917301. baiyzipjbr.mp4
+INFO:root:total norm 1.4252454042434692 and total fake image detected by img detector 68
+INFO:root:NUM DETECTION FRAMES: 34, VIDEO SCORE: 0.2903094371461417. bbnesewcot.mp4
+INFO:root:total norm 1.487199306488037 and total fake image detected by img detector 92
+INFO:root:NUM DETECTION FRAMES: 34, VIDEO SCORE: 0.35253429763315397. bbxqtnztyy.mp4
+INFO:root:total norm 1.4024114608764648 and total fake image detected by img detector 83
+INFO:root:NUM DETECTION FRAMES: 34, VIDEO SCORE: 0.03894949869103139. bdnoxibdvz.mp4
+INFO:root:total norm 1.3605815172195435 and total fake image detected by img detector 98
+INFO:root:NUM DETECTION FRAMES: 34, VIDEO SCORE: 0.2976989661106873. bemkbovwsz.mp4
+INFO:root:total norm 1.4013323783874512 and total fake image detected by img detector 91
+INFO:root:NUM DETECTION FRAMES: 34, VIDEO SCORE: 0.3420893811782432. bfktkdugru.mp4
+INFO:root:total norm 1.386103630065918 and total fake image detected by img detector 73
+INFO:root:NUM DETECTION FRAMES: 34, VIDEO SCORE: 0.18362794514530875. bhvnfaylpk.mp4
+INFO:root:total norm 1.3605822324752808 and total fake image detected by img detector 98
+INFO:root:NUM DETECTION FRAMES: 34, VIDEO SCORE: 0.33995601865447733. biatmogsbv.mp4
+INFO:root:total norm 1.5987358093261719 and total fake image detected by img detector 92
+INFO:root:NUM DETECTION FRAMES: 34, VIDEO SCORE: 0.2596265824070074. birmbtezni.mp4
+INFO:root:total norm 1.3038134574890137 and total fake image detected by img detector 88
+INFO:root:NUM DETECTION FRAMES: 34, VIDEO SCORE: 0.20012950320260198. 014_790.mp4
+INFO:root:total norm 0.6802919507026672 and total fake image detected by img detector 48
+INFO:root:NUM DETECTION FRAMES: 34, VIDEO SCORE: 0.024658203669622993. 016_209.mp4
+INFO:root:total norm 1.3605797290802002 and total fake image detected by img detector 98
