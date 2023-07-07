@@ -310,8 +310,8 @@ def untargeted_video_attack(vid_model, vid, directions_generator, ori_class,
         # tensor([[0.9987]], device='cuda:0') tensor(0.9987, device='cuda:0') tensor([[0, 0]], device='cuda:0')
 
         last_score.append(pre_score)
-        last_score = last_score[-400:]
-        if last_score[-1] >= last_score[0] and len(last_score) == 400:
+        last_score = last_score[-200:]
+        if last_score[-1] >= last_score[0] and len(last_score) == 200:
             image_checker(adv_vid, img_model, 'xception')
             image_checker(adv_vid, mesomodel, 'meso')
             image_checker(adv_vid, efmodel, 'ef')
