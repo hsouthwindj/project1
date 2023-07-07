@@ -132,6 +132,7 @@ def image_checker(X, model, model_type): # X dim = 5
 def sim_rectification_vector(model, vid, tentative_directions, n, sigma, target_class, rank_transform, sub_num,
                              group_gen, img_model, fake_r, image_flag, untargeted, vc = 'rnn'):
     with torch.no_grad():
+        image_flag = False
         sigma *= (100*fake_r + 1)
         #model.cuda()
         grads = torch.zeros(len(group_gen), device='cuda')

@@ -1,0 +1,44 @@
+detector %s, origin total frame %d, origin total fake frame %d xception 43 13
+/opt/conda/lib/python3.10/site-packages/torchvision/transforms/functional.py:1603: UserWarning: The default value of the antialias parameter of all the resizing transforms (Resize(), RandomResizedCrop(), etc.) will change from None to True in v0.17, in order to be consistent across the PIL and Tensor backends. To suppress this warning, directly pass antialias=True (recommended, future default), antialias=None (current default, which means False for Tensors and True for PIL), or antialias=False (only works on Tensors - PIL will still use antialiasing). This also applies if you are using the inference transforms from the models weights: update the call to weights.transforms(antialias=True).
+  warnings.warn(
+/opt/conda/lib/python3.10/site-packages/torch/nn/functional.py:1331: UserWarning: dropout2d: Received a 2-D input to dropout2d, which is deprecated and will result in an error in a future release. To retain the behavior and silence this warning, please use dropout instead. Note that dropout2d exists to provide channel-wise dropout on inputs with 2 spatial dimensions, a channel dimension, and an optional batch dimension (i.e. 3D or 4D inputs).
+  warnings.warn(warn_msg)
+detector %s, origin total frame %d, origin total fake frame %d meso 43 17
+detector %s, origin total frame %d, origin total fake frame %d ef 43 0
+final video score tensor([[0.4998]], device='cuda:0', grad_fn=<SigmoidBackward0>)
+f 6 f 7 f 10 f 12 f 13 f 18 f 23 f 25 f 27 f 33 f 36 f 40 f 42 total frame and total fake frame 43 13
+final l2,1 norm tensor(1.2776, device='cuda:0')
+detector %s, origin total frame %d, origin total fake frame %d xception 43 7
+detector %s, origin total frame %d, origin total fake frame %d meso 43 38
+detector %s, origin total frame %d, origin total fake frame %d ef 43 0
+final video score tensor([[0.4998]], device='cuda:0', grad_fn=<SigmoidBackward0>)
+f 2 f 4 f 8 f 9 f 29 f 35 f 38 total frame and total fake frame 43 7
+final l2,1 norm tensor(1.2838, device='cuda:0')
+detector %s, origin total frame %d, origin total fake frame %d xception 43 28
+detector %s, origin total frame %d, origin total fake frame %d meso 43 32
+detector %s, origin total frame %d, origin total fake frame %d ef 43 0
+final video score tensor([[0.5000]], device='cuda:0', grad_fn=<SigmoidBackward0>)
+f 0 f 1 f 2 f 3 f 4 f 5 f 6 f 7 f 8 f 9 f 10 f 11 f 12 f 13 f 14 f 15 f 17 f 18 f 19 f 31 f 32 f 33 f 34 f 35 f 38 f 39 f 40 f 41 total frame and total fake frame 43 28
+final l2,1 norm tensor(1.2880, device='cuda:0')
+detector %s, origin total frame %d, origin total fake frame %d xception 43 34
+detector %s, origin total frame %d, origin total fake frame %d meso 43 19
+detector %s, origin total frame %d, origin total fake frame %d ef 43 2
+final video score tensor([[0.4999]], device='cuda:0', grad_fn=<SigmoidBackward0>)
+f 0 f 1 f 2 f 4 f 5 f 6 f 7 f 10 f 12 f 16 f 17 f 18 f 19 f 20 f 21 f 22 f 23 f 24 f 25 f 26 f 27 f 28 f 29 f 31 f 32 f 33 f 34 f 35 f 36 f 37 f 38 f 39 f 41 f 42 total frame and total fake frame 43 34
+final l2,1 norm tensor(1.2891, device='cuda:0')
+detector %s, origin total frame %d, origin total fake frame %d xception 43 9
+detector %s, origin total frame %d, origin total fake frame %d meso 43 17
+detector %s, origin total frame %d, origin total fake frame %d ef 43 0
+final video score tensor([[0.5000]], device='cuda:0', grad_fn=<SigmoidBackward0>)
+f 27 f 28 f 29 f 30 f 31 f 32 f 33 f 36 f 38 total frame and total fake frame 43 9
+final l2,1 norm tensor(1.2752, device='cuda:0')
+detector %s, origin total frame %d, origin total fake frame %d xception 43 2
+/opt/conda/lib/python3.10/site-packages/torchvision/transforms/functional.py:1603: UserWarning: The default value of the antialias parameter of all the resizing transforms (Resize(), RandomResizedCrop(), etc.) will change from None to True in v0.17, in order to be consistent across the PIL and Tensor backends. To suppress this warning, directly pass antialias=True (recommended, future default), antialias=None (current default, which means False for Tensors and True for PIL), or antialias=False (only works on Tensors - PIL will still use antialiasing). This also applies if you are using the inference transforms from the models weights: update the call to weights.transforms(antialias=True).
+  warnings.warn(
+/opt/conda/lib/python3.10/site-packages/torch/nn/functional.py:1331: UserWarning: dropout2d: Received a 2-D input to dropout2d, which is deprecated and will result in an error in a future release. To retain the behavior and silence this warning, please use dropout instead. Note that dropout2d exists to provide channel-wise dropout on inputs with 2 spatial dimensions, a channel dimension, and an optional batch dimension (i.e. 3D or 4D inputs).
+  warnings.warn(warn_msg)
+detector %s, origin total frame %d, origin total fake frame %d meso 43 8
+detector %s, origin total frame %d, origin total fake frame %d ef 43 35
+final video score tensor([[0.5126]], device='cuda:0', grad_fn=<SigmoidBackward0>)
+f 19 f 31 total frame and total fake frame 43 2
+final l2,1 norm tensor(1.2958, device='cuda:0')
