@@ -6,7 +6,7 @@ final video score 0.17896810173988342
 f 1 =======================================
 total frames and total fake frames 14 1
 norm  tensor(0.4314, device='cuda:0')
-final video score 0.646061360836029
+final video score 0.646061360836029 droping
 =======================================
 total frames and total fake frames 14 0
 norm  tensor(0.4317, device='cuda:0')
