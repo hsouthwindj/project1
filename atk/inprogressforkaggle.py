@@ -974,7 +974,7 @@ def batk3d(model_path, data_path):
             directions_generator = TentativePerturbationGenerator(extractors, part_size=32, preprocess=False,
                                                                   device=0)
             return directions_generator
-        X = X[0, :14,:,:,:].unsqueeze(0)
+        X = X[0, :7,:,:,:].unsqueeze(0)
         X.squeeze_(dim = 0)
         directions_generator = VBAD_items()
         directions_generator.set_untargeted_params(X, random_mask = 1., scale=5.)
