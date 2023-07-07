@@ -1,0 +1,20 @@
+final video score 0.7283698916435242
+f 0 f 1 f 4 f 5 f 7 f 8 f 9 f 10 f 11 f 12 f 13 =======================================
+total frames and total fake frames 14 11
+norm  tensor(0.4298, device='cuda:0')
+final video score 0.17896810173988342
+f 1 =======================================
+total frames and total fake frames 14 1
+norm  tensor(0.4314, device='cuda:0')
+final video score 0.646061360836029
+=======================================
+total frames and total fake frames 14 0
+norm  tensor(0.4317, device='cuda:0')
+final video score 0.03706914931535721
+f 3 f 4 f 9 =======================================
+total frames and total fake frames 14 3
+norm  tensor(0.4338, device='cuda:0')
+final video score 0.29019853472709656
+=======================================
+total frames and total fake frames 14 0
+norm  tensor(0.4319, device='cuda:0')
