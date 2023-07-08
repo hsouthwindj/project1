@@ -295,7 +295,7 @@ def image_checker(X, model, model_type): # X dim = 5
             
 def rnnatk(l3, sec_phase, max_iters, full_pert, reg_type, ws, data_path):
     ct = time.time()
-    for vid_name, (data, y) in video_loader(data_path, b = True):
+    for vid_name, (data, y) in video_loader(data_path):
         logging.info('new video %s', vid_name)
         X = data.to(device)
         X = X[0, :100,:,:,:].unsqueeze(0)
