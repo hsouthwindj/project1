@@ -148,12 +148,12 @@ class SimBA:
             if improved.sum() > 0:
                 left_indices = remaining_indices[improved.cpu()]
                 left_mask_remaining = improved.unsqueeze(1).repeat(1, n_dims)
-                x[left_indices] = left_vec[left_mask_remaining].view(-1, n_dims)
+                x[left_indices] = left_vec[left_mask_remaining.cpu()].view(-1, n_dims)
                 probs_k[left_indices] = left_probs[improved]
             if right_improved.sum() > 0:
                 right_indices = remaining_indices[right_improved.cpu()]
                 right_mask_remaining = right_improved.unsqueeze(1).repeat(1, n_dims)
-                x[right_indices] = right_vec[right_mask_remaining].view(-1, n_dims)
+                x[right_indices] = right_vec[right_mask_remaining.cpu()].view(-1, n_dims)
                 probs_k[right_indices] = right_probs[right_improved]
             probs[:, k] = probs_k
             queries[:, k] = queries_k
