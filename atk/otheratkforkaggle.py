@@ -420,7 +420,7 @@ def rnnatk(l3, sec_phase, max_iters, full_pert, reg_type, ws, data_path):
         from utils.simba import SimBA
         advs = []
         simba = SimBA(img_model, 'a', X[0][0].shape[1])
-        out = simba.simba_batch(X[0], torch.Tensor([1]).repeat(len(X[0])).long().cuda(), 2500, 64, 8, 10/255, pixel_attack = True)
+        out = simba.simba_batch(X[0], torch.Tensor([1]).repeat(len(X[0])).long().cuda(), 2500, 64, 8, 5/255, pixel_attack = True)
         advs = out[0].unsqueeze(0)
         
         # simba end
