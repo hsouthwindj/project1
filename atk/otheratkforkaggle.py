@@ -486,213 +486,67 @@ class TrackSequencesClassifier(object):
                                                     VIDEO_SEQUENCE_MODEL_SEQUENCE_LENGTH)
                     module._expand_conv = seq_expand_conv
         self.model = model.cuda().eval()
-        
-                     
+
         normalize = Normalize(mean=[0.485, 0.456, 0.406], std=[0.229, 0.224, 0.225])
         self.transform = Compose(
             [SmallestMaxSize(VIDEO_MODEL_MIN_SIZE), CenterCrop(VIDEO_MODEL_CROP_HEIGHT, VIDEO_MODEL_CROP_WIDTH), ToTensor()])
 
         state = torch.load(weights_path, map_location=lambda storage, loc: storage)
         state = {key: value.float() for key, value in state.items()}
-        self.model.load_state_dict(state)    
-    def ori_classify(self, track_sequences):
+        self.model.load_state_dict(state)
         
-        with torch.no_grad():
-            track_probs = torch.sigmoid(self.model(track_sequences)).flatten().cpu().numpy()
-
-        return track_probs    
-    def classifyn(self, track_sequences, modifier):
-        track_sequences = [torch.stack([self.transform(image=face)['image'] for face in sequence]) for sequence in
-                           track_sequences]
-        track_sequences = torch.cat(track_sequences).cuda()
-        if track_sequences.requires_grad:
-            track_sequences.requires_grad = False
-        track_sequences = track_sequences + modifier
-        track_probs = torch.sigmoid(self.model(track_sequences)).mean()
-        return track_probs
-        
-    def _nes_gradient_estimator(self, input_var, model, sample_num = 20, sigma = 0.001):
-        g = 0
-        print('nes')
-        for sample in range(sample_num):
-            print(sample)
-            for transform_fn in _get_transforms({"gauss_noise", "gauss_blur", "resize"}):
-                
-                rand_noise = torch.randn_like(input_var)
-                i1 = input_var + sigma * rand_noise
-                i2 = input_var - sigma * rand_noise
-
-                with torch.no_grad():
-                    prob1 = torch.mean(model(transform_fn(i1)))
-                    prob2 = torch.mean(model(transform_fn(i2)))
-
-                g = g + prob1 * rand_noise
-                g = g - prob2 * rand_noise
-                g = g.data.detach()
-            
-        return (1./(2. * sample_num * sigma)) * g
-        
-    def benchmark_atk(self, track_sequences, attack = 'white'):
-        eps = 4/255
+    def classifyn(self, track_sequences, pert, start_idx):
         track_sequences = [torch.stack([self.transform(image=face)['image'] for face in sequence]) for sequence in
                            track_sequences]
         track_sequences = torch.cat(track_sequences).cuda()
         
-        for param in self.model.parameters():
-            param.requires_grad = False
-        input_var = autograd.Variable(track_sequences, requires_grad = True).cuda()
-        target_var = autograd.Variable(torch.zeros(track_sequences.size(0)), requires_grad = True).cuda() # need to spoof to real, set target to real and minus the gradient later
-        it = 0
-        pred = np.array([1])
-        last = np.array([10 ** 9])
-        
-        while pred.mean().item() > 0:
-            
-            torch.cuda.empty_cache()
-            if it > 100:
-                break
-    
-            if attack == 'bench_white':
-                loss_criterion = nn.CrossEntropyLoss()
-                temptotal = []
-                for transform_fn in _get_transforms({"gauss_noise", "gauss_blur", "resize"}):
-                    loss = 0
-                    transformed_img = transform_fn(input_var)
-                    logits = self.model(transformed_img).flatten()
-                    loss += logits.sum()
-                # pred = self.model(input_var).flatten()
-                # loss = torch.nn.functional.binary_cross_entropy_with_logits(pred, target_var)
-                    loss.backward()
-                    temptotal.append(torch.sign(input_var.grad.detach()))
-                adv = input_var.detach() - (1/255) * sum(temptotal) /3
-                with torch.no_grad():
-                    pred = self.model(input_var).flatten()
-                #if last.mean() < pred.mean():
-                #    pred = last
-                #    break
-                #last = pred
-                # adv = input_var.detach() + (1/255) * torch.sign(input_var.grad.detach())
-            elif attack == 'bench_black':
-                with torch.no_grad():
-                    pred = self.model(input_var).flatten()
-                adv = input_var.detach() + (1/255) * self._nes_gradient_estimator(input_var, self.model)
-            total_pert = adv - track_sequences
-            total_pert = torch.clamp(total_pert, -eps, eps)
-            input_adv = track_sequences + total_pert
-            input_adv = torch.clamp(input_adv, 0, 1)
-            input_var.data = input_adv.detach()
-            it += 1
-        img_model = torch.load(image_model_path)
-        f = 0
-        for i in range(len(adv)):
-            t, _ = predict_image(img_model, input_var[i], 'xception')
-            f += t
-        l21 = torch.sum(torch.sqrt(torch.mean(torch.pow((input_var - track_sequences).unsqueeze(0), 2), dim=0).mean(dim=2).mean(dim=2).mean(dim=1)))
-        track_probs = torch.sigmoid(pred).detach().cpu().numpy()
-        return track_probs, l21, f
-
-    def classify(self, track_sequences):
-        track_sequences = [torch.stack([self.transform(image=face)['image'] for face in sequence]) for sequence in
-                           track_sequences]
-        track_sequences = torch.cat(track_sequences).cuda()
-        print(track_sequences.shape)
-        # with torch.no_grad():
-        #     # print(self.model(track_sequences))
-        #     track_probs = torch.sigmoid(self.model(track_sequences)).flatten().cpu().numpy()
-        # return track_probs
-    
-        eps = 0.006
-        
-        for param in self.model.parameters():
-            param.requires_grad = False
-            
-        modif = torch.Tensor(track_sequences.shape).fill_(0.01/255).to(device)
+        modif = torch.Tensor(pert.detach().clone()).fill_(0.01/255).to(device)
         modifier = torch.nn.Parameter(modif, requires_grad=True)
         optimizer = torch.optim.Adam([modifier], lr=0.01)
+        ori_sequences = autograd.Variable(track_sequences, requires_grad = False).cuda()
         
-        input_var = autograd.Variable(track_sequences, requires_grad = False).cuda()
-        target_var = autograd.Variable(torch.zeros(track_sequences.size(0)), requires_grad = False).cuda() # need to spoof to real, set target to real and minus the gradient later
+        
+        for param in self.model.parameters():
+            param.requires_grad = False
+        
         it = 0
-        maxiter = 1
-        pred = np.array([1])
-        last = np.array([10 ** 9])
+        maxiter = 20
         
-        while it < maxiter:
-            torch.cuda.empty_cache()
-            print('iter', it)
-                
-            input_var = input_var + modifier
-    
-            
-            loss = 0
-            loss3 = 0
-            logits = self.model(input_var).flatten()
-            loss1 = logits.mean()
-            # print(modifier.shape)
-            loss2 = torch.sum(torch.sqrt(torch.mean(torch.pow(modifier.unsqueeze(0), 2), dim=0).mean(dim=2).mean(dim=2).mean(dim=1)))
-            
-            from lpips import LPIPS
-            img_model = torch.load(image_model_path)
-            target_pert = image_pert(img_model, track_sequences.unsqueeze(0), modifier.clone().detach().requires_grad_(True), 'xception')
-            target_pert = target_pert.unsqueeze(0)
-            lpips_distance = 0.0
-            lpips_fn = LPIPS(net='alex', verbose=False).to(modifier.device)
-            window_size = modifier.shape[0]
-            for w in range(window_size):
-                loss3 += torch.sum(torch.sqrt(torch.mean(torch.pow((modifier[w] - target_pert[0][window_size // 2]).unsqueeze(0), 2), dim=0).mean(dim=1).mean(dim=1).mean(dim=0)))
-
-            # ssim = StructuralSimilarityIndexMeasure(data_range=1.0).to(device)
-            # tv = TotalVariation().to(device)
-            # mse = torch.nn.MSELoss()
-            # treg = 0
-            # for w in range(window_size - 1):
-            #     # treg += tv(torch.abs(modifier[0][w + i] - modifier[0][w + i + 1]).unsqueeze(0))
-            #     # treg += ssim(modifier[0][w + i].unsqueeze(0), modifier[0][w + i + 1].unsqueeze(0))
-            #     treg += mse(modifier[0][w].unsqueeze(0), modifier[0][w + 1].unsqueeze(0))
-            # # reg += -torch.log(treg / window_size)
-            # reg += (treg / window_size)
-                 
-            
-            
-            loss = loss1 + loss2 + loss3
-            optimizer.zero_grad()
-            loss.backward()
-            optimizer.step()
-            
-            with torch.no_grad():
-                pred = self.model(input_var).flatten()
-                score = self.get_score(torch.sigmoid(pred).detach().cpu().numpy())
-            if score < 0.02: # early abort
-                break
-            
-            it += 1
-        # check image detector performance
-        f = 0
-        for i in range(len(input_var)):
-            t, _ = predict_image(img_model, input_var[i], model_type)
-            f += t
+        image_model_path = '/kaggle/input/models2' # better for high dimension image
+        img_model = torch.load(image_model_path)
+        
+        si = 192
+        rsf = torchvision.transforms.Resize((si, si))
+        
+        # print(track_sequences.shape)
+         # simba
+         # track_sequences[0].shape[1]
+        from utils.simba import SimBA
+        advs = []
+        simba = SimBA(img_model, 'a', si)
+        # out = simba.simba_single(rsf(track_sequences)[0], torch.Tensor([1]).long().cuda())
+        # print(out)
+        out = simba.simba_batch(rsf(track_sequences), torch.Tensor([1]).repeat(len(track_sequences)).long().cuda(), 100, 192, 24, 25/255, pixel_attack = True)
+        advs = out[0]
+        l2s = out[4]
+        
+        brsf = torchvision.transforms.Resize((224, 192))
+        advs = brsf(advs)
+        
+        l21 = torch.sum(torch.sqrt(torch.mean(torch.pow((track_sequences - advs).unsqueeze(0), 2), dim=0).mean(dim=2).mean(dim=2).mean(dim=1)))
+        #simba end
+        
+        fa = [[]]
+        for i in range(len(advs)):
+            t, _ = predict_image(img_model, advs[i], 'xception')
             if t != 0:
-                print('f', i, end = ' ')
-        track_probs = torch.sigmoid(pred).detach().cpu().numpy()
-        return track_probs, [loss2, f]
-    def get_score(self, track_probs):
-        delta = track_probs - 0.5
-        sign = np.sign(delta)
-        pos_delta = delta > 0
-        neg_delta = delta < 0
-        track_probs[pos_delta] = np.clip(0.5 + sign[pos_delta] * np.power(abs(delta[pos_delta]), 0.65), 0.01, 0.99)
-        track_probs[neg_delta] = np.clip(0.5 + sign[neg_delta] * np.power(abs(delta[neg_delta]), 0.65), 0.01, 0.99)
-        weights = np.power(abs(delta), 1.0) + 1e-4
-        video_score = float((track_probs * weights).sum() / weights.sum())
-        return video_score
-
+                fa[0].append(start_idx + i)
+        return track_probs, track_sequences - advs, fa
 def atk3d(model_path, data_path):
-
-
     fd = detector.Detector(os.path.join(model_path, DETECTOR_WEIGHTS_PATH))
     track_sequences_classifier = TrackSequencesClassifier(os.path.join(model_path, VIDEO_SEQUENCE_MODEL_WEIGHTS_PATH))
 
-    dataset = detector.UnlabeledVideoDataset(data_path)
+    dataset = detector.UnlabeledVideoDataset(os.path.join(data_path, 'cur'))
     print('Total number of videos: {}'.format(len(dataset)))
 
     loader = DataLoader(dataset, batch_size=VIDEO_BATCH_SIZE, shuffle=False, num_workers=VIDEO_NUM_WORKERS,
@@ -702,7 +556,7 @@ def atk3d(model_path, data_path):
     video_name_to_score = {}
 
     for video_sample in loader:
-        frames = video_sample[0]['frames'][:60]
+        frames = video_sample[0]['frames'][:100]
         detector_frames = frames[::DETECTOR_STEP]
         video_idx = video_sample[0]['index']
         video_rel_path = dataset.content[video_idx]
@@ -725,29 +579,30 @@ def atk3d(model_path, data_path):
             video_name_to_score[video_name] = 0.5
             continue
         
-        pert_sizes = []
-        fakes = []
         sequence_track_scores = [np.array([])]
-        
+        f = [set(), set(), set()]
+        tsl = []
         modif = torch.rand([len(frames),3,224,192]).to(device) * (1/255) #torch.Tensor(X.shape).fill_(0.01/255).to(device)
-        modifier = torch.nn.Parameter(modif, requires_grad=True)
-        optimizer = torch.optim.Adam([modifier], lr=0.01)
-        loss = 0
+        modifier = torch.nn.Parameter(modif)
+        # optimizer = torch.optim.Adam([modifier], lr=0.01)
+        
+                
+        # for simba, full video mode, nvm, memory not enough
         for track in tracks:
             track_sequences = []
             for i, (start_idx, _) in enumerate(
-                    track[:-VIDEO_SEQUENCE_MODEL_SEQUENCE_LENGTH + 1:VIDEO_SEQUENCE_MODEL_TRACK_STEP]):
-                print(i)
+                    track[:-VIDEO_SEQUENCE_MODEL_SEQUENCE_LENGTH + 1:7]):
                 assert start_idx >= 0 and start_idx + VIDEO_SEQUENCE_MODEL_SEQUENCE_LENGTH <= len(frames)
-                _, bbox = track[i * VIDEO_SEQUENCE_MODEL_TRACK_STEP + VIDEO_SEQUENCE_MODEL_SEQUENCE_LENGTH // 2]
+                _, bbox = track[i * 7 + VIDEO_SEQUENCE_MODEL_SEQUENCE_LENGTH // 2]
                 # track_sequences.append(extract_sequence(frames, start_idx, bbox, i % 2 == 0))
-                track_sequences = [detector.extract_sequence(frames, start_idx, bbox, i % 2 == 0)]
-                preds = track_sequences_classifier.classifyn(track_sequences, modifier[start_idx:start_idx + 7]) # return preds and [pert_size, img detecto as fake]
-                loss += preds
-        print('loss', loss)
-        loss.backward()
-        optimizer.step()
-                # sequence_track_scores[0] = np.concatenate([sequence_track_scores[0], track_prob])
+                track_sequences.append(detector.extract_sequence(frames, start_idx, bbox, i % 2 == 0))
+            preds, pert, fake = track_sequences_classifier.classifyn(track_sequences, modifier[start_idx:start_idx + 7], start_idx) # return preds and [pert_size, img detecto as fake]
+            f[0] = f[0] | set(fake[0])
+            with torch.no_grad():
+                modifier = pert
+            track_prob = preds
+            print(modifier.shape)
+            tsl.append(track_sequences)
         
         # verify
         for track in tracks:
@@ -758,14 +613,14 @@ def atk3d(model_path, data_path):
                 _, bbox = track[i * VIDEO_SEQUENCE_MODEL_TRACK_STEP + VIDEO_SEQUENCE_MODEL_SEQUENCE_LENGTH // 2]
                 # track_sequences.append(extract_sequence(frames, start_idx, bbox, i % 2 == 0))
                 track_sequences = [detector.extract_sequence(frames, start_idx, bbox, i % 2 == 0)]
-                preds, [pert_size, fake] = track_sequences_classifier.classify(track_sequences) # return preds and [pert_size, img detecto as fake]
+                preds = track_sequences_classifier.ori_classify(track_sequences) # return preds and [pert_size, img detecto as fake]
                 
-                pert_sizes.append(pert_size)
-                fakes.append(fake)
-                track_prob = preds
 
                 sequence_track_scores[0] = np.concatenate([sequence_track_scores[0], track_prob])
-
+        
+        pert_size = torch.sum(torch.sqrt(torch.mean(torch.pow(modifier.unsqueeze(0), 2), dim=0).mean(dim=2).mean(dim=2).mean(dim=1)))
+        # print(len(modifier))
+        # print(modifier)
         sequence_track_scores = np.concatenate(sequence_track_scores)
         track_probs = sequence_track_scores
 
@@ -785,178 +640,7 @@ def atk3d(model_path, data_path):
                                                                  video_rel_path))
         logging.info('NUM DETECTION FRAMES: {}, VIDEO SCORE: {}. {}'.format(len(detections), video_name_to_score[video_name],
                                                                  video_rel_path))
-        logging.info('total norm {} and total fake image detected by img detector {}'.format(sum(pert_sizes), sum(fakes)))       
-
-def batk3d(model_path, data_path):
-    fd = detector.Detector(os.path.join(model_path, DETECTOR_WEIGHTS_PATH))
-    track_sequences_classifier = TrackSequencesClassifier(os.path.join(model_path, VIDEO_SEQUENCE_MODEL_WEIGHTS_PATH))
-
-    dataset = detector.UnlabeledVideoDataset(data_path)
-    print('Total number of videos: {}'.format(len(dataset)))
-
-    loader = DataLoader(dataset, batch_size=VIDEO_BATCH_SIZE, shuffle=False, num_workers=VIDEO_NUM_WORKERS,
-                        collate_fn=lambda X: X,
-                        drop_last=False)
-
-    video_name_to_score = {}
-
-    for video_sample in loader:
-        frames = video_sample[0]['frames'][:100]
-        detector_frames = frames[::DETECTOR_STEP]
-        video_idx = video_sample[0]['index']
-        video_rel_path = dataset.content[video_idx]
-        video_name = os.path.basename(video_rel_path)
-        print('len', len(frames))
-
-        if len(frames) == 0:
-            video_name_to_score[video_name] = 0.5
-            continue
-
-        detections = []
-        for start in range(0, len(detector_frames), DETECTOR_BATCH_SIZE):
-            end = min(len(detector_frames), start + DETECTOR_BATCH_SIZE)
-            detections_batch = fd.detect(detector_frames[start:end])
-            for detections_per_frame in detections_batch:
-                detections.append({key: value.cpu().numpy() for key, value in detections_per_frame.items()})
-
-        tracks = detector.get_tracks(detections)
-        if len(tracks) == 0:
-            video_name_to_score[video_name] = 0.5
-            continue
-        
-        sequence_track_scores = [np.array([])]
-        # optimizer = torch.optim.Adam([modifier], lr=0.01)
-        track_sequences = []
-        for track in tracks:
-            track_sequences = []
-            for i, (start_idx, _) in enumerate(
-                    track[:-VIDEO_SEQUENCE_MODEL_SEQUENCE_LENGTH + 1:7]):
-                assert start_idx >= 0 and start_idx + VIDEO_SEQUENCE_MODEL_SEQUENCE_LENGTH <= len(frames)
-                _, bbox = track[i * 7 + VIDEO_SEQUENCE_MODEL_SEQUENCE_LENGTH // 2]
-                # track_sequences.append(extract_sequence(frames, start_idx, bbox, i % 2 == 0))
-                track_sequences.append(detector.extract_sequence(frames, start_idx, bbox, i % 2 == 0))
-                
-                
-        track_sequences = [torch.stack([track_sequences_classifier.transform(image=face)['image'] for face in sequence]) for sequence in
-                           track_sequences]
-        X = torch.cat(track_sequences).cuda().unsqueeze(0)
-        image_model_path = '/kaggle/input/models2/all_raw.p'
-        # do atk
-        img_model = torch.load(image_model_path)
-        # vbad partial generator declaration
-        def VBAD_items():
-            extractors = []
-            resnet50 = tvmodels.resnet50(pretrained=True)
-            resnet50_extractor = ResNetFeatureExtractor(resnet50, ['fc']).eval().cuda()
-            # extractors.append(img_model)
-            extractors.append(resnet50_extractor)
-            directions_generator = TentativePerturbationGenerator(extractors, part_size=32, preprocess=False,
-                                                                  device=0)
-            return directions_generator
-        X = X[0, :7,:,:,:].unsqueeze(0)
-        X.squeeze_(dim = 0)
-        directions_generator = VBAD_items()
-        directions_generator.set_untargeted_params(X, random_mask = 1., scale=5.)
-        advs = []
-        for i in range(len(X) // 7):
-            _, _, adv = untargeted_video_attack(track_sequences_classifier, X[7*i:7*i + 7], directions_generator,
-                                     1, rank_transform=False,
-                                     image_split=1,
-                                     sub_num_sample=12, sigma=1e-5,
-                                     eps=0.05, max_iter=5000,
-                                     sample_per_draw=48, vc = 'c3d')
-            adv = adv.unsqueeze(0)
-            advs.append(adv)
-        adv = torch.cat(advs, dim = 1)
-        # check final video output
-        # print(adv)
-        probs = track_sequences_classifier.get_score(track_sequences_classifier.ori_classify(adv.squeeze(0)))
-        logging.info('final video score %s', probs)
-        print('final video score', probs)
-        # check image detector performance
-
-        f = 0
-        for i in range(len(adv[0])):
-            t, _ = predict_image(img_model, adv[0][i], model_type)
-            f += t
-            if t != 0:
-                print('f', i, end = ' ')
-        print('=======================================')
-        logging.info('total frame %d, total fake frame %d', len(adv[0]), f)
-        print('total frames and total fake frames', len(adv[0]), f)
-        l21 = torch.sum(torch.sqrt(torch.mean(torch.pow((adv - X), 2), dim=0).mean(dim=2).mean(dim=2).mean(dim=1)))
-        logging.info('fianl l2,1 nrom %s', l21)
-        print('norm ', l21)
-
-def benchatk(model_path, data_path):
-    fd = detector.Detector(os.path.join(model_path, DETECTOR_WEIGHTS_PATH))
-    track_sequences_classifier = TrackSequencesClassifier(os.path.join(model_path, VIDEO_SEQUENCE_MODEL_WEIGHTS_PATH))
-
-    dataset = detector.UnlabeledVideoDataset(data_path)
-    print('Total number of videos: {}'.format(len(dataset)))
-
-    loader = DataLoader(dataset, batch_size=VIDEO_BATCH_SIZE, shuffle=False, num_workers=VIDEO_NUM_WORKERS,
-                        collate_fn=lambda X: X,
-                        drop_last=False)
-
-    video_name_to_score = {}
-
-    for video_sample in loader:
-        frames = video_sample[0]['frames'][:100]
-        detector_frames = frames[::DETECTOR_STEP]
-        video_idx = video_sample[0]['index']
-        video_rel_path = dataset.content[video_idx]
-        video_name = os.path.basename(video_rel_path)
-        print('len', len(frames))
-
-        if len(frames) == 0:
-            video_name_to_score[video_name] = 0.5
-            continue
-
-        detections = []
-        for start in range(0, len(detector_frames), DETECTOR_BATCH_SIZE):
-            end = min(len(detector_frames), start + DETECTOR_BATCH_SIZE)
-            detections_batch = fd.detect(detector_frames[start:end])
-            for detections_per_frame in detections_batch:
-                detections.append({key: value.cpu().numpy() for key, value in detections_per_frame.items()})
-
-        tracks = detector.get_tracks(detections)
-        if len(tracks) == 0:
-            video_name_to_score[video_name] = 0.5
-            continue
-        
-        sequence_track_scores = [np.array([])]
-        f = 0
-        l21 = 0
-        for track in tracks:
-            track_sequences = []
-            for i, (start_idx, _) in enumerate(
-                    track[:-VIDEO_SEQUENCE_MODEL_SEQUENCE_LENGTH + 1:7]):
-                assert start_idx >= 0 and start_idx + VIDEO_SEQUENCE_MODEL_SEQUENCE_LENGTH <= len(frames)
-                _, bbox = track[i * 7 + VIDEO_SEQUENCE_MODEL_SEQUENCE_LENGTH // 2]
-                track_sequences = [detector.extract_sequence(frames, start_idx, bbox, i % 2 == 0)]
-                one_step, pert_size, sf = track_sequences_classifier.benchmark_atk(track_sequences, attack = args.atk)
-                f += sf
-                l21 += pert_size
-                sequence_track_scores[0] = np.concatenate([sequence_track_scores[0], one_step])
-
-        sequence_track_scores = np.concatenate(sequence_track_scores)
-        track_probs = sequence_track_scores
-
-        delta = track_probs - 0.5
-        sign = np.sign(delta)
-        pos_delta = delta > 0
-        neg_delta = delta < 0
-        track_probs[pos_delta] = np.clip(0.5 + sign[pos_delta] * np.power(abs(delta[pos_delta]), 0.65), 0.01, 0.99)
-        track_probs[neg_delta] = np.clip(0.5 + sign[neg_delta] * np.power(abs(delta[neg_delta]), 0.65), 0.01, 0.99)
-        weights = np.power(abs(delta), 1.0) + 1e-4
-        video_score = float((track_probs * weights).sum() / weights.sum())
-
-        video_name_to_score[video_name] = video_score
-        print('NUM DETECTION FRAMES: {}, VIDEO SCORE: {}. {}'.format(len(detections), video_name_to_score[video_name],
-                                                                     video_rel_path))
-        print('fianl l21 norm {}'.format(l21))
-        print('total fake frame ', f)
+        logging.info('total norm {} and total fake image detected by img detector {} , {} , {}'.format(pert_size, len(f[0]), len(f[1]), len(f[2])))
 
 
 import argparse
