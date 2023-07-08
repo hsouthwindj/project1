@@ -115,8 +115,7 @@ class SimBA:
                 succs[:, k:] = torch.ones(batch_size, max_iters - k)
                 queries[:, k:] = torch.zeros(batch_size, max_iters - k)
                 break
-            print(remaining.device)
-            remaining_indices = torch.arange(0, batch_size)[remaining].long()
+            remaining_indices = torch.arange(0, batch_size)[remaining.cpu()].long()
             if k > 0:
                 succs[:, k] = ~remaining
             diff = torch.zeros(remaining.sum(), n_dims)
