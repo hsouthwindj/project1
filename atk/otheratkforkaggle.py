@@ -293,7 +293,7 @@ def image_checker(X, model, model_type): # X dim = 5
             f += t
     print('detector %s, origin total frame %d, origin total fake frame %d', model_type, len(X[0]), f)
             
-def rnnatk(l3, sec_phase, max_iters, full_pert, reg_type, ws):
+def rnnatk(l3, sec_phase, max_iters, full_pert, reg_type, ws, data_path):
     ct = time.time()
     for vid_name, (data, y) in video_loader(data_path, b = True):
         logging.info('new video %s', vid_name)
@@ -980,7 +980,7 @@ for arg, value in sorted(vars(args).items()):
 
 if args.atk == 'white':
     if args.model == 'rnn':
-        rnnatk(args.l3, args.sec_phase, args.iters, args.full_pert, args.reg, args.group_size)
+        rnnatk(args.l3, args.sec_phase, args.iters, args.full_pert, args.reg, args.group_size, args.path)
     else:
         with open('configforkaggle.yaml', 'r') as f:
             config = yaml.load(f)
