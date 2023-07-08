@@ -439,7 +439,7 @@ def rnnatk(l3, sec_phase, max_iters, full_pert, reg_type, ws, data_path):
         # true_image = X + modifier
         probs, pre_label = eval_model(true_image)
         probs = torch.sigmoid(probs)
-        logging.info('final video score %s', probs)
+        print('final video score %s', probs)
         image_checker(true_image, img_model, 'xception')
         l21 = torch.sum(torch.sqrt(torch.mean(torch.pow((true_image - X), 2), dim=0).mean(dim=2).mean(dim=2).mean(dim=1)))
         print('fianl l2,1 nrom %s', l21)

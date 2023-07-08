@@ -58,7 +58,7 @@ class SimBA:
                 print(last_prob)
         return x.squeeze()
     def simba_batch(self, images_batch, labels_batch, max_iters, freq_dims, stride, epsilon, linf_bound=0.0,
-                order='rand', targeted=False, pixel_attack=False, log_every=1):
+                order='rand', targeted=False, pixel_attack=False, log_every=10):
         batch_size = images_batch.size(0)
         image_size = images_batch.size(2)
         assert self.image_size == image_size
@@ -96,7 +96,7 @@ class SimBA:
             expanded = (images_batch[remaining_indices] + trans(self.expand_vector(x[remaining_indices], expand_dims)).cuda()).clamp(0, 1)
             perturbation = trans(self.expand_vector(x, expand_dims)).cuda()
             l21 = torch.sum(torch.sqrt(torch.mean(torch.pow((perturbation).unsqueeze(0), 2), dim=0).mean(dim=2).mean(dim=2).mean(dim=1)))
-            print(l21)
+            #print(l21)
             l2_norms[:, k] = perturbation.view(batch_size, -1).norm(2, 1)
             linf_norms[:, k] = perturbation.view(batch_size, -1).abs().max(1)[0]
             preds_next = self.get_preds(expanded).cuda()
