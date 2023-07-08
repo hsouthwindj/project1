@@ -466,7 +466,7 @@ VIDEO_MODEL_CROP_HEIGHT = 224
 VIDEO_MODEL_CROP_WIDTH = 192
 VIDEO_FACE_MODEL_TRACK_STEP = 2
 VIDEO_SEQUENCE_MODEL_SEQUENCE_LENGTH = 7
-VIDEO_SEQUENCE_MODEL_TRACK_STEP = 14
+VIDEO_SEQUENCE_MODEL_TRACK_STEP = 7
 
 VIDEO_SEQUENCE_MODEL_WEIGHTS_PATH = 'snapshot_100000.fp16.pth'
 
@@ -526,7 +526,7 @@ class TrackSequencesClassifier(object):
         simba = SimBA(img_model, 'a', si)
         # out = simba.simba_single(rsf(track_sequences)[0], torch.Tensor([1]).long().cuda())
         # print(out)
-        out = simba.simba_batch(rsf(track_sequences), torch.Tensor([1]).repeat(len(track_sequences)).long().cuda(), 100, 192, 24, 25/255, pixel_attack = True)
+        out = simba.simba_batch(rsf(track_sequences), torch.Tensor([1]).repeat(len(track_sequences)).long().cuda(), 5000, 192, 24, 25/255, pixel_attack = True)
         advs = out[0]
         l2s = out[4]
         
@@ -598,8 +598,39 @@ def atk3d(model_path, data_path):
         modifier = torch.nn.Parameter(modif)
         # optimizer = torch.optim.Adam([modifier], lr=0.01)
         
+        # before atk
+        for track in tracks:
+            track_sequences = []
+            for i, (start_idx, _) in enumerate(
+                    track[:-VIDEO_SEQUENCE_MODEL_SEQUENCE_LENGTH + 1:VIDEO_SEQUENCE_MODEL_TRACK_STEP]):
+                assert start_idx >= 0 and start_idx + VIDEO_SEQUENCE_MODEL_SEQUENCE_LENGTH <= len(frames)
+                _, bbox = track[i * VIDEO_SEQUENCE_MODEL_TRACK_STEP + VIDEO_SEQUENCE_MODEL_SEQUENCE_LENGTH // 2]
+                # track_sequences.append(extract_sequence(frames, start_idx, bbox, i % 2 == 0))
+                track_sequences = [detector.extract_sequence(frames, start_idx, bbox, i % 2 == 0)]
+                track_prob = track_sequences_classifier.ori_classify(track_sequences) # return preds and [pert_size, img detecto as fake]
+                sequence_track_scores[0] = np.concatenate([sequence_track_scores[0], track_prob])
+        sequence_track_scores = np.concatenate(sequence_track_scores)
+        track_probs = sequence_track_scores
+
+        # print(track_probs)
+        delta = track_probs - 0.5
+        sign = np.sign(delta)
+        pos_delta = delta > 0
+        neg_delta = delta < 0
+        track_probs[pos_delta] = np.clip(0.5 + sign[pos_delta] * np.power(abs(delta[pos_delta]), 0.65), 0.01, 0.99)
+        track_probs[neg_delta] = np.clip(0.5 + sign[neg_delta] * np.power(abs(delta[neg_delta]), 0.65), 0.01, 0.99)
+        weights = np.power(abs(delta), 1.0) + 1e-4
+        video_score = float((track_probs * weights).sum() / weights.sum())
+        # print(delta, pos_delta, track_probs)
+
+        video_name_to_score[video_name] = video_score
+        print('NUM DETECTION FRAMES: {}, VIDEO SCORE: {}. {}'.format(len(detections), video_name_to_score[video_name],
+                                                                 video_rel_path))
+        print('total norm {} and total fake image detected by img detector {} , {} , {}'.format(pert_size, len(f[0]), len(f[1]), len(f[2])))
+        print('after')
                 
         # for simba, full video mode, nvm, memory not enough
+        sequence_track_scores = [np.array([])]
         for track in tracks:
             track_sequences = []
             for i, (start_idx, _) in enumerate(
@@ -613,7 +644,7 @@ def atk3d(model_path, data_path):
             with torch.no_grad():
                 modifier = pert
             track_prob = preds
-            print(modifier.shape)
+            #print(modifier.shape)
             tsl.append(track_sequences)
         
         # verify
@@ -648,8 +679,6 @@ def atk3d(model_path, data_path):
         # print(delta, pos_delta, track_probs)
 
         video_name_to_score[video_name] = video_score
-        print('NUM DETECTION FRAMES: {}, VIDEO SCORE: {}. {}'.format(len(detections), video_name_to_score[video_name],
-                                                                 video_rel_path))
         print('NUM DETECTION FRAMES: {}, VIDEO SCORE: {}. {}'.format(len(detections), video_name_to_score[video_name],
                                                                  video_rel_path))
         print('total norm {} and total fake image detected by img detector {} , {} , {}'.format(pert_size, len(f[0]), len(f[1]), len(f[2])))
