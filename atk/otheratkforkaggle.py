@@ -512,7 +512,7 @@ class TrackSequencesClassifier(object):
         it = 0
         maxiter = 20
         
-        image_model_path = '/kaggle/input/models2' # better for high dimension image
+        image_model_path = '/kaggle/input/models2/all_raw.p' # better for high dimension image
         img_model = torch.load(image_model_path)
         
         si = 192
