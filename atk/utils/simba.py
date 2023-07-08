@@ -135,7 +135,7 @@ class SimBA:
                 improved = left_probs.lt(prev_probs[remaining_indices])
             # only increase query count further by 1 for images that did not improve in adversarial loss
             if improved.sum() < remaining_indices.size(0):
-                queries_k[remaining_indices[~improved]] += 1
+                queries_k[remaining_indices[~improved.cpu()].cpu()] += 1
             # try positive directions
             adv = (images_batch[remaining_indices] + trans(self.expand_vector(right_vec, expand_dims)).cuda()).clamp(0, 1)
             right_probs = self.get_probs(adv, labels_batch[remaining_indices])
