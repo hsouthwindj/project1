@@ -650,9 +650,9 @@ def atk3d(model_path, data_path):
         video_name_to_score[video_name] = video_score
         print('NUM DETECTION FRAMES: {}, VIDEO SCORE: {}. {}'.format(len(detections), video_name_to_score[video_name],
                                                                  video_rel_path))
-        logging.info('NUM DETECTION FRAMES: {}, VIDEO SCORE: {}. {}'.format(len(detections), video_name_to_score[video_name],
+        print('NUM DETECTION FRAMES: {}, VIDEO SCORE: {}. {}'.format(len(detections), video_name_to_score[video_name],
                                                                  video_rel_path))
-        logging.info('total norm {} and total fake image detected by img detector {} , {} , {}'.format(pert_size, len(f[0]), len(f[1]), len(f[2])))
+        print('total norm {} and total fake image detected by img detector {} , {} , {}'.format(pert_size, len(f[0]), len(f[1]), len(f[2])))
 
 
 import argparse
