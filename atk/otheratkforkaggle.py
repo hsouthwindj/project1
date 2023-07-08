@@ -544,6 +544,16 @@ class TrackSequencesClassifier(object):
         pred = self.model(advs).flatten()
         track_probs = torch.sigmoid(pred).detach().cpu().numpy()
         return track_probs, track_sequences - advs, fa
+        
+    def ori_classify(self, track_sequences):
+        track_sequences = [torch.stack([self.transform(image=face)['image'] for face in sequence]) for sequence in
+                           track_sequences]
+        track_sequences = torch.cat(track_sequences).cuda()
+        with torch.no_grad():
+            track_probs = torch.sigmoid(self.model(track_sequences)).flatten().cpu().numpy()
+
+        return track_probs
+        
 def atk3d(model_path, data_path):
     fd = detector.Detector(os.path.join(model_path, DETECTOR_WEIGHTS_PATH))
     track_sequences_classifier = TrackSequencesClassifier(os.path.join(model_path, VIDEO_SEQUENCE_MODEL_WEIGHTS_PATH))
