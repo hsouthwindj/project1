@@ -541,6 +541,8 @@ class TrackSequencesClassifier(object):
             t, _ = predict_image(img_model, advs[i], 'xception')
             if t != 0:
                 fa[0].append(start_idx + i)
+        pred = self.model(advs).flatten()
+        track_probs = torch.sigmoid(pred).detach().cpu().numpy()
         return track_probs, track_sequences - advs, fa
 def atk3d(model_path, data_path):
     fd = detector.Detector(os.path.join(model_path, DETECTOR_WEIGHTS_PATH))
