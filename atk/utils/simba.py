@@ -77,7 +77,7 @@ class SimBA:
         else:
             expand_dims = image_size
         n_dims = 3 * expand_dims * expand_dims
-        x = torch.zeros(batch_size, n_dims).fill_(2/255)
+        #x = torch.zeros(batch_size, n_dims).fill_(2/255)
         # logging tensors
         probs = torch.zeros(batch_size, max_iters).cuda()
         succs = torch.zeros(batch_size, max_iters).cuda()
