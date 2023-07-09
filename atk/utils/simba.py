@@ -120,7 +120,6 @@ class SimBA:
             
             cprobs[remaining_indices] = self.get_probs(expanded, labels_batch)
             remaining = cprobs > 0.05
-            print(remaining.shape)
             # check if all images are misclassified and stop early
             if remaining.sum() == 0 and k > 100:
                 adv = (images_batch + trans(self.expand_vector(x, expand_dims)).cuda()).clamp(0, 1)
