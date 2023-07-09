@@ -114,7 +114,7 @@ class SimBA:
                 remaining = preds.ne(labels_batch)
             else:
                 remaining = preds.eq(labels_batch)
-            remaining = Tensor([True]).repeat(len(labels_batch))
+            remaining = torch.Tensor([True]).repeat(len(labels_batch))
             # check if all images are misclassified and stop early
             if remaining.sum() == 0 and k > 100:
                 adv = (images_batch + trans(self.expand_vector(x, expand_dims)).cuda()).clamp(0, 1)
