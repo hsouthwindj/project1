@@ -35,6 +35,9 @@ class SimBA:
         return torch.diag(probs)
     
     def get_preds(self, x):
+        # for 3dcnn
+        brsf = torchvision.transforms.Resize((224, 192))
+        x = brsf(x)
         output = self.model(x.cuda()).cpu()
         _, preds = output.data.max(1)
         return preds
