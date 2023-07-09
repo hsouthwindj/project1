@@ -26,6 +26,7 @@ class SimBA:
     def get_probs(self, x, y):
         # print(x.shape)
         output = self.model((x.cuda()))
+        print(output[:5])
         # output = torch.sigmoid(output)
         probs = torch.index_select(F.softmax(output, dim=-1).data, 1, y)
         return torch.diag(probs)
