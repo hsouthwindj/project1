@@ -94,7 +94,7 @@ class SimBA:
         prev_probs = self.get_probs(images_batch, labels_batch).cuda()
         preds = self.get_preds(images_batch).cuda()
         
-        cprobs = torch.zeros(batch_size, max_iters).cuda()
+        cprobs = self.get_probs(images_batch, labels_batch)
         if pixel_attack:
             trans = lambda z: z
         else:
@@ -117,7 +117,7 @@ class SimBA:
             else:
                 remaining = preds.eq(labels_batch)
             #remaining = torch.Tensor([True]).repeat(len(labels_batch)).bool()
-            print('cprobs shape', cprobs.shape)
+            
             cprobs[remaining_indices] = self.get_probs(expanded, labels_batch)
             remaining = cprobs > 0.05
             print(remaining.shape)
