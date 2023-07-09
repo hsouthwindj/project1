@@ -26,7 +26,6 @@ class SimBA:
     def get_probs(self, x, y):
         # print(x.shape)
         output = self.model((x.cuda()))
-        print(output[:5])
         # output = torch.sigmoid(output)
         probs = torch.index_select(F.softmax(output, dim=-1).data, 1, y)
         return torch.diag(probs)
@@ -172,4 +171,5 @@ class SimBA:
         else:
             remaining = preds.eq(labels_batch.cuda())
         succs[:, max_iters-1] = ~remaining
+        print('inner', self.model(expanded)[:10])
         return expanded, probs, succs, queries, l2_norms, linf_norms
