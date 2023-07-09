@@ -177,7 +177,7 @@ class SimBA:
             if (k + 1) % log_every == 0 or k == max_iters - 1:
                 print('Iteration %d: queries = %.4f, prob = %.4f, remaining = %.4f' % (
                         k + 1, queries.sum(1).mean(), probs[:, k].mean(), remaining.float().mean()))
-            if probs[:, k].mean() < 0.05 and k > 50:
+            if probs[:, k].mean() < 0.05 and k > 100:
                 break
         expanded = (images_batch + trans(self.expand_vector(x, expand_dims)).cuda()).clamp(0, 1)
         preds = self.get_preds(expanded).cuda()
