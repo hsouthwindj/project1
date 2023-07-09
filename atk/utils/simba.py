@@ -6,6 +6,7 @@ source : https://github.com/cg563/simple-blackbox-attack/blob/master/simba.py
 import torch
 import torch.nn.functional as F
 import utils
+import torchvision
 
 
 class SimBA:
