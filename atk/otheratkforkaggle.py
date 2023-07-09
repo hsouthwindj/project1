@@ -518,7 +518,7 @@ class TrackSequencesClassifier(object):
         si = 192
         rsf = torchvision.transforms.Resize((si, si))
         
-        print(img_model(track_sequences)[0][:5])
+        print(img_model(track_sequences)[:5])
         
         # print(track_sequences.shape)
          # simba
@@ -538,7 +538,7 @@ class TrackSequencesClassifier(object):
         l21 = torch.sum(torch.sqrt(torch.mean(torch.pow((track_sequences - advs).unsqueeze(0), 2), dim=0).mean(dim=2).mean(dim=2).mean(dim=1)))
         #simba end
         
-        print(img_model(advs)[0][:5])
+        print(img_model(advs)[:5])
         fa = [[]]
         for i in range(len(advs)):
             t, _ = predict_image(img_model, advs[i], 'xception')
@@ -629,7 +629,7 @@ def atk3d(model_path, data_path):
         video_name_to_score[video_name] = video_score
         print('NUM DETECTION FRAMES: {}, VIDEO SCORE: {}. {}'.format(len(detections), video_name_to_score[video_name],
                                                                  video_rel_path))
-        print('after')
+        print('after attack')
                 
         # for simba, full video mode, nvm, memory not enough
         sequence_track_scores = [np.array([])]
