@@ -515,10 +515,9 @@ class TrackSequencesClassifier(object):
         image_model_path = '/kaggle/input/models2/all_raw.p' # better for high dimension image
         img_model = torch.load(image_model_path)
         
+        print('before atk', img_model(track_sequences)[:10])
         si = 192
         rsf = torchvision.transforms.Resize((si, si))
-        
-        print(img_model(track_sequences)[:10])
         
         # print(track_sequences.shape)
          # simba
@@ -538,7 +537,7 @@ class TrackSequencesClassifier(object):
         l21 = torch.sum(torch.sqrt(torch.mean(torch.pow((track_sequences - advs).unsqueeze(0), 2), dim=0).mean(dim=2).mean(dim=2).mean(dim=1)))
         #simba end
         
-        print(img_model(advs)[:10])
+        print('after atk', img_model(advs)[:10])
         fa = [[]]
         for i in range(len(advs)):
             t, _ = predict_image(img_model, advs[i], 'xception')
