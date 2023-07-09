@@ -114,7 +114,6 @@ class SimBA:
                 remaining = preds.ne(labels_batch)
             else:
                 remaining = preds.eq(labels_batch)
-            print('remaining', remaining)
             remaining = torch.Tensor([True]).repeat(len(labels_batch)).bool()
             # check if all images are misclassified and stop early
             if remaining.sum() == 0 and k > 100:
