@@ -170,7 +170,7 @@ class SimBA:
             queries[:, k] = queries_k
             prev_probs = probs[:, k]
             if (k + 1) % log_every == 0 or k == max_iters - 1:
-                print(self.get_probs(images_batch, labels_batch).cuda())
+                print(self.get_probs(adv, labels_batch).cuda())
                 print('Iteration %d: queries = %.4f, prob = %.4f, remaining = %.4f' % (
                         k + 1, queries.sum(1).mean(), probs[:, k].mean(), remaining.float().mean()))
             if probs[:, k].mean() < 0.05 and k > 50:
