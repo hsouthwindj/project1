@@ -127,8 +127,10 @@ class SimBA:
                 succs[:, k] = ~remaining
             diff = torch.zeros(remaining.sum(), n_dims)
             #diff[:, k] = epsilon
-            diff[:, torch.randint(0, len(indices), (32,))] = epsilon
-            diff[:, torch.randint(0, len(indices), (32,))] = -epsilon
+            #diff[:, torch.randint(0, len(indices), (32,))] = epsilon
+            #diff[:, torch.randint(0, len(indices), (32,))] = -epsilon
+            diff[:, torch.randint(0, len(indices), (192,))] = epsilon
+            diff[:, torch.randint(0, len(indices), (192,))] = -epsilon
             left_vec = x[remaining_indices] - diff
             right_vec = x[remaining_indices] + diff
             # trying negative direction
