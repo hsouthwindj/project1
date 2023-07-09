@@ -25,6 +25,9 @@ class SimBA:
 
     def get_probs(self, x, y):
         # print(x.shape)
+        # for 3dcnn
+        brsf = torchvision.transforms.Resize((224, 192))
+        x = brsf(x)
         output = self.model((x.cuda()))
         # output = torch.sigmoid(output)
         probs = torch.index_select(F.softmax(output, dim=-1).data, 1, y)
