@@ -527,7 +527,7 @@ class TrackSequencesClassifier(object):
         simba = SimBA(img_model, 'a', si)
         # out = simba.simba_single(rsf(track_sequences)[0], torch.Tensor([1]).long().cuda())
         # print(out)
-        out = simba.simba_batch(rsf(track_sequences), torch.Tensor([1]).repeat(len(track_sequences)).long().cuda(), 500, 192, 12, 10/255, pixel_attack = True)
+        out = simba.simba_batch(rsf(track_sequences), torch.Tensor([1]).repeat(len(track_sequences)).long().cuda(), 500, 192, 12, 12/255, pixel_attack = True)
         advs = out[0]
         l2s = out[4]
         
@@ -570,7 +570,7 @@ def atk3d(model_path, data_path):
     video_name_to_score = {}
 
     for video_sample in loader:
-        frames = video_sample[0]['frames'][:100]
+        frames = video_sample[0]['frames'][:45]
         detector_frames = frames[::DETECTOR_STEP]
         video_idx = video_sample[0]['index']
         video_rel_path = dataset.content[video_idx]
