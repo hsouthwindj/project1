@@ -118,7 +118,7 @@ class SimBA:
                 remaining = preds.ne(labels_batch)
             else:
                 remaining = preds.eq(labels_batch)
-            remaining = torch.Tensor([True]).repeat(len(labels_batch)).bool()
+            #remaining = torch.Tensor([True]).repeat(len(labels_batch)).bool()
             
             #cprobs[remaining_indices] = self.get_probs(expanded, labels_batch)
             #remaining = cprobs > 0.01
