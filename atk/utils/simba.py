@@ -123,7 +123,7 @@ class SimBA:
             #cprobs[remaining_indices] = self.get_probs(expanded, labels_batch)
             #remaining = cprobs > 0.01
             # check if all images are misclassified and stop early
-            if remaining.sum() == 0 and k > 100:
+            if remaining.sum() == 0:
                 adv = (images_batch + trans(self.expand_vector(x, expand_dims)).cuda()).clamp(0, 1)
                 probs_k = self.get_probs(adv, labels_batch).cuda()
                 probs[:, k:] = probs_k.unsqueeze(1).repeat(1, max_iters - k)
