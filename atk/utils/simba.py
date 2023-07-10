@@ -119,7 +119,7 @@ class SimBA:
             else:
                 remaining = preds.eq(labels_batch)
             #remaining = torch.Tensor([True]).repeat(len(labels_batch)).bool()
-            if remaining.sum() == 0 and k < 100:
+            if remaining.sum() == 0 and k < 50:
                 remaining = torch.Tensor([True]).repeat(len(labels_batch)).bool()
                 
             
