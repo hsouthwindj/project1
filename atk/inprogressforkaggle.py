@@ -599,7 +599,7 @@ class TrackSequencesClassifier(object):
             track_probs = torch.sigmoid(self.model(track_sequences)).flatten().cpu().numpy()
 
         return track_probs    
-    def classifyn(self, track_sequences, modifier):
+    def classifyn(self, track_sequences, pert, start_idx):
         track_sequences = [torch.stack([self.transform(image=face)['image'] for face in sequence]) for sequence in
                            track_sequences]
         track_sequences = torch.cat(track_sequences).cuda()
@@ -857,7 +857,7 @@ def atk3d(model_path, data_path, maxiter):
 
 
     fd = detector.Detector(os.path.join(model_path, DETECTOR_WEIGHTS_PATH))
-    track_sequences_classifier = TrackSequencesClassifier(os.path.join(model_path, VIDEO_SEQUENCE_MODEL_WEIGHTS_PATH))
+    track_sequences_classifier = TrackSequencesClassifier(os.path.join(model_path, VIDEO_SEQUENCE_MODEL_WEIGHTS_PATH), maxiter)
 
     dataset = detector.UnlabeledVideoDataset(os.path.join(data_path))
     print('Total number of videos: {}'.format(len(dataset)))
@@ -906,7 +906,7 @@ def atk3d(model_path, data_path, maxiter):
                 _, bbox = track[i * 6 + VIDEO_SEQUENCE_MODEL_SEQUENCE_LENGTH // 2]
                 # track_sequences.append(extract_sequence(frames, start_idx, bbox, i % 2 == 0))
                 track_sequences = [detector.extract_sequence(frames, start_idx, bbox, i % 2 == 0)]
-                preds, pert, fake = track_sequences_classifier.classifyn(track_sequences, modifier[start_idx:start_idx + 7], start_idx, maxiter) # return preds and [pert_size, img detecto as fake]
+                preds, pert, fake = track_sequences_classifier.classifyn(track_sequences, modifier[start_idx:start_idx + 7], start_idx) # return preds and [pert_size, img detecto as fake]
                 f[0] = f[0] | set(fake[0])
                 with torch.no_grad():
                     modifier[start_idx:start_idx + 7] = pert
