@@ -1175,7 +1175,7 @@ elif args.atk == 'black':
     if args.model == 'rnn':
         rnnbatk(data_path, model_path) 
     else:
-        batk3d(data_path, model_path_3d)   
+        batk3d(model_path_3d, data_path)   
 elif args.atk == 'bench_white':                                    # below parts are for testing other attack, ignore these
     if args.model == 'c3d':
         with open('configforkaggle.yaml', 'r') as f:
