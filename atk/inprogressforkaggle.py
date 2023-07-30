@@ -603,12 +603,115 @@ class TrackSequencesClassifier(object):
         track_sequences = [torch.stack([self.transform(image=face)['image'] for face in sequence]) for sequence in
                            track_sequences]
         track_sequences = torch.cat(track_sequences).cuda()
-        if track_sequences.requires_grad:
-            track_sequences.requires_grad = False
-        track_sequences = track_sequences + modifier
+        
+        modif = torch.Tensor(pert.detach().clone()).fill_(0.01/255).to(device)
+        modifier = torch.nn.Parameter(modif, requires_grad=True)
+        optimizer = torch.optim.Adam([modifier], lr=0.01)
+        ori_sequences = autograd.Variable(track_sequences, requires_grad = False).cuda()
+        
+        
+        for param in self.model.parameters():
+            param.requires_grad = False
+        
+        it = 0
+        maxiter = self.maxiter
+        
+        while it < maxiter:
+            f = 7
+            torch.cuda.empty_cache()
+            print('iter', it)
+            perturbed_sequences = ori_sequences + modifier
+            
+            loss = 0
+            loss3 = 0
+            logits = self.model(perturbed_sequences).flatten()
+            loss1 = torch.sigmoid(logits.mean())
+            loss2 = torch.sum(torch.sqrt(torch.mean(torch.pow(modifier.unsqueeze(0), 2), dim=0).mean(dim=2).mean(dim=2).mean(dim=1)))
+            if math.isnan(logits[0].item()):
+                print(modifier)
+                print(perturbed_sequences)
+            
+            # from lpips import LPIPS
+            pert_img_model_type = 'meso'
+            if it == 0:
+                img_model = torch.load(image_model_path)
+                
+                cp = torch.load('/notebooks/atk/models/best.pkl')
+                mesomodel = Meso4()
+                mesomodel.load_state_dict(cp)
+                mesomodel = mesomodel.cuda()
+                
+                pth = '/notebooks/atk/weight/final_111_DeepFakeClassifier_tf_efficientnet_b7_ns_0_36'
+                efmodel = DeepFakeClassifier(encoder="tf_efficientnet_b7_ns").to("cuda")
+                checkpoint = torch.load(pth, map_location="cpu")
+                state_dict = checkpoint.get("state_dict", checkpoint)
+                efmodel.load_state_dict({re.sub("^module.", "", k): v for k, v in state_dict.items()}, strict=True)
+                efmodel.eval()
+                if pert_img_model_type == 'xception':
+                    pert_img_model = img_model
+                elif pert_img_model_type == 'meso':
+                    pert_img_model = mesomodel
+                elif pert_img_model_type == 'ef':
+                    pert_img_model = efmodel
+                    
+            target_pert = image_pert(pert_img_model, track_sequences.unsqueeze(0), modifier.clone().detach().requires_grad_(True), pert_img_model_type)
+            target_pert = target_pert.unsqueeze(0)
+            # lpips_distance = 0.0
+            # lpips_fn = LPIPS(net='alex', verbose=False).to(modifier.device)
+            window_size = modifier.shape[0]
+            for w in range(window_size):
+                target_prepert = window_size // 4 if w < window_size // 2 else window_size * 3 // 4
+                loss3 += torch.sum(torch.sqrt(torch.mean(torch.pow((modifier[w] - target_pert[0][target_prepert]).unsqueeze(0), 2), dim=0).mean(dim=1).mean(dim=1).mean(dim=0)))
+            print(loss1, loss2,loss3)
+            loss = 0.1*loss1 + 2*loss2 + 2.5*loss3 # 0.1 4 1
+            if math.isnan(loss.item()):
+                break
+            optimizer.zero_grad()
+            loss.backward()
+            optimizer.step()
+            
+            
+            with torch.no_grad():
+                pred = self.model(perturbed_sequences).flatten()
+                score = self.get_score(torch.sigmoid(pred).detach().cpu().numpy())
+            
+            it += 1
+            
+            # check image detector performance
+            if it % 2 == 0:
+                fa = [[],[],[]]
+                for i in range(len(perturbed_sequences)):
+                    t, _ = predict_image(img_model, perturbed_sequences[i], 'xception')
+                    if t != 0:
+                        fa[0].append(start_idx + i)
+
+                for i in range(len(perturbed_sequences)):
+                    t, _ = predict_image(mesomodel, perturbed_sequences[i], 'meso')
+                    if t == 0:
+                        fa[1].append(start_idx + i)
+
+                with torch.no_grad():
+                    rsf = torchvision.transforms.Resize(380)
+                    for i in range(len(perturbed_sequences)):
+                        t = efmodel(rsf(perturbed_sequences[i].unsqueeze(0)))
+                        if t[0] < 0:
+                            fa[2].append(start_idx + i)
+                for i in fa:
+                    if score < 0.2 and len(i) < 3 and loss2 < 0.06:
+                        break
+                print(fa[0])
+                print(fa[1])
+                print(fa[2])
+        
         with torch.no_grad():
-            track_probs = torch.sigmoid(self.model(track_sequences)).mean()
-        return track_probs
+            pred = self.model(track_sequences + modifier).flatten()
+            print(pred)
+            # print(self.model(perturbed_sequences).flatten())
+            # print(track_sequences[0][0])
+            # print(modifier[0][0])
+            # print(perturbed_sequences[0][0])
+        track_probs = torch.sigmoid(pred).detach().cpu().numpy()
+        return track_probs, modifier.detach().clone(), fa
         
     def _nes_gradient_estimator(self, input_var, model, sample_num = 20, sigma = 0.001):
         g = 0
@@ -789,9 +892,9 @@ def atk3d(model_path, data_path, maxiter):
 
 
     fd = detector.Detector(os.path.join(model_path, DETECTOR_WEIGHTS_PATH))
-    track_sequences_classifier = TrackSequencesClassifier(os.path.join(model_path, VIDEO_SEQUENCE_MODEL_WEIGHTS_PATH), maxiter)
+    track_sequences_classifier = TrackSequencesClassifier(os.path.join(model_path, VIDEO_SEQUENCE_MODEL_WEIGHTS_PATH))
 
-    dataset = detector.UnlabeledVideoDataset(data_path)
+    dataset = detector.UnlabeledVideoDataset(os.path.join(data_path, 'cur'))
     print('Total number of videos: {}'.format(len(dataset)))
 
     loader = DataLoader(dataset, batch_size=VIDEO_BATCH_SIZE, shuffle=False, num_workers=VIDEO_NUM_WORKERS,
@@ -801,7 +904,7 @@ def atk3d(model_path, data_path, maxiter):
     video_name_to_score = {}
 
     for video_sample in loader:
-        frames = video_sample[0]['frames'][:60]
+        frames = video_sample[0]['frames'][:100]
         detector_frames = frames[::DETECTOR_STEP]
         video_idx = video_sample[0]['index']
         video_rel_path = dataset.content[video_idx]
@@ -824,28 +927,28 @@ def atk3d(model_path, data_path, maxiter):
             video_name_to_score[video_name] = 0.5
             continue
         
-        pert_sizes = []
-        fakes = []
         sequence_track_scores = [np.array([])]
-        
+        f = [set(), set(), set()]
+        tsl = []
         modif = torch.rand([len(frames),3,224,192]).to(device) * (1/255) #torch.Tensor(X.shape).fill_(0.01/255).to(device)
-        modifier = torch.nn.Parameter(modif, requires_grad=True)
-        optimizer = torch.optim.Adam([modifier], lr=0.01)
-        loss = 0
+        modifier = torch.nn.Parameter(modif)
+        # optimizer = torch.optim.Adam([modifier], lr=0.01)
         for track in tracks:
             track_sequences = []
             for i, (start_idx, _) in enumerate(
-                    track[:-VIDEO_SEQUENCE_MODEL_SEQUENCE_LENGTH + 1:VIDEO_SEQUENCE_MODEL_TRACK_STEP]):
-                print(i)
+                    track[:-VIDEO_SEQUENCE_MODEL_SEQUENCE_LENGTH + 1:6]):
                 assert start_idx >= 0 and start_idx + VIDEO_SEQUENCE_MODEL_SEQUENCE_LENGTH <= len(frames)
-                _, bbox = track[i * VIDEO_SEQUENCE_MODEL_TRACK_STEP + VIDEO_SEQUENCE_MODEL_SEQUENCE_LENGTH // 2]
+                _, bbox = track[i * 6 + VIDEO_SEQUENCE_MODEL_SEQUENCE_LENGTH // 2]
                 # track_sequences.append(extract_sequence(frames, start_idx, bbox, i % 2 == 0))
                 track_sequences = [detector.extract_sequence(frames, start_idx, bbox, i % 2 == 0)]
-                preds = track_sequences_classifier.classifyn(track_sequences, modifier[start_idx:start_idx + 7]) # return preds and [pert_size, img detecto as fake]
-                loss += preds
-        print('loss', loss)
-        loss.backward()
-        optimizer.step()
+                preds, pert, fake = track_sequences_classifier.classifyn(track_sequences, modifier[start_idx:start_idx + 7], start_idx, maxiter) # return preds and [pert_size, img detecto as fake]
+                f[0] = f[0] | set(fake[0])
+                f[1] = f[1] | set(fake[1])
+                f[2] = f[2] | set(fake[2])
+                with torch.no_grad():
+                    modifier[start_idx:start_idx + 7] = pert
+                track_prob = preds
+                tsl.append(track_sequences)
                 # sequence_track_scores[0] = np.concatenate([sequence_track_scores[0], track_prob])
         
         # verify
@@ -857,14 +960,14 @@ def atk3d(model_path, data_path, maxiter):
                 _, bbox = track[i * VIDEO_SEQUENCE_MODEL_TRACK_STEP + VIDEO_SEQUENCE_MODEL_SEQUENCE_LENGTH // 2]
                 # track_sequences.append(extract_sequence(frames, start_idx, bbox, i % 2 == 0))
                 track_sequences = [detector.extract_sequence(frames, start_idx, bbox, i % 2 == 0)]
-                preds, [pert_size, fake] = track_sequences_classifier.classify(track_sequences) # return preds and [pert_size, img detecto as fake]
+                preds = track_sequences_classifier.ori_classify(track_sequences) # return preds and [pert_size, img detecto as fake]
                 
-                pert_sizes.append(pert_size)
-                fakes.append(fake)
-                track_prob = preds
 
                 sequence_track_scores[0] = np.concatenate([sequence_track_scores[0], track_prob])
-
+        
+        pert_size = torch.sum(torch.sqrt(torch.mean(torch.pow(modifier.unsqueeze(0), 2), dim=0).mean(dim=2).mean(dim=2).mean(dim=1)))
+        # print(len(modifier))
+        # print(modifier)
         sequence_track_scores = np.concatenate(sequence_track_scores)
         track_probs = sequence_track_scores
 
@@ -884,7 +987,7 @@ def atk3d(model_path, data_path, maxiter):
                                                                  video_rel_path))
         logging.info('NUM DETECTION FRAMES: {}, VIDEO SCORE: {}. {}'.format(len(detections), video_name_to_score[video_name],
                                                                  video_rel_path))
-        logging.info('total norm {} and total fake image detected by img detector {}'.format(sum(pert_sizes), sum(fakes)))       
+        logging.info('total norm {} and total fake image detected by img detector {} , {} , {}'.format(pert_size, len(f[0]), len(f[1]), len(f[2])))       
 
 def batk3d(model_path, data_path):
     fd = detector.Detector(os.path.join(model_path, DETECTOR_WEIGHTS_PATH))
