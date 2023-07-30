@@ -628,9 +628,6 @@ class TrackSequencesClassifier(object):
             logits = self.model(perturbed_sequences).flatten()
             loss1 = torch.sigmoid(logits.mean())
             loss2 = torch.sum(torch.sqrt(torch.mean(torch.pow(modifier.unsqueeze(0), 2), dim=0).mean(dim=2).mean(dim=2).mean(dim=1)))
-            if math.isnan(logits[0].item()):
-                print(modifier)
-                print(perturbed_sequences)
             
             # from lpips import LPIPS
             if it == 0:
@@ -638,7 +635,7 @@ class TrackSequencesClassifier(object):
                 pert_img_model = img_model
 
                     
-            target_pert = image_pert(pert_img_model, track_sequences.unsqueeze(0), modifier.clone().detach().requires_grad_(True), pert_img_model_type)
+            target_pert = image_pert(pert_img_model, track_sequences.unsqueeze(0), modifier.clone().detach().requires_grad_(True), 'xception')
             target_pert = target_pert.unsqueeze(0)
             # lpips_distance = 0.0
             # lpips_fn = LPIPS(net='alex', verbose=False).to(modifier.device)
