@@ -1073,7 +1073,7 @@ model_path = '/kaggle/input/models/bi-model_type-baseline_gru_auc_0.150000_ep-10
 # default 3dcnn model path
 model_path_3d = '/kaggle/input/models'
 # default data folder
-data_path = '/kaggle/input/wsvids'
+data_path = '/kaggle/input/small-vids1-8'
 
 parser = argparse.ArgumentParser()
 parser.add_argument('--model', type=str, default='rnn') # target video model type, rnn+cnn or 3dcnn
