@@ -360,8 +360,7 @@ def rnnbatk(data_path, model_path):
 def rnnatk(l3, max_iters, ws, data_path, model_path):
     ct = time.time()
     for vid_name, (data, y) in video_loader(data_path):
-        print('aa %d, bb %d', 1, 2)
-        logging.info('new video %s', vid_name)
+        print('new video %s', vid_name)
         X = data.to(device)
         X = X[0, :95,:,:,:].unsqueeze(0)
         it = 0
@@ -388,7 +387,7 @@ def rnnatk(l3, max_iters, ws, data_path, model_path):
         for i in range(len(X[0])):
             t, _ = predict_image(img_model, X[0][i], model_type)
             f += t
-        logging.info('origin total frame %d, origin total fake frame %d', len(X[0]), f)
+        print('origin total frame %d, origin total fake frame %d', len(X[0]), f)
         
         target_pert = dict()
         
@@ -402,7 +401,7 @@ def rnnatk(l3, max_iters, ws, data_path, model_path):
                     m = m.eval()
         while it < maxiter:
             #print('iter', it)
-            logging.info('iter %d', it)
+            print('iter %d', it)
             
             
             window_size = ws # default 9
