@@ -16,7 +16,7 @@ import re
 import sys
 sys.path.append('../../..')
 
-image_model_path = '/kaggle/input/models/all_raw.p'
+image_model_path = '/kaggle/input/models/all_c40.p'
 
 device = torch.device('cuda')
 
