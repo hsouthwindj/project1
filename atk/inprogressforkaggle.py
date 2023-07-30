@@ -954,7 +954,7 @@ def atk3d(model_path, data_path, maxiter):
                                                                  video_rel_path))
         logging.info('total norm {} and total fake image detected by img detector {}'.format(pert_size, len(f[0])))       
 
-def batk3d(model_path, data_path):
+def batk3d(model_path, data_path, maxiter):
     fd = detector.Detector(os.path.join(model_path, DETECTOR_WEIGHTS_PATH))
     track_sequences_classifier = TrackSequencesClassifier(os.path.join(model_path, VIDEO_SEQUENCE_MODEL_WEIGHTS_PATH))
 
@@ -1030,7 +1030,7 @@ def batk3d(model_path, data_path):
                                      1, rank_transform=False,
                                      image_split=1,
                                      sub_num_sample=12, sigma=1e-5,
-                                     eps=0.05, max_iter=5000,
+                                     eps=0.05, max_iter=maxiter,
                                      sample_per_draw=48, vc = 'c3d')
             adv = adv.unsqueeze(0)
             advs.append(adv)
@@ -1176,7 +1176,7 @@ elif args.atk == 'black':
     if args.model == 'rnn':
         rnnbatk(data_path, model_path) 
     else:
-        batk3d(model_path_3d, data_path)   
+        batk3d(model_path_3d, data_path, args.iters)   
 elif args.atk == 'bench_white':                                    # below parts are for testing other attack, ignore these
     if args.model == 'c3d':
         with open('configforkaggle.yaml', 'r') as f:
