@@ -632,27 +632,10 @@ class TrackSequencesClassifier(object):
                 print(perturbed_sequences)
             
             # from lpips import LPIPS
-            pert_img_model_type = 'meso'
             if it == 0:
                 img_model = torch.load(image_model_path)
-                
-                cp = torch.load('/notebooks/atk/models/best.pkl')
-                mesomodel = Meso4()
-                mesomodel.load_state_dict(cp)
-                mesomodel = mesomodel.cuda()
-                
-                pth = '/notebooks/atk/weight/final_111_DeepFakeClassifier_tf_efficientnet_b7_ns_0_36'
-                efmodel = DeepFakeClassifier(encoder="tf_efficientnet_b7_ns").to("cuda")
-                checkpoint = torch.load(pth, map_location="cpu")
-                state_dict = checkpoint.get("state_dict", checkpoint)
-                efmodel.load_state_dict({re.sub("^module.", "", k): v for k, v in state_dict.items()}, strict=True)
-                efmodel.eval()
-                if pert_img_model_type == 'xception':
-                    pert_img_model = img_model
-                elif pert_img_model_type == 'meso':
-                    pert_img_model = mesomodel
-                elif pert_img_model_type == 'ef':
-                    pert_img_model = efmodel
+                pert_img_model = img_model
+
                     
             target_pert = image_pert(pert_img_model, track_sequences.unsqueeze(0), modifier.clone().detach().requires_grad_(True), pert_img_model_type)
             target_pert = target_pert.unsqueeze(0)
@@ -679,37 +662,19 @@ class TrackSequencesClassifier(object):
             
             # check image detector performance
             if it % 2 == 0:
-                fa = [[],[],[]]
+                fa = [[]]
                 for i in range(len(perturbed_sequences)):
                     t, _ = predict_image(img_model, perturbed_sequences[i], 'xception')
                     if t != 0:
                         fa[0].append(start_idx + i)
-
-                for i in range(len(perturbed_sequences)):
-                    t, _ = predict_image(mesomodel, perturbed_sequences[i], 'meso')
-                    if t == 0:
-                        fa[1].append(start_idx + i)
-
-                with torch.no_grad():
-                    rsf = torchvision.transforms.Resize(380)
-                    for i in range(len(perturbed_sequences)):
-                        t = efmodel(rsf(perturbed_sequences[i].unsqueeze(0)))
-                        if t[0] < 0:
-                            fa[2].append(start_idx + i)
                 for i in fa:
                     if score < 0.2 and len(i) < 3 and loss2 < 0.06:
                         break
-                print(fa[0])
-                print(fa[1])
-                print(fa[2])
+
         
         with torch.no_grad():
             pred = self.model(track_sequences + modifier).flatten()
             print(pred)
-            # print(self.model(perturbed_sequences).flatten())
-            # print(track_sequences[0][0])
-            # print(modifier[0][0])
-            # print(perturbed_sequences[0][0])
         track_probs = torch.sigmoid(pred).detach().cpu().numpy()
         return track_probs, modifier.detach().clone(), fa
         
@@ -943,8 +908,6 @@ def atk3d(model_path, data_path, maxiter):
                 track_sequences = [detector.extract_sequence(frames, start_idx, bbox, i % 2 == 0)]
                 preds, pert, fake = track_sequences_classifier.classifyn(track_sequences, modifier[start_idx:start_idx + 7], start_idx, maxiter) # return preds and [pert_size, img detecto as fake]
                 f[0] = f[0] | set(fake[0])
-                f[1] = f[1] | set(fake[1])
-                f[2] = f[2] | set(fake[2])
                 with torch.no_grad():
                     modifier[start_idx:start_idx + 7] = pert
                 track_prob = preds
@@ -987,7 +950,7 @@ def atk3d(model_path, data_path, maxiter):
                                                                  video_rel_path))
         logging.info('NUM DETECTION FRAMES: {}, VIDEO SCORE: {}. {}'.format(len(detections), video_name_to_score[video_name],
                                                                  video_rel_path))
-        logging.info('total norm {} and total fake image detected by img detector {} , {} , {}'.format(pert_size, len(f[0]), len(f[1]), len(f[2])))       
+        logging.info('total norm {} and total fake image detected by img detector {}'.format(pert_size, len(f[0])))       
 
 def batk3d(model_path, data_path):
     fd = detector.Detector(os.path.join(model_path, DETECTOR_WEIGHTS_PATH))
