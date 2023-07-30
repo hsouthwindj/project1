@@ -277,9 +277,6 @@ use_cuda = torch.cuda.is_available()
 device = torch.device('cuda' if use_cuda else 'cpu')
 group_size = 7 # default 7
 # rnn + cnn
-
-data_path = '/kaggle/input/wsvids'
-model_path = '/kaggle/input/models/bi-model_type-baseline_gru_auc_0.150000_ep-10.pth'
 image_model_path = '/kaggle/input/models/all_c40.p' #all_c40 works well, full_raw works fine, the rest are terrible
 model_type = 'xception'
 logging.basicConfig(filename=time.strftime("%Y%m%d-%H%M%S"), level=logging.INFO)
@@ -307,9 +304,8 @@ def rnn():
 
             
             
-def rnnbatk(path):
+def rnnbatk(data_path, model_path):
     img_model = torch.load(image_model_path)
-    data_path = path
     # vbad partial generator declaration
     def VBAD_items():
         extractors = []
@@ -361,7 +357,7 @@ def rnnbatk(path):
         print('final l2,1 norm', l21)
         logging.info('fianl l2,1 nrom %s', l21)
 
-def rnnatk(l3, sec_phase, max_iters, full_pert, reg_type, ws):
+def rnnatk(l3, max_iters, ws, data_path, model_path):
     ct = time.time()
     for vid_name, (data, y) in video_loader(data_path):
         print('aa %d, bb %d', 1, 2)
@@ -426,7 +422,6 @@ def rnnatk(l3, sec_phase, max_iters, full_pert, reg_type, ws):
             loss1 = 0
             loss2 = 0
             loss3 = 0
-            reg = 0
             for i in range(0, seq_len - window_size + 1, step_size):
                 input_image = autograd.Variable(X[0][i:i + window_size], requires_grad=False).unsqueeze(0)
             
@@ -472,29 +467,11 @@ def rnnatk(l3, sec_phase, max_iters, full_pert, reg_type, ws):
                 # loss3 += (lpips_distance / window_size)
                 # loss3 = -torch.log(1 - loss3 + 1e-6)
                 
-                ssim = StructuralSimilarityIndexMeasure(data_range=1.0).to(device)
-                tv = TotalVariation().to(device)
-                mse = torch.nn.MSELoss()
-                treg = 0
-                for w in range(window_size - 1):
-                    if reg_type == 'tv':
-                        treg += tv(torch.abs(modifier[0][w + i] - modifier[0][w + i + 1]).unsqueeze(0))
-                    elif reg_type == 'ssim':
-                        treg += ssim(modifier[0][w + i].unsqueeze(0), modifier[0][w + i + 1].unsqueeze(0))
-                    elif reg_type == 'mse':
-                        treg += mse(modifier[0][w + i].unsqueeze(0), modifier[0][w + i + 1].unsqueeze(0))
-                if reg_type == 'ssim':
-                    reg += -torch.log(treg / window_size)
-                else:
-                    reg += (treg / window_size)
-            if reg_type == 'tv':
-                reg /= 2500
             
             # windows size exp var => 2, 1.25, 0.8
             weight_loss2 = 1.25 #default is 1
             if l3 == True:
-                loss = 2 * loss1 + weight_loss2 * loss2 + 1.3 * loss3# + 0.8 * reg # default 0.5, 1.25, 1.3
-                #print(loss1, loss2, loss3, reg)
+                loss = 2 * loss1 + weight_loss2 * loss2 + 1.3 * loss3 # default 0.5, 1.25, 1.3
                 logging.info('%s, %s, %s', loss1, loss2, loss3)
             else:
                 loss = loss1 + weight_loss2 * loss2
@@ -1080,40 +1057,58 @@ def benchatk(model_path, data_path):
         print('total fake frame ', f)
 
 
+
+
+#======================== main function ===========================
+
 import argparse
 
+# be caution to the path
+# the attack for rnn+cnn, the path for data(dpath) and be a file or directory, the model path(mpath) needs to be a fixed url to the model
+# 
+# the attack for 3dcnn, the path for both data and model needs to be a directory since it has its own data loader and such, i don't want to mess with it
+
+# you can run this on kaggle if the pathes are set correctly
+# default rnn+cnn model path
+model_path = '/kaggle/input/models/bi-model_type-baseline_gru_auc_0.150000_ep-10.pth'
+# default 3dcnn model path
+model_path_3d = '/kaggle/input/models'
+# default data folder
+data_path = '/kaggle/input/wsvids'
+
 parser = argparse.ArgumentParser()
-parser.add_argument('--model', type=str, default='rnn')
-parser.add_argument('--atk', type=str, default='white')
-parser.add_argument('--iters',type=int,default=100)
-parser.add_argument('--group_size', type = int, default = 7)
-parser.add_argument('--l3', action = 'store_true')
-parser.add_argument('--sec_phase', action = 'store_true')
-parser.add_argument('--full_pert', action = 'store_true')
-parser.add_argument('--reg', type=str, default = 'none')
-parser.add_argument('--path', type=str)
+parser.add_argument('--model', type=str, default='rnn') # target video model type, rnn+cnn or 3dcnn
+parser.add_argument('--atk', type=str, default='white') # white or black box attack
+parser.add_argument('--iters',type=int,default=100) # maximum iterations, only works for white box since black box setting are set to default VBAD setting
+parser.add_argument('--group_size', type = int, default = 7) # window size (white box only)
+parser.add_argument('--l3', action = 'store_true')  # whether to use loss3, you probaably always turn this on so you can ignore this
+parser.add_argument('--mpath', type=str)
+parser.add_argument('--dpath', type=str)
 args = parser.parse_args()
+
+# also, for 3dcnn, the window size is actually fixed due to the model structure
+# but still you could modify the window stride as well
+
+# if you have no idea what these are, just ignore everything and try to run this messy code
 
 group_size = args.group_size
 
 for arg, value in sorted(vars(args).items()):
     logging.info("Argument %s: %r", arg, value)
+    
+
 
 if args.atk == 'white':
     if args.model == 'rnn':
-        rnnatk(args.l3, args.sec_phase, args.iters, args.full_pert, args.reg, args.group_size)
+        rnnatk(args.l3, args.iters, args.group_size, data_path, model_path)
     else:
-        with open('configforkaggle.yaml', 'r') as f:
-            config = yaml.load(f)
-        atk3d(config['MODELS_PATH'], config['DFDC_DATA_PATH'])
+        atk3d(data_path, model_path_3d)
 elif args.atk == 'black':
     if args.model == 'rnn':
-        rnnbatk(args.path) 
+        rnnbatk(data_path, model_path) 
     else:
-        with open('configforkaggle.yaml', 'r') as f:
-            config = yaml.load(f)
-        batk3d(config['MODELS_PATH'], config['DFDC_DATA_PATH'])    
-elif args.atk == 'bench_white':
+        batk3d(data_path, model_path_3d)   
+elif args.atk == 'bench_white':                                    # below parts are for testing other attack, ignore these
     if args.model == 'c3d':
         with open('configforkaggle.yaml', 'r') as f:
             config = yaml.load(f)
