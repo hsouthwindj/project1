@@ -595,9 +595,10 @@ class TrackSequencesClassifier(object):
         self.model.load_state_dict(state)    
         self.maxiter = maxiter
     def ori_classify(self, track_sequences):
-        track_sequences = [torch.stack([self.transform(image=face)['image'] for face in sequence]) for sequence in
-                           track_sequences]
-        track_sequences = torch.cat(track_sequences).cuda()
+        if isinstance(track_sequences, list):
+            track_sequences = [torch.stack([self.transform(image=face)['image'] for face in sequence]) for sequence in
+                               track_sequences]
+            track_sequences = torch.cat(track_sequences).cuda()
         
         with torch.no_grad():
             track_probs = torch.sigmoid(self.model(track_sequences)).flatten().cpu().numpy()
