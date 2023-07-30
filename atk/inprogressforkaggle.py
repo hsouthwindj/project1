@@ -569,7 +569,8 @@ VIDEO_SEQUENCE_MODEL_WEIGHTS_PATH = 'snapshot_100000.fp16.pth'
 
 VIDEO_BATCH_SIZE = 1
 VIDEO_TARGET_FPS = 15
-VIDEO_NUM_WORKERS = 0      
+VIDEO_NUM_WORKERS = 0    
+import math  
 
 class TrackSequencesClassifier(object):
     def __init__(self, weights_path, maxiter = 50):
