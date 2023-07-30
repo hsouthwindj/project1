@@ -304,7 +304,7 @@ def rnn():
 
             
             
-def rnnbatk(data_path, model_path):
+def rnnbatk(data_path, model_path, maxiter):
     img_model = torch.load(image_model_path)
     # vbad partial generator declaration
     def VBAD_items():
@@ -334,7 +334,7 @@ def rnnbatk(data_path, model_path):
                                  1, rank_transform=False,
                                  image_split=1,
                                  sub_num_sample=12, sigma=1e-5,
-                                 eps=0.05, max_iter=50000,
+                                 eps=0.05, max_iter=maxiter,
                                  sample_per_draw=48)
         adv = adv.unsqueeze(0)
         # check final video output
@@ -1174,7 +1174,7 @@ if args.atk == 'white':
         atk3d(model_path_3d, data_path, args.iters)
 elif args.atk == 'black':
     if args.model == 'rnn':
-        rnnbatk(data_path, model_path) 
+        rnnbatk(data_path, model_path, args.iters) 
     else:
         batk3d(model_path_3d, data_path, args.iters)   
 elif args.atk == 'bench_white':                                    # below parts are for testing other attack, ignore these
