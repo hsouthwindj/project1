@@ -572,7 +572,7 @@ VIDEO_TARGET_FPS = 15
 VIDEO_NUM_WORKERS = 0      
 
 class TrackSequencesClassifier(object):
-    def __init__(self, weights_path):
+    def __init__(self, weights_path, maxiter = 50):
         model = EfficientNet.from_pretrained('efficientnet-b7', num_classes = 1)
 
         for module in model.modules():
@@ -592,6 +592,7 @@ class TrackSequencesClassifier(object):
         state = torch.load(weights_path, map_location=lambda storage, loc: storage)
         state = {key: value.float() for key, value in state.items()}
         self.model.load_state_dict(state)    
+        self.maxiter = maxiter
     def ori_classify(self, track_sequences):
         
         with torch.no_grad():
@@ -714,7 +715,7 @@ class TrackSequencesClassifier(object):
         pred = np.array([1])
         last = np.array([10 ** 9])
         
-        while it < maxiter:
+        while it < self.maxiter:
             torch.cuda.empty_cache()
             print('iter', it)
                 
@@ -783,11 +784,11 @@ class TrackSequencesClassifier(object):
         video_score = float((track_probs * weights).sum() / weights.sum())
         return video_score
 
-def atk3d(model_path, data_path):
+def atk3d(model_path, data_path, maxiter):
 
 
     fd = detector.Detector(os.path.join(model_path, DETECTOR_WEIGHTS_PATH))
-    track_sequences_classifier = TrackSequencesClassifier(os.path.join(model_path, VIDEO_SEQUENCE_MODEL_WEIGHTS_PATH))
+    track_sequences_classifier = TrackSequencesClassifier(os.path.join(model_path, VIDEO_SEQUENCE_MODEL_WEIGHTS_PATH), maxiter)
 
     dataset = detector.UnlabeledVideoDataset(data_path)
     print('Total number of videos: {}'.format(len(dataset)))
@@ -1101,7 +1102,7 @@ if args.atk == 'white':
     if args.model == 'rnn':
         rnnatk(args.l3, args.iters, args.group_size, data_path, model_path)
     else:
-        atk3d(data_path, model_path_3d)
+        atk3d(model_path_3d, data_path, args.iters)
 elif args.atk == 'black':
     if args.model == 'rnn':
         rnnbatk(data_path, model_path) 
