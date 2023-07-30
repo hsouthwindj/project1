@@ -606,7 +606,8 @@ class TrackSequencesClassifier(object):
         if track_sequences.requires_grad:
             track_sequences.requires_grad = False
         track_sequences = track_sequences + modifier
-        track_probs = torch.sigmoid(self.model(track_sequences)).mean()
+        with torch.no_grad():
+            track_probs = torch.sigmoid(self.model(track_sequences)).mean()
         return track_probs
         
     def _nes_gradient_estimator(self, input_var, model, sample_num = 20, sigma = 0.001):
