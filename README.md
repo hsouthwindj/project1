@@ -23,6 +23,10 @@ you can download xeptionnet, meso from here [paarthneekhara github](https://gith
 for rnn+cnn model and related files, [PWB97 github](https://github.com/PWB97/Deepfake-detection)  
 for 3dcnn model and related files, [NTech-Lab github](https://github.com/ntech-lab/deepfake-detection-challenge)  
 
+for dataset, you can get both of them in kaggle  
+(https://www.kaggle.com/competitions/deepfake-detection-challenge)  
+(https://www.kaggle.com/datasets/sorokin/faceforensics)  
+
 if there's any further question
 you can email me aevin880713@gmail.com
 
