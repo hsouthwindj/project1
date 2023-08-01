@@ -23,4 +23,7 @@ you can download xeptionnet, meso from here [paarthneekhara github](https://gith
 for rnn+cnn model and related files, [PWB97 github](https://github.com/PWB97/Deepfake-detection)  
 for 3dcnn model and related files, [NTech-Lab github](https://github.com/ntech-lab/deepfake-detection-challenge)  
 
+if there's any further question
+you can email me aevin880713@gmail.com
+
 
