@@ -26,7 +26,6 @@ from utils.aucloss import AUCLoss
 from sklearn.metrics import accuracy_score
 
 import detector
-import GAfunc
 import logging
 import time
 

@@ -1158,8 +1158,6 @@ args = parser.parse_args()
 # also, for 3dcnn, the window size is actually fixed due to the model structure
 # but still you could modify the window stride as well
 
-# if you have no idea what these are, just ignore everything and try to run this messy code
-
 group_size = args.group_size
 
 for arg, value in sorted(vars(args).items()):
