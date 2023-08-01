@@ -19,8 +19,8 @@ below are the options for the program
 you should be able to find the model weight in the cd
 but here provides the source of the weight
 
-you can download xeptionnet, meso from here [paarthneekhara github](https://github.com/paarthneekhara/AdversarialDeepFakes)
-for rnn+cnn model and related files, [PWB97 github](https://github.com/PWB97/Deepfake-detection)
-for 3dcnn model and related files, [NTech-Lab github](https://github.com/ntech-lab/deepfake-detection-challenge)
+you can download xeptionnet, meso from here [paarthneekhara github](https://github.com/paarthneekhara/AdversarialDeepFakes)  
+for rnn+cnn model and related files, [PWB97 github](https://github.com/PWB97/Deepfake-detection)  
+for 3dcnn model and related files, [NTech-Lab github](https://github.com/ntech-lab/deepfake-detection-challenge)  
 
 
