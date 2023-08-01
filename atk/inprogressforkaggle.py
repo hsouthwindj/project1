@@ -303,7 +303,7 @@ def rnn():
 
             
             
-def rnnbatk(data_path, model_path, maxiter):
+def rnnbatk(data_path, model_path, maxiter, sample_num, uth, dth):
     img_model = torch.load(image_model_path)
     # vbad partial generator declaration
     def VBAD_items():
@@ -332,9 +332,9 @@ def rnnbatk(data_path, model_path, maxiter):
         _, _, adv = untargeted_video_attack(model, X, directions_generator,
                                  1, rank_transform=False,
                                  image_split=1,
-                                 sub_num_sample=12, sigma=1e-5,
+                                 sub_num_sample=sample_num//4, sigma=1e-5,
                                  eps=0.05, max_iter=maxiter,
-                                 sample_per_draw=48, img_model=img_model)
+                                 sample_per_draw=sample_num, img_model=img_model, uth, dth)
         adv = adv.unsqueeze(0)
         # check final video output
         # print(adv)
@@ -1153,6 +1153,12 @@ parser.add_argument('--iters',type=int,default=100) # maximum iterations, only w
 parser.add_argument('--group_size', type = int, default = 7) # window size (white box only)
 parser.add_argument('--l3', action = 'store_true')  # whether to use loss3, you probaably always turn this on so you can ignore this
 parser.add_argument('--overlap', type=int, default=2) # determine window overlap size, only works for white box
+
+# option for black box
+parser.add_argument('--sample_num', type=int, default=48)  # NES sample number, needs to be multiply of 4 for VBAD restriction
+parser.add_argument('--upper_thres', type=float, default=0.85) # thresholds for dynamic adjustment
+parser.add_argument('--lower_thres', type=float, default=0.55)
+
 parser.add_argument('--mpath', type=str)
 parser.add_argument('--dpath', type=str)
 args = parser.parse_args()
@@ -1174,9 +1180,9 @@ if args.atk == 'white':
         atk3d(model_path_3d, data_path, args.iters, args.overlap)
 elif args.atk == 'black':
     if args.model == 'rnn':
-        rnnbatk(data_path, model_path, args.iters) 
+        rnnbatk(data_path, model_path, args.iters, args.sample_num, args.upper_thres, args.lower_thres) 
     else:
-        batk3d(model_path_3d, data_path, args.iters)   
+        batk3d(model_path_3d, data_path, args.iters, args.sample_num, args.upper_thres, args.lower_thres)   
 elif args.atk == 'bench_white':                                    # below parts are for testing other attack, ignore these
     if args.model == 'c3d':
         with open('configforkaggle.yaml', 'r') as f:

@@ -15,6 +15,8 @@ import re
 
 import sys
 sys.path.append('../../..')
+upper_thres = 0.85
+lower_thres = 0.55
 
 #image_model_path = '/kaggle/input/models/all_c40.p'
 
@@ -132,7 +134,7 @@ def image_checker(X, model, model_type): # X dim = 5
 def sim_rectification_vector(model, vid, tentative_directions, n, sigma, target_class, rank_transform, sub_num,
                              group_gen, img_model, fake_r, image_flag, untargeted, vc = 'rnn'):
     with torch.no_grad():
-        image_flag = False
+        #image_flag = False
         sigma *= (100*fake_r + 1)
         #model.cuda()
         grads = torch.zeros(len(group_gen), device='cuda')
@@ -238,7 +240,9 @@ def sim_rectification_vector(model, vid, tentative_directions, n, sigma, target_
 # The input should be normalized to [0, 1]
 def untargeted_video_attack(vid_model, vid, directions_generator, ori_class,
                             rank_transform=False, eps=0.05, max_lr=1e-2, min_lr=2 * 1e-3, sample_per_draw=48,
-                            max_iter=10000, sigma=1e-5, sub_num_sample=12, image_split=1, vc='rnn', img_model=None):
+                            max_iter=10000, sigma=1e-5, sub_num_sample=12, image_split=1, vc='rnn', img_model=None, uth=0.85, dth=0.55):
+    upper_thres = uth
+    lower_thres = dth
     num_iter = 0
     adv_vid = torch.clamp(vid.clone() + (torch.rand_like(vid) * 2 - 1) * eps, 0., 1.).cuda()
     cur_lr = max_lr
@@ -273,15 +277,15 @@ def untargeted_video_attack(vid_model, vid, directions_generator, ori_class,
         #    adv_vid[len(adv_vid) // 2] += ip
         #clip_frame = torch.clamp(adv_vid, 0., 1.)
         #adv_vid = clip_frame.clone()
-        #fake_r = fake_rate(img_model, adv_vid)
+        fake_r = fake_rate(img_model, adv_vid)
+        spoof_r = 1 - fake_r
         #fake_r = fake_rate_meso(mesomodel, adv_vid)
-        #if fake_r < fake_rate_mi:
-        #    image_flag = False
-        #elif fake_r > fake_rate_ma:
-        #    image_flag = True
+        if spoof_r > upper_thres:
+            image_flag = False
+        elif spoof_r <= lower_thres:
+            image_flag = True
         #print('image fake rate', fake_r)
-        fake_r = 1
-        image_flag = False
+
         # print(adv_vid.shape)
         # print(adv_vid[None, :].shape)
         # top_val, top_idx, _ = vid_model(adv_vid[None, :])
