@@ -14,6 +14,9 @@ below are the options for the program
 `--l3, whether to use loss3 for white box, please always turn this on or transfer attack wont work  `  
 `--mpath, model directory path  `  
 `--dpath, data directory path  `  
+`--sample_num, sample number for NES algorithm, blackbox only`  
+`--upper_thres, upper threshold for dynamic adjustment, blackbox only`  
+`--lower_thres, lower threshold for dynamic adjustment, blackbox only`  
 
 ## weights
 you should be able to find the model weight in the cd
