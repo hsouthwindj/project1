@@ -334,7 +334,7 @@ def rnnbatk(data_path, model_path, maxiter, sample_num, uth, dth):
                                  image_split=1,
                                  sub_num_sample=sample_num//4, sigma=1e-5,
                                  eps=0.05, max_iter=maxiter,
-                                 sample_per_draw=sample_num, img_model=img_model, uth, dth)
+                                 sample_per_draw=sample_num, img_model=img_model, uth=0.55, dth=0.85)
         adv = adv.unsqueeze(0)
         # check final video output
         # print(adv)
