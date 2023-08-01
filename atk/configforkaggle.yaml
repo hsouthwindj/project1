@@ -1,3 +1,0 @@
-DFDC_DATA_PATH: "/kaggle/input/small-vids1-2"
-MODELS_PATH: "/kaggle/input/models"
-attack: "rnn+cnn"                                 

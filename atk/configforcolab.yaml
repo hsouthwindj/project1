@@ -1,3 +1,0 @@
-DFDC_DATA_PATH: "/content/drive/MyDrive/pr1vid"
-MODELS_PATH: "/content/drive/MyDrive/pr1model"
-attack: "rnn+cnn"                                 
