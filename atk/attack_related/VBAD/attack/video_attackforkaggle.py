@@ -16,7 +16,7 @@ import re
 import sys
 sys.path.append('../../..')
 
-image_model_path = '/kaggle/input/models/all_c40.p'
+#image_model_path = '/kaggle/input/models/all_c40.p'
 
 device = torch.device('cuda')
 
@@ -238,7 +238,7 @@ def sim_rectification_vector(model, vid, tentative_directions, n, sigma, target_
 # The input should be normalized to [0, 1]
 def untargeted_video_attack(vid_model, vid, directions_generator, ori_class,
                             rank_transform=False, eps=0.05, max_lr=1e-2, min_lr=2 * 1e-3, sample_per_draw=48,
-                            max_iter=10000, sigma=1e-5, sub_num_sample=12, image_split=1, vc='rnn'):
+                            max_iter=10000, sigma=1e-5, sub_num_sample=12, image_split=1, vc='rnn', img_model=None):
     num_iter = 0
     adv_vid = torch.clamp(vid.clone() + (torch.rand_like(vid) * 2 - 1) * eps, 0., 1.).cuda()
     cur_lr = max_lr
@@ -246,7 +246,7 @@ def untargeted_video_attack(vid_model, vid, directions_generator, ori_class,
     last_score = []
     group_gen = EquallySplitGrouping(image_split)
     
-    img_model = torch.load(image_model_path)
+    #img_model = torch.load(image_model_path)
     max_lr = 2*1e-2
     min_lr = 1*1e-3
     
@@ -255,17 +255,17 @@ def untargeted_video_attack(vid_model, vid, directions_generator, ori_class,
     image_flag = True
     
     #meso img model
-    cp = torch.load('/kaggle/input/othermodels/best.pkl')
-    mesomodel = Meso4()
-    mesomodel.load_state_dict(cp)
-    mesomodel = mesomodel.cuda()
+    #cp = torch.load('/kaggle/input/othermodels/best.pkl')
+    #mesomodel = Meso4()
+    #mesomodel.load_state_dict(cp)
+    #mesomodel = mesomodel.cuda()
     
-    pth = '/kaggle/input/othermodels/final_111_DeepFakeClassifier_tf_efficientnet_b7_ns_0_36'
-    efmodel = DeepFakeClassifier(encoder="tf_efficientnet_b7_ns").to("cuda")
-    checkpoint = torch.load(pth, map_location="cpu")
-    state_dict = checkpoint.get("state_dict", checkpoint)
-    efmodel.load_state_dict({re.sub("^module.", "", k): v for k, v in state_dict.items()}, strict=True)
-    efmodel.eval()
+    #pth = '/kaggle/input/othermodels/final_111_DeepFakeClassifier_tf_efficientnet_b7_ns_0_36'
+    #efmodel = DeepFakeClassifier(encoder="tf_efficientnet_b7_ns").to("cuda")
+    #checkpoint = torch.load(pth, map_location="cpu")
+    #state_dict = checkpoint.get("state_dict", checkpoint)
+    #efmodel.load_state_dict({re.sub("^module.", "", k): v for k, v in state_dict.items()}, strict=True)
+    #efmodel.eval()
 
     while num_iter < max_iter:
         #ip = img_pert(img_model, adv_vid[len(adv_vid) // 2].detach().clone())
@@ -355,6 +355,6 @@ def untargeted_video_attack(vid_model, vid, directions_generator, ori_class,
 
         logging.info('step {} : loss {} | lr {}'.format(num_iter, l, cur_lr))
     image_checker(adv_vid, img_model, 'xception')
-    image_checker(adv_vid, mesomodel, 'meso')
-    image_checker(adv_vid, efmodel, 'ef')
+    #image_checker(adv_vid, mesomodel, 'meso')
+    #image_checker(adv_vid, efmodel, 'ef')
     return False, pre_score.cpu().item(), adv_vid
