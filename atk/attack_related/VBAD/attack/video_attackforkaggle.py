@@ -169,7 +169,7 @@ def sim_rectification_vector(model, vid, tentative_directions, n, sigma, target_
             #if image_flag:
             #    ns = [(video_score(img_model, (vid.repeat((len(all_noise),) + (1,) * len(vid.size())).cuda() + perturbation_sample)[i]), perturbation_sample[i], all_noise[i]) for i in range(len(all_noise))]
             if image_flag:
-                ns = [(video_score_meso(img_model, (vid.repeat((len(all_noise),) + (1,) * len(vid.size())).cuda() + perturbation_sample)[i]), perturbation_sample[i], all_noise[i]) for i in range(len(all_noise))]
+                ns = [(video_meso(img_model, (vid.repeat((len(all_noise),) + (1,) * len(vid.size())).cuda() + perturbation_sample)[i]), perturbation_sample[i], all_noise[i]) for i in range(len(all_noise))]
             # ns = sorted(ns, key = lambda x : x[0])
             # all_noise = torch.stack([ns[i][2] for i in range(sub_num)])
             # perturbation_sample = torch.stack([ns[i][1] for i in range(sub_num)])

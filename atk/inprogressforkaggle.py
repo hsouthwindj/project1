@@ -955,7 +955,7 @@ def atk3d(model_path, data_path, maxiter, overlap):
                                                                  video_rel_path))
         logging.info('total norm {} and total fake image detected by img detector {}'.format(pert_size, len(f[0])))       
 
-def batk3d(model_path, data_path, maxiter):
+def batk3d(model_path, data_path, maxiter, sample_num, uth, dth):
     fd = detector.Detector(os.path.join(model_path, DETECTOR_WEIGHTS_PATH))
     track_sequences_classifier = TrackSequencesClassifier(os.path.join(model_path, VIDEO_SEQUENCE_MODEL_WEIGHTS_PATH))
 
@@ -1030,9 +1030,9 @@ def batk3d(model_path, data_path, maxiter):
             _, _, adv = untargeted_video_attack(track_sequences_classifier, X[7*i:7*i + 7], directions_generator,
                                      1, rank_transform=False,
                                      image_split=1,
-                                     sub_num_sample=12, sigma=1e-5,
+                                     sub_num_sample=sample_num//4, sigma=1e-5,
                                      eps=0.05, max_iter=maxiter,
-                                     sample_per_draw=48, vc = 'c3d', img_model=img_model)
+                                     sample_per_draw=sample_num, vc = 'c3d', img_model=img_model, uth=0.85, dth=0.55)
             adv = adv.unsqueeze(0)
             advs.append(adv)
         adv = torch.cat(advs, dim = 1)
