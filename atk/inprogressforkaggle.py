@@ -356,7 +356,7 @@ def rnnbatk(data_path, model_path, maxiter):
         print('final l2,1 norm', l21)
         logging.info('fianl l2,1 nrom %s', l21)
 
-def rnnatk(l3, max_iters, ws, data_path, model_path):
+def rnnatk(l3, max_iters, ws, data_path, model_path, overlap):
     ct = time.time()
     for vid_name, (data, y) in video_loader(data_path):
         print('new video %s', vid_name)
@@ -404,7 +404,7 @@ def rnnatk(l3, max_iters, ws, data_path, model_path):
             
             
             window_size = ws # default 9
-            step_size = window_size - 2 # default 7
+            step_size = window_size - overlap # default 7
             # check image detector performance
             f = 0
             ti = X + modifier
@@ -854,7 +854,9 @@ class TrackSequencesClassifier(object):
         video_score = float((track_probs * weights).sum() / weights.sum())
         return video_score
 
-def atk3d(model_path, data_path, maxiter):
+def atk3d(model_path, data_path, maxiter, overlap):
+
+    VIDEO_SEQUENCE_MODEL_TRACK_STEP = 7 - overlap
 
 
     fd = detector.Detector(os.path.join(model_path, DETECTOR_WEIGHTS_PATH))
@@ -1150,6 +1152,7 @@ parser.add_argument('--atk', type=str, default='white') # white or black box att
 parser.add_argument('--iters',type=int,default=100) # maximum iterations, only works for white box since black box setting are set to default VBAD setting
 parser.add_argument('--group_size', type = int, default = 7) # window size (white box only)
 parser.add_argument('--l3', action = 'store_true')  # whether to use loss3, you probaably always turn this on so you can ignore this
+parser.add_argument('--overlap', type=int, default=2) # determine window overlap size, only works for white box
 parser.add_argument('--mpath', type=str)
 parser.add_argument('--dpath', type=str)
 args = parser.parse_args()
@@ -1166,9 +1169,9 @@ for arg, value in sorted(vars(args).items()):
 
 if args.atk == 'white':
     if args.model == 'rnn':
-        rnnatk(args.l3, args.iters, args.group_size, data_path, model_path)
+        rnnatk(args.l3, args.iters, args.group_size, data_path, model_path, args.overlap)
     else:
-        atk3d(model_path_3d, data_path, args.iters)
+        atk3d(model_path_3d, data_path, args.iters, args.overlap)
 elif args.atk == 'black':
     if args.model == 'rnn':
         rnnbatk(data_path, model_path, args.iters) 

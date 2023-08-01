@@ -297,8 +297,8 @@ def untargeted_video_attack(vid_model, vid, directions_generator, ori_class,
         if ori_class != top_idx and image_flag == False:
             print('early stop', num_iter)
             image_checker(adv_vid, img_model, 'xception')
-            image_checker(adv_vid, mesomodel, 'meso')
-            image_checker(adv_vid, efmodel, 'ef')
+            #image_checker(adv_vid, mesomodel, 'meso')
+            #image_checker(adv_vid, efmodel, 'ef')
             logging.info('early stop at iterartion {}'.format(num_iter))
             return True, num_iter, adv_vid
         idx = [[0, 0]] # idk waht's this but it's always [0, 0] when i testing
@@ -313,8 +313,8 @@ def untargeted_video_attack(vid_model, vid, directions_generator, ori_class,
         last_score = last_score[-200:]
         if last_score[-1] >= last_score[0] and len(last_score) == 200:
             image_checker(adv_vid, img_model, 'xception')
-            image_checker(adv_vid, mesomodel, 'meso')
-            image_checker(adv_vid, efmodel, 'ef')
+            #image_checker(adv_vid, mesomodel, 'meso')
+            #image_checker(adv_vid, efmodel, 'ef')
             print('FAIL: No Descent, Stop iteration')
             return False, pre_score.cpu().item(), adv_vid
 
