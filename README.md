@@ -6,7 +6,7 @@ python -W ignore inprogressforkaggle.py --atk white --model rnn --l3  --iters 10
 
 below are the options for the program
 
-`--atk, white box or black box setting, options : white, black`
+`--atk, white box or black box setting, options : white, black`  
 `--model, target video model type, options : rnn, c3d  `
 `--iters, maximum iteration number, default 100 for white box  `
 `--group_size, window size for white box attack  `
